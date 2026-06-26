@@ -550,6 +550,68 @@ function Process() {
   );
 }
 
+/* ---------------- Video Testimonials ---------------- */
+const VIDEOS: VideoItem[] = [
+  {
+    id: "thermofibras",
+    youtubeId: "BX6rpC1cSUg",
+    title: "Confiança e visão estratégica na Thermofibras",
+    person: "Anderson Drummond",
+    role: "Thermofibras",
+  },
+  {
+    id: "quintao",
+    youtubeId: "-J942kkVc-s",
+    title: "40 anos de parceria com a Fraga Contabilidade",
+    person: "Helvecio Quintão",
+    role: "Cliente parceiro",
+  },
+];
+
+function VideoTestimonials() {
+  const modal = useVideoModal();
+  const ctaLink = waLink("Olá, vi os depoimentos no site e quero conhecer melhor a Fraga Contabilidade.");
+  return (
+    <section id="depoimentos-video" className="relative py-24 lg:py-32 bg-gradient-dark text-white overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-mesh opacity-25 animate-mesh pointer-events-none" />
+      <div className="absolute -top-20 right-0 w-96 h-96 rounded-full bg-accent/20 blur-3xl pointer-events-none animate-glow-pulse" />
+      <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
+        <div className="max-w-3xl mb-14">
+          <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent-glow mb-4">
+            <span className="w-8 h-px bg-accent-glow" /> Quem confia
+          </div>
+          <h2 className="text-3xl lg:text-5xl font-bold mb-5 leading-[1.05]">
+            Histórias reais de quem cresce <span className="text-gradient-gold">ao lado da Fraga</span>
+          </h2>
+          <p className="text-white/70 text-lg max-w-2xl">
+            Empresários que contam, com as próprias palavras, o impacto de ter uma contabilidade consultiva no dia a dia da empresa.
+          </p>
+        </div>
+        <div className="grid lg:grid-cols-2 gap-6">
+          {VIDEOS.map((v) => (
+            <VideoCard key={v.id} v={v} onPlay={modal.open} />
+          ))}
+        </div>
+        <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <PremiumButton
+            href={ctaLink}
+            variant="gold"
+            size="lg"
+            icon={<MessageCircle className="w-5 h-5" />}
+            trailingIcon={<ArrowRight className="w-4 h-4" />}
+            trackLocation="video_section_cta_click"
+            trackMessage="CTA pós depoimentos"
+          >
+            Quero esse mesmo nível de atenção
+          </PremiumButton>
+          <p className="text-sm text-white/60">Atendimento humano, pelo WhatsApp, com resposta rápida.</p>
+        </div>
+      </div>
+      <VideoModal video={modal.active} onClose={modal.close} />
+    </section>
+  );
+}
+
 /* ---------------- Testimonials ---------------- */
 function Testimonials() {
   const items = [
