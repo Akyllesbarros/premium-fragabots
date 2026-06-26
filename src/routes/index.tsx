@@ -6,7 +6,10 @@ import {
   MessageCircle, ChevronDown, Star, Quote, Menu, Zap, Target,
   HeartHandshake, BarChart3, Clock, MapPin,
 } from "lucide-react";
-import { waLink } from "@/lib/whatsapp";
+import { waLink, trackConversion } from "@/lib/whatsapp";
+import { PremiumButton } from "@/components/fraga/PremiumButton";
+import { ScrollProgress } from "@/components/fraga/ScrollProgress";
+import { VideoCard, VideoModal, useVideoModal, type VideoItem } from "@/components/fraga/VideoModal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -59,19 +62,29 @@ function Counter({ to, suffix = "", duration = 1800 }: { to: number; suffix?: st
 function LandingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <ScrollProgress />
       <Header />
       <Hero />
-      <TrustBar />
-      <Narrative />
-      <Services />
-      <Plans />
-      <Process />
-      <Testimonials />
-      <Comparison />
-      <Faq />
-      <FinalCta />
+      <Stack layer={2}><TrustBar /></Stack>
+      <Stack layer={3}><Narrative /></Stack>
+      <Stack layer={4}><Services /></Stack>
+      <Stack layer={5}><VideoTestimonials /></Stack>
+      <Stack layer={6}><Plans /></Stack>
+      <Stack layer={7}><Process /></Stack>
+      <Stack layer={8}><Testimonials /></Stack>
+      <Stack layer={3}><Comparison /></Stack>
+      <Stack layer={4}><Faq /></Stack>
+      <Stack layer={5}><FinalCta /></Stack>
       <Footer />
       <WhatsAppFloat />
+    </div>
+  );
+}
+
+function Stack({ layer, children }: { layer: number; children: React.ReactNode }) {
+  return (
+    <div className="stack-section" data-layer={layer}>
+      {children}
     </div>
   );
 }
