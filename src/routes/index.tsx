@@ -881,6 +881,7 @@ function WhatsAppFloat() {
       target="_blank"
       rel="noopener"
       aria-label="Falar no WhatsApp"
+      onClick={() => trackConversion("floating_whatsapp_click")}
       className="fixed bottom-6 right-6 z-40 group"
     >
       <span className="absolute inset-0 rounded-full bg-whatsapp animate-glow-pulse" />
