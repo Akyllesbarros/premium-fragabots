@@ -414,7 +414,7 @@ function Services() {
                 </div>
                 <h3 className="font-bold text-lg mb-2">{s.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-5 flex-1">{s.desc}</p>
-                <a href={link} target="_blank" rel="noopener" className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary-deep transition-colors group/cta">
+                <a href={link} target="_blank" rel="noopener" onClick={() => trackConversion("service_whatsapp_click", s.title)} className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary-deep transition-colors group/cta">
                   Conversar sobre este serviço
                   <ArrowRight className="w-4 h-4 group-hover/cta:translate-x-1 transition-transform" />
                 </a>
@@ -483,7 +483,7 @@ function Plans() {
                     ))}
                   </ul>
 
-                  <a href={link} target="_blank" rel="noopener" className={`inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm transition-all hover:-translate-y-0.5 ${
+                  <a href={link} target="_blank" rel="noopener" onClick={() => trackConversion("plan_whatsapp_click", p.name)} className={`inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm transition-all hover:-translate-y-0.5 ${
                     isFeatured
                       ? "bg-gradient-accent text-accent-foreground shadow-gold hover:shadow-glow"
                       : "bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground"
@@ -775,7 +775,7 @@ function Faq() {
                     <div className="px-5 lg:px-6 pb-5 lg:pb-6 text-muted-foreground leading-relaxed">
                       {f.a}
                       <div className="mt-4">
-                        <a href={waLink(`Olá, tenho uma dúvida sobre: ${f.q}`)} target="_blank" rel="noopener" className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline">
+                        <a href={waLink(`Olá, tenho uma dúvida sobre: ${f.q}`)} target="_blank" rel="noopener" onClick={() => trackConversion("faq_whatsapp_click", f.q)} className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline">
                           <MessageCircle className="w-4 h-4" />
                           Fale com a Fraga pelo WhatsApp
                         </a>
