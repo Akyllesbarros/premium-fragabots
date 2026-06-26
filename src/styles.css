@@ -133,6 +133,14 @@
   0%, 100% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(-3%, 2%) scale(1.05); }
 }
+@keyframes fraga-shine {
+  0% { background-position: -150% 0; }
+  100% { background-position: 150% 0; }
+}
+@keyframes fraga-reveal {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 @utility animate-float { animation: float 6s ease-in-out infinite; }
 @utility animate-float-slow { animation: float-slow 9s ease-in-out infinite; }
@@ -141,6 +149,7 @@
 @utility animate-fade-in { animation: fade-in 0.8s ease-out both; }
 @utility animate-marquee { animation: marquee 35s linear infinite; }
 @utility animate-mesh { animation: mesh-shift 18s ease-in-out infinite; }
+@utility animate-reveal { animation: fraga-reveal 1s cubic-bezier(0.16, 1, 0.3, 1) both; }
 
 @utility glass {
   background: oklch(1 0 0 / 0.65);
@@ -173,3 +182,35 @@
 @utility shadow-glow { box-shadow: var(--shadow-glow); }
 @utility shadow-gold { box-shadow: var(--shadow-gold); }
 @utility shadow-card { box-shadow: var(--shadow-card); }
+
+/* ---- Stack section (Curtis-style rising layers) ---- */
+.stack-section {
+  position: relative;
+  z-index: 1;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  margin-top: -2.5rem;
+  box-shadow: 0 -30px 80px -40px oklch(0.16 0.03 220 / 0.35);
+  isolation: isolate;
+}
+.stack-section--flat {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: 0;
+  box-shadow: none;
+}
+.stack-section[data-layer="2"] { z-index: 2; }
+.stack-section[data-layer="3"] { z-index: 3; }
+.stack-section[data-layer="4"] { z-index: 4; }
+.stack-section[data-layer="5"] { z-index: 5; }
+.stack-section[data-layer="6"] { z-index: 6; }
+.stack-section[data-layer="7"] { z-index: 7; }
+.stack-section[data-layer="8"] { z-index: 8; }
+
+@media (prefers-reduced-motion: reduce) {
+  .stack-section { margin-top: 0; border-radius: 0; box-shadow: none; }
+  .animate-reveal, .animate-fade-up, .animate-fade-in, .animate-float, .animate-float-slow, .animate-mesh, .animate-glow-pulse, .animate-marquee {
+    animation: none !important;
+  }
+  html { scroll-behavior: auto; }
+}
