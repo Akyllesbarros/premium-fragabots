@@ -186,14 +186,19 @@ function Hero() {
             A Fraga Contabilidade une +50 anos de experiência, tecnologia e visão consultiva para ajudar sua empresa a organizar a gestão, reduzir riscos e tomar decisões melhores.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mb-10">
-            <a href={HERO_CTA} target="_blank" rel="noopener" className="group inline-flex items-center justify-center gap-2 bg-gradient-primary text-primary-foreground px-7 py-4 rounded-xl font-semibold shadow-elegant hover:shadow-glow transition-all hover:-translate-y-0.5">
-              <MessageCircle className="w-5 h-5" />
+            <PremiumButton
+              href={HERO_CTA}
+              size="lg"
+              icon={<MessageCircle className="w-5 h-5" />}
+              trailingIcon={<ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />}
+              trackLocation="hero_cta_click"
+              trackMessage="Hero principal"
+            >
               Falar com especialista agora
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a href="#planos" className="inline-flex items-center justify-center gap-2 glass text-foreground px-7 py-4 rounded-xl font-semibold hover:bg-white transition-all">
-              Conhecer planos contábeis
-            </a>
+            </PremiumButton>
+            <PremiumButton href="#solucoes" variant="secondary" size="lg">
+              Ver soluções
+            </PremiumButton>
           </div>
           <div className="grid grid-cols-3 gap-4 max-w-xl">
             {[
