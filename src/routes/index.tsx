@@ -119,10 +119,16 @@ function Header() {
             ))}
           </nav>
           <div className="flex items-center gap-2">
-            <a href={HERO_CTA} target="_blank" rel="noopener" className="hidden sm:inline-flex items-center gap-2 bg-gradient-primary text-primary-foreground px-5 py-2.5 rounded-xl text-sm font-semibold shadow-elegant hover:shadow-glow transition-all hover:-translate-y-0.5">
-              <MessageCircle className="w-4 h-4" />
+            <PremiumButton
+              href={HERO_CTA}
+              size="md"
+              icon={<MessageCircle className="w-4 h-4" />}
+              className="hidden sm:inline-flex"
+              trackLocation="header_cta_click"
+              trackMessage="Header"
+            >
               Falar com especialista
-            </a>
+            </PremiumButton>
             <button onClick={() => setOpen((v) => !v)} className="lg:hidden p-2 rounded-lg text-foreground" aria-label="Menu">
               <Menu className="w-5 h-5" />
             </button>
@@ -539,11 +545,16 @@ function Process() {
         </div>
 
         <div className="text-center">
-          <a href={link} target="_blank" rel="noopener" className="inline-flex items-center gap-2 bg-gradient-accent text-accent-foreground px-8 py-4 rounded-xl font-semibold shadow-gold hover:shadow-glow transition-all hover:-translate-y-0.5">
-            <MessageCircle className="w-5 h-5" />
+        <PremiumButton
+            href={link}
+            variant="gold"
+            size="lg"
+            icon={<MessageCircle className="w-5 h-5" />}
+            trailingIcon={<ArrowRight className="w-4 h-4" />}
+            trackLocation="process_cta_click"
+          >
             Começar pelo WhatsApp
-            <ArrowRight className="w-4 h-4" />
-          </a>
+          </PremiumButton>
         </div>
       </div>
     </section>
@@ -802,11 +813,17 @@ function FinalCta() {
         <p className="text-lg lg:text-xl text-white/75 mb-10 max-w-2xl mx-auto leading-relaxed">
           Fale com a Fraga Contabilidade e descubra qual solução faz mais sentido para o seu momento.
         </p>
-        <a href={link} target="_blank" rel="noopener" className="group inline-flex items-center gap-3 bg-gradient-accent text-accent-foreground px-9 py-5 rounded-2xl font-bold text-lg shadow-gold hover:shadow-glow transition-all hover:-translate-y-1">
-          <MessageCircle className="w-6 h-6" />
+        <PremiumButton
+          href={link}
+          variant="gold"
+          size="lg"
+          icon={<MessageCircle className="w-6 h-6" />}
+          trailingIcon={<ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />}
+          trackLocation="final_cta_click"
+          trackMessage="CTA Final"
+        >
           Falar com especialista pelo WhatsApp
-          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-        </a>
+        </PremiumButton>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-white/60">
           <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-accent-glow" /> Atendimento humano</div>
           <div className="flex items-center gap-2"><Award className="w-4 h-4 text-accent-glow" /> +50 anos de experiência</div>
