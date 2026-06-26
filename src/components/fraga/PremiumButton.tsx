@@ -130,12 +130,13 @@ export const PremiumButton = forwardRef<HTMLElement, AnchorProps | ButtonProps>(
 
     if ("href" in props && props.href) {
       const { href, ...anchorRest } = rest as Omit<AnchorProps, keyof CommonProps>;
+      const isExternal = /^https?:/i.test(href);
       return (
         <a
           {...anchorRest}
           href={href}
-          target="_blank"
-          rel="noopener"
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener" : undefined}
           ref={(el) => {
             mag.ref.current = el;
           }}
