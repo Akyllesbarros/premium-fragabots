@@ -6,7 +6,10 @@ import {
   MessageCircle, ChevronDown, Star, Quote, Menu, Zap, Target,
   HeartHandshake, BarChart3, Clock, MapPin,
 } from "lucide-react";
-import { waLink } from "@/lib/whatsapp";
+import { waLink, trackConversion } from "@/lib/whatsapp";
+import { PremiumButton } from "@/components/fraga/PremiumButton";
+import { ScrollProgress } from "@/components/fraga/ScrollProgress";
+import { VideoCard, VideoModal, useVideoModal, type VideoItem } from "@/components/fraga/VideoModal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -59,19 +62,29 @@ function Counter({ to, suffix = "", duration = 1800 }: { to: number; suffix?: st
 function LandingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <ScrollProgress />
       <Header />
       <Hero />
-      <TrustBar />
-      <Narrative />
-      <Services />
-      <Plans />
-      <Process />
-      <Testimonials />
-      <Comparison />
-      <Faq />
-      <FinalCta />
+      <Stack layer={2}><TrustBar /></Stack>
+      <Stack layer={3}><Narrative /></Stack>
+      <Stack layer={4}><Services /></Stack>
+      <Stack layer={5}><VideoTestimonials /></Stack>
+      <Stack layer={6}><Plans /></Stack>
+      <Stack layer={7}><Process /></Stack>
+      <Stack layer={8}><Testimonials /></Stack>
+      <Stack layer={3}><Comparison /></Stack>
+      <Stack layer={4}><Faq /></Stack>
+      <Stack layer={5}><FinalCta /></Stack>
       <Footer />
       <WhatsAppFloat />
+    </div>
+  );
+}
+
+function Stack({ layer, children }: { layer: number; children: React.ReactNode }) {
+  return (
+    <div className="stack-section" data-layer={layer}>
+      {children}
     </div>
   );
 }
@@ -106,10 +119,16 @@ function Header() {
             ))}
           </nav>
           <div className="flex items-center gap-2">
-            <a href={HERO_CTA} target="_blank" rel="noopener" className="hidden sm:inline-flex items-center gap-2 bg-gradient-primary text-primary-foreground px-5 py-2.5 rounded-xl text-sm font-semibold shadow-elegant hover:shadow-glow transition-all hover:-translate-y-0.5">
-              <MessageCircle className="w-4 h-4" />
+            <PremiumButton
+              href={HERO_CTA}
+              size="md"
+              icon={<MessageCircle className="w-4 h-4" />}
+              className="hidden sm:inline-flex"
+              trackLocation="header_cta_click"
+              trackMessage="Header"
+            >
               Falar com especialista
-            </a>
+            </PremiumButton>
             <button onClick={() => setOpen((v) => !v)} className="lg:hidden p-2 rounded-lg text-foreground" aria-label="Menu">
               <Menu className="w-5 h-5" />
             </button>
@@ -173,14 +192,19 @@ function Hero() {
             A Fraga Contabilidade une +50 anos de experiência, tecnologia e visão consultiva para ajudar sua empresa a organizar a gestão, reduzir riscos e tomar decisões melhores.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mb-10">
-            <a href={HERO_CTA} target="_blank" rel="noopener" className="group inline-flex items-center justify-center gap-2 bg-gradient-primary text-primary-foreground px-7 py-4 rounded-xl font-semibold shadow-elegant hover:shadow-glow transition-all hover:-translate-y-0.5">
-              <MessageCircle className="w-5 h-5" />
+            <PremiumButton
+              href={HERO_CTA}
+              size="lg"
+              icon={<MessageCircle className="w-5 h-5" />}
+              trailingIcon={<ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />}
+              trackLocation="hero_cta_click"
+              trackMessage="Hero principal"
+            >
               Falar com especialista agora
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a href="#planos" className="inline-flex items-center justify-center gap-2 glass text-foreground px-7 py-4 rounded-xl font-semibold hover:bg-white transition-all">
-              Conhecer planos contábeis
-            </a>
+            </PremiumButton>
+            <PremiumButton href="#solucoes" variant="secondary" size="lg">
+              Ver soluções
+            </PremiumButton>
           </div>
           <div className="grid grid-cols-3 gap-4 max-w-xl">
             {[
@@ -390,7 +414,7 @@ function Services() {
                 </div>
                 <h3 className="font-bold text-lg mb-2">{s.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-5 flex-1">{s.desc}</p>
-                <a href={link} target="_blank" rel="noopener" className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary-deep transition-colors group/cta">
+                <a href={link} target="_blank" rel="noopener" onClick={() => trackConversion("service_whatsapp_click", s.title)} className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary-deep transition-colors group/cta">
                   Conversar sobre este serviço
                   <ArrowRight className="w-4 h-4 group-hover/cta:translate-x-1 transition-transform" />
                 </a>
@@ -459,7 +483,7 @@ function Plans() {
                     ))}
                   </ul>
 
-                  <a href={link} target="_blank" rel="noopener" className={`inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm transition-all hover:-translate-y-0.5 ${
+                  <a href={link} target="_blank" rel="noopener" onClick={() => trackConversion("plan_whatsapp_click", p.name)} className={`inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm transition-all hover:-translate-y-0.5 ${
                     isFeatured
                       ? "bg-gradient-accent text-accent-foreground shadow-gold hover:shadow-glow"
                       : "bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground"
@@ -521,13 +545,80 @@ function Process() {
         </div>
 
         <div className="text-center">
-          <a href={link} target="_blank" rel="noopener" className="inline-flex items-center gap-2 bg-gradient-accent text-accent-foreground px-8 py-4 rounded-xl font-semibold shadow-gold hover:shadow-glow transition-all hover:-translate-y-0.5">
-            <MessageCircle className="w-5 h-5" />
+        <PremiumButton
+            href={link}
+            variant="gold"
+            size="lg"
+            icon={<MessageCircle className="w-5 h-5" />}
+            trailingIcon={<ArrowRight className="w-4 h-4" />}
+            trackLocation="process_cta_click"
+          >
             Começar pelo WhatsApp
-            <ArrowRight className="w-4 h-4" />
-          </a>
+          </PremiumButton>
         </div>
       </div>
+    </section>
+  );
+}
+
+/* ---------------- Video Testimonials ---------------- */
+const VIDEOS: VideoItem[] = [
+  {
+    id: "thermofibras",
+    youtubeId: "BX6rpC1cSUg",
+    title: "Confiança e visão estratégica na Thermofibras",
+    person: "Anderson Drummond",
+    role: "Thermofibras",
+  },
+  {
+    id: "quintao",
+    youtubeId: "-J942kkVc-s",
+    title: "40 anos de parceria com a Fraga Contabilidade",
+    person: "Helvecio Quintão",
+    role: "Cliente parceiro",
+  },
+];
+
+function VideoTestimonials() {
+  const modal = useVideoModal();
+  const ctaLink = waLink("Olá, vi os depoimentos no site e quero conhecer melhor a Fraga Contabilidade.");
+  return (
+    <section id="depoimentos-video" className="relative py-24 lg:py-32 bg-gradient-dark text-white overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-mesh opacity-25 animate-mesh pointer-events-none" />
+      <div className="absolute -top-20 right-0 w-96 h-96 rounded-full bg-accent/20 blur-3xl pointer-events-none animate-glow-pulse" />
+      <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
+        <div className="max-w-3xl mb-14">
+          <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent-glow mb-4">
+            <span className="w-8 h-px bg-accent-glow" /> Quem confia
+          </div>
+          <h2 className="text-3xl lg:text-5xl font-bold mb-5 leading-[1.05]">
+            Histórias reais de quem cresce <span className="text-gradient-gold">ao lado da Fraga</span>
+          </h2>
+          <p className="text-white/70 text-lg max-w-2xl">
+            Empresários que contam, com as próprias palavras, o impacto de ter uma contabilidade consultiva no dia a dia da empresa.
+          </p>
+        </div>
+        <div className="grid lg:grid-cols-2 gap-6">
+          {VIDEOS.map((v) => (
+            <VideoCard key={v.id} v={v} onPlay={modal.open} />
+          ))}
+        </div>
+        <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <PremiumButton
+            href={ctaLink}
+            variant="gold"
+            size="lg"
+            icon={<MessageCircle className="w-5 h-5" />}
+            trailingIcon={<ArrowRight className="w-4 h-4" />}
+            trackLocation="video_section_cta_click"
+            trackMessage="CTA pós depoimentos"
+          >
+            Quero esse mesmo nível de atenção
+          </PremiumButton>
+          <p className="text-sm text-white/60">Atendimento humano, pelo WhatsApp, com resposta rápida.</p>
+        </div>
+      </div>
+      <VideoModal video={modal.active} onClose={modal.close} />
     </section>
   );
 }
@@ -684,7 +775,7 @@ function Faq() {
                     <div className="px-5 lg:px-6 pb-5 lg:pb-6 text-muted-foreground leading-relaxed">
                       {f.a}
                       <div className="mt-4">
-                        <a href={waLink(`Olá, tenho uma dúvida sobre: ${f.q}`)} target="_blank" rel="noopener" className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline">
+                        <a href={waLink(`Olá, tenho uma dúvida sobre: ${f.q}`)} target="_blank" rel="noopener" onClick={() => trackConversion("faq_whatsapp_click", f.q)} className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline">
                           <MessageCircle className="w-4 h-4" />
                           Fale com a Fraga pelo WhatsApp
                         </a>
@@ -722,11 +813,17 @@ function FinalCta() {
         <p className="text-lg lg:text-xl text-white/75 mb-10 max-w-2xl mx-auto leading-relaxed">
           Fale com a Fraga Contabilidade e descubra qual solução faz mais sentido para o seu momento.
         </p>
-        <a href={link} target="_blank" rel="noopener" className="group inline-flex items-center gap-3 bg-gradient-accent text-accent-foreground px-9 py-5 rounded-2xl font-bold text-lg shadow-gold hover:shadow-glow transition-all hover:-translate-y-1">
-          <MessageCircle className="w-6 h-6" />
+        <PremiumButton
+          href={link}
+          variant="gold"
+          size="lg"
+          icon={<MessageCircle className="w-6 h-6" />}
+          trailingIcon={<ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />}
+          trackLocation="final_cta_click"
+          trackMessage="CTA Final"
+        >
           Falar com especialista pelo WhatsApp
-          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-        </a>
+        </PremiumButton>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-white/60">
           <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-accent-glow" /> Atendimento humano</div>
           <div className="flex items-center gap-2"><Award className="w-4 h-4 text-accent-glow" /> +50 anos de experiência</div>
@@ -784,6 +881,7 @@ function WhatsAppFloat() {
       target="_blank"
       rel="noopener"
       aria-label="Falar no WhatsApp"
+      onClick={() => trackConversion("floating_whatsapp_click")}
       className="fixed bottom-6 right-6 z-40 group"
     >
       <span className="absolute inset-0 rounded-full bg-whatsapp animate-glow-pulse" />
