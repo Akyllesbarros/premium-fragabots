@@ -514,12 +514,12 @@ function HistoryAuthority() {
    INTERACTIVE DIFFERENTIALS
    ============================================================ */
 const DIFFERENTIALS = [
-  { icon: Calculator, title: "Planejamento tributário seguro", desc: "Reduzimos a carga de impostos sempre dentro da legalidade, com análise profunda da operação.", media: "tributario" },
-  { icon: FileCheck, title: "Rotina contábil organizada", desc: "Processos claros, prazos cumpridos, zero surpresas no fim do mês.", media: "rotina" },
-  { icon: Users, title: "Departamento pessoal confiável", desc: "Folha, admissões, demissões e obrigações trabalhistas com método.", media: "dp" },
-  { icon: Wallet, title: "BPO financeiro para controle", desc: "Contas a pagar e a receber, conciliações e fluxo de caixa nas mãos de especialistas.", media: "bpo" },
-  { icon: Briefcase, title: "Abertura de empresas com orientação", desc: "Da constituição ao primeiro DAS, com escolha do regime tributário ideal.", media: "abertura" },
-  { icon: ShieldCheck, title: "Regularização fiscal com segurança", desc: "Pendências resolvidas com plano de ação claro e acompanhamento.", media: "reg" },
+  { icon: Calculator, title: "Planejamento tributário", desc: "Avaliamos se a empresa está no regime adequado e onde existem riscos, excessos ou oportunidades dentro da lei.", media: "tributario" },
+  { icon: FileCheck, title: "Rotina contábil", desc: "Apurações, guias, declarações e obrigações acessórias acompanhadas de perto, com prazos cumpridos e relatórios mensais.", media: "rotina" },
+  { icon: Users, title: "Departamento pessoal", desc: "Folha, admissões, desligamentos, eSocial e rotinas trabalhistas conduzidas por uma equipe dedicada.", media: "dp" },
+  { icon: Wallet, title: "BPO financeiro", desc: "Contas a pagar e a receber, conciliação bancária e fluxo de caixa organizados para a empresa decidir com dados reais.", media: "bpo" },
+  { icon: Briefcase, title: "Abertura de empresas", desc: "Orientação para abrir o CNPJ com a atividade certa, o enquadramento adequado e os primeiros passos contábeis organizados.", media: "abertura" },
+  { icon: ShieldCheck, title: "Regularização fiscal", desc: "Diagnóstico das pendências e plano de ação para devolver previsibilidade antes que pequenos problemas cresçam.", media: "reg" },
 ] as const;
 
 function InteractiveDifferentials() {
@@ -530,14 +530,14 @@ function InteractiveDifferentials() {
       <div className="mx-auto max-w-[1400px] px-4 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— Por que Fraga</div>
+            <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— O que a Fraga entrega</div>
             <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02]">
-              Tudo para sua empresa{" "}
-              <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>crescer com clareza</span>
+              Um time inteiro acompanhando a{" "}
+              <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>rotina</span>{" "}da sua empresa.
             </h2>
           </div>
           <div className="text-sm text-white/55 max-w-xs">
-            Passe o mouse ou toque em cada diferencial — o painel ao lado responde.
+            Clique em cada frente de trabalho para ver como ela funciona dentro da Fraga.
           </div>
         </div>
 
