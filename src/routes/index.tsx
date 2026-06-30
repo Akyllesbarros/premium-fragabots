@@ -33,34 +33,44 @@ function LandingPage() {
   useEffect(() => {
     console.log("[FragaLandingPage]", "mounted");
   }, []);
+  const stack: React.ReactNode[] = [
+    <Hero key="hero" />,
+    <Manifesto key="manifesto" />,
+    <HistoryAuthority key="history" />,
+    <InteractiveDifferentials key="diffs" />,
+    <NumberedServices key="services" />,
+    <WhatsAppJourney key="wa" />,
+    <StageSolutions key="stage" />,
+    <VideoTestimonials key="testi" />,
+    <CommunityTrust key="trust" />,
+    <Plans key="plans" />,
+    <Insights key="insights" />,
+    <Faq key="faq" />,
+    <FinalCta key="cta" />,
+    <Footer key="footer" />,
+  ];
   return (
     <div className="min-h-screen bg-[oklch(0.13_0.025_220)] text-white selection:bg-accent/40 overflow-x-hidden">
       <ScrollProgress />
       <Header />
-      <Hero />
-      <Layer bg="bg-[oklch(0.1_0.02_220)]"><Manifesto /></Layer>
-      <Layer bg="bg-[oklch(0.97_0.008_200)] text-foreground"><HistoryAuthority /></Layer>
-      <Layer bg="bg-[oklch(0.13_0.025_220)]"><InteractiveDifferentials /></Layer>
-      <Layer bg="bg-[oklch(0.97_0.008_200)] text-foreground"><NumberedServices /></Layer>
-      <Layer bg="bg-[oklch(0.13_0.025_220)]"><WhatsAppJourney /></Layer>
-      <Layer bg="bg-[oklch(0.97_0.008_200)] text-foreground"><StageSolutions /></Layer>
-      <Layer bg="bg-[oklch(0.1_0.02_220)]"><VideoTestimonials /></Layer>
-      <Layer bg="bg-[oklch(0.97_0.008_200)] text-foreground"><CommunityTrust /></Layer>
-      <Layer bg="bg-[oklch(0.13_0.025_220)]"><Plans /></Layer>
-      <Layer bg="bg-[oklch(0.97_0.008_200)] text-foreground"><Insights /></Layer>
-      <Layer bg="bg-[oklch(0.13_0.025_220)]"><Faq /></Layer>
-      <FinalCta />
-      <Footer />
+      <div className="fraga-scroll-page">
+        {stack.map((node, i) => (
+          <div
+            key={(node as { key?: string }).key ?? i}
+            className="fraga-stack-section"
+            style={{ zIndex: 10 + i }}
+            data-stack-index={i}
+          >
+            {node}
+          </div>
+        ))}
+      </div>
       <FloatingWhatsApp />
     </div>
   );
 }
 
-function Layer({ bg, children }: { bg: string; children: React.ReactNode }) {
-  return (
-    <section className={`stack-section relative ${bg}`}>{children}</section>
-  );
-}
+// Layer wrapper removed in favor of fraga-stack-section in LandingPage.
 
 /* ============================================================
    Reveal hook & counter
