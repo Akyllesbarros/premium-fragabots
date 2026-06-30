@@ -6,31 +6,31 @@ import { ScrollReveal, SplitTextReveal } from "./motion/kinetic";
 const stages = [
   {
     n: "01",
-    label: "Improviso",
-    title: "Decisão sem camada jurídica.",
-    body: "A empresa cresce e cada decisão importante passa por planilha, conversa e bom senso — sem registro defensável.",
+    label: "Como começa",
+    title: "Contabilidade no piloto automático.",
+    body: "A empresa recebe guias por e-mail, paga e segue. Não sabe ao certo se está no regime certo, se há imposto a recuperar ou se há risco fiscal acumulado.",
     side: "right",
   },
   {
     n: "02",
-    label: "Risco invisível",
-    title: "Passivo que ninguém vê.",
-    body: "Contratos genéricos, marca exposta, sócios sem acordo. O risco não aparece — até virar custo, processo ou perda de ativo.",
+    label: "Sinal de alerta",
+    title: "Os números não batem com o que o empresário sente.",
+    body: "Caixa apertado mesmo com bom faturamento, surpresas com impostos, folha com erros e relatórios que não ajudam a decidir nada.",
     side: "left",
   },
   {
     n: "03",
-    label: "Estrutura jurídica",
-    title: "Base que sustenta a operação.",
-    body: "Contratos modelados sobre o fluxo real, marca registrada e monitorada, governança escrita, política mínima implementada.",
+    label: "Como trabalhamos",
+    title: "Contabilidade conduzida de perto, com método.",
+    body: "Diagnóstico, revisão fiscal, rotina mensal cumprida em dia, BPO financeiro organizado e reuniões para que os números deixem de ser obrigação e voltem a ser ferramenta.",
     side: "right",
     big: true,
   },
   {
     n: "04",
-    label: "Crescimento seguro",
-    title: "Decisão rápida, defensável e replicável.",
-    body: "A empresa decide mais rápido porque a base jurídica já antecipou o problema. Escala sem acumular passivo.",
+    label: "O que muda",
+    title: "O empresário decide com clareza, não no escuro.",
+    body: "Impostos em ordem, prazos cumpridos, indicadores reais e uma equipe técnica acessível pelo WhatsApp para as dúvidas do dia a dia.",
     side: "left",
   },
 ];
@@ -51,12 +51,12 @@ export function ProblemRiskSolution() {
         <div className="grid gap-10 lg:grid-cols-12 mb-20">
           <div className="lg:col-span-9">
             <ScrollReveal>
-              <Eyebrow>Improviso → Risco → Estrutura → Crescimento</Eyebrow>
+              <Eyebrow>Como começa → Como trabalhamos → O que muda</Eyebrow>
             </ScrollReveal>
             <h2 className="font-display text-[clamp(2.2rem,5.4vw,5rem)] leading-[0.98] tracking-[-0.03em] text-bone mt-6">
               <SplitTextReveal
-                text="O problema não é o processo. É a ausência de estrutura."
-                highlight={["estrutura."]}
+                text="Quem trabalha com a Fraga conta com clareza nos números."
+                highlight={["clareza"]}
               />
             </h2>
           </div>
