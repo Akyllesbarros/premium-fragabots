@@ -29,9 +29,9 @@ type ButtonProps = CommonProps & {
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-gradient-primary text-primary-foreground shadow-elegant hover:shadow-glow",
+    "fraga-shiny text-white shadow-elegant hover:shadow-glow",
   gold:
-    "bg-gradient-accent text-accent-foreground shadow-gold hover:shadow-glow",
+    "fraga-shiny fraga-shiny--gold text-white shadow-gold hover:shadow-glow",
   secondary:
     "glass text-foreground hover:bg-white hover:text-primary-deep",
   ghost:
@@ -95,17 +95,19 @@ export const PremiumButton = forwardRef<HTMLElement, AnchorProps | ButtonProps>(
     };
 
     const cls = `${base} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
+    const isShiny = variant === "primary" || variant === "gold";
     const inner = (
       <>
-        <span
+        {isShiny && <span aria-hidden className="fraga-shiny__glow" />}
+        {!isShiny && <span
           aria-hidden
           className="pointer-events-none absolute inset-0 rounded-[inherit] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
           style={{
             background:
               "radial-gradient(180px circle at var(--gx,50%) var(--gy,50%), rgba(255,255,255,0.28), transparent 60%)",
           }}
-        />
-        <span
+        />}
+        {!isShiny && <span
           aria-hidden
           className="pointer-events-none absolute -inset-px rounded-[inherit] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
           style={{
@@ -115,8 +117,8 @@ export const PremiumButton = forwardRef<HTMLElement, AnchorProps | ButtonProps>(
             animation: "fraga-shine 1.6s ease-in-out infinite",
             mixBlendMode: "overlay",
           }}
-        />
-        <span className="relative flex items-center gap-2">
+        />}
+        <span className={isShiny ? "fraga-shiny__label" : "relative flex items-center gap-2"}>
           {icon}
           <span>{children}</span>
           {trailingIcon}
