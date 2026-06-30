@@ -940,12 +940,9 @@ function StageSolutions() {
               <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">Como a Fraga atua</div>
               <h3 className="font-display text-3xl lg:text-4xl font-bold tracking-tight mb-5">{st.title}</h3>
               <p className="text-foreground/70 text-lg leading-relaxed mb-7">{st.desc}</p>
-              <div className="rounded-2xl border border-accent/30 bg-accent/10 p-5 mb-8 flex items-start gap-3">
-                <Check className="w-5 h-5 text-accent-foreground mt-0.5" />
-                <div>
-                  <div className="text-[11px] uppercase tracking-[0.2em] font-bold text-accent-foreground/80">O que muda na prática</div>
-                  <div className="font-display font-bold text-lg text-foreground">{st.benefit}</div>
-                </div>
+              <div className="rounded-2xl border-l-2 border-accent bg-accent/5 p-5 mb-8">
+                <div className="text-[10px] uppercase tracking-[0.22em] font-bold text-accent-foreground/80 mb-1">O que muda na prática</div>
+                <div className="font-display font-bold text-lg text-foreground">{st.benefit}</div>
               </div>
               <PremiumButton
                 href={waLink(st.msg)}
