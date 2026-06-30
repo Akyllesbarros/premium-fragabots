@@ -10,7 +10,6 @@ import { AboutAuthority } from "@/components/rdlf/AboutAuthority";
 import { FAQ } from "@/components/rdlf/FAQ";
 import { FinalCTA } from "@/components/rdlf/FinalCTA";
 import { CinematicRDLFFooter } from "@/components/rdlf/CinematicRDLFFooter";
-import { Preloader } from "@/components/rdlf/Preloader";
 import { FloatingWhatsAppButton } from "@/components/rdlf/FloatingWhatsAppButton";
 
 export const Route = createFileRoute("/")({
@@ -28,7 +27,6 @@ export const Route = createFileRoute("/")({
 function LandingPage() {
   return (
     <div className="rdlf-site-shell">
-      <Preloader />
       <Header />
       <main className="text-foreground">
         <Hero />
