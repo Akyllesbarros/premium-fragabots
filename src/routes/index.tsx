@@ -804,7 +804,7 @@ function StepItem({ index, text }: { index: number; text: string }) {
         0{index + 1}
       </span>
       <span className="text-white/80 font-medium">{text}</span>
-      <span className="ml-auto"><Check className="w-4 h-4 text-[oklch(0.78_0.18_145)]" /></span>
+      <span aria-hidden className="ml-auto h-px w-8 bg-[oklch(0.78_0.18_145)]/60" />
     </li>
   );
 }
