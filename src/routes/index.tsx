@@ -1,10 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import {
-  ArrowUpRight, ArrowRight, MessageCircle, Plus, Minus, Check,
-  ShieldCheck, FileCheck, Wallet, Users, Briefcase,
-  Calculator, Building2, Star,
-  MapPin, Phone, Mail, Clock, Menu, X,
+  ArrowUpRight, ArrowRight, MessageCircle, Menu, X,
 } from "lucide-react";
 import { waLink, trackConversion } from "@/lib/whatsapp";
 import { PremiumButton } from "@/components/fraga/PremiumButton";
@@ -367,8 +364,8 @@ function HeroComposition({ mouse }: { mouse: { x: number; y: number } }) {
         style={tx(-0.8)}
       >
         <div className="flex items-center gap-2 mb-2">
-          <ShieldCheck className="w-4 h-4 text-accent" />
-          <div className="text-[11px] uppercase tracking-wider text-white/50 font-semibold">Conformidade</div>
+          <span className="h-px w-6 bg-accent" />
+          <div className="text-[10px] uppercase tracking-[0.22em] text-white/50 font-semibold">Conformidade</div>
         </div>
         <div className="font-display text-3xl font-bold text-white">100<span className="text-accent">%</span></div>
         <div className="text-[11px] text-white/55">obrigações em dia</div>
@@ -379,8 +376,8 @@ function HeroComposition({ mouse }: { mouse: { x: number; y: number } }) {
         style={tx(-0.6)}
       >
         <div className="flex items-center gap-2 mb-2">
-          <FileCheck className="w-4 h-4" />
-          <div className="text-[11px] uppercase tracking-wider font-bold">Relatório do mês</div>
+          <span className="h-px w-6 bg-current opacity-60" />
+          <div className="text-[10px] uppercase tracking-[0.22em] font-bold">Relatório do mês</div>
         </div>
         <div className="font-display text-base font-bold leading-tight">
           Apuração fiscal, folha e DCTF entregues no prazo.
@@ -393,8 +390,8 @@ function HeroComposition({ mouse }: { mouse: { x: number; y: number } }) {
         style={{ ...tx(0.9), animationDelay: "1.2s" }}
       >
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-gradient-accent flex items-center justify-center">
-            <Star className="w-4 h-4 fill-accent-foreground text-accent-foreground" />
+          <div className="w-10 h-10 rounded-full bg-gradient-accent flex items-center justify-center font-display font-black text-accent-foreground text-sm">
+            G
           </div>
           <div>
             <div className="font-display text-base font-bold text-white">4,9/5</div>
@@ -474,7 +471,7 @@ function HistoryAuthority() {
               <div className="absolute inset-0 p-8 flex flex-col justify-between">
                 <div className="flex items-center justify-between text-white">
                   <div className="font-display text-xl font-bold">Desde<br/>1974</div>
-                  <Building2 className="w-7 h-7 opacity-70" />
+                  <span className="text-[10px] uppercase tracking-[0.28em] text-white/55">Fraga · ES</span>
                 </div>
                 <div className="text-white">
                   <div className="font-display text-6xl font-black tracking-tight">F</div>
@@ -514,12 +511,12 @@ function HistoryAuthority() {
    INTERACTIVE DIFFERENTIALS
    ============================================================ */
 const DIFFERENTIALS = [
-  { icon: Calculator, title: "Planejamento tributário", desc: "Avaliamos se a empresa está no regime adequado e onde existem riscos, excessos ou oportunidades dentro da lei.", media: "tributario" },
-  { icon: FileCheck, title: "Rotina contábil", desc: "Apurações, guias, declarações e obrigações acessórias acompanhadas de perto, com prazos cumpridos e relatórios mensais.", media: "rotina" },
-  { icon: Users, title: "Departamento pessoal", desc: "Folha, admissões, desligamentos, eSocial e rotinas trabalhistas conduzidas por uma equipe dedicada.", media: "dp" },
-  { icon: Wallet, title: "BPO financeiro", desc: "Contas a pagar e a receber, conciliação bancária e fluxo de caixa organizados para a empresa decidir com dados reais.", media: "bpo" },
-  { icon: Briefcase, title: "Abertura de empresas", desc: "Orientação para abrir o CNPJ com a atividade certa, o enquadramento adequado e os primeiros passos contábeis organizados.", media: "abertura" },
-  { icon: ShieldCheck, title: "Regularização fiscal", desc: "Diagnóstico das pendências e plano de ação para devolver previsibilidade antes que pequenos problemas cresçam.", media: "reg" },
+  { title: "Planejamento tributário", desc: "Avaliamos se a empresa está no regime adequado e onde existem riscos, excessos ou oportunidades dentro da lei.", media: "tributario" },
+  { title: "Rotina contábil", desc: "Apurações, guias, declarações e obrigações acessórias acompanhadas de perto, com prazos cumpridos e relatórios mensais.", media: "rotina" },
+  { title: "Departamento pessoal", desc: "Folha, admissões, desligamentos, eSocial e rotinas trabalhistas conduzidas por uma equipe dedicada.", media: "dp" },
+  { title: "BPO financeiro", desc: "Contas a pagar e a receber, conciliação bancária e fluxo de caixa organizados para a empresa decidir com dados reais.", media: "bpo" },
+  { title: "Abertura de empresas", desc: "Orientação para abrir o CNPJ com a atividade certa, o enquadramento adequado e os primeiros passos contábeis organizados.", media: "abertura" },
+  { title: "Regularização fiscal", desc: "Diagnóstico das pendências e plano de ação para devolver previsibilidade antes que pequenos problemas cresçam.", media: "reg" },
 ] as const;
 
 function InteractiveDifferentials() {
@@ -557,14 +554,14 @@ function InteractiveDifferentials() {
                         : "border-white/10 hover:border-white/25 hover:bg-white/[0.02]"
                     }`}
                   >
-                    <span className={`flex h-11 w-11 items-center justify-center rounded-xl transition-colors ${isActive ? "bg-accent text-accent-foreground" : "bg-white/5 text-white/70"}`}>
-                      <d.icon className="w-5 h-5" />
+                    <span className={`font-display font-bold text-sm tabular-nums tracking-[0.1em] transition-colors ${isActive ? "text-accent-glow" : "text-white/40"}`}>
+                      0{i + 1}
                     </span>
                     <div className="flex-1 min-w-0">
                       <div className={`font-display text-lg font-bold transition-colors ${isActive ? "text-white" : "text-white/80"}`}>{d.title}</div>
                       <div className={`text-sm leading-relaxed transition-colors ${isActive ? "text-white/70" : "text-white/45"}`}>{d.desc}</div>
                     </div>
-                    <ArrowUpRight className={`w-5 h-5 transition-all ${isActive ? "text-accent translate-x-0 translate-y-0" : "text-white/30 -translate-x-1 translate-y-1"}`} />
+                    <ArrowUpRight strokeWidth={1.5} className={`w-5 h-5 transition-all ${isActive ? "text-accent translate-x-0 translate-y-0" : "text-white/30 -translate-x-1 translate-y-1"}`} />
                   </button>
                 </li>
               );
@@ -583,12 +580,12 @@ function InteractiveDifferentials() {
             {DIFFERENTIALS.map((d, i) => (
               <details key={d.title} className="group rounded-2xl border border-white/10 bg-white/[0.03] p-5">
                 <summary className="flex items-center gap-4 cursor-pointer list-none">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-white/70 group-open:bg-accent group-open:text-accent-foreground transition-colors">
-                    <d.icon className="w-5 h-5" />
+                  <span className="font-display text-sm font-bold tabular-nums text-white/50 group-open:text-accent-glow transition-colors">
+                    0{i + 1}
                   </span>
                   <span className="font-display font-bold flex-1">{d.title}</span>
-                  <Plus className="w-5 h-5 text-white/50 group-open:hidden" />
-                  <Minus className="w-5 h-5 text-white/50 hidden group-open:block" />
+                  <span className="text-white/50 text-xl leading-none font-light group-open:hidden">+</span>
+                  <span className="text-white/50 text-xl leading-none font-light hidden group-open:block">−</span>
                 </summary>
                 <p className="mt-4 text-sm text-white/65 leading-relaxed">{d.desc}</p>
               </details>
@@ -609,8 +606,8 @@ function DifferentialPreview({ item }: { item: (typeof DIFFERENTIALS)[number] })
         <span>0{DIFFERENTIALS.findIndex(d => d.media === item.media) + 1}</span>
       </div>
       <div className="relative flex-1 flex flex-col justify-center">
-        <div className="w-16 h-16 rounded-2xl bg-gradient-accent flex items-center justify-center shadow-gold mb-7">
-          <item.icon className="w-7 h-7 text-accent-foreground" />
+        <div className="font-display text-7xl font-black text-gradient-gold leading-none mb-7 tabular-nums">
+          0{DIFFERENTIALS.findIndex(d => d.media === item.media) + 1}
         </div>
         <h3 className="font-display text-3xl font-bold text-white tracking-tight mb-4">{item.title}</h3>
         <p className="text-white/65 text-base leading-relaxed">{item.desc}</p>
@@ -630,12 +627,12 @@ function DifferentialPreview({ item }: { item: (typeof DIFFERENTIALS)[number] })
    NUMBERED SERVICES (Padelix-style)
    ============================================================ */
 const SERVICES = [
-  { n: "01", title: "Abertura de Empresas", desc: "Orientação para abrir o CNPJ com enquadramento adequado, definição de atividade, regime tributário e primeiros passos contábeis organizados.", benefit: "Começar pagando o imposto certo, sem retrabalho lá na frente.", msg: "Olá, vim pela landing page e quero falar sobre abertura de empresa com a Fraga.", icon: Briefcase },
-  { n: "02", title: "Planejamento Tributário", desc: "Análise para entender se a empresa está no regime adequado e onde existem riscos, excessos ou oportunidades dentro da lei.", benefit: "Mais clareza sobre o que se paga e por quê.", msg: "Olá, vim pela landing page e quero falar sobre planejamento tributário com a Fraga.", icon: Calculator },
-  { n: "03", title: "Assessoria Contábil", desc: "Rotina contábil, fiscal e gerencial organizada para que o empresário tenha clareza sobre obrigações e resultados.", benefit: "Obrigações em dia e relatórios que ajudam a decidir.", msg: "Olá, vim pela landing page e quero falar sobre assessoria contábil com a Fraga.", icon: FileCheck },
-  { n: "04", title: "Departamento Pessoal", desc: "Apoio nas rotinas trabalhistas, folha, admissões, desligamentos e obrigações relacionadas à equipe.", benefit: "A equipe administrada com método e prazos cumpridos.", msg: "Olá, vim pela landing page e quero falar sobre departamento pessoal com a Fraga.", icon: Users },
-  { n: "05", title: "BPO Financeiro", desc: "Organização de contas, controles e informações financeiras para dar mais previsibilidade à gestão.", benefit: "Caixa sob controle e relatórios que mostram o real.", msg: "Olá, vim pela landing page e quero falar sobre BPO financeiro com a Fraga.", icon: Wallet },
-  { n: "06", title: "Regularização Fiscal", desc: "Diagnóstico e condução de pendências fiscais para recuperar previsibilidade e evitar que problemas cresçam.", benefit: "Pendências resolvidas com um plano claro de ação.", msg: "Olá, vim pela landing page e quero falar sobre regularização fiscal com a Fraga.", icon: ShieldCheck },
+  { n: "01", title: "Abertura de Empresas", desc: "Orientação para abrir o CNPJ com enquadramento adequado, definição de atividade, regime tributário e primeiros passos contábeis organizados.", benefit: "Começar pagando o imposto certo, sem retrabalho lá na frente.", msg: "Olá, vim pela landing page e quero falar sobre abertura de empresa com a Fraga." },
+  { n: "02", title: "Planejamento Tributário", desc: "Análise para entender se a empresa está no regime adequado e onde existem riscos, excessos ou oportunidades dentro da lei.", benefit: "Mais clareza sobre o que se paga e por quê.", msg: "Olá, vim pela landing page e quero falar sobre planejamento tributário com a Fraga." },
+  { n: "03", title: "Assessoria Contábil", desc: "Rotina contábil, fiscal e gerencial organizada para que o empresário tenha clareza sobre obrigações e resultados.", benefit: "Obrigações em dia e relatórios que ajudam a decidir.", msg: "Olá, vim pela landing page e quero falar sobre assessoria contábil com a Fraga." },
+  { n: "04", title: "Departamento Pessoal", desc: "Apoio nas rotinas trabalhistas, folha, admissões, desligamentos e obrigações relacionadas à equipe.", benefit: "A equipe administrada com método e prazos cumpridos.", msg: "Olá, vim pela landing page e quero falar sobre departamento pessoal com a Fraga." },
+  { n: "05", title: "BPO Financeiro", desc: "Organização de contas, controles e informações financeiras para dar mais previsibilidade à gestão.", benefit: "Caixa sob controle e relatórios que mostram o real.", msg: "Olá, vim pela landing page e quero falar sobre BPO financeiro com a Fraga." },
+  { n: "06", title: "Regularização Fiscal", desc: "Diagnóstico e condução de pendências fiscais para recuperar previsibilidade e evitar que problemas cresçam.", benefit: "Pendências resolvidas com um plano claro de ação.", msg: "Olá, vim pela landing page e quero falar sobre regularização fiscal com a Fraga." },
 ];
 
 function NumberedServices() {
@@ -688,8 +685,8 @@ function NumberedServices() {
               <div key={s.n} className="rounded-[2rem] overflow-hidden border border-border bg-gradient-to-br from-[oklch(0.99_0.005_200)] to-[oklch(0.94_0.018_200)] shadow-elegant p-8 animate-fade-in">
                 <div className="flex items-center justify-between mb-6">
                   <div className="font-display text-5xl font-black text-gradient-primary">{s.n}</div>
-                  <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center shadow-elegant">
-                    <s.icon className="w-5 h-5 text-primary-foreground" />
+                  <div className="text-[10px] uppercase tracking-[0.22em] font-semibold text-foreground/45">
+                    Serviço Fraga
                   </div>
                 </div>
                 <h3 className="font-display text-2xl font-bold mb-3 text-foreground">{s.title}</h3>
@@ -720,8 +717,8 @@ function NumberedServices() {
                 <summary className="flex items-center gap-4 cursor-pointer list-none">
                   <span className="font-display text-xl font-bold text-primary">{it.n}</span>
                   <span className="font-display font-bold flex-1 text-foreground">{it.title}</span>
-                  <Plus className="w-5 h-5 text-foreground/40 group-open:hidden" />
-                  <Minus className="w-5 h-5 text-foreground/40 hidden group-open:block" />
+                  <span className="text-foreground/40 text-xl leading-none font-light group-open:hidden">+</span>
+                  <span className="text-foreground/40 text-xl leading-none font-light hidden group-open:block">−</span>
                 </summary>
                 <div className="mt-4 space-y-3">
                   <p className="text-sm text-foreground/65 leading-relaxed">{it.desc}</p>
@@ -807,7 +804,7 @@ function StepItem({ index, text }: { index: number; text: string }) {
         0{index + 1}
       </span>
       <span className="text-white/80 font-medium">{text}</span>
-      <span className="ml-auto"><Check className="w-4 h-4 text-[oklch(0.78_0.18_145)]" /></span>
+      <span aria-hidden className="ml-auto h-px w-8 bg-[oklch(0.78_0.18_145)]/60" />
     </li>
   );
 }
@@ -943,12 +940,9 @@ function StageSolutions() {
               <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">Como a Fraga atua</div>
               <h3 className="font-display text-3xl lg:text-4xl font-bold tracking-tight mb-5">{st.title}</h3>
               <p className="text-foreground/70 text-lg leading-relaxed mb-7">{st.desc}</p>
-              <div className="rounded-2xl border border-accent/30 bg-accent/10 p-5 mb-8 flex items-start gap-3">
-                <Check className="w-5 h-5 text-accent-foreground mt-0.5" />
-                <div>
-                  <div className="text-[11px] uppercase tracking-[0.2em] font-bold text-accent-foreground/80">O que muda na prática</div>
-                  <div className="font-display font-bold text-lg text-foreground">{st.benefit}</div>
-                </div>
+              <div className="rounded-2xl border-l-2 border-accent bg-accent/5 p-5 mb-8">
+                <div className="text-[10px] uppercase tracking-[0.22em] font-bold text-accent-foreground/80 mb-1">O que muda na prática</div>
+                <div className="font-display font-bold text-lg text-foreground">{st.benefit}</div>
               </div>
               <PremiumButton
                 href={waLink(st.msg)}
@@ -1007,9 +1001,9 @@ function VideoTestimonials() {
    ============================================================ */
 function CommunityTrust() {
   const items = [
-    { icon: MessageCircle, title: "Atendimento por pessoas, não por robô", desc: "Quem responde no WhatsApp e nas reuniões faz parte da equipe técnica da Fraga." },
-    { icon: Clock, title: "Clientes que ficam por muitos anos", desc: "Boa parte da carteira está com a Fraga há mais de uma década, alguns desde a fundação." },
-    { icon: FileCheck, title: "Foco no que é obrigação contábil", desc: "Apuração, folha, obrigações acessórias e relatórios entregues no prazo, todo mês." },
+    { kicker: "Atendimento", title: "Atendimento por pessoas, não por robô", desc: "Quem responde no WhatsApp e nas reuniões faz parte da equipe técnica da Fraga." },
+    { kicker: "Permanência", title: "Clientes que ficam por muitos anos", desc: "Boa parte da carteira está com a Fraga há mais de uma década, alguns desde a fundação." },
+    { kicker: "Método", title: "Foco no que é obrigação contábil", desc: "Apuração, folha, obrigações acessórias e relatórios entregues no prazo, todo mês." },
   ];
   return (
     <div className="py-24 lg:py-36">
@@ -1024,15 +1018,14 @@ function CommunityTrust() {
         <div className="grid md:grid-cols-3 gap-5">
           {items.map((it, i) => (
             <RevealCard key={it.title} delay={i * 120}>
-              <div className="relative rounded-3xl border border-border bg-card p-8 h-full shadow-card hover:shadow-elegant transition-all hover:-translate-y-1 overflow-hidden group">
-                <div className="absolute -top-16 -right-16 w-40 h-40 rounded-full bg-primary-glow/10 blur-3xl group-hover:bg-primary-glow/20 transition-all" />
-                <div className="relative">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-elegant mb-6">
-                    <it.icon className="w-6 h-6 text-primary-foreground" />
-                  </div>
-                  <h3 className="font-display text-xl font-bold mb-3">{it.title}</h3>
-                  <p className="text-sm text-foreground/65 leading-relaxed">{it.desc}</p>
+              <div className="relative h-full rounded-2xl border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-foreground/30">
+                <div className="flex items-baseline gap-3 mb-6">
+                  <span className="font-display text-sm font-bold tabular-nums text-primary">0{i + 1}</span>
+                  <span className="h-px flex-1 bg-border" />
+                  <span className="text-[10px] uppercase tracking-[0.22em] font-semibold text-foreground/45">{it.kicker}</span>
                 </div>
+                <h3 className="font-display text-xl font-bold mb-3 leading-tight">{it.title}</h3>
+                <p className="text-sm text-foreground/65 leading-relaxed">{it.desc}</p>
               </div>
             </RevealCard>
           ))}
@@ -1103,9 +1096,7 @@ function Plans() {
                   <ul className="space-y-2.5 mb-7 flex-1">
                     {p.features.map(f => (
                       <li key={f} className={`flex items-start gap-2 text-sm ${isFeatured ? "text-accent-foreground/90" : "text-white/85"}`}>
-                        <span className={`mt-0.5 flex h-4 w-4 items-center justify-center rounded-full ${isFeatured ? "bg-accent-foreground/20" : "bg-accent/20"}`}>
-                          <Check className={`w-2.5 h-2.5 ${isFeatured ? "text-accent-foreground" : "text-accent"}`} strokeWidth={3} />
-                        </span>
+                        <span aria-hidden className={`mt-2 h-px w-3 flex-shrink-0 ${isFeatured ? "bg-accent-foreground/60" : "bg-accent/70"}`} />
                         {f}
                       </li>
                     ))}
@@ -1236,7 +1227,7 @@ function Faq() {
                   >
                     <span className="font-display font-bold text-lg lg:text-xl text-white flex-1 group-hover:text-accent-glow transition-colors">{f.q}</span>
                     <span className={`flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/70 transition-all ${isOpen ? "bg-accent text-accent-foreground border-accent rotate-180" : ""}`}>
-                      <Plus className="w-4 h-4" />
+                      <span className="text-lg leading-none font-light">+</span>
                     </span>
                   </button>
                   <div
@@ -1284,7 +1275,7 @@ function FinalCta() {
       }} />
       <div className="relative mx-auto max-w-5xl px-4 lg:px-8 py-28 lg:py-40 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-medium text-white/70 backdrop-blur mb-8">
-          <MessageCircle className="w-3 h-3 text-accent" />
+          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
           Atendimento direto · sem formulário
         </div>
         <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.0] mb-8 text-white">
@@ -1306,9 +1297,11 @@ function FinalCta() {
           Chamar a Fraga no WhatsApp
         </PremiumButton>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-white/55">
-          <span className="inline-flex items-center gap-2"><Phone className="w-4 h-4 text-accent" /> (27) 98848-2268</span>
-          <span className="inline-flex items-center gap-2"><MapPin className="w-4 h-4 text-accent" /> Vila Velha · ES</span>
-          <span className="inline-flex items-center gap-2"><Clock className="w-4 h-4 text-accent" /> Resposta rápida no WhatsApp</span>
+          <span><span className="text-[10px] uppercase tracking-[0.22em] text-accent-glow/80 mr-2">Tel.</span> (27) 98848-2268</span>
+          <span className="text-white/30">·</span>
+          <span><span className="text-[10px] uppercase tracking-[0.22em] text-accent-glow/80 mr-2">Sede</span> Vila Velha · ES</span>
+          <span className="text-white/30">·</span>
+          <span><span className="text-[10px] uppercase tracking-[0.22em] text-accent-glow/80 mr-2">Resposta</span> rápida no WhatsApp</span>
         </div>
       </div>
     </section>
@@ -1332,10 +1325,10 @@ function Footer() {
           <div className="lg:col-span-3">
             <div className="text-[11px] uppercase tracking-[0.22em] text-white/40 mb-4 font-semibold">Contato</div>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-accent" /> (27) 98848-2268</li>
-              <li className="flex items-center gap-2"><MessageCircle className="w-4 h-4 text-accent" /> WhatsApp</li>
-              <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-accent" /> contato@fragacontabilidade.com.br</li>
-              <li className="flex items-start gap-2"><MapPin className="w-4 h-4 text-accent mt-0.5" /> Vila Velha · Espírito Santo</li>
+              <li><span className="text-[10px] uppercase tracking-[0.22em] text-white/40 mr-2">Tel.</span>(27) 98848-2268</li>
+              <li><span className="text-[10px] uppercase tracking-[0.22em] text-white/40 mr-2">WhatsApp</span>(27) 98848-2268</li>
+              <li><span className="text-[10px] uppercase tracking-[0.22em] text-white/40 mr-2">E-mail</span>contato@fragacontabilidade.com.br</li>
+              <li><span className="text-[10px] uppercase tracking-[0.22em] text-white/40 mr-2">Sede</span>Vila Velha · Espírito Santo</li>
             </ul>
           </div>
           <div className="lg:col-span-4">
