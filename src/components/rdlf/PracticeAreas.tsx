@@ -13,55 +13,57 @@ type Area = {
   link: string;
 };
 
+const baseWa = "https://wa.me/5527988482268?text=Olá,%20vim%20pela%20landing%20page%20da%20Fraga%20e%20gostaria%20de%20saber%20mais%20sobre%20";
+
 const featured: Area = {
   n: "01",
-  title: "Propriedade Intelectual",
-  desc: "Marca tratada como ativo estratégico — não como tarefa de cartório.",
-  tag: "Ativo estratégico",
-  items: ["Registro INPI", "Monitoramento contínuo", "Defesa e oposições"],
-  link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Propriedade%20Intelectual%20na%20Fraga.",
+  title: "Planejamento tributário",
+  desc: "Avaliamos se a empresa está no regime adequado e onde existem riscos, excessos ou oportunidades dentro da lei.",
+  tag: "Decisão com clareza",
+  items: ["Análise de regime", "Simulação de cenários", "Acompanhamento mensal"],
+  link: baseWa + "Planejamento%20Tribut%C3%A1rio.",
 };
 
 const areas: Area[] = [
   {
     n: "02",
-    title: "Contratos Empresariais",
-    desc: "Modelagem contratual sobre o fluxo real do negócio.",
-    tag: "Previsibilidade",
-    items: ["Redação crítica", "Revisão", "Negociação assistida"],
-    link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Contratos%20Empresariais%20na%20Fraga.",
+    title: "Rotina contábil",
+    desc: "Apurações, guias, declarações e obrigações acessórias acompanhadas de perto, com prazos cumpridos e relatórios mensais.",
+    tag: "Sem atraso",
+    items: ["Apuração de impostos", "Obrigações acessórias", "Relatórios mensais"],
+    link: baseWa + "Rotina%20Cont%C3%A1bil.",
   },
   {
     n: "03",
-    title: "Consultoria Preventiva",
-    desc: "Jurídico como camada da decisão empresarial.",
-    tag: "Decisão segura",
-    items: ["Pareceres rápidos", "Hotline jurídica"],
-    link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Consultoria%20Preventiva%20na%20Fraga.",
+    title: "Departamento pessoal",
+    desc: "Folha, admissões, desligamentos, eSocial e rotinas trabalhistas conduzidas por uma equipe dedicada.",
+    tag: "Folha em dia",
+    items: ["Folha de pagamento", "eSocial", "Admissões e rescisões"],
+    link: baseWa + "Departamento%20Pessoal.",
   },
   {
     n: "04",
-    title: "Estruturação de Negócios",
-    desc: "Societário, governança e desenho operacional.",
-    tag: "Base sólida",
-    items: ["Acordo de sócios", "Reorganização"],
-    link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Estrutura%C3%A7%C3%A3o%20de%20Neg%C3%B3cios%20na%20Fraga.",
+    title: "BPO financeiro",
+    desc: "Contas a pagar e a receber, conciliação bancária e fluxo de caixa organizados para a empresa decidir com dados reais.",
+    tag: "Caixa organizado",
+    items: ["Contas a pagar", "Conciliação bancária", "Fluxo de caixa"],
+    link: baseWa + "BPO%20Financeiro.",
   },
   {
     n: "05",
-    title: "Compliance & ESG Documental",
-    desc: "Políticas mínimas para escalar com auditabilidade.",
-    tag: "Auditável",
-    items: ["Políticas internas", "LGPD aplicada"],
-    link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Compliance%20e%20ESG%20Documental%20na%20Fraga.",
+    title: "Abertura e regularização",
+    desc: "Abertura de CNPJ, troca de regime, regularização fiscal e tudo o que prepara a empresa para operar sem pendências.",
+    tag: "Estrutura desde o início",
+    items: ["Abertura de CNPJ", "Alterações contratuais", "Regularização"],
+    link: baseWa + "Abertura%20e%20Regulariza%C3%A7%C3%A3o.",
   },
   {
     n: "06",
-    title: "Resolução Extrajudicial",
-    desc: "Negociação antes da judicialização do conflito.",
-    tag: "Composição",
-    items: ["Notificações", "Mediação", "Acordos"],
-    link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Resolu%C3%A7%C3%A3o%20Extrajudicial%20na%20Fraga.",
+    title: "Consultoria empresarial",
+    desc: "Apoio na leitura de números, indicadores e decisões de investimento — para crescer com base no que os relatórios dizem.",
+    tag: "Decidir com dado",
+    items: ["Leitura de indicadores", "Cenários", "Reuniões periódicas"],
+    link: baseWa + "Consultoria%20Empresarial.",
   },
 ];
 
@@ -78,8 +80,8 @@ export function PracticeAreas() {
             </ScrollReveal>
             <ScrollReveal delay={0.08}>
               <SectionTitle className="mt-5">
-                Seis áreas integradas — um único{" "}
-                <span className="italic text-[color:var(--gold-light)]">sistema jurídico</span>.
+                Seis frentes integradas — uma única{" "}
+                <span className="italic text-[color:var(--gold-light)]">contabilidade</span>.
               </SectionTitle>
             </ScrollReveal>
           </div>
