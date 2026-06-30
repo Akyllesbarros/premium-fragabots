@@ -211,12 +211,12 @@ html, body { overflow-x: clip; }
   z-index: 4;
   background: conic-gradient(
     from var(--rdlf-card-angle),
-    rgba(237, 247, 248, 0.02),
-    rgba(237, 247, 248, 0.18),
-    rgba(255, 168, 25, 0.42),
-    rgba(31, 111, 120, 0.5),
-    rgba(237, 247, 248, 0.10),
-    rgba(237, 247, 248, 0.02)
+    rgba(13, 37, 40, 0.04),
+    rgba(54, 162, 172, 0.35),
+    rgba(255, 168, 25, 0.55),
+    rgba(31, 111, 120, 0.45),
+    rgba(13, 37, 40, 0.10),
+    rgba(13, 37, 40, 0.04)
   );
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
