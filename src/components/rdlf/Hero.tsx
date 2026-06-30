@@ -72,7 +72,7 @@ export function Hero() {
 
                 <ScrollReveal delay={0.45}>
                   <div className="mt-10 md:mt-12 flex flex-wrap items-center justify-center gap-5">
-                    <RDLFAnimatedLayerButton href="https://wa.me/5527988496428">
+                    <RDLFAnimatedLayerButton href="https://wa.me/5527988482268">
                       Agendar diagnóstico
                     </RDLFAnimatedLayerButton>
                     <a

@@ -24,7 +24,7 @@ export function Preloader() {
           <div className="flex flex-col items-center gap-4">
             <motion.img
               src={rdlfLogo.url}
-              alt="RDLF"
+              alt="Fraga Contabilidade"
               initial={{ opacity: 0, y: 8, filter: "blur(6px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}

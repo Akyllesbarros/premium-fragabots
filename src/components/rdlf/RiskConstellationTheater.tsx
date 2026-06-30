@@ -298,7 +298,7 @@ export function RiskConstellationTheater() {
 
                 <div className="mt-7">
                   <a
-                    href="https://wa.me/5527988496428"
+                    href="https://wa.me/5527988482268"
                     className="inline-flex items-center gap-2 rounded-full border border-[color:var(--gold)]/40 bg-[color:var(--gold)]/10 px-5 py-3 text-sm text-bone hover:border-[color:var(--gold)] hover:bg-[color:var(--gold)]/20 transition-all"
                   >
                     Mapear riscos da minha empresa

@@ -41,7 +41,7 @@ export function Header() {
           )}
         >
           <a href="#top" className="flex items-center shrink-0">
-            <img src={rdlfLogo.url} alt="RDLF" className="h-5 md:h-6 w-auto select-none opacity-100" style={{ filter: "none" }} draggable={false} />
+            <img src={rdlfLogo.url} alt="Fraga Contabilidade" className="h-5 md:h-6 w-auto select-none opacity-100" style={{ filter: "none" }} draggable={false} />
           </a>
 
           <nav className="hidden lg:flex items-center gap-8">
@@ -60,7 +60,7 @@ export function Header() {
           <div className="flex items-center gap-2">
             <div className="hidden sm:block">
               <RDLFAnimatedLayerButton
-                href="https://wa.me/5527988496428"
+                href="https://wa.me/5527988482268"
                 className="h-[44px] min-w-[160px] px-5 text-xs shadow-[5px_5px_0px_#041F1F] hover:translate-y-[3px] hover:shadow-[2px_2px_0px_#041F1F]"
               >
                 Agendar diagnóstico
@@ -88,7 +88,7 @@ export function Header() {
             className="fixed inset-0 z-[60] bg-ink/95 backdrop-blur-2xl lg:hidden"
           >
             <div className="container-rdlf flex items-center justify-between py-5">
-              <img src={rdlfLogo.url} alt="RDLF" className="h-6 w-auto select-none opacity-100" style={{ filter: "none" }} draggable={false} />
+              <img src={rdlfLogo.url} alt="Fraga Contabilidade" className="h-6 w-auto select-none opacity-100" style={{ filter: "none" }} draggable={false} />
               <button
                 aria-label="Fechar menu"
                 onClick={() => setOpen(false)}
@@ -113,7 +113,7 @@ export function Header() {
               ))}
               <div className="mt-10">
               <RDLFAnimatedLayerButton
-                href="https://wa.me/5527988496428"
+                href="https://wa.me/5527988482268"
                 onClick={() => setOpen(false)}
                 className="w-full"
               >

@@ -45,12 +45,12 @@ export function FinalCTA() {
 
           <ScrollReveal delay={0.45}>
             <div className="mt-12 flex flex-wrap justify-center gap-4">
-              <MagneticButton href="https://wa.me/5527988496428">
+              <MagneticButton href="https://wa.me/5527988482268">
                 Agendar diagnóstico jurídico
                 <ArrowUpRight className="h-4 w-4" />
               </MagneticButton>
               <a
-                href="https://wa.me/5527988496428"
+                href="https://wa.me/5527988482268"
                 className="inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3.5 text-sm text-bone/85 hover:border-[color:var(--gold)]/50 hover:text-bone transition-colors"
               >
                 <MessageCircle className="h-4 w-4" />

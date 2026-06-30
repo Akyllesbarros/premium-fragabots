@@ -74,7 +74,7 @@ export function BrandProtectionStack() {
           </ul>
 
           <div className="mt-10">
-            <MagneticButton as="a" href="https://wa.me/5527988496428" className="bg-bone/95 text-ink hover:bg-[color:var(--gold-light)] hover:text-ink border-transparent">
+            <MagneticButton as="a" href="https://wa.me/5527988482268" className="bg-bone/95 text-ink hover:bg-[color:var(--gold-light)] hover:text-ink border-transparent">
               Analisar proteção de marca
               <ArrowUpRight className="h-4 w-4" />
             </MagneticButton>

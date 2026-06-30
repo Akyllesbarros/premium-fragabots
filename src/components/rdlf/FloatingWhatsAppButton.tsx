@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function FloatingWhatsAppButton() {
   const whatsappUrl =
-    "https://wa.me/5527988496428?text=Olá,%20quero%20saber%20mais%20sobre%20a%20RDLF.";
+    "https://wa.me/5527988482268?text=Olá,%20quero%20saber%20mais%20sobre%20a%20RDLF.";
 
   return (
     <a
