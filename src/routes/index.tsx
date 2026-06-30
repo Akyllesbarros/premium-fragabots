@@ -1121,17 +1121,9 @@ function Faq() {
    ============================================================ */
 function FinalCta() {
   return (
-    <section className="stack-section relative overflow-hidden bg-foreground text-background">
-      <div aria-hidden className="absolute inset-0 opacity-50" style={{
-        backgroundImage: "radial-gradient(ellipse at center, oklch(0.42 0.12 195 / 0.5), transparent 60%), radial-gradient(circle at 80% 20%, oklch(0.78 0.16 78 / 0.3), transparent 50%)",
-      }} />
-      <div aria-hidden className="absolute inset-0 opacity-[0.04]" style={{
-        backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
-        backgroundSize: "80px 80px",
-        maskImage: "radial-gradient(ellipse at center, black 30%, transparent 80%)",
-      }} />
+    <section className="stack-section relative overflow-hidden bg-secondary text-foreground">
       <div className="relative mx-auto max-w-5xl px-4 lg:px-8 py-28 lg:py-40 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/60 px-3 py-1.5 text-[11px] font-medium text-foreground/70 backdrop-blur mb-8">
+        <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-[11px] font-medium text-foreground/70 mb-8">
           <span className="h-1.5 w-1.5 rounded-full bg-accent" />
           Atendimento direto · sem formulário
         </div>
@@ -1170,7 +1162,7 @@ function FinalCta() {
    ============================================================ */
 function Footer() {
   return (
-    <footer className="bg-foreground text-background/80 text-foreground/70 pt-20 pb-28 border-t border-border">
+    <footer className="bg-foreground text-background/80 pt-20 pb-28 border-t border-border">
       <div className="mx-auto max-w-[1400px] px-4 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-10 mb-14">
           <div className="lg:col-span-5">
