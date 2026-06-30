@@ -9,7 +9,7 @@ export function Preloader() {
     const t = setTimeout(() => {
       console.log("[Fraga] Preloader completo");
       setDone(true);
-    }, 2000);
+    }, 2500);
     return () => clearTimeout(t);
   }, []);
 
