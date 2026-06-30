@@ -5,7 +5,6 @@ import {
 } from "lucide-react";
 import { waLink, trackConversion } from "@/lib/whatsapp";
 import { PremiumButton } from "@/components/fraga/PremiumButton";
-import { ScrollProgress } from "@/components/fraga/ScrollProgress";
 import { VideoCard, VideoModal, useVideoModal, type VideoItem } from "@/components/fraga/VideoModal";
 import fragaLogo from "@/assets/fraga-logo.png.asset.json";
 
