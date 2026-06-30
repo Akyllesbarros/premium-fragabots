@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
-  ArrowUpRight, ArrowRight, MessageCircle, Play, Plus, Minus, Check,
+  ArrowUpRight, ArrowRight, MessageCircle, Plus, Minus, Check,
   Sparkles, ShieldCheck, TrendingUp, FileCheck, Wallet, Users, Briefcase,
-  Calculator, Building2, BarChart3, HeartHandshake, Target, Zap, Star,
+  Calculator, Building2, BarChart3, HeartHandshake, Star,
   MapPin, Phone, Mail, Clock, Menu, X,
 } from "lucide-react";
 import { waLink, trackConversion } from "@/lib/whatsapp";
