@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Eyebrow } from "./primitives";
 
-const HEADLINE = "A empresa que cresce sem estrutura jurídica não economiza — acumula riscos invisíveis.";
+const HEADLINE = "Impostos em ordem. Números claros. Decisões menos no escuro.";
 
 export function Manifesto() {
   const ref = useRef<HTMLDivElement>(null);
@@ -22,7 +22,7 @@ export function Manifesto() {
         style={{ x: monogramX }}
         className="pointer-events-none absolute -left-10 top-1/2 -translate-y-1/2 font-display italic text-[34vw] leading-none text-white/[0.02] select-none tracking-[-0.05em]"
       >
-        RDLF
+        Fraga
       </motion.span>
 
       <div className="container-rdlf grid gap-12 lg:grid-cols-12 relative">
@@ -50,10 +50,10 @@ export function Manifesto() {
               const start = i / words.length;
               const end = (i + 1) / words.length;
               return (
-                <Word
+              <Word
                   key={i}
                   word={word}
-                  highlight={word === "invisíveis."}
+                  highlight={word === "escuro."}
                   progress={scrollYProgress}
                   start={start}
                   end={end}
@@ -78,9 +78,8 @@ export function Manifesto() {
             transition={{ duration: 1, delay: 0.4 }}
             className="mt-10 max-w-2xl text-bone/65 leading-[1.85] text-[15px]"
           >
-            A Fraga previne, estrutura e acompanha.{" "}
-            Cada empresa atendida recebe uma base jurídica desenhada para o crescimento real —
-            não para o papel.
+            Uma boa contabilidade não aparece só no fim do mês. Ela ajuda o empresário a enxergar
+            riscos, organizar obrigações e entender o que os números estão dizendo.
           </motion.p>
         </div>
 
