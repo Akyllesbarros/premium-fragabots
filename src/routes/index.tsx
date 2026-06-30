@@ -2,8 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowUpRight, ArrowRight, MessageCircle, Plus, Minus, Check,
-  Sparkles, ShieldCheck, TrendingUp, FileCheck, Wallet, Users, Briefcase,
-  Calculator, Building2, BarChart3, HeartHandshake, Star,
+  ShieldCheck, FileCheck, Wallet, Users, Briefcase,
+  Calculator, Building2, Star,
   MapPin, Phone, Mail, Clock, Menu, X,
 } from "lucide-react";
 import { waLink, trackConversion } from "@/lib/whatsapp";
@@ -147,7 +147,7 @@ function Header() {
               className="hidden sm:inline-flex items-center gap-2 rounded-full bg-white text-[oklch(0.18_0.03_220)] px-4 py-2 text-[13px] font-semibold hover:bg-accent hover:text-accent-foreground transition-colors"
             >
               <MessageCircle className="w-3.5 h-3.5" />
-              Falar com especialista
+              Falar com a Fraga
             </a>
             <button
               onClick={() => setOpen(v => !v)}
@@ -166,7 +166,7 @@ function Header() {
               </a>
             ))}
             <a href={MAIN_CTA} target="_blank" rel="noopener" onClick={() => { setOpen(false); trackConversion("header_cta_click", "Header mobile"); }} className="mt-3 flex items-center justify-center gap-2 rounded-full bg-accent text-accent-foreground px-5 py-3 text-sm font-semibold">
-              <MessageCircle className="w-4 h-4" /> Falar com especialista
+              <MessageCircle className="w-4 h-4" /> Chamar no WhatsApp
             </a>
           </div>
         )}
@@ -213,7 +213,7 @@ function Hero() {
     return () => el?.removeEventListener("mousemove", fn);
   }, []);
 
-  const headline = "Cresça com uma contabilidade que enxerga além dos números.";
+  const headline = "Contabilidade para empresários que precisam de clareza antes de decidir.";
   const words = headline.split(" ");
 
   return (
@@ -238,12 +238,12 @@ function Hero() {
         <div className="lg:col-span-7 z-10">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-medium text-white/75 backdrop-blur mb-7 animate-fade-in">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-glow-pulse" />
-            Contabilidade estratégica para empresas no Espírito Santo e em todo o Brasil
+            Vila Velha · Espírito Santo · atende empresas em todo o Brasil
           </div>
 
           <h1 className="font-display font-bold tracking-[-0.035em] leading-[0.95] text-[clamp(2.4rem,6vw,5.2rem)] mb-7">
             {words.map((w, i) => {
-              const highlight = w.startsWith("enxerga") || w.startsWith("além") || w.startsWith("dos") || w.startsWith("números");
+              const highlight = w.startsWith("clareza") || w.startsWith("antes") || w.startsWith("decidir");
               return (
                 <span key={i} className="inline-block overflow-hidden align-bottom mr-[0.25em]">
                   <span
@@ -258,7 +258,7 @@ function Hero() {
           </h1>
 
           <p className="max-w-xl text-base lg:text-lg text-white/65 leading-relaxed mb-10 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-            Há mais de 50 anos, a Fraga Contabilidade ajuda empresários a organizar a gestão, reduzir riscos, entender seus números e tomar decisões com mais segurança.
+            A Fraga acompanha empresas em Vila Velha, no Espírito Santo e em todo o Brasil com rotinas contábeis, fiscais, tributárias e financeiras conduzidas por uma equipe com mais de 50 anos de experiência.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-12 animate-fade-in" style={{ animationDelay: "0.75s" }}>
@@ -271,23 +271,23 @@ function Hero() {
               trackLocation="hero_cta_click"
               trackMessage="Hero principal"
             >
-              Falar com especialista agora
+              Falar com a Fraga pelo WhatsApp
             </PremiumButton>
             <a
               href="#servicos"
               className="group inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl text-sm font-semibold border border-white/20 text-white hover:bg-white/10 transition-colors"
             >
-              Ver soluções contábeis
+              Ver como podemos ajudar
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden border border-white/10 max-w-2xl">
             {[
-              { v: 50, suf: "+", label: "anos de experiência" },
-              { v: 1000, suf: "+", label: "casos de sucesso" },
-              { v: 100, suf: "%", label: "atendimento nacional" },
-              { v: 4, suf: ",9★", label: "avaliação clientes" },
+              { v: 50, suf: "+", label: "anos de história" },
+              { v: 1000, suf: "+", label: "empresas atendidas" },
+              { v: 1974, suf: "", label: "fundada em" },
+              { v: 4, suf: ",9★", label: "avaliação Google" },
             ].map((s, i) => (
               <div key={i} className="bg-[oklch(0.13_0.025_220)] p-4 lg:p-5">
                 <div className="font-display text-2xl lg:text-3xl font-bold text-white tracking-tight">
@@ -375,17 +375,17 @@ function HeroComposition({ mouse }: { mouse: { x: number; y: number } }) {
       </div>
 
       <div
-        className="absolute bottom-6 -left-4 w-60 rounded-2xl border border-accent/30 bg-gradient-to-br from-[oklch(0.78_0.16_78)] to-[oklch(0.86_0.15_85)] text-accent-foreground p-4 shadow-gold animate-float-slow"
+        className="absolute bottom-6 -left-4 w-64 rounded-2xl border border-accent/30 bg-gradient-to-br from-[oklch(0.78_0.16_78)] to-[oklch(0.86_0.15_85)] text-accent-foreground p-4 shadow-gold animate-float-slow"
         style={tx(-0.6)}
       >
         <div className="flex items-center gap-2 mb-2">
-          <TrendingUp className="w-4 h-4" />
-          <div className="text-[11px] uppercase tracking-wider font-bold">Economia tributária</div>
+          <FileCheck className="w-4 h-4" />
+          <div className="text-[11px] uppercase tracking-wider font-bold">Relatório do mês</div>
         </div>
-        <div className="font-display text-3xl font-bold">
-          <Counter to={32} />%
+        <div className="font-display text-base font-bold leading-tight">
+          Apuração fiscal, folha e DCTF entregues no prazo.
         </div>
-        <div className="text-[11px] opacity-80">média anual em clientes Premium</div>
+        <div className="text-[11px] opacity-80 mt-1">acompanhamento mensal</div>
       </div>
 
       <div
@@ -410,7 +410,7 @@ function HeroComposition({ mouse }: { mouse: { x: number; y: number } }) {
    MANIFESTO — marquee
    ============================================================ */
 function Manifesto() {
-  const lines = ["Empresas fortes.", "Gestão clara.", "Decisões seguras."];
+  const lines = ["Impostos em ordem.", "Números claros.", "Decisões menos no escuro."];
   return (
     <div className="relative py-24 lg:py-36 overflow-hidden">
       <div aria-hidden className="absolute inset-0 opacity-[0.04]" style={{
@@ -427,7 +427,7 @@ function Manifesto() {
       </div>
       <div className="relative mx-auto max-w-3xl px-4 lg:px-8 text-center mt-20">
         <p className="font-display text-2xl lg:text-3xl leading-snug text-white/85 tracking-tight">
-          A Fraga transforma contabilidade em <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>clareza</span> para empresários que precisam crescer com controle, segurança e visão estratégica.
+          Uma boa contabilidade não aparece só no fim do mês. Ela ajuda o empresário a enxergar riscos, organizar obrigações e entender o que os <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>números</span> estão dizendo.
         </p>
       </div>
     </div>
@@ -452,12 +452,12 @@ function Marquee({ children, direction = "left", muted = false }: { children: Re
    ============================================================ */
 function HistoryAuthority() {
   const blocks = [
-    { v: "+50", l: "anos de experiência" },
-    { v: "+1.000", l: "casos de sucesso" },
-    { v: "100%", l: "atendimento consultivo" },
-    { v: "BR", l: "empresas em todo o Brasil" },
+    { v: "1974", l: "ano de fundação" },
+    { v: "+1.000", l: "empresas atendidas ao longo da história" },
+    { v: "ES", l: "sede em Vila Velha" },
+    { v: "BR", l: "atendemos empresas em todo o país" },
   ];
-  const tags = ["Segurança fiscal", "Clareza nos números", "Apoio para decisão", "Visão consultiva", "Atendimento próximo"];
+  const tags = ["Rotina contábil mensal", "Folha e DP", "Apuração tributária", "Abertura de CNPJ", "Regularização fiscal", "BPO financeiro"];
   return (
     <div id="sobre" className="py-24 lg:py-36">
       <div className="mx-auto max-w-[1400px] px-4 lg:px-8 grid lg:grid-cols-12 gap-12">
@@ -465,9 +465,9 @@ function HistoryAuthority() {
           <div className="sticky top-32">
             <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-5">— Nossa história</div>
             <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02] mb-8">
-              Mais do que contabilidade. Uma{" "}
-              <span className="italic font-serif text-primary-deep" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>parceria</span>{" "}
-              de longo prazo.
+              Uma contabilidade construída{" "}
+              <span className="italic font-serif text-primary-deep" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>de perto</span>,
+              cliente por cliente.
             </h2>
             <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden bg-gradient-primary shadow-elegant max-w-sm">
               <div className="absolute inset-0 bg-gradient-mesh opacity-40" />
@@ -487,7 +487,7 @@ function HistoryAuthority() {
 
         <div className="lg:col-span-7 lg:pt-20">
           <p className="text-lg lg:text-xl text-foreground/75 leading-relaxed mb-10 max-w-xl">
-            A Fraga combina tradição, tecnologia e visão consultiva para apoiar empresas em diferentes fases: da abertura do CNPJ à estruturação financeira, tributária e gerencial.
+            A Fraga nasceu da prática contábil feita de perto: acompanhando empresários, entendendo rotinas, corrigindo processos e construindo relações que atravessam anos. A tecnologia entrou para acelerar o trabalho, mas a base continua a mesma — clareza, responsabilidade e presença.
           </p>
           <div className="grid grid-cols-2 gap-4 mb-10">
             {blocks.map(b => (
@@ -514,12 +514,12 @@ function HistoryAuthority() {
    INTERACTIVE DIFFERENTIALS
    ============================================================ */
 const DIFFERENTIALS = [
-  { icon: Calculator, title: "Planejamento tributário seguro", desc: "Reduzimos a carga de impostos sempre dentro da legalidade, com análise profunda da operação.", media: "tributario" },
-  { icon: FileCheck, title: "Rotina contábil organizada", desc: "Processos claros, prazos cumpridos, zero surpresas no fim do mês.", media: "rotina" },
-  { icon: Users, title: "Departamento pessoal confiável", desc: "Folha, admissões, demissões e obrigações trabalhistas com método.", media: "dp" },
-  { icon: Wallet, title: "BPO financeiro para controle", desc: "Contas a pagar e a receber, conciliações e fluxo de caixa nas mãos de especialistas.", media: "bpo" },
-  { icon: Briefcase, title: "Abertura de empresas com orientação", desc: "Da constituição ao primeiro DAS, com escolha do regime tributário ideal.", media: "abertura" },
-  { icon: ShieldCheck, title: "Regularização fiscal com segurança", desc: "Pendências resolvidas com plano de ação claro e acompanhamento.", media: "reg" },
+  { icon: Calculator, title: "Planejamento tributário", desc: "Avaliamos se a empresa está no regime adequado e onde existem riscos, excessos ou oportunidades dentro da lei.", media: "tributario" },
+  { icon: FileCheck, title: "Rotina contábil", desc: "Apurações, guias, declarações e obrigações acessórias acompanhadas de perto, com prazos cumpridos e relatórios mensais.", media: "rotina" },
+  { icon: Users, title: "Departamento pessoal", desc: "Folha, admissões, desligamentos, eSocial e rotinas trabalhistas conduzidas por uma equipe dedicada.", media: "dp" },
+  { icon: Wallet, title: "BPO financeiro", desc: "Contas a pagar e a receber, conciliação bancária e fluxo de caixa organizados para a empresa decidir com dados reais.", media: "bpo" },
+  { icon: Briefcase, title: "Abertura de empresas", desc: "Orientação para abrir o CNPJ com a atividade certa, o enquadramento adequado e os primeiros passos contábeis organizados.", media: "abertura" },
+  { icon: ShieldCheck, title: "Regularização fiscal", desc: "Diagnóstico das pendências e plano de ação para devolver previsibilidade antes que pequenos problemas cresçam.", media: "reg" },
 ] as const;
 
 function InteractiveDifferentials() {
@@ -530,14 +530,14 @@ function InteractiveDifferentials() {
       <div className="mx-auto max-w-[1400px] px-4 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— Por que Fraga</div>
+            <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— O que a Fraga entrega</div>
             <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02]">
-              Tudo para sua empresa{" "}
-              <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>crescer com clareza</span>
+              Um time inteiro acompanhando a{" "}
+              <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>rotina</span>{" "}da sua empresa.
             </h2>
           </div>
           <div className="text-sm text-white/55 max-w-xs">
-            Passe o mouse ou toque em cada diferencial — o painel ao lado responde.
+            Clique em cada frente de trabalho para ver como ela funciona dentro da Fraga.
           </div>
         </div>
 
@@ -630,12 +630,12 @@ function DifferentialPreview({ item }: { item: (typeof DIFFERENTIALS)[number] })
    NUMBERED SERVICES (Padelix-style)
    ============================================================ */
 const SERVICES = [
-  { n: "01", title: "Abertura de Empresas", desc: "Constituição rápida e segura, com escolha do regime tributário ideal desde o primeiro dia.", benefit: "Sua empresa em operação sem dor de cabeça burocrática.", msg: "Olá, tenho interesse em abertura de empresa com a Fraga Contabilidade.", icon: Briefcase },
-  { n: "02", title: "Planejamento Tributário", desc: "Análise profunda da sua operação para reduzir impostos com total respaldo legal.", benefit: "Menos imposto pago, mais margem para crescer.", msg: "Olá, tenho interesse em planejamento tributário com a Fraga Contabilidade.", icon: Calculator },
-  { n: "03", title: "Assessoria Contábil", desc: "Rotinas mensais conduzidas com método, prazos cumpridos e relatórios que importam.", benefit: "Você dorme tranquilo sabendo que tudo está em dia.", msg: "Olá, tenho interesse em assessoria contábil com a Fraga Contabilidade.", icon: FileCheck },
-  { n: "04", title: "Departamento Pessoal", desc: "Folha, admissões, demissões e obrigações trabalhistas sem dor de cabeça.", benefit: "Equipe administrada com segurança jurídica.", msg: "Olá, tenho interesse em departamento pessoal com a Fraga Contabilidade.", icon: Users },
-  { n: "05", title: "BPO Financeiro", desc: "Contas a pagar e a receber, conciliações e fluxo de caixa nas mãos de especialistas.", benefit: "Caixa sob controle, decisões com base em dados.", msg: "Olá, tenho interesse em BPO financeiro com a Fraga Contabilidade.", icon: Wallet },
-  { n: "06", title: "Regularização Fiscal", desc: "Empresas com pendências voltam à conformidade com plano de ação claro.", benefit: "Pendências resolvidas, futuro destravado.", msg: "Olá, tenho interesse em regularização fiscal com a Fraga Contabilidade.", icon: ShieldCheck },
+  { n: "01", title: "Abertura de Empresas", desc: "Orientação para abrir o CNPJ com enquadramento adequado, definição de atividade, regime tributário e primeiros passos contábeis organizados.", benefit: "Começar pagando o imposto certo, sem retrabalho lá na frente.", msg: "Olá, vim pela landing page e quero falar sobre abertura de empresa com a Fraga.", icon: Briefcase },
+  { n: "02", title: "Planejamento Tributário", desc: "Análise para entender se a empresa está no regime adequado e onde existem riscos, excessos ou oportunidades dentro da lei.", benefit: "Mais clareza sobre o que se paga e por quê.", msg: "Olá, vim pela landing page e quero falar sobre planejamento tributário com a Fraga.", icon: Calculator },
+  { n: "03", title: "Assessoria Contábil", desc: "Rotina contábil, fiscal e gerencial organizada para que o empresário tenha clareza sobre obrigações e resultados.", benefit: "Obrigações em dia e relatórios que ajudam a decidir.", msg: "Olá, vim pela landing page e quero falar sobre assessoria contábil com a Fraga.", icon: FileCheck },
+  { n: "04", title: "Departamento Pessoal", desc: "Apoio nas rotinas trabalhistas, folha, admissões, desligamentos e obrigações relacionadas à equipe.", benefit: "A equipe administrada com método e prazos cumpridos.", msg: "Olá, vim pela landing page e quero falar sobre departamento pessoal com a Fraga.", icon: Users },
+  { n: "05", title: "BPO Financeiro", desc: "Organização de contas, controles e informações financeiras para dar mais previsibilidade à gestão.", benefit: "Caixa sob controle e relatórios que mostram o real.", msg: "Olá, vim pela landing page e quero falar sobre BPO financeiro com a Fraga.", icon: Wallet },
+  { n: "06", title: "Regularização Fiscal", desc: "Diagnóstico e condução de pendências fiscais para recuperar previsibilidade e evitar que problemas cresçam.", benefit: "Pendências resolvidas com um plano claro de ação.", msg: "Olá, vim pela landing page e quero falar sobre regularização fiscal com a Fraga.", icon: ShieldCheck },
 ];
 
 function NumberedServices() {
@@ -648,13 +648,13 @@ function NumberedServices() {
           <div className="lg:col-span-7">
             <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Serviços</div>
             <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02]">
-              Soluções contábeis para empresas que pensam{" "}
-              <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>grande</span>.
+              O que a Fraga faz, na{" "}
+              <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>prática</span>.
             </h2>
           </div>
           <div className="lg:col-span-5 lg:pt-6">
             <p className="text-foreground/65 text-lg leading-relaxed">
-              Um portfólio completo conduzido por uma equipe que entende seu negócio. Escolha o serviço para ver detalhes — todo CTA leva direto ao WhatsApp.
+              Da abertura do CNPJ à rotina fiscal e financeira do mês a mês. Clique em cada serviço para entender como ele funciona dentro da Fraga.
             </p>
           </div>
         </div>
@@ -695,7 +695,7 @@ function NumberedServices() {
                 <h3 className="font-display text-2xl font-bold mb-3 text-foreground">{s.title}</h3>
                 <p className="text-sm text-foreground/65 leading-relaxed mb-5">{s.desc}</p>
                 <div className="rounded-2xl border border-accent/30 bg-accent/10 p-4 mb-7">
-                  <div className="text-[10px] uppercase tracking-[0.2em] font-semibold text-accent-foreground/80 mb-1">Benefício principal</div>
+                  <div className="text-[10px] uppercase tracking-[0.2em] font-semibold text-accent-foreground/80 mb-1">O que muda na prática</div>
                   <div className="text-sm font-semibold text-foreground">{s.benefit}</div>
                 </div>
                 <PremiumButton
@@ -707,7 +707,7 @@ function NumberedServices() {
                   trackMessage={s.title}
                   className="w-full"
                 >
-                  Falar sobre {s.title}
+                  Conversar sobre {s.title}
                 </PremiumButton>
               </div>
             </div>
@@ -733,7 +733,7 @@ function NumberedServices() {
                     onClick={() => trackConversion("service_whatsapp_click", it.title)}
                     className="inline-flex items-center gap-2 text-sm font-semibold text-primary"
                   >
-                    Falar no WhatsApp <ArrowUpRight className="w-4 h-4" />
+                    Conversar no WhatsApp <ArrowUpRight className="w-4 h-4" />
                   </a>
                 </div>
               </details>
@@ -750,25 +750,25 @@ function NumberedServices() {
    ============================================================ */
 function WhatsAppJourney() {
   const steps = [
-    "Chamar no WhatsApp",
-    "Explicar o momento da empresa",
-    "Receber orientação inicial",
-    "Escolher melhor plano",
-    "Iniciar transição com segurança",
+    "Você chama no WhatsApp",
+    "Conta o momento da empresa",
+    "A equipe avalia o cenário",
+    "Indicação do caminho mais adequado",
+    "Início organizado, sem parar a operação",
   ];
-  const cta = waLink("Olá, quero entender como funciona para começar com a Fraga Contabilidade.");
+  const cta = waLink("Olá, vim pela landing page e gostaria de entender como começar com a Fraga.");
   return (
     <div className="py-24 lg:py-36 relative overflow-hidden">
       <div aria-hidden className="absolute -top-20 right-0 w-[500px] h-[500px] rounded-full bg-[oklch(0.62_0.16_145)]/15 blur-[140px]" />
       <div className="relative mx-auto max-w-[1400px] px-4 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-6">
-          <div className="text-xs uppercase tracking-[0.22em] text-[oklch(0.78_0.18_145)] font-semibold mb-4">— Sem burocracia</div>
+          <div className="text-xs uppercase tracking-[0.22em] text-[oklch(0.78_0.18_145)] font-semibold mb-4">— Como começa</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02] mb-7">
-            Comece pelo{" "}
-            <span className="italic font-serif" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: "oklch(0.78 0.18 145)" }}>WhatsApp</span>. Sem formulário.
+            Sem formulário. Sem espera.{" "}
+            <span className="italic font-serif" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: "oklch(0.78 0.18 145)" }}>Conversa direta</span> no WhatsApp.
           </h2>
           <p className="text-white/65 text-lg leading-relaxed mb-10 max-w-lg">
-            Em poucos minutos, você fala com a equipe da Fraga, explica seu momento atual e entende qual solução contábil faz mais sentido para sua empresa.
+            A equipe entende o momento da empresa antes de indicar um plano. Seja para abrir, regularizar, organizar ou trocar de contador, o atendimento começa por uma conversa real.
           </p>
           <ol className="space-y-3 mb-10">
             {steps.map((s, i) => (
@@ -783,7 +783,7 @@ function WhatsAppJourney() {
             trailingIcon={<ArrowUpRight className="w-4 h-4" />}
             trackLocation="whatsapp_journey_cta"
           >
-            Começar agora pelo WhatsApp
+            Começar pelo WhatsApp
           </PremiumButton>
         </div>
 
@@ -814,10 +814,10 @@ function StepItem({ index, text }: { index: number; text: string }) {
 
 type Msg = { from: "client" | "fraga"; text: string; t: string };
 const CONVO: Msg[] = [
-  { from: "client", text: "Olá, quero melhorar a contabilidade da minha empresa.", t: "10:14" },
-  { from: "fraga", text: "Claro! Vamos entender seu momento e indicar a melhor solução.", t: "10:14" },
-  { from: "client", text: "Faturamos cerca de R$ 150 mil/mês.", t: "10:15" },
-  { from: "fraga", text: "Perfeito. O plano Plus se encaixa bem. Posso te explicar agora?", t: "10:15" },
+  { from: "client", text: "Olá, tenho uma empresa e queria entender se minha contabilidade está adequada.", t: "10:14" },
+  { from: "fraga", text: "Claro. Podemos começar entendendo seu regime atual, faturamento, rotina fiscal e o que você espera melhorar.", t: "10:14" },
+  { from: "client", text: "Também quero saber se vale trocar de contador.", t: "10:15" },
+  { from: "fraga", text: "Avaliamos esse cenário com cuidado e orientamos os próximos passos para uma transição segura.", t: "10:15" },
 ];
 
 function WhatsAppMock() {
@@ -896,12 +896,12 @@ function WhatsAppMock() {
    STAGE SOLUTIONS — vertical tabs
    ============================================================ */
 const STAGES = [
-  { key: "abrindo", label: "Estou abrindo minha empresa", title: "Tire o seu CNPJ no caminho certo", desc: "Te ajudamos a escolher a natureza jurídica e o regime tributário que mais protegem o seu negócio desde o dia 1.", benefit: "Comece pagando o imposto certo, sem retrabalho.", msg: "Olá, estou abrindo minha empresa e gostaria de falar com a Fraga Contabilidade." },
-  { key: "trocar", label: "Quero trocar de contador", title: "Migração sem dor de cabeça", desc: "Cuidamos de toda a transição com o seu contador atual. Você não precisa parar a operação para mudar.", benefit: "Em até 30 dias com contabilidade nova rodando.", msg: "Olá, quero trocar de contador e gostaria de falar com a Fraga Contabilidade." },
-  { key: "financeiro", label: "Preciso organizar meu financeiro", title: "BPO financeiro completo", desc: "Contas a pagar/receber, conciliação bancária, fluxo de caixa e relatórios gerenciais.", benefit: "Você passa a tomar decisão olhando dados reais.", msg: "Olá, preciso organizar o financeiro da minha empresa com a Fraga." },
-  { key: "impostos", label: "Quero entender meus impostos", title: "Planejamento tributário consultivo", desc: "Estudamos a sua operação e mostramos, com clareza, onde existe espaço para reduzir tributos legalmente.", benefit: "Pague o que é devido — nem um real a mais.", msg: "Olá, quero entender melhor os impostos da minha empresa com a Fraga." },
-  { key: "crescimento", label: "Minha empresa está crescendo", title: "Estrutura contábil para escalar", desc: "Adaptamos rotinas, controles e relatórios para uma empresa em expansão acelerada.", benefit: "Cresça sem perder o controle.", msg: "Olá, minha empresa está crescendo e preciso de uma contabilidade preparada." },
-  { key: "estrategica", label: "Quero uma contabilidade estratégica", title: "Parceria consultiva de longo prazo", desc: "Reuniões periódicas, análise de cenário, projeções e visão de gestão sobre os números.", benefit: "Um sócio invisível ajudando você a decidir melhor.", msg: "Olá, quero uma contabilidade mais estratégica com a Fraga." },
+  { key: "abrindo", label: "Vou abrir empresa e não sei o melhor enquadramento", title: "Abertura com o enquadramento certo desde o início", desc: "Avaliamos a atividade, o porte e a expectativa de faturamento para indicar a natureza jurídica e o regime tributário mais adequados ao seu caso.", benefit: "Começar pagando o imposto certo, sem retrabalho lá na frente.", msg: "Olá, vou abrir uma empresa e quero entender o melhor enquadramento. Vim pela landing page." },
+  { key: "cresceu", label: "Minha empresa cresceu e a contabilidade ficou confusa", title: "Reorganização contábil para empresas em crescimento", desc: "Revisamos rotinas, controles e relatórios para que a operação continue acompanhando o ritmo do negócio.", benefit: "Estrutura adequada ao tamanho atual da empresa.", msg: "Olá, minha empresa cresceu e a contabilidade ficou confusa. Vim pela landing page." },
+  { key: "trocar", label: "Quero trocar de contador sem dor de cabeça", title: "Transição contábil conduzida em paralelo à operação", desc: "Cuidamos do contato com o contador atual e da migração de informações sem que sua empresa precise parar para mudar.", benefit: "Mudança feita por etapas, sem perder histórico.", msg: "Olá, quero trocar de contador sem dor de cabeça. Vim pela landing page da Fraga." },
+  { key: "financeiro", label: "Preciso organizar financeiro e rotina fiscal", title: "Rotina financeira e fiscal sob o mesmo método", desc: "Contas a pagar/receber, conciliações bancárias, apuração fiscal e relatórios mensais organizados em um único fluxo.", benefit: "Menos planilhas soltas, mais previsibilidade.", msg: "Olá, preciso organizar o financeiro e a rotina fiscal da minha empresa. Vim pela landing page." },
+  { key: "impostos", label: "Tenho dúvidas se pago imposto corretamente", title: "Diagnóstico tributário sem promessas", desc: "Olhamos para o regime atual, a atividade e o histórico para apontar onde existem riscos, excessos ou oportunidades dentro da lei.", benefit: "Clareza sobre o que se paga e por que se paga.", msg: "Olá, tenho dúvidas se pago imposto corretamente. Vim pela landing page da Fraga." },
+  { key: "estrategica", label: "Quero uma contabilidade mais próxima da gestão", title: "Contabilidade conectada às decisões do dia a dia", desc: "Conversas periódicas com os sócios, leitura dos números, alertas de risco e apoio para decisões de gestão.", benefit: "Um contador presente nas decisões, não só nas obrigações.", msg: "Olá, quero uma contabilidade mais próxima da gestão. Vim pela landing page da Fraga." },
 ];
 
 function StageSolutions() {
@@ -911,11 +911,10 @@ function StageSolutions() {
     <div id="solucoes" className="py-24 lg:py-36">
       <div className="mx-auto max-w-[1400px] px-4 lg:px-8">
         <div className="max-w-3xl mb-14">
-          <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Soluções por momento</div>
+          <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Em qual cenário você está?</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02]">
-            Soluções para cada{" "}
-            <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>fase</span>{" "}
-            da sua empresa
+            O atendimento começa pelo seu{" "}
+            <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>cenário real</span>.
           </h2>
         </div>
 
@@ -941,13 +940,13 @@ function StageSolutions() {
 
           <div className="lg:col-span-7">
             <div key={st.key} className="rounded-[2rem] border border-border bg-card overflow-hidden shadow-card p-8 lg:p-12 animate-fade-in">
-              <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">Solução recomendada</div>
+              <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">Como a Fraga atua</div>
               <h3 className="font-display text-3xl lg:text-4xl font-bold tracking-tight mb-5">{st.title}</h3>
               <p className="text-foreground/70 text-lg leading-relaxed mb-7">{st.desc}</p>
               <div className="rounded-2xl border border-accent/30 bg-accent/10 p-5 mb-8 flex items-start gap-3">
-                <Sparkles className="w-5 h-5 text-accent-foreground mt-0.5" />
+                <Check className="w-5 h-5 text-accent-foreground mt-0.5" />
                 <div>
-                  <div className="text-[11px] uppercase tracking-[0.2em] font-bold text-accent-foreground/80">Benefício</div>
+                  <div className="text-[11px] uppercase tracking-[0.2em] font-bold text-accent-foreground/80">O que muda na prática</div>
                   <div className="font-display font-bold text-lg text-foreground">{st.benefit}</div>
                 </div>
               </div>
@@ -960,7 +959,7 @@ function StageSolutions() {
                 trackLocation="solution_whatsapp_click"
                 trackMessage={st.label}
               >
-                Falar sobre esta solução
+                Conversar sobre esse cenário
               </PremiumButton>
             </div>
           </div>
@@ -974,8 +973,8 @@ function StageSolutions() {
    VIDEO TESTIMONIALS
    ============================================================ */
 const VIDEOS: VideoItem[] = [
-  { id: "thermofibras", youtubeId: "BX6rpC1cSUg", title: "Parceria que sustenta o crescimento da Thermofibras", person: "Anderson Drummond", role: "Thermofibras" },
-  { id: "quintao", youtubeId: "-J942kkVc-s", title: "40 anos de parceria contábil com a Fraga", person: "Helvecio Quintão", role: "Cliente parceiro" },
+  { id: "thermofibras", youtubeId: "BX6rpC1cSUg", title: "Thermofibras: confiança construída na prática", person: "Anderson Drummond", role: "Thermofibras" },
+  { id: "quintao", youtubeId: "-J942kkVc-s", title: "Helvecio Quintão: uma parceria de 40 anos", person: "Helvecio Quintão", role: "Cliente de longa data" },
 ];
 
 function VideoTestimonials() {
@@ -985,13 +984,13 @@ function VideoTestimonials() {
       <div aria-hidden className="absolute top-1/3 -left-32 w-[400px] h-[400px] rounded-full bg-accent/10 blur-[140px]" />
       <div className="relative mx-auto max-w-[1400px] px-4 lg:px-8">
         <div className="max-w-3xl mb-14">
-          <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— Depoimentos em vídeo</div>
+          <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— Quem trabalha com a Fraga conta</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02] mb-5">
-            Parcerias que{" "}
-            <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>atravessam anos</span>
+            Clientes falando em{" "}
+            <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>vídeo</span>, na própria voz.
           </h2>
           <p className="text-white/65 text-lg max-w-2xl">
-            Clientes reais compartilham a experiência de contar com a Fraga como parceira contábil.
+            Sem depoimentos escritos por terceiros: dois clientes contam, em vídeo, como é o trabalho com a Fraga.
           </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-6">
@@ -1008,18 +1007,18 @@ function VideoTestimonials() {
    ============================================================ */
 function CommunityTrust() {
   const items = [
-    { icon: HeartHandshake, title: "Atendimento próximo", desc: "Uma equipe preparada para entender sua realidade e orientar com clareza." },
-    { icon: Clock, title: "Relacionamento de longo prazo", desc: "Parcerias construídas com consistência, confiança e acompanhamento." },
-    { icon: BarChart3, title: "Visão de gestão", desc: "Mais do que obrigações fiscais, uma contabilidade que apoia decisões." },
+    { icon: MessageCircle, title: "Atendimento por pessoas, não por robô", desc: "Quem responde no WhatsApp e nas reuniões faz parte da equipe técnica da Fraga." },
+    { icon: Clock, title: "Clientes que ficam por muitos anos", desc: "Boa parte da carteira está com a Fraga há mais de uma década, alguns desde a fundação." },
+    { icon: FileCheck, title: "Foco no que é obrigação contábil", desc: "Apuração, folha, obrigações acessórias e relatórios entregues no prazo, todo mês." },
   ];
   return (
     <div className="py-24 lg:py-36">
       <div className="mx-auto max-w-[1400px] px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Cultura Fraga</div>
+          <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Como trabalhamos</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02]">
-            Empresas que valorizam clareza{" "}
-            <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>caminham melhor</span>
+            O que sustenta a relação com{" "}
+            <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>cada cliente</span>.
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-5">
@@ -1060,10 +1059,10 @@ function RevealCard({ children, delay = 0 }: { children: React.ReactNode; delay?
    PLANS
    ============================================================ */
 const PLANS = [
-  { name: "MEI", desc: "Para faturamento até R$ 81 mil/ano", ideal: "Ideal para quem está começando", features: ["Emissão de notas", "Guia DAS mensal", "Declaração anual", "Suporte WhatsApp"], cta: "Falar sobre MEI", msg: "Olá, quero falar sobre o plano MEI da Fraga Contabilidade." },
-  { name: "Essencial", desc: "Para empresas até R$ 100 mil/mês", ideal: "Rotinas contábeis organizadas", features: ["Contabilidade completa", "Departamento pessoal", "Apuração de impostos", "Relatórios mensais"], cta: "Falar sobre Essencial", msg: "Olá, quero falar sobre o plano Essencial da Fraga Contabilidade." },
-  { name: "Plus", desc: "Para empresas até R$ 200 mil/mês", ideal: "Negócios em crescimento", features: ["Tudo do Essencial", "Consultoria tributária", "Análise gerencial", "Atendimento prioritário"], cta: "Falar sobre Plus", msg: "Olá, quero falar sobre o plano Plus da Fraga Contabilidade." },
-  { name: "Premium", desc: "Para empresas até R$ 400 mil/mês", ideal: "Acompanhamento estratégico", features: ["Tudo do Plus", "Planejamento tributário avançado", "Reuniões estratégicas mensais", "Gestor de conta dedicado"], cta: "Falar sobre Premium", msg: "Olá, quero falar sobre o plano Premium da Fraga Contabilidade.", featured: true },
+  { name: "MEI", desc: "Para faturamento até R$ 81 mil/ano", ideal: "Para quem está começando e precisa manter o básico em ordem sem complicação.", features: ["Emissão de notas", "Guia DAS mensal", "Declaração anual", "Suporte por WhatsApp"], cta: "Saber se o MEI serve para mim", msg: "Olá, vim pela landing page e quero saber se o plano MEI da Fraga serve para o meu caso." },
+  { name: "Essencial", desc: "Para empresas até R$ 100 mil/mês", ideal: "Para empresas que precisam de rotina contábil consistente e obrigações bem acompanhadas.", features: ["Contabilidade mensal", "Departamento pessoal", "Apuração de impostos", "Relatórios mensais"], cta: "Conversar sobre o Essencial", msg: "Olá, vim pela landing page e quero conversar sobre o plano Essencial da Fraga." },
+  { name: "Plus", desc: "Para empresas até R$ 200 mil/mês", ideal: "Para negócios em crescimento que exigem mais organização, previsibilidade e suporte.", features: ["Tudo do Essencial", "Consultoria tributária", "Análise gerencial", "Atendimento prioritário"], cta: "Ver se o Plus encaixa", msg: "Olá, vim pela landing page e quero entender se o plano Plus faz sentido para minha empresa." },
+  { name: "Premium", desc: "Para empresas até R$ 400 mil/mês", ideal: "Para empresas que precisam de uma contabilidade próxima da gestão e de decisões mais consultivas.", features: ["Tudo do Plus", "Planejamento tributário aprofundado", "Reuniões periódicas com a equipe", "Gestor de conta dedicado"], cta: "Conversar sobre o Premium", msg: "Olá, vim pela landing page e quero conversar sobre o plano Premium da Fraga.", featured: true },
 ];
 
 function Plans() {
@@ -1074,10 +1073,11 @@ function Plans() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— Planos</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02] mb-5">
-            Planos simples. <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>Valor estratégico.</span>
+            Quatro pontos de partida.{" "}
+            <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>Um atendimento por vez.</span>
           </h2>
           <p className="text-white/65 text-lg">
-            Escolha o plano ideal para o momento da sua empresa e fale diretamente com a Fraga pelo WhatsApp.
+            O plano é apenas o ponto de partida. Antes de indicar, a equipe entende o momento da sua empresa.
           </p>
         </div>
 
@@ -1093,7 +1093,7 @@ function Plans() {
                 }`}>
                   {isFeatured && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[oklch(0.18_0.03_220)] text-accent-glow text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-accent/40">
-                      Mais estratégico
+                      Mais consultivo
                     </div>
                   )}
                   <div className={`text-[11px] font-semibold uppercase tracking-[0.2em] mb-3 ${isFeatured ? "text-accent-foreground/80" : "text-accent-glow"}`}>Plano</div>
@@ -1130,7 +1130,7 @@ function Plans() {
         </div>
 
         <p className="text-center text-sm text-white/55 mt-12">
-          Não sabe qual escolher? <a href={MAIN_CTA} target="_blank" rel="noopener" className="text-accent-glow font-semibold underline-offset-4 hover:underline">Fale com um especialista</a> para indicação personalizada.
+          Não sabe qual escolher? <a href={MAIN_CTA} target="_blank" rel="noopener" className="text-accent-glow font-semibold underline-offset-4 hover:underline">Chame a Fraga no WhatsApp</a> e conte o seu cenário — a indicação vem depois da conversa.
         </p>
       </div>
     </div>
@@ -1153,10 +1153,10 @@ function Insights() {
       <div className="mx-auto max-w-[1400px] px-4 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Insights</div>
+            <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Dúvidas comuns que recebemos</div>
             <h2 className="font-display text-4xl lg:text-5xl font-bold tracking-tight leading-[1.02]">
-              Conteúdo estratégico para empresas que querem{" "}
-              <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>crescer com segurança</span>
+              Os temas que mais aparecem nas{" "}
+              <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>conversas</span> com empresários.
             </h2>
           </div>
         </div>
@@ -1182,7 +1182,7 @@ function Insights() {
               <h3 className="font-display text-2xl lg:text-3xl font-bold tracking-tight leading-tight max-w-md">{it.title}</h3>
               <p className="text-sm text-foreground/65 leading-relaxed max-w-md">{it.desc}</p>
               <div className="mt-auto pt-4 text-xs font-semibold text-primary group-hover:text-primary-deep flex items-center gap-1.5">
-                Conversar no WhatsApp <ArrowRight className="w-3.5 h-3.5" />
+                Tirar essa dúvida no WhatsApp <ArrowRight className="w-3.5 h-3.5" />
               </div>
             </a>
           ))}
@@ -1284,16 +1284,16 @@ function FinalCta() {
       }} />
       <div className="relative mx-auto max-w-5xl px-4 lg:px-8 py-28 lg:py-40 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-medium text-white/70 backdrop-blur mb-8">
-          <Sparkles className="w-3 h-3 text-accent" />
-          Sem formulário · Sem espera
+          <MessageCircle className="w-3 h-3 text-accent" />
+          Atendimento direto · sem formulário
         </div>
         <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.0] mb-8 text-white">
-          Pronto para ter uma contabilidade{" "}
-          <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>mais estratégica</span>{" "}
-          ao lado da sua empresa?
+          Quer entender se a Fraga{" "}
+          <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>encaixa</span>{" "}
+          com a sua empresa?
         </h2>
         <p className="text-white/65 text-lg max-w-2xl mx-auto mb-12">
-          Fale com a Fraga pelo WhatsApp e descubra qual solução faz mais sentido para o seu momento.
+          Conte o seu cenário no WhatsApp. A equipe responde com orientação real antes de qualquer proposta.
         </p>
         <PremiumButton
           href={waLink("Olá, quero falar com um especialista da Fraga Contabilidade.")}
@@ -1303,7 +1303,7 @@ function FinalCta() {
           trailingIcon={<ArrowUpRight className="w-4 h-4" />}
           trackLocation="final_cta_click"
         >
-          Falar com especialista pelo WhatsApp
+          Chamar a Fraga no WhatsApp
         </PremiumButton>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-white/55">
           <span className="inline-flex items-center gap-2"><Phone className="w-4 h-4 text-accent" /> (27) 98848-2268</span>
@@ -1326,7 +1326,7 @@ function Footer() {
           <div className="lg:col-span-5">
             <FragaWordmark />
             <p className="mt-6 text-sm leading-relaxed max-w-sm text-white/60">
-              Contabilidade estratégica desde 1974. Tradição, tecnologia e visão consultiva para empresas que querem crescer com clareza.
+              Contabilidade em Vila Velha, Espírito Santo, atendendo empresas em todo o Brasil desde 1974. Rotinas contábeis, fiscais, trabalhistas e financeiras conduzidas por uma equipe técnica dedicada.
             </p>
           </div>
           <div className="lg:col-span-3">
