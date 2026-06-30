@@ -234,7 +234,7 @@ export function AutoLegalOperatingSystem() {
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
               <div className="grid h-32 w-32 place-items-center rounded-full border border-[color:var(--gold)]/30 bg-ink-soft/80 backdrop-blur-xl shadow-[0_0_60px_-10px_oklch(0.30_0.045_175/0.4)]">
                 <div className="text-center">
-                  <div className="font-display text-2xl text-bone">RDLF</div>
+                  <div className="font-display text-2xl text-bone">Fraga</div>
                   <div className="mt-1 text-[9px] uppercase tracking-[0.2em] text-bone/55">
                     Base sólida
                   </div>

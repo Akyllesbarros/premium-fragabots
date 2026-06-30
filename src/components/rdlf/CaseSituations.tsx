@@ -113,7 +113,7 @@ export function CaseSituations() {
                     <div className="absolute inset-4 rounded-full border border-[color:var(--gold)]/25 border-dashed" />
                     <div className="absolute inset-1/4 rounded-full bg-[color:var(--gold)]/10 blur-2xl" />
                     <div className="absolute inset-0 grid place-items-center">
-                      <span className="font-display italic text-7xl text-bone/85">RDLF</span>
+                      <span className="font-display italic text-7xl text-bone/85">Fraga</span>
                     </div>
                   </div>
                 </div>

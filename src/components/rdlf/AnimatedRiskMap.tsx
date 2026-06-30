@@ -128,7 +128,7 @@ export function AnimatedRiskMap() {
             </h2>
             <p className="mt-6 max-w-2xl text-bone/65 leading-relaxed">
               O mapa percorre automaticamente os pontos sensíveis da operação e mostra onde a
-              RDLF transforma improviso em estrutura jurídica.
+              Fraga transforma improviso em estrutura jurídica.
             </p>
             <div className="mt-5 flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-bone/45">
               <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--gold)] node-pulse" />
