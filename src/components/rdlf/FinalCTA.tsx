@@ -20,33 +20,33 @@ export function FinalCTA() {
         />
 
         {/* Giant monogram */}
-        <span className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-display italic text-[44vw] md:text-[28vw] leading-none text-white/[0.04] select-none tracking-[-0.05em]">
+        <span id="contato" className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-display italic text-[44vw] md:text-[28vw] leading-none text-white/[0.04] select-none tracking-[-0.05em]">
           Fraga
         </span>
 
         <div className="container-rdlf relative text-center max-w-3xl">
           <ScrollReveal>
-            <span className="eyebrow inline-flex">— Próximo movimento</span>
+            <span className="eyebrow inline-flex">— Atendimento direto · sem formulário</span>
           </ScrollReveal>
 
           <h2 className="font-display text-[clamp(2.4rem,6vw,5.8rem)] leading-[0.98] tracking-[-0.035em] text-bone mt-6">
             <SplitTextReveal
-              text="Empresas que crescem com estrutura jurídica crescem com segurança."
-              highlight={["estrutura", "segurança."]}
+              text="Fale direto com a Fraga pelo WhatsApp."
+              highlight={["direto", "WhatsApp."]}
             />
           </h2>
 
           <ScrollReveal delay={0.3}>
             <p className="mt-8 text-bone/65 text-[15px] md:text-base max-w-xl mx-auto leading-relaxed">
-              Comece pelo diagnóstico jurídico estratégico — o ponto onde o improviso
-              vira sistema.
+              Sem formulários, sem intermediários. Você fala com a equipe da Fraga, explica
+              sua situação e recebe uma resposta com clareza.
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={0.45}>
             <div className="mt-12 flex flex-wrap justify-center gap-4">
-              <MagneticButton href="https://wa.me/5527988482268">
-                Agendar diagnóstico jurídico
+              <MagneticButton href="https://wa.me/5527988482268?text=Olá,%20vim%20pela%20landing%20page%20da%20Fraga%20Contabilidade%20e%20gostaria%20de%20falar%20com%20um%20especialista.">
+                Falar com a Fraga
                 <ArrowUpRight className="h-4 w-4" />
               </MagneticButton>
               <a
@@ -54,13 +54,13 @@ export function FinalCTA() {
                 className="inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3.5 text-sm text-bone/85 hover:border-[color:var(--gold)]/50 hover:text-bone transition-colors"
               >
                 <MessageCircle className="h-4 w-4" />
-                Falar pelo WhatsApp
+                Abrir WhatsApp
               </a>
             </div>
           </ScrollReveal>
 
           <div className="mt-14 flex flex-wrap justify-center gap-2">
-            {["Diagnóstico", "Estrutura", "Acompanhamento", "Crescimento"].map((t, i) => (
+            {["Vila Velha · ES", "Atendimento Brasil", "Desde 1974", "WhatsApp direto"].map((t, i) => (
               <FloatingBadge key={t} label={t} delay={0.55 + i * 0.08} />
             ))}
           </div>
