@@ -147,7 +147,7 @@ function Header() {
               className="hidden sm:inline-flex items-center gap-2 rounded-full bg-white text-[oklch(0.18_0.03_220)] px-4 py-2 text-[13px] font-semibold hover:bg-accent hover:text-accent-foreground transition-colors"
             >
               <MessageCircle className="w-3.5 h-3.5" />
-              Falar com especialista
+              Falar com a Fraga
             </a>
             <button
               onClick={() => setOpen(v => !v)}
@@ -166,7 +166,7 @@ function Header() {
               </a>
             ))}
             <a href={MAIN_CTA} target="_blank" rel="noopener" onClick={() => { setOpen(false); trackConversion("header_cta_click", "Header mobile"); }} className="mt-3 flex items-center justify-center gap-2 rounded-full bg-accent text-accent-foreground px-5 py-3 text-sm font-semibold">
-              <MessageCircle className="w-4 h-4" /> Falar com especialista
+              <MessageCircle className="w-4 h-4" /> Chamar no WhatsApp
             </a>
           </div>
         )}
@@ -1326,7 +1326,7 @@ function Footer() {
           <div className="lg:col-span-5">
             <FragaWordmark />
             <p className="mt-6 text-sm leading-relaxed max-w-sm text-white/60">
-              Contabilidade estratégica desde 1974. Tradição, tecnologia e visão consultiva para empresas que querem crescer com clareza.
+              Contabilidade em Vila Velha, Espírito Santo, atendendo empresas em todo o Brasil desde 1974. Rotinas contábeis, fiscais, trabalhistas e financeiras conduzidas por uma equipe técnica dedicada.
             </p>
           </div>
           <div className="lg:col-span-3">
