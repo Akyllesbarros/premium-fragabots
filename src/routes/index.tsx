@@ -427,7 +427,7 @@ function InteractiveDifferentials() {
 
           {/* desktop: preview */}
           <div className="lg:col-span-5 hidden lg:block">
-            <div className="sticky top-32 aspect-[4/5] rounded-[2rem] overflow-hidden border border-border bg-gradient-to-br from-[oklch(0.18_0.03_220)] to-[oklch(0.13_0.025_220)] shadow-elegant">
+            <div className="sticky top-32 aspect-[4/5] rounded-[2rem] overflow-hidden border border-border bg-gradient-to-br from-secondary to-card shadow-elegant">
               <DifferentialPreview key={item.media} item={item} />
             </div>
           </div>
@@ -613,10 +613,10 @@ function WhatsAppJourney() {
   const cta = waLink("Olá, vim pela landing page e gostaria de entender como começar com a Fraga.");
   return (
     <div className="py-24 lg:py-36 relative overflow-hidden">
-      <div aria-hidden className="absolute -top-20 right-0 w-[500px] h-[500px] rounded-full bg-[oklch(0.62_0.16_145)]/15 blur-[140px]" />
+      <div aria-hidden className="absolute -top-20 right-0 w-[500px] h-[500px] rounded-full bg-[var(--primary)]/15 blur-[140px]" />
       <div className="relative mx-auto max-w-[1400px] px-4 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-6">
-          <div className="text-xs uppercase tracking-[0.22em] text-[oklch(0.78_0.18_145)] font-semibold mb-4">— Como começa</div>
+          <div className="text-xs uppercase tracking-[0.22em] text-[var(--primary)] font-semibold mb-4">— Como começa</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02] mb-7">
             Sem formulário. Sem espera.{" "}
             Conversa direta no WhatsApp.
@@ -661,7 +661,7 @@ function StepItem({ index, text }: { index: number; text: string }) {
         0{index + 1}
       </span>
       <span className="text-foreground/80 font-medium">{text}</span>
-      <span aria-hidden className="ml-auto h-px w-8 bg-[oklch(0.78_0.18_145)]/60" />
+      <span aria-hidden className="ml-auto h-px w-8 bg-[var(--primary)]/60" />
     </li>
   );
 }
@@ -700,22 +700,22 @@ function WhatsAppMock() {
 
   return (
     <div ref={ref} className="relative max-w-md mx-auto">
-      <div className="absolute -inset-4 bg-gradient-to-br from-[oklch(0.62_0.16_145)]/30 to-accent/20 rounded-[3rem] blur-2xl" />
+      <div className="absolute -inset-4 bg-gradient-to-br from-[var(--primary)]/30 to-accent/20 rounded-[3rem] blur-2xl" />
       <div className="relative rounded-[2.2rem] border border-border bg-secondary overflow-hidden shadow-elegant">
         {/* header */}
-        <div className="flex items-center gap-3 px-5 py-4 bg-[oklch(0.2_0.03_215)] border-b border-border">
+        <div className="flex items-center gap-3 px-5 py-4 bg-secondary border-b border-border">
           <div className="w-10 h-10 rounded-full bg-gradient-accent flex items-center justify-center text-accent-foreground font-display font-black text-sm">F</div>
           <div className="flex-1">
             <div className="text-foreground font-semibold text-sm">Fraga Contabilidade</div>
-            <div className="text-[11px] text-[oklch(0.78_0.18_145)] flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.78_0.18_145)] animate-glow-pulse" />
+            <div className="text-[11px] text-[var(--primary)] flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary)] animate-glow-pulse" />
               online agora
             </div>
           </div>
           <MessageCircle className="w-5 h-5 text-muted-foreground/80" />
         </div>
         {/* body */}
-        <div className="p-5 space-y-3 min-h-[340px] bg-[oklch(0.14_0.025_220)]" style={{
+        <div className="p-5 space-y-3 min-h-[340px] bg-[#e9efe6]" style={{
           backgroundImage: "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0)",
           backgroundSize: "16px 16px",
         }}>
@@ -723,7 +723,7 @@ function WhatsAppMock() {
             <div key={i} className={`flex ${m.from === "client" ? "justify-end" : "justify-start"} animate-wa-pop`}>
               <div className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-snug ${
                 m.from === "client"
-                  ? "bg-[oklch(0.55_0.14_145)] text-foreground rounded-br-sm"
+                  ? "bg-[var(--primary)] text-foreground rounded-br-sm"
                   : "bg-card/[0.07] text-foreground rounded-bl-sm border border-border"
               }`}>
                 <div>{m.text}</div>
@@ -733,7 +733,7 @@ function WhatsAppMock() {
           ))}
           {typing && shown < CONVO.length && (
             <div className={`flex ${CONVO[shown].from === "client" ? "justify-end" : "justify-start"}`}>
-              <div className={`rounded-2xl px-4 py-3 flex gap-1 ${CONVO[shown].from === "client" ? "bg-[oklch(0.55_0.14_145)]" : "bg-card/[0.07] border border-border"}`}>
+              <div className={`rounded-2xl px-4 py-3 flex gap-1 ${CONVO[shown].from === "client" ? "bg-[var(--primary)]" : "bg-card/[0.07] border border-border"}`}>
                 {[0,1,2].map(i => (
                   <span key={i} className="w-1.5 h-1.5 rounded-full bg-card inline-block" style={{ animation: "wa-typing 1.2s infinite", animationDelay: `${i*0.15}s` }} />
                 ))}
@@ -965,8 +965,8 @@ function Plans() {
                     onClick={() => trackConversion("plan_whatsapp_click", p.name)}
                     className={`inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm transition-all hover:-translate-y-0.5 ${
                       isFeatured
-                        ? "bg-secondary text-foreground hover:bg-[oklch(0.28_0.06_215)]"
-                        : "bg-card text-[oklch(0.18_0.03_220)] hover:bg-accent hover:text-accent-foreground"
+                        ? "bg-foreground text-background hover:bg-primary"
+                        : "bg-card text-foreground border border-border hover:bg-accent hover:text-accent-foreground hover:border-accent"
                     }`}
                   >
                     <MessageCircle className="w-4 h-4" /> {p.cta}
@@ -1121,7 +1121,7 @@ function Faq() {
    ============================================================ */
 function FinalCta() {
   return (
-    <section className="stack-section relative overflow-hidden bg-[oklch(0.1_0.02_220)]">
+    <section className="stack-section relative overflow-hidden bg-foreground text-background">
       <div aria-hidden className="absolute inset-0 opacity-50" style={{
         backgroundImage: "radial-gradient(ellipse at center, oklch(0.42 0.12 195 / 0.5), transparent 60%), radial-gradient(circle at 80% 20%, oklch(0.78 0.16 78 / 0.3), transparent 50%)",
       }} />
@@ -1170,7 +1170,7 @@ function FinalCta() {
    ============================================================ */
 function Footer() {
   return (
-    <footer className="bg-[oklch(0.08_0.02_220)] text-foreground/70 pt-20 pb-28 border-t border-border">
+    <footer className="bg-foreground text-background/80 text-foreground/70 pt-20 pb-28 border-t border-border">
       <div className="mx-auto max-w-[1400px] px-4 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-10 mb-14">
           <div className="lg:col-span-5">
@@ -1231,7 +1231,7 @@ function FloatingWhatsApp() {
         rel="noopener"
         onClick={() => trackConversion("floating_whatsapp_click", "Floating desktop")}
         aria-label="Fale com a Fraga no WhatsApp"
-        className={`hidden sm:inline-flex fixed bottom-6 right-6 z-40 items-center gap-3 rounded-full pl-5 pr-6 py-3 bg-[oklch(0.55_0.14_145)] text-foreground font-semibold text-sm shadow-[0_15px_40px_-10px_rgba(0,0,0,0.5)] hover:bg-[oklch(0.6_0.16_145)] transition-all ${hidden ? "translate-y-24 opacity-0" : "translate-y-0 opacity-100"}`}
+        className={`hidden sm:inline-flex fixed bottom-6 right-6 z-40 items-center gap-3 rounded-full pl-5 pr-6 py-3 bg-[var(--primary)] text-foreground font-semibold text-sm shadow-[0_15px_40px_-10px_rgba(0,0,0,0.5)] hover:bg-[var(--primary-deep)] transition-all ${hidden ? "translate-y-24 opacity-0" : "translate-y-0 opacity-100"}`}
       >
         <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-card/15">
           <span className="absolute inset-0 rounded-full bg-card/30 animate-glow-pulse" />
@@ -1246,7 +1246,7 @@ function FloatingWhatsApp() {
           target="_blank"
           rel="noopener"
           onClick={() => trackConversion("floating_whatsapp_click", "Floating mobile")}
-          className="flex items-center justify-center gap-2 w-full rounded-full bg-[oklch(0.55_0.14_145)] text-foreground py-3.5 font-semibold text-sm shadow-elegant"
+          className="flex items-center justify-center gap-2 w-full rounded-full bg-[var(--primary)] text-foreground py-3.5 font-semibold text-sm shadow-elegant"
         >
           <MessageCircle className="w-4 h-4" /> Falar no WhatsApp
         </a>
