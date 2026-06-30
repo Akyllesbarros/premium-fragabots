@@ -4,29 +4,29 @@ const cols = [
   {
     title: "Navegação",
     links: [
-      ["Hub Jurídico", "#hub"],
-      ["Propriedade Intelectual", "#pi"],
-      ["Método", "#metodo"],
-      ["Riscos", "#riscos"],
+      ["Sobre", "#sobre"],
+      ["Serviços", "#servicos"],
+      ["Como trabalhamos", "#metodo"],
+      ["FAQ", "#faq"],
       ["Contato", "#contato"],
     ],
   },
   {
-    title: "Áreas",
+    title: "Serviços",
     links: [
-      ["Propriedade Intelectual", "#pi"],
-      ["Contratos Empresariais", "#hub"],
-      ["Consultoria Preventiva", "#hub"],
-      ["Estruturação Jurídica", "#hub"],
-      ["Compliance & ESG", "#hub"],
-      ["Resolução Extrajudicial", "#hub"],
+      ["Planejamento tributário", "#servicos"],
+      ["Rotina contábil", "#servicos"],
+      ["Departamento pessoal", "#servicos"],
+      ["BPO financeiro", "#servicos"],
+      ["Abertura de CNPJ", "#servicos"],
+      ["Consultoria empresarial", "#servicos"],
     ],
   },
   {
     title: "Contato",
     links: [
-      ["contato@fragacontabilidade.com.br", "mailto:contato@fragacontabilidade.com.br"],
-      ["WhatsApp", "#contato"],
+      ["WhatsApp", "https://wa.me/5527988482268"],
+      ["Vila Velha — ES", "#sobre"],
       ["Instagram", "#"],
       ["LinkedIn", "#"],
     ],
@@ -43,18 +43,20 @@ export function Footer() {
         {/* Top: brand statement */}
         <div className="grid gap-12 lg:grid-cols-12 mb-20">
           <div className="lg:col-span-7">
-            <div className="eyebrow">Fraga · Contabilidade jurídico estratégico</div>
+            <div className="eyebrow">Fraga Contabilidade · desde 1974</div>
             <h3 className="font-display italic text-[clamp(2rem,4vw,3.4rem)] leading-[1.02] tracking-[-0.03em] text-bone mt-5 max-w-2xl">
-              Estrutura jurídica não é custo. É a base que permite crescer sem
-              acumular risco.
+              Contabilidade não é só fechamento de mês. É a base que ajuda o empresário
+              a decidir com clareza.
             </h3>
           </div>
           <div className="lg:col-span-4 lg:col-start-9 lg:pt-3">
             <a
-              href="#contato"
+              href="https://wa.me/5527988482268?text=Olá,%20vim%20pela%20landing%20page%20da%20Fraga%20Contabilidade%20e%20gostaria%20de%20falar%20com%20um%20especialista."
+              target="_blank"
+              rel="noopener"
               className="group inline-flex items-center gap-3 rounded-full border border-[color:var(--gold)]/50 bg-bone px-6 py-3 text-sm text-ink hover:bg-[color:var(--gold-light)] transition-colors"
             >
-              Iniciar diagnóstico
+              Falar com a Fraga
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </a>
           </div>
@@ -64,11 +66,11 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
           <div>
             <div className="font-display text-3xl text-bone">
-              R<span className="text-[color:var(--gold)]">D</span>LF
+              F<span className="text-[color:var(--gold)]">RAGA</span>
             </div>
             <p className="mt-5 max-w-sm text-bone/60 leading-relaxed text-[15px]">
-              Hub jurídico estratégico para empresas em crescimento. Base sólida para
-              decisões rápidas, seguras e defensáveis.
+              Contabilidade estratégica para empresas em Vila Velha e em todo o Brasil.
+              +50 anos de experiência em rotinas contábeis, fiscais, tributárias e financeiras.
             </p>
             <div className="mt-7 flex items-center gap-3">
               <SocialBtn label="Instagram" href="#">
