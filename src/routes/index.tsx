@@ -66,15 +66,19 @@ function LandingPage() {
       <Header />
       <Hero />
       <Stack layer={2}><TrustBar /></Stack>
-      <Stack layer={3}><Narrative /></Stack>
-      <Stack layer={4}><Services /></Stack>
-      <Stack layer={5}><VideoTestimonials /></Stack>
-      <Stack layer={6}><Plans /></Stack>
-      <Stack layer={7}><Process /></Stack>
-      <Stack layer={8}><Testimonials /></Stack>
-      <Stack layer={3}><Comparison /></Stack>
-      <Stack layer={4}><Faq /></Stack>
-      <Stack layer={5}><FinalCta /></Stack>
+      <Stack layer={3}><Manifesto /></Stack>
+      <Stack layer={4}><Narrative /></Stack>
+      <Stack layer={5}><NumberedServices /></Stack>
+      <Stack layer={6}><WhatsAppMockup /></Stack>
+      <Stack layer={7}><StageSolutions /></Stack>
+      <Stack layer={8}><VideoTestimonials /></Stack>
+      <Stack layer={3}><Plans /></Stack>
+      <Stack layer={4}><Process /></Stack>
+      <Stack layer={5}><Testimonials /></Stack>
+      <Stack layer={6}><Comparison /></Stack>
+      <Stack layer={7}><Insights /></Stack>
+      <Stack layer={8}><Faq /></Stack>
+      <Stack layer={3}><FinalCta /></Stack>
       <Footer />
       <WhatsAppFloat />
     </div>
@@ -101,8 +105,10 @@ function Header() {
   }, []);
   const nav = [
     { href: "#solucoes", label: "Soluções" },
+    { href: "#sobre", label: "Sobre" },
+    { href: "#servicos", label: "Serviços" },
+    { href: "#depoimentos-video", label: "Depoimentos" },
     { href: "#planos", label: "Planos" },
-    { href: "#depoimentos", label: "Depoimentos" },
     { href: "#faq", label: "FAQ" },
   ];
   return (
