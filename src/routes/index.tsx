@@ -33,20 +33,19 @@ function LandingPage() {
   }, []);
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-accent/40 overflow-x-hidden">
-      <ScrollProgress />
       <Header />
       <Hero />
-      <Layer bg="bg-secondary text-foreground"><Manifesto /></Layer>
-      <Layer bg="bg-background text-foreground"><HistoryAuthority /></Layer>
-      <Layer bg="bg-secondary text-foreground"><InteractiveDifferentials /></Layer>
-      <Layer bg="bg-background text-foreground"><NumberedServices /></Layer>
-      <Layer bg="bg-secondary text-foreground"><WhatsAppJourney /></Layer>
-      <Layer bg="bg-background text-foreground"><StageSolutions /></Layer>
-      <Layer bg="bg-secondary text-foreground"><VideoTestimonials /></Layer>
-      <Layer bg="bg-background text-foreground"><CommunityTrust /></Layer>
-      <Layer bg="bg-secondary text-foreground"><Plans /></Layer>
-      <Layer bg="bg-background text-foreground"><Insights /></Layer>
-      <Layer bg="bg-secondary text-foreground"><Faq /></Layer>
+      <Layer bg="bg-background text-foreground"><Manifesto /></Layer>
+      <Layer bg="bg-secondary/40 text-foreground"><HistoryAuthority /></Layer>
+      <Layer bg="bg-background text-foreground"><InteractiveDifferentials /></Layer>
+      <Layer bg="bg-secondary/40 text-foreground"><NumberedServices /></Layer>
+      <Layer bg="bg-background text-foreground"><WhatsAppJourney /></Layer>
+      <Layer bg="bg-secondary/40 text-foreground"><StageSolutions /></Layer>
+      <Layer bg="bg-background text-foreground"><VideoTestimonials /></Layer>
+      <Layer bg="bg-secondary/40 text-foreground"><CommunityTrust /></Layer>
+      <Layer bg="bg-background text-foreground"><Plans /></Layer>
+      <Layer bg="bg-secondary/40 text-foreground"><Insights /></Layer>
+      <Layer bg="bg-background text-foreground"><Faq /></Layer>
       <FinalCta />
       <Footer />
       <FloatingWhatsApp />
