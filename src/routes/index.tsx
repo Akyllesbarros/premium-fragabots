@@ -1153,10 +1153,10 @@ function Insights() {
       <div className="mx-auto max-w-[1400px] px-4 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Insights</div>
+            <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Dúvidas comuns que recebemos</div>
             <h2 className="font-display text-4xl lg:text-5xl font-bold tracking-tight leading-[1.02]">
-              Conteúdo estratégico para empresas que querem{" "}
-              <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>crescer com segurança</span>
+              Os temas que mais aparecem nas{" "}
+              <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>conversas</span> com empresários.
             </h2>
           </div>
         </div>
@@ -1182,7 +1182,7 @@ function Insights() {
               <h3 className="font-display text-2xl lg:text-3xl font-bold tracking-tight leading-tight max-w-md">{it.title}</h3>
               <p className="text-sm text-foreground/65 leading-relaxed max-w-md">{it.desc}</p>
               <div className="mt-auto pt-4 text-xs font-semibold text-primary group-hover:text-primary-deep flex items-center gap-1.5">
-                Conversar no WhatsApp <ArrowRight className="w-3.5 h-3.5" />
+                Tirar essa dúvida no WhatsApp <ArrowRight className="w-3.5 h-3.5" />
               </div>
             </a>
           ))}
