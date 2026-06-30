@@ -125,8 +125,8 @@ function Header() {
       <div className={`mx-auto max-w-[1400px] px-4 lg:px-8 transition-all duration-500 ${scrolled ? "py-2" : "py-4"}`}>
         <div className={`flex items-center justify-between rounded-full px-5 lg:px-6 py-2.5 transition-all duration-500 border ${
           scrolled
-            ? "bg-white/90 backdrop-blur-xl border-border shadow-card"
-            : "bg-white/70 backdrop-blur-md border-transparent"
+            ? "bg-card/90 backdrop-blur-xl border-border shadow-card"
+            : "bg-card/70 backdrop-blur-md border-transparent"
         }`}>
           <FragaWordmark />
           <nav className="hidden xl:flex items-center gap-7">
@@ -157,7 +157,7 @@ function Header() {
           </div>
         </div>
         {open && (
-          <div className="xl:hidden mt-2 rounded-3xl bg-white/95 backdrop-blur-xl border border-border p-4 shadow-card animate-fade-in">
+          <div className="xl:hidden mt-2 rounded-3xl bg-card/95 backdrop-blur-xl border border-border p-4 shadow-card animate-fade-in">
             {nav.map((n) => (
               <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="block py-2.5 text-foreground/80 hover:text-foreground border-b border-border last:border-0">
                 {n.label}
@@ -280,7 +280,7 @@ function Manifesto() {
         </Marquee>
       </div>
       <div className="relative mx-auto max-w-3xl px-4 lg:px-8 text-center mt-20">
-        <p className="font-display text-2xl lg:text-3xl leading-snug text-white/85 tracking-tight">
+        <p className="font-display text-2xl lg:text-3xl leading-snug text-foreground/85 tracking-tight">
           Uma boa contabilidade não aparece só no fim do mês. Ela ajuda o empresário a enxergar riscos, organizar obrigações e entender o que os números estão dizendo.
         </p>
       </div>
@@ -292,7 +292,7 @@ function Marquee({ children, direction = "left", muted = false }: { children: Re
   const cls = direction === "left" ? "animate-marquee" : "animate-marquee-rev";
   return (
     <div className="overflow-hidden">
-      <div className={`flex whitespace-nowrap ${cls} font-display font-black tracking-[-0.04em] text-[clamp(3rem,11vw,9rem)] leading-none ${muted ? "text-white/10" : "text-white"}`}>
+      <div className={`flex whitespace-nowrap ${cls} font-display font-black tracking-[-0.04em] text-[clamp(3rem,11vw,9rem)] leading-none ${muted ? "text-foreground/10" : "text-foreground"}`}>
         {Array.from({ length: 4 }).map((_, i) => (
           <span key={i} className="px-6">{children}</span>
         ))}
@@ -326,11 +326,11 @@ function HistoryAuthority() {
             <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden bg-gradient-primary shadow-elegant max-w-sm">
               <div className="absolute inset-0 bg-gradient-mesh opacity-40" />
               <div className="absolute inset-0 p-8 flex flex-col justify-between">
-                <div className="flex items-center justify-between text-white">
+                <div className="flex items-center justify-between text-foreground">
                   <div className="font-display text-xl font-bold">Desde<br/>1974</div>
-                  <span className="text-[10px] uppercase tracking-[0.28em] text-white/55">Fraga · ES</span>
+                  <span className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground">Fraga · ES</span>
                 </div>
-                <div className="text-white">
+                <div className="text-foreground">
                   <div className="font-display text-6xl font-black tracking-tight">F</div>
                   <div className="text-[11px] uppercase tracking-[0.2em] opacity-70 mt-2">Vila Velha · ES</div>
                 </div>
@@ -384,13 +384,13 @@ function InteractiveDifferentials() {
       <div className="mx-auto max-w-[1400px] px-4 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— O que a Fraga entrega</div>
+            <div className="text-xs uppercase tracking-[0.22em] text-accent font-semibold mb-4">— O que a Fraga entrega</div>
             <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02]">
               Um time inteiro acompanhando a{" "}
               rotina{" "}da sua empresa.
             </h2>
           </div>
-          <div className="text-sm text-white/55 max-w-xs">
+          <div className="text-sm text-muted-foreground max-w-xs">
             Clique em cada frente de trabalho para ver como ela funciona dentro da Fraga.
           </div>
         </div>
@@ -407,18 +407,18 @@ function InteractiveDifferentials() {
                     onMouseEnter={() => setActive(i)}
                     className={`group w-full text-left rounded-2xl border transition-all duration-500 px-6 py-5 flex items-center gap-5 ${
                       isActive
-                        ? "border-accent/40 bg-white/[0.05] shadow-[inset_0_0_0_1px_oklch(0.78_0.16_78/0.2)]"
-                        : "border-white/10 hover:border-white/25 hover:bg-white/[0.02]"
+                        ? "border-accent/40 bg-card/[0.05] shadow-[inset_0_0_0_1px_oklch(0.78_0.16_78/0.2)]"
+                        : "border-border hover:border-border hover:bg-card/[0.02]"
                     }`}
                   >
-                    <span className={`font-display font-bold text-sm tabular-nums tracking-[0.1em] transition-colors ${isActive ? "text-accent-glow" : "text-white/40"}`}>
+                    <span className={`font-display font-bold text-sm tabular-nums tracking-[0.1em] transition-colors ${isActive ? "text-accent" : "text-muted-foreground/80"}`}>
                       0{i + 1}
                     </span>
                     <div className="flex-1 min-w-0">
-                      <div className={`font-display text-lg font-bold transition-colors ${isActive ? "text-white" : "text-white/80"}`}>{d.title}</div>
-                      <div className={`text-sm leading-relaxed transition-colors ${isActive ? "text-white/70" : "text-white/45"}`}>{d.desc}</div>
+                      <div className={`font-display text-lg font-bold transition-colors ${isActive ? "text-foreground" : "text-foreground/80"}`}>{d.title}</div>
+                      <div className={`text-sm leading-relaxed transition-colors ${isActive ? "text-foreground/70" : "text-muted-foreground"}`}>{d.desc}</div>
                     </div>
-                    <ArrowUpRight strokeWidth={1.5} className={`w-5 h-5 transition-all ${isActive ? "text-accent translate-x-0 translate-y-0" : "text-white/30 -translate-x-1 translate-y-1"}`} />
+                    <ArrowUpRight strokeWidth={1.5} className={`w-5 h-5 transition-all ${isActive ? "text-accent translate-x-0 translate-y-0" : "text-foreground/30 -translate-x-1 translate-y-1"}`} />
                   </button>
                 </li>
               );
@@ -427,7 +427,7 @@ function InteractiveDifferentials() {
 
           {/* desktop: preview */}
           <div className="lg:col-span-5 hidden lg:block">
-            <div className="sticky top-32 aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/10 bg-gradient-to-br from-[oklch(0.18_0.03_220)] to-[oklch(0.13_0.025_220)] shadow-elegant">
+            <div className="sticky top-32 aspect-[4/5] rounded-[2rem] overflow-hidden border border-border bg-gradient-to-br from-[oklch(0.18_0.03_220)] to-[oklch(0.13_0.025_220)] shadow-elegant">
               <DifferentialPreview key={item.media} item={item} />
             </div>
           </div>
@@ -435,16 +435,16 @@ function InteractiveDifferentials() {
           {/* mobile: accordion */}
           <div className="lg:hidden space-y-3">
             {DIFFERENTIALS.map((d, i) => (
-              <details key={d.title} className="group rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+              <details key={d.title} className="group rounded-2xl border border-border bg-card/[0.03] p-5">
                 <summary className="flex items-center gap-4 cursor-pointer list-none">
-                  <span className="font-display text-sm font-bold tabular-nums text-white/50 group-open:text-accent-glow transition-colors">
+                  <span className="font-display text-sm font-bold tabular-nums text-muted-foreground group-open:text-accent transition-colors">
                     0{i + 1}
                   </span>
                   <span className="font-display font-bold flex-1">{d.title}</span>
-                  <span className="text-white/50 text-xl leading-none font-light group-open:hidden">+</span>
-                  <span className="text-white/50 text-xl leading-none font-light hidden group-open:block">−</span>
+                  <span className="text-muted-foreground text-xl leading-none font-light group-open:hidden">+</span>
+                  <span className="text-muted-foreground text-xl leading-none font-light hidden group-open:block">−</span>
                 </summary>
-                <p className="mt-4 text-sm text-white/65 leading-relaxed">{d.desc}</p>
+                <p className="mt-4 text-sm text-foreground/65 leading-relaxed">{d.desc}</p>
               </details>
             ))}
           </div>
@@ -458,20 +458,20 @@ function DifferentialPreview({ item }: { item: (typeof DIFFERENTIALS)[number] })
   return (
     <div className="relative h-full w-full p-8 flex flex-col animate-fade-in">
       <div className="absolute inset-0 bg-gradient-mesh opacity-30" />
-      <div className="relative flex items-center justify-between text-white/40 text-[10px] uppercase tracking-[0.25em] mb-8">
+      <div className="relative flex items-center justify-between text-muted-foreground/80 text-[10px] uppercase tracking-[0.25em] mb-8">
         <span>Diferencial Fraga</span>
         <span>0{DIFFERENTIALS.findIndex(d => d.media === item.media) + 1}</span>
       </div>
       <div className="relative flex-1 flex flex-col justify-center">
-        <div className="font-display text-7xl font-black text-white leading-none mb-7 tabular-nums">
+        <div className="font-display text-7xl font-black text-foreground leading-none mb-7 tabular-nums">
           0{DIFFERENTIALS.findIndex(d => d.media === item.media) + 1}
         </div>
-        <h3 className="font-display text-3xl font-bold text-white tracking-tight mb-4">{item.title}</h3>
-        <p className="text-white/65 text-base leading-relaxed">{item.desc}</p>
+        <h3 className="font-display text-3xl font-bold text-foreground tracking-tight mb-4">{item.title}</h3>
+        <p className="text-foreground/65 text-base leading-relaxed">{item.desc}</p>
       </div>
       <div className="relative grid grid-cols-3 gap-2 mt-8">
         {[1,2,3].map(i => (
-          <div key={i} className="h-1.5 rounded-full bg-white/10 overflow-hidden">
+          <div key={i} className="h-1.5 rounded-full bg-muted overflow-hidden">
             <div className="h-full w-2/3 bg-gradient-accent" />
           </div>
         ))}
@@ -621,7 +621,7 @@ function WhatsAppJourney() {
             Sem formulário. Sem espera.{" "}
             Conversa direta no WhatsApp.
           </h2>
-          <p className="text-white/65 text-lg leading-relaxed mb-10 max-w-lg">
+          <p className="text-foreground/65 text-lg leading-relaxed mb-10 max-w-lg">
             A equipe entende o momento da empresa antes de indicar um plano. Seja para abrir, regularizar, organizar ou trocar de contador, o atendimento começa por uma conversa real.
           </p>
           <ol className="space-y-3 mb-10">
@@ -657,10 +657,10 @@ function StepItem({ index, text }: { index: number; text: string }) {
       className={`flex items-center gap-4 transition-all duration-700 ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}`}
       style={{ transitionDelay: `${index * 120}ms` }}
     >
-      <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-xs font-bold text-accent-glow">
+      <span className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-muted/60 text-xs font-bold text-accent">
         0{index + 1}
       </span>
-      <span className="text-white/80 font-medium">{text}</span>
+      <span className="text-foreground/80 font-medium">{text}</span>
       <span aria-hidden className="ml-auto h-px w-8 bg-[oklch(0.78_0.18_145)]/60" />
     </li>
   );
@@ -701,18 +701,18 @@ function WhatsAppMock() {
   return (
     <div ref={ref} className="relative max-w-md mx-auto">
       <div className="absolute -inset-4 bg-gradient-to-br from-[oklch(0.62_0.16_145)]/30 to-accent/20 rounded-[3rem] blur-2xl" />
-      <div className="relative rounded-[2.2rem] border border-white/10 bg-[oklch(0.16_0.03_220)] overflow-hidden shadow-elegant">
+      <div className="relative rounded-[2.2rem] border border-border bg-secondary overflow-hidden shadow-elegant">
         {/* header */}
-        <div className="flex items-center gap-3 px-5 py-4 bg-[oklch(0.2_0.03_215)] border-b border-white/10">
+        <div className="flex items-center gap-3 px-5 py-4 bg-[oklch(0.2_0.03_215)] border-b border-border">
           <div className="w-10 h-10 rounded-full bg-gradient-accent flex items-center justify-center text-accent-foreground font-display font-black text-sm">F</div>
           <div className="flex-1">
-            <div className="text-white font-semibold text-sm">Fraga Contabilidade</div>
+            <div className="text-foreground font-semibold text-sm">Fraga Contabilidade</div>
             <div className="text-[11px] text-[oklch(0.78_0.18_145)] flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.78_0.18_145)] animate-glow-pulse" />
               online agora
             </div>
           </div>
-          <MessageCircle className="w-5 h-5 text-white/40" />
+          <MessageCircle className="w-5 h-5 text-muted-foreground/80" />
         </div>
         {/* body */}
         <div className="p-5 space-y-3 min-h-[340px] bg-[oklch(0.14_0.025_220)]" style={{
@@ -723,8 +723,8 @@ function WhatsAppMock() {
             <div key={i} className={`flex ${m.from === "client" ? "justify-end" : "justify-start"} animate-wa-pop`}>
               <div className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-snug ${
                 m.from === "client"
-                  ? "bg-[oklch(0.55_0.14_145)] text-white rounded-br-sm"
-                  : "bg-white/[0.07] text-white rounded-bl-sm border border-white/5"
+                  ? "bg-[oklch(0.55_0.14_145)] text-foreground rounded-br-sm"
+                  : "bg-card/[0.07] text-foreground rounded-bl-sm border border-border"
               }`}>
                 <div>{m.text}</div>
                 <div className="text-[10px] opacity-60 text-right mt-1">{m.t}</div>
@@ -733,9 +733,9 @@ function WhatsAppMock() {
           ))}
           {typing && shown < CONVO.length && (
             <div className={`flex ${CONVO[shown].from === "client" ? "justify-end" : "justify-start"}`}>
-              <div className={`rounded-2xl px-4 py-3 flex gap-1 ${CONVO[shown].from === "client" ? "bg-[oklch(0.55_0.14_145)]" : "bg-white/[0.07] border border-white/5"}`}>
+              <div className={`rounded-2xl px-4 py-3 flex gap-1 ${CONVO[shown].from === "client" ? "bg-[oklch(0.55_0.14_145)]" : "bg-card/[0.07] border border-border"}`}>
                 {[0,1,2].map(i => (
-                  <span key={i} className="w-1.5 h-1.5 rounded-full bg-white inline-block" style={{ animation: "wa-typing 1.2s infinite", animationDelay: `${i*0.15}s` }} />
+                  <span key={i} className="w-1.5 h-1.5 rounded-full bg-card inline-block" style={{ animation: "wa-typing 1.2s infinite", animationDelay: `${i*0.15}s` }} />
                 ))}
               </div>
             </div>
@@ -835,12 +835,12 @@ function VideoTestimonials() {
       <div aria-hidden className="absolute top-1/3 -left-32 w-[400px] h-[400px] rounded-full bg-accent/10 blur-[140px]" />
       <div className="relative mx-auto max-w-[1400px] px-4 lg:px-8">
         <div className="max-w-3xl mb-14">
-          <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— Quem trabalha com a Fraga conta</div>
+          <div className="text-xs uppercase tracking-[0.22em] text-accent font-semibold mb-4">— Quem trabalha com a Fraga conta</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02] mb-5">
             Clientes falando em{" "}
             vídeo, na própria voz.
           </h2>
-          <p className="text-white/65 text-lg max-w-2xl">
+          <p className="text-foreground/65 text-lg max-w-2xl">
             Sem depoimentos escritos por terceiros: dois clientes contam, em vídeo, como é o trabalho com a Fraga.
           </p>
         </div>
@@ -921,12 +921,12 @@ function Plans() {
       <div aria-hidden className="absolute -top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-accent/10 blur-[160px]" />
       <div className="relative mx-auto max-w-[1400px] px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— Planos</div>
+          <div className="text-xs uppercase tracking-[0.22em] text-accent font-semibold mb-4">— Planos</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02] mb-5">
             Quatro pontos de partida.{" "}
             Um atendimento por vez.
           </h2>
-          <p className="text-white/65 text-lg">
+          <p className="text-foreground/65 text-lg">
             O plano é apenas o ponto de partida. Antes de indicar, a equipe entende o momento da sua empresa.
           </p>
         </div>
@@ -939,20 +939,20 @@ function Plans() {
                 <div className={`relative h-full rounded-3xl p-7 flex flex-col transition-all hover:-translate-y-1 ${
                   isFeatured
                     ? "bg-gradient-to-br from-[oklch(0.78_0.16_78)] to-[oklch(0.86_0.15_85)] text-accent-foreground shadow-gold lg:scale-[1.04] lg:-my-2 border border-accent/50"
-                    : "bg-white/[0.04] border border-white/10 backdrop-blur"
+                    : "bg-muted/60 border border-border backdrop-blur"
                 }`}>
                   {isFeatured && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[oklch(0.18_0.03_220)] text-accent-glow text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-accent/40">
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-accent text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-accent/40">
                       Mais consultivo
                     </div>
                   )}
-                  <div className={`text-[11px] font-semibold uppercase tracking-[0.2em] mb-3 ${isFeatured ? "text-accent-foreground/80" : "text-accent-glow"}`}>Plano</div>
-                  <h3 className={`font-display text-3xl font-bold mb-2 ${isFeatured ? "text-accent-foreground" : "text-white"}`}>{p.name}</h3>
-                  <p className={`text-sm mb-1 ${isFeatured ? "text-accent-foreground/85" : "text-white/85 font-medium"}`}>{p.desc}</p>
-                  <p className={`text-xs mb-6 ${isFeatured ? "text-accent-foreground/65" : "text-white/55"}`}>{p.ideal}</p>
+                  <div className={`text-[11px] font-semibold uppercase tracking-[0.2em] mb-3 ${isFeatured ? "text-accent-foreground/80" : "text-accent"}`}>Plano</div>
+                  <h3 className={`font-display text-3xl font-bold mb-2 ${isFeatured ? "text-accent-foreground" : "text-foreground"}`}>{p.name}</h3>
+                  <p className={`text-sm mb-1 ${isFeatured ? "text-accent-foreground/85" : "text-foreground/85 font-medium"}`}>{p.desc}</p>
+                  <p className={`text-xs mb-6 ${isFeatured ? "text-accent-foreground/65" : "text-muted-foreground"}`}>{p.ideal}</p>
                   <ul className="space-y-2.5 mb-7 flex-1">
                     {p.features.map(f => (
-                      <li key={f} className={`flex items-start gap-2 text-sm ${isFeatured ? "text-accent-foreground/90" : "text-white/85"}`}>
+                      <li key={f} className={`flex items-start gap-2 text-sm ${isFeatured ? "text-accent-foreground/90" : "text-foreground/85"}`}>
                         <span aria-hidden className={`mt-2 h-px w-3 flex-shrink-0 ${isFeatured ? "bg-accent-foreground/60" : "bg-accent/70"}`} />
                         {f}
                       </li>
@@ -965,8 +965,8 @@ function Plans() {
                     onClick={() => trackConversion("plan_whatsapp_click", p.name)}
                     className={`inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm transition-all hover:-translate-y-0.5 ${
                       isFeatured
-                        ? "bg-[oklch(0.18_0.03_220)] text-white hover:bg-[oklch(0.28_0.06_215)]"
-                        : "bg-white text-[oklch(0.18_0.03_220)] hover:bg-accent hover:text-accent-foreground"
+                        ? "bg-secondary text-foreground hover:bg-[oklch(0.28_0.06_215)]"
+                        : "bg-card text-[oklch(0.18_0.03_220)] hover:bg-accent hover:text-accent-foreground"
                     }`}
                   >
                     <MessageCircle className="w-4 h-4" /> {p.cta}
@@ -977,8 +977,8 @@ function Plans() {
           })}
         </div>
 
-        <p className="text-center text-sm text-white/55 mt-12">
-          Não sabe qual escolher? <a href={MAIN_CTA} target="_blank" rel="noopener" className="text-accent-glow font-semibold underline-offset-4 hover:underline">Chame a Fraga no WhatsApp</a> e conte o seu cenário — a indicação vem depois da conversa.
+        <p className="text-center text-sm text-muted-foreground mt-12">
+          Não sabe qual escolher? <a href={MAIN_CTA} target="_blank" rel="noopener" className="text-accent font-semibold underline-offset-4 hover:underline">Chame a Fraga no WhatsApp</a> e conte o seu cenário — a indicação vem depois da conversa.
         </p>
       </div>
     </div>
@@ -1061,18 +1061,18 @@ function Faq() {
       <div className="mx-auto max-w-5xl px-4 lg:px-8 grid lg:grid-cols-12 gap-12">
         <div className="lg:col-span-4">
           <div className="sticky top-32">
-            <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— FAQ</div>
+            <div className="text-xs uppercase tracking-[0.22em] text-accent font-semibold mb-4">— FAQ</div>
             <h2 className="font-display text-3xl lg:text-5xl font-bold tracking-tight leading-[1.02] mb-6">
               Perguntas{" "}
               frequentes
             </h2>
-            <p className="text-white/55 text-sm leading-relaxed">
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Não encontrou o que procurava? Fale com um especialista no WhatsApp.
             </p>
           </div>
         </div>
         <div className="lg:col-span-8">
-          <ul className="divide-y divide-white/10 border-y border-white/10">
+          <ul className="divide-y divide-border border-y border-border">
             {FAQ.map((f, i) => {
               const isOpen = open === i;
               return (
@@ -1082,8 +1082,8 @@ function Faq() {
                     aria-expanded={isOpen}
                     className="w-full text-left py-5 flex items-center gap-6 group"
                   >
-                    <span className="font-display font-bold text-lg lg:text-xl text-white flex-1 group-hover:text-accent-glow transition-colors">{f.q}</span>
-                    <span className={`flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/70 transition-all ${isOpen ? "bg-accent text-accent-foreground border-accent rotate-180" : ""}`}>
+                    <span className="font-display font-bold text-lg lg:text-xl text-foreground flex-1 group-hover:text-accent transition-colors">{f.q}</span>
+                    <span className={`flex h-9 w-9 items-center justify-center rounded-full border border-border text-foreground/70 transition-all ${isOpen ? "bg-accent text-accent-foreground border-accent rotate-180" : ""}`}>
                       <span className="text-lg leading-none font-light">+</span>
                     </span>
                   </button>
@@ -1093,13 +1093,13 @@ function Faq() {
                   >
                     <div className="overflow-hidden">
                       <div className="pb-6 pr-14">
-                        <p className="text-white/70 text-base leading-relaxed mb-4">{f.a}</p>
+                        <p className="text-foreground/70 text-base leading-relaxed mb-4">{f.a}</p>
                         <a
                           href={waLink(`Olá, tenho uma dúvida: ${f.q}`)}
                           target="_blank"
                           rel="noopener"
                           onClick={() => trackConversion("faq_whatsapp_click", f.q)}
-                          className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent-glow hover:text-accent"
+                          className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:text-accent"
                         >
                           Tirar essa dúvida no WhatsApp <ArrowUpRight className="w-3.5 h-3.5" />
                         </a>
@@ -1131,16 +1131,16 @@ function FinalCta() {
         maskImage: "radial-gradient(ellipse at center, black 30%, transparent 80%)",
       }} />
       <div className="relative mx-auto max-w-5xl px-4 lg:px-8 py-28 lg:py-40 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-medium text-white/70 backdrop-blur mb-8">
+        <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/60 px-3 py-1.5 text-[11px] font-medium text-foreground/70 backdrop-blur mb-8">
           <span className="h-1.5 w-1.5 rounded-full bg-accent" />
           Atendimento direto · sem formulário
         </div>
-        <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.0] mb-8 text-white">
+        <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.0] mb-8 text-foreground">
           Quer entender se a Fraga{" "}
           encaixa{" "}
           com a sua empresa?
         </h2>
-        <p className="text-white/65 text-lg max-w-2xl mx-auto mb-12">
+        <p className="text-foreground/65 text-lg max-w-2xl mx-auto mb-12">
           Conte o seu cenário no WhatsApp. A equipe responde com orientação real antes de qualquer proposta.
         </p>
         <PremiumButton
@@ -1153,12 +1153,12 @@ function FinalCta() {
         >
           Chamar a Fraga no WhatsApp
         </PremiumButton>
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-white/55">
-          <span><span className="text-[10px] uppercase tracking-[0.22em] text-accent-glow/80 mr-2">Tel.</span> (27) 98848-2268</span>
-          <span className="text-white/30">·</span>
-          <span><span className="text-[10px] uppercase tracking-[0.22em] text-accent-glow/80 mr-2">Sede</span> Vila Velha · ES</span>
-          <span className="text-white/30">·</span>
-          <span><span className="text-[10px] uppercase tracking-[0.22em] text-accent-glow/80 mr-2">Resposta</span> rápida no WhatsApp</span>
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
+          <span><span className="text-[10px] uppercase tracking-[0.22em] text-accent/80 mr-2">Tel.</span> (27) 98848-2268</span>
+          <span className="text-foreground/30">·</span>
+          <span><span className="text-[10px] uppercase tracking-[0.22em] text-accent/80 mr-2">Sede</span> Vila Velha · ES</span>
+          <span className="text-foreground/30">·</span>
+          <span><span className="text-[10px] uppercase tracking-[0.22em] text-accent/80 mr-2">Resposta</span> rápida no WhatsApp</span>
         </div>
       </div>
     </section>
@@ -1170,39 +1170,39 @@ function FinalCta() {
    ============================================================ */
 function Footer() {
   return (
-    <footer className="bg-[oklch(0.08_0.02_220)] text-white/70 pt-20 pb-28 border-t border-white/10">
+    <footer className="bg-[oklch(0.08_0.02_220)] text-foreground/70 pt-20 pb-28 border-t border-border">
       <div className="mx-auto max-w-[1400px] px-4 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-10 mb-14">
           <div className="lg:col-span-5">
             <FragaWordmark />
-            <p className="mt-6 text-sm leading-relaxed max-w-sm text-white/60">
+            <p className="mt-6 text-sm leading-relaxed max-w-sm text-muted-foreground">
               Contabilidade em Vila Velha, Espírito Santo, atendendo empresas em todo o Brasil desde 1974. Rotinas contábeis, fiscais, trabalhistas e financeiras conduzidas por uma equipe técnica dedicada.
             </p>
           </div>
           <div className="lg:col-span-3">
-            <div className="text-[11px] uppercase tracking-[0.22em] text-white/40 mb-4 font-semibold">Contato</div>
+            <div className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground/80 mb-4 font-semibold">Contato</div>
             <ul className="space-y-3 text-sm">
-              <li><span className="text-[10px] uppercase tracking-[0.22em] text-white/40 mr-2">Tel.</span>(27) 98848-2268</li>
-              <li><span className="text-[10px] uppercase tracking-[0.22em] text-white/40 mr-2">WhatsApp</span>(27) 98848-2268</li>
-              <li><span className="text-[10px] uppercase tracking-[0.22em] text-white/40 mr-2">E-mail</span>contato@fragacontabilidade.com.br</li>
-              <li><span className="text-[10px] uppercase tracking-[0.22em] text-white/40 mr-2">Sede</span>Vila Velha · Espírito Santo</li>
+              <li><span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80 mr-2">Tel.</span>(27) 98848-2268</li>
+              <li><span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80 mr-2">WhatsApp</span>(27) 98848-2268</li>
+              <li><span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80 mr-2">E-mail</span>contato@fragacontabilidade.com.br</li>
+              <li><span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80 mr-2">Sede</span>Vila Velha · Espírito Santo</li>
             </ul>
           </div>
           <div className="lg:col-span-4">
-            <div className="text-[11px] uppercase tracking-[0.22em] text-white/40 mb-4 font-semibold">Navegar</div>
+            <div className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground/80 mb-4 font-semibold">Navegar</div>
             <ul className="grid grid-cols-2 gap-2 text-sm">
-              <li><a href="#inicio" className="hover:text-white">Início</a></li>
-              <li><a href="#sobre" className="hover:text-white">Sobre</a></li>
-              <li><a href="#servicos" className="hover:text-white">Serviços</a></li>
-              <li><a href="#solucoes" className="hover:text-white">Soluções</a></li>
-              <li><a href="#depoimentos" className="hover:text-white">Depoimentos</a></li>
-              <li><a href="#planos" className="hover:text-white">Planos</a></li>
-              <li><a href="#faq" className="hover:text-white">FAQ</a></li>
-              <li><a href={MAIN_CTA} target="_blank" rel="noopener" className="hover:text-white">WhatsApp</a></li>
+              <li><a href="#inicio" className="hover:text-foreground">Início</a></li>
+              <li><a href="#sobre" className="hover:text-foreground">Sobre</a></li>
+              <li><a href="#servicos" className="hover:text-foreground">Serviços</a></li>
+              <li><a href="#solucoes" className="hover:text-foreground">Soluções</a></li>
+              <li><a href="#depoimentos" className="hover:text-foreground">Depoimentos</a></li>
+              <li><a href="#planos" className="hover:text-foreground">Planos</a></li>
+              <li><a href="#faq" className="hover:text-foreground">FAQ</a></li>
+              <li><a href={MAIN_CTA} target="_blank" rel="noopener" className="hover:text-foreground">WhatsApp</a></li>
             </ul>
           </div>
         </div>
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-4 text-xs text-white/40">
+        <div className="pt-8 border-t border-border flex flex-col sm:flex-row justify-between gap-4 text-xs text-muted-foreground/80">
           <div>© {new Date().getFullYear()} Fraga Contabilidade. Todos os direitos reservados.</div>
           <div>CNPJ · Vila Velha/ES · Atendimento em todo o Brasil</div>
         </div>
@@ -1231,10 +1231,10 @@ function FloatingWhatsApp() {
         rel="noopener"
         onClick={() => trackConversion("floating_whatsapp_click", "Floating desktop")}
         aria-label="Fale com a Fraga no WhatsApp"
-        className={`hidden sm:inline-flex fixed bottom-6 right-6 z-40 items-center gap-3 rounded-full pl-5 pr-6 py-3 bg-[oklch(0.55_0.14_145)] text-white font-semibold text-sm shadow-[0_15px_40px_-10px_rgba(0,0,0,0.5)] hover:bg-[oklch(0.6_0.16_145)] transition-all ${hidden ? "translate-y-24 opacity-0" : "translate-y-0 opacity-100"}`}
+        className={`hidden sm:inline-flex fixed bottom-6 right-6 z-40 items-center gap-3 rounded-full pl-5 pr-6 py-3 bg-[oklch(0.55_0.14_145)] text-foreground font-semibold text-sm shadow-[0_15px_40px_-10px_rgba(0,0,0,0.5)] hover:bg-[oklch(0.6_0.16_145)] transition-all ${hidden ? "translate-y-24 opacity-0" : "translate-y-0 opacity-100"}`}
       >
-        <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-white/15">
-          <span className="absolute inset-0 rounded-full bg-white/30 animate-glow-pulse" />
+        <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-card/15">
+          <span className="absolute inset-0 rounded-full bg-card/30 animate-glow-pulse" />
           <MessageCircle className="relative w-4 h-4" />
         </span>
         Fale com a Fraga
@@ -1246,7 +1246,7 @@ function FloatingWhatsApp() {
           target="_blank"
           rel="noopener"
           onClick={() => trackConversion("floating_whatsapp_click", "Floating mobile")}
-          className="flex items-center justify-center gap-2 w-full rounded-full bg-[oklch(0.55_0.14_145)] text-white py-3.5 font-semibold text-sm shadow-elegant"
+          className="flex items-center justify-center gap-2 w-full rounded-full bg-[oklch(0.55_0.14_145)] text-foreground py-3.5 font-semibold text-sm shadow-elegant"
         >
           <MessageCircle className="w-4 h-4" /> Falar no WhatsApp
         </a>
