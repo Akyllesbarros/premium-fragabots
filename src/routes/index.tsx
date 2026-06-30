@@ -973,8 +973,8 @@ function StageSolutions() {
    VIDEO TESTIMONIALS
    ============================================================ */
 const VIDEOS: VideoItem[] = [
-  { id: "thermofibras", youtubeId: "BX6rpC1cSUg", title: "Parceria que sustenta o crescimento da Thermofibras", person: "Anderson Drummond", role: "Thermofibras" },
-  { id: "quintao", youtubeId: "-J942kkVc-s", title: "40 anos de parceria contábil com a Fraga", person: "Helvecio Quintão", role: "Cliente parceiro" },
+  { id: "thermofibras", youtubeId: "BX6rpC1cSUg", title: "Thermofibras: confiança construída na prática", person: "Anderson Drummond", role: "Thermofibras" },
+  { id: "quintao", youtubeId: "-J942kkVc-s", title: "Helvecio Quintão: uma parceria de 40 anos", person: "Helvecio Quintão", role: "Cliente de longa data" },
 ];
 
 function VideoTestimonials() {
@@ -984,13 +984,13 @@ function VideoTestimonials() {
       <div aria-hidden className="absolute top-1/3 -left-32 w-[400px] h-[400px] rounded-full bg-accent/10 blur-[140px]" />
       <div className="relative mx-auto max-w-[1400px] px-4 lg:px-8">
         <div className="max-w-3xl mb-14">
-          <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— Depoimentos em vídeo</div>
+          <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— Quem trabalha com a Fraga conta</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02] mb-5">
-            Parcerias que{" "}
-            <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>atravessam anos</span>
+            Clientes falando em{" "}
+            <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>vídeo</span>, na própria voz.
           </h2>
           <p className="text-white/65 text-lg max-w-2xl">
-            Clientes reais compartilham a experiência de contar com a Fraga como parceira contábil.
+            Sem depoimentos escritos por terceiros: dois clientes contam, em vídeo, como é o trabalho com a Fraga.
           </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-6">
