@@ -750,25 +750,25 @@ function NumberedServices() {
    ============================================================ */
 function WhatsAppJourney() {
   const steps = [
-    "Chamar no WhatsApp",
-    "Explicar o momento da empresa",
-    "Receber orientação inicial",
-    "Escolher melhor plano",
-    "Iniciar transição com segurança",
+    "Você chama no WhatsApp",
+    "Conta o momento da empresa",
+    "A equipe avalia o cenário",
+    "Indicação do caminho mais adequado",
+    "Início organizado, sem parar a operação",
   ];
-  const cta = waLink("Olá, quero entender como funciona para começar com a Fraga Contabilidade.");
+  const cta = waLink("Olá, vim pela landing page e gostaria de entender como começar com a Fraga.");
   return (
     <div className="py-24 lg:py-36 relative overflow-hidden">
       <div aria-hidden className="absolute -top-20 right-0 w-[500px] h-[500px] rounded-full bg-[oklch(0.62_0.16_145)]/15 blur-[140px]" />
       <div className="relative mx-auto max-w-[1400px] px-4 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-6">
-          <div className="text-xs uppercase tracking-[0.22em] text-[oklch(0.78_0.18_145)] font-semibold mb-4">— Sem burocracia</div>
+          <div className="text-xs uppercase tracking-[0.22em] text-[oklch(0.78_0.18_145)] font-semibold mb-4">— Como começa</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02] mb-7">
-            Comece pelo{" "}
-            <span className="italic font-serif" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: "oklch(0.78 0.18 145)" }}>WhatsApp</span>. Sem formulário.
+            Sem formulário. Sem espera.{" "}
+            <span className="italic font-serif" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: "oklch(0.78 0.18 145)" }}>Conversa direta</span> no WhatsApp.
           </h2>
           <p className="text-white/65 text-lg leading-relaxed mb-10 max-w-lg">
-            Em poucos minutos, você fala com a equipe da Fraga, explica seu momento atual e entende qual solução contábil faz mais sentido para sua empresa.
+            A equipe entende o momento da empresa antes de indicar um plano. Seja para abrir, regularizar, organizar ou trocar de contador, o atendimento começa por uma conversa real.
           </p>
           <ol className="space-y-3 mb-10">
             {steps.map((s, i) => (
@@ -783,7 +783,7 @@ function WhatsAppJourney() {
             trailingIcon={<ArrowUpRight className="w-4 h-4" />}
             trackLocation="whatsapp_journey_cta"
           >
-            Começar agora pelo WhatsApp
+            Começar pelo WhatsApp
           </PremiumButton>
         </div>
 
@@ -814,10 +814,10 @@ function StepItem({ index, text }: { index: number; text: string }) {
 
 type Msg = { from: "client" | "fraga"; text: string; t: string };
 const CONVO: Msg[] = [
-  { from: "client", text: "Olá, quero melhorar a contabilidade da minha empresa.", t: "10:14" },
-  { from: "fraga", text: "Claro! Vamos entender seu momento e indicar a melhor solução.", t: "10:14" },
-  { from: "client", text: "Faturamos cerca de R$ 150 mil/mês.", t: "10:15" },
-  { from: "fraga", text: "Perfeito. O plano Plus se encaixa bem. Posso te explicar agora?", t: "10:15" },
+  { from: "client", text: "Olá, tenho uma empresa e queria entender se minha contabilidade está adequada.", t: "10:14" },
+  { from: "fraga", text: "Claro. Podemos começar entendendo seu regime atual, faturamento, rotina fiscal e o que você espera melhorar.", t: "10:14" },
+  { from: "client", text: "Também quero saber se vale trocar de contador.", t: "10:15" },
+  { from: "fraga", text: "Avaliamos esse cenário com cuidado e orientamos os próximos passos para uma transição segura.", t: "10:15" },
 ];
 
 function WhatsAppMock() {
