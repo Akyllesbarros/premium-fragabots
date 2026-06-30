@@ -4,7 +4,7 @@ import {
   Award, ShieldCheck, TrendingUp, Users, Building2, Calculator,
   FileCheck, Wallet, Briefcase, Sparkles, ArrowRight, Check, X,
   MessageCircle, ChevronDown, Star, Quote, Menu, Zap, Target,
-  HeartHandshake, BarChart3, Clock, MapPin,
+  HeartHandshake, BarChart3, Clock, MapPin, Phone, Send,
 } from "lucide-react";
 import { waLink, trackConversion } from "@/lib/whatsapp";
 import { PremiumButton } from "@/components/fraga/PremiumButton";
