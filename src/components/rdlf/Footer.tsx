@@ -107,7 +107,7 @@ export function Footer() {
         {/* Giant Fraga wordmark */}
         <div className="relative mt-24 mb-6 overflow-hidden">
           <div className="font-display italic text-[22vw] leading-[0.85] tracking-[-0.06em] text-bone/95 select-none">
-            RDLF
+            Fraga
           </div>
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink via-ink/60 to-transparent" />
         </div>
