@@ -554,14 +554,14 @@ function InteractiveDifferentials() {
                         : "border-white/10 hover:border-white/25 hover:bg-white/[0.02]"
                     }`}
                   >
-                    <span className={`flex h-11 w-11 items-center justify-center rounded-xl transition-colors ${isActive ? "bg-accent text-accent-foreground" : "bg-white/5 text-white/70"}`}>
-                      <d.icon className="w-5 h-5" />
+                    <span className={`font-display font-bold text-sm tabular-nums tracking-[0.1em] transition-colors ${isActive ? "text-accent-glow" : "text-white/40"}`}>
+                      0{i + 1}
                     </span>
                     <div className="flex-1 min-w-0">
                       <div className={`font-display text-lg font-bold transition-colors ${isActive ? "text-white" : "text-white/80"}`}>{d.title}</div>
                       <div className={`text-sm leading-relaxed transition-colors ${isActive ? "text-white/70" : "text-white/45"}`}>{d.desc}</div>
                     </div>
-                    <ArrowUpRight className={`w-5 h-5 transition-all ${isActive ? "text-accent translate-x-0 translate-y-0" : "text-white/30 -translate-x-1 translate-y-1"}`} />
+                    <ArrowUpRight strokeWidth={1.5} className={`w-5 h-5 transition-all ${isActive ? "text-accent translate-x-0 translate-y-0" : "text-white/30 -translate-x-1 translate-y-1"}`} />
                   </button>
                 </li>
               );
@@ -580,12 +580,12 @@ function InteractiveDifferentials() {
             {DIFFERENTIALS.map((d, i) => (
               <details key={d.title} className="group rounded-2xl border border-white/10 bg-white/[0.03] p-5">
                 <summary className="flex items-center gap-4 cursor-pointer list-none">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-white/70 group-open:bg-accent group-open:text-accent-foreground transition-colors">
-                    <d.icon className="w-5 h-5" />
+                  <span className="font-display text-sm font-bold tabular-nums text-white/50 group-open:text-accent-glow transition-colors">
+                    0{i + 1}
                   </span>
                   <span className="font-display font-bold flex-1">{d.title}</span>
-                  <Plus className="w-5 h-5 text-white/50 group-open:hidden" />
-                  <Minus className="w-5 h-5 text-white/50 hidden group-open:block" />
+                  <span className="text-white/50 text-xl leading-none font-light group-open:hidden">+</span>
+                  <span className="text-white/50 text-xl leading-none font-light hidden group-open:block">−</span>
                 </summary>
                 <p className="mt-4 text-sm text-white/65 leading-relaxed">{d.desc}</p>
               </details>
