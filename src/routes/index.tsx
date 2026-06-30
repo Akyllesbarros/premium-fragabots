@@ -175,14 +175,9 @@ function Header() {
 function FragaWordmark() {
   return (
     <a href="#inicio" className="flex items-center gap-2.5 group">
-      <div className="relative">
-        <div className="w-9 h-9 rounded-full bg-gradient-accent flex items-center justify-center shadow-gold">
-          <span className="text-accent-foreground font-display font-black text-sm">F</span>
-        </div>
-      </div>
       <div className="leading-none">
-        <div className="text-[15px] font-display font-bold tracking-tight text-white">fraga</div>
-        <div className="text-[9px] uppercase tracking-[0.22em] text-white/45">contabilidade</div>
+        <div className="text-[15px] font-display font-semibold tracking-tight text-white">Fraga</div>
+        <div className="text-[9px] uppercase tracking-[0.28em] text-white/50 mt-1">Contabilidade · desde 1974</div>
       </div>
     </a>
   );
