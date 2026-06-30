@@ -723,7 +723,7 @@ function WhatsAppMock() {
             <div key={i} className={`flex ${m.from === "client" ? "justify-end" : "justify-start"} animate-wa-pop`}>
               <div className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-snug ${
                 m.from === "client"
-                  ? "bg-[var(--primary)] text-foreground rounded-br-sm"
+                  ? "bg-whatsapp text-whatsapp-foreground rounded-br-sm"
                   : "bg-card/[0.07] text-foreground rounded-bl-sm border border-border"
               }`}>
                 <div>{m.text}</div>
@@ -1172,29 +1172,29 @@ function Footer() {
             </p>
           </div>
           <div className="lg:col-span-3">
-            <div className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground/80 mb-4 font-semibold">Contato</div>
+            <div className="text-[11px] uppercase tracking-[0.22em] text-background/55 mb-4 font-semibold">Contato</div>
             <ul className="space-y-3 text-sm">
-              <li><span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80 mr-2">Tel.</span>(27) 98848-2268</li>
-              <li><span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80 mr-2">WhatsApp</span>(27) 98848-2268</li>
-              <li><span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80 mr-2">E-mail</span>contato@fragacontabilidade.com.br</li>
-              <li><span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80 mr-2">Sede</span>Vila Velha · Espírito Santo</li>
+              <li><span className="text-[10px] uppercase tracking-[0.22em] text-background/55 mr-2">Tel.</span>(27) 98848-2268</li>
+              <li><span className="text-[10px] uppercase tracking-[0.22em] text-background/55 mr-2">WhatsApp</span>(27) 98848-2268</li>
+              <li><span className="text-[10px] uppercase tracking-[0.22em] text-background/55 mr-2">E-mail</span>contato@fragacontabilidade.com.br</li>
+              <li><span className="text-[10px] uppercase tracking-[0.22em] text-background/55 mr-2">Sede</span>Vila Velha · Espírito Santo</li>
             </ul>
           </div>
           <div className="lg:col-span-4">
-            <div className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground/80 mb-4 font-semibold">Navegar</div>
+            <div className="text-[11px] uppercase tracking-[0.22em] text-background/55 mb-4 font-semibold">Navegar</div>
             <ul className="grid grid-cols-2 gap-2 text-sm">
-              <li><a href="#inicio" className="hover:text-foreground">Início</a></li>
-              <li><a href="#sobre" className="hover:text-foreground">Sobre</a></li>
-              <li><a href="#servicos" className="hover:text-foreground">Serviços</a></li>
-              <li><a href="#solucoes" className="hover:text-foreground">Soluções</a></li>
-              <li><a href="#depoimentos" className="hover:text-foreground">Depoimentos</a></li>
-              <li><a href="#planos" className="hover:text-foreground">Planos</a></li>
-              <li><a href="#faq" className="hover:text-foreground">FAQ</a></li>
-              <li><a href={MAIN_CTA} target="_blank" rel="noopener" className="hover:text-foreground">WhatsApp</a></li>
+              <li><a href="#inicio" className="hover:text-background">Início</a></li>
+              <li><a href="#sobre" className="hover:text-background">Sobre</a></li>
+              <li><a href="#servicos" className="hover:text-background">Serviços</a></li>
+              <li><a href="#solucoes" className="hover:text-background">Soluções</a></li>
+              <li><a href="#depoimentos" className="hover:text-background">Depoimentos</a></li>
+              <li><a href="#planos" className="hover:text-background">Planos</a></li>
+              <li><a href="#faq" className="hover:text-background">FAQ</a></li>
+              <li><a href={MAIN_CTA} target="_blank" rel="noopener" className="hover:text-background">WhatsApp</a></li>
             </ul>
           </div>
         </div>
-        <div className="pt-8 border-t border-border flex flex-col sm:flex-row justify-between gap-4 text-xs text-muted-foreground/80">
+        <div className="pt-8 border-t border-background/15 flex flex-col sm:flex-row justify-between gap-4 text-xs text-background/55">
           <div>© {new Date().getFullYear()} Fraga Contabilidade. Todos os direitos reservados.</div>
           <div>CNPJ · Vila Velha/ES · Atendimento em todo o Brasil</div>
         </div>
@@ -1223,7 +1223,7 @@ function FloatingWhatsApp() {
         rel="noopener"
         onClick={() => trackConversion("floating_whatsapp_click", "Floating desktop")}
         aria-label="Fale com a Fraga no WhatsApp"
-        className={`hidden sm:inline-flex fixed bottom-6 right-6 z-40 items-center gap-3 rounded-full pl-5 pr-6 py-3 bg-[var(--primary)] text-foreground font-semibold text-sm shadow-[0_15px_40px_-10px_rgba(0,0,0,0.5)] hover:bg-[var(--primary-deep)] transition-all ${hidden ? "translate-y-24 opacity-0" : "translate-y-0 opacity-100"}`}
+        className={`hidden sm:inline-flex fixed bottom-6 right-6 z-40 items-center gap-3 rounded-full pl-5 pr-6 py-3 bg-whatsapp text-whatsapp-foreground font-semibold text-sm shadow-[0_15px_40px_-10px_rgba(0,0,0,0.5)] hover:opacity-90 transition-all ${hidden ? "translate-y-24 opacity-0" : "translate-y-0 opacity-100"}`}
       >
         <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-card/15">
           <span className="absolute inset-0 rounded-full bg-card/30 animate-glow-pulse" />
@@ -1238,7 +1238,7 @@ function FloatingWhatsApp() {
           target="_blank"
           rel="noopener"
           onClick={() => trackConversion("floating_whatsapp_click", "Floating mobile")}
-          className="flex items-center justify-center gap-2 w-full rounded-full bg-[var(--primary)] text-foreground py-3.5 font-semibold text-sm shadow-elegant"
+          className="flex items-center justify-center gap-2 w-full rounded-full bg-whatsapp text-whatsapp-foreground py-3.5 font-semibold text-sm shadow-elegant"
         >
           <MessageCircle className="w-4 h-4" /> Falar no WhatsApp
         </a>
