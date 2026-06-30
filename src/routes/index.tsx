@@ -1275,7 +1275,7 @@ function FinalCta() {
       }} />
       <div className="relative mx-auto max-w-5xl px-4 lg:px-8 py-28 lg:py-40 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-medium text-white/70 backdrop-blur mb-8">
-          <MessageCircle className="w-3 h-3 text-accent" />
+          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
           Atendimento direto · sem formulário
         </div>
         <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.0] mb-8 text-white">
