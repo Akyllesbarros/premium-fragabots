@@ -10,7 +10,7 @@ export function FloatingWhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar com a Fraga pelo WhatsApp"
-      className="rdlf-whatsapp-float group fixed bottom-6 right-5 z-[80] flex h-[58px] w-[58px] items-center justify-center rounded-full border border-[#F5F0E1]/15 bg-[#073534] shadow-[0_18px_50px_rgba(0,0,0,0.35)] transition duration-300 hover:scale-105 hover:bg-[#0B4644] md:bottom-8 md:right-8 md:h-[62px] md:w-[62px]"
+      className="rdlf-whatsapp-float group fixed bottom-6 right-5 z-[80] flex h-[58px] w-[58px] items-center justify-center rounded-full border border-white/15 bg-[#25d366] shadow-[0_18px_50px_rgba(0,0,0,0.35)] transition duration-300 hover:scale-105 hover:bg-[#1ebe57] md:bottom-8 md:right-8 md:h-[62px] md:w-[62px]"
     >
       <motion.span
         className="absolute inset-0 rounded-full border border-[#F5F0E1]/15"
@@ -18,10 +18,10 @@ export function FloatingWhatsAppButton() {
         transition={{ duration: 3, repeat: Infinity, ease: "easeOut" }}
       />
 
-      <span className="absolute -right-1 -top-1 h-3 w-3 rounded-full bg-[#FF3131] shadow-[0_0_18px_rgba(255,49,49,0.45)]" />
+      <span className="absolute -right-1 -top-1 h-3 w-3 rounded-full bg-[#ffa819] shadow-[0_0_18px_rgba(255,168,25,0.55)]" />
 
       <svg
-        className="relative z-10 h-8 w-8 fill-[#F5F0E1] transition duration-300 group-hover:scale-105"
+        className="relative z-10 h-8 w-8 fill-white transition duration-300 group-hover:scale-105"
         viewBox="0 0 48 48"
         aria-hidden="true"
       >
