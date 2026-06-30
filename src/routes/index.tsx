@@ -469,11 +469,11 @@ function ManifestoLine({ index, text }: { index: number; text: string }) {
    HISTORY / AUTHORITY
    ============================================================ */
 function HistoryAuthority() {
-  const blocks = [
-    { v: "1974", l: "ano de fundação" },
-    { v: "+1.000", l: "empresas atendidas ao longo da história" },
-    { v: "ES", l: "sede em Vila Velha" },
-    { v: "BR", l: "atendemos empresas em todo o país" },
+  const timeline = [
+    { year: "1974", title: "Início de uma trajetória contábil", desc: "A Fraga nasce em Vila Velha acompanhando empresários locais de perto, em rotinas contábeis e fiscais." },
+    { year: "1990s", title: "Expansão dos serviços", desc: "Departamento pessoal, apuração tributária e folha passam a ser conduzidos pela mesma equipe técnica." },
+    { year: "2010s", title: "Atendimento nacional", desc: "Com tecnologia e processos próprios, passamos a atender empresas em todo o Brasil sem perder a proximidade." },
+    { year: "Hoje", title: "Contabilidade próxima da gestão", desc: "Mais de cinco décadas de prática, conversando com sócios e apoiando decisões — não só entregando guias." },
   ];
   const tags = ["Rotina contábil mensal", "Folha e DP", "Apuração tributária", "Abertura de CNPJ", "Regularização fiscal", "BPO financeiro"];
   return (
@@ -487,44 +487,81 @@ function HistoryAuthority() {
               <span className="italic font-serif text-primary-deep" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>de perto</span>,
               cliente por cliente.
             </h2>
-            <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden bg-gradient-primary shadow-elegant max-w-sm">
-              <div className="absolute inset-0 bg-gradient-mesh opacity-40" />
-              <div className="absolute inset-0 p-8 flex flex-col justify-between">
-                <div className="flex items-center justify-between text-white">
-                  <div className="font-display text-xl font-bold">Desde<br/>1974</div>
-                  <Building2 className="w-7 h-7 opacity-70" />
-                </div>
-                <div className="text-white">
-                  <div className="font-display text-6xl font-black tracking-tight">F</div>
-                  <div className="text-[11px] uppercase tracking-[0.2em] opacity-70 mt-2">Vila Velha · ES</div>
-                </div>
-              </div>
+            <p className="text-foreground/65 text-base leading-relaxed mb-8 max-w-md">
+              A Fraga nasceu da prática contábil feita lado a lado com empresários. A tecnologia entrou para acelerar o trabalho, mas a base continua a mesma — clareza, responsabilidade e presença.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {tags.map(t => (
+                <span key={t} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[11px] font-medium border border-border bg-background text-foreground/70">
+                  <span className="w-1 h-1 rounded-full bg-accent" /> {t}
+                </span>
+              ))}
             </div>
           </div>
         </div>
 
-        <div className="lg:col-span-7 lg:pt-20">
-          <p className="text-lg lg:text-xl text-foreground/75 leading-relaxed mb-10 max-w-xl">
-            A Fraga nasceu da prática contábil feita de perto: acompanhando empresários, entendendo rotinas, corrigindo processos e construindo relações que atravessam anos. A tecnologia entrou para acelerar o trabalho, mas a base continua a mesma — clareza, responsabilidade e presença.
-          </p>
-          <div className="grid grid-cols-2 gap-4 mb-10">
-            {blocks.map(b => (
-              <div key={b.l} className="rounded-2xl border border-border bg-card p-6 shadow-card hover:shadow-elegant transition-shadow">
-                <div className="font-display text-4xl lg:text-5xl font-bold tracking-tight text-foreground">{b.v}</div>
-                <div className="text-sm text-muted-foreground mt-2">{b.l}</div>
+        <div className="lg:col-span-7 lg:pt-2">
+          <ol className="relative border-l border-border/70 pl-8 lg:pl-10 space-y-10">
+            {timeline.map((t, i) => (
+              <TimelineItem key={t.year} index={i} {...t} last={i === timeline.length - 1} />
+            ))}
+          </ol>
+
+          {/* Bento institucional inferior */}
+          <div className="mt-12 grid grid-cols-6 gap-3">
+            <div className="col-span-4 rounded-3xl border border-border bg-card p-7 shadow-card">
+              <div className="text-[11px] uppercase tracking-[0.22em] text-primary font-semibold mb-3">Base local</div>
+              <div className="font-display text-2xl lg:text-3xl font-bold tracking-tight leading-tight">
+                Vila Velha · Espírito Santo
               </div>
-            ))}
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {tags.map(t => (
-              <span key={t} className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium border border-border bg-background text-foreground/75">
-                <span className="w-1 h-1 rounded-full bg-accent" /> {t}
-              </span>
-            ))}
+              <p className="text-sm text-foreground/65 mt-3 leading-relaxed">
+                Escritório próprio com equipe técnica presencial. Atendimento por WhatsApp, e-mail e videochamada para empresas em todo o país.
+              </p>
+            </div>
+            <div className="col-span-2 rounded-3xl border border-accent/30 bg-gradient-to-br from-[oklch(0.96_0.06_85)] to-[oklch(0.92_0.10_82)] p-6 flex flex-col justify-between">
+              <div className="text-[10px] uppercase tracking-[0.22em] text-accent-foreground/70 font-semibold">Trajetória</div>
+              <div>
+                <div className="font-serif italic text-accent-foreground text-5xl leading-none" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>+50</div>
+                <div className="text-xs text-accent-foreground/75 mt-1">anos de história contábil</div>
+              </div>
+            </div>
+            <div className="col-span-3 rounded-3xl border border-border bg-background p-6">
+              <div className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground font-semibold mb-2">Empresas atendidas</div>
+              <div className="font-display text-4xl font-bold tracking-tight">+1.000</div>
+              <div className="text-xs text-foreground/55 mt-2">em diferentes momentos — abertura, crescimento, regularização e gestão.</div>
+            </div>
+            <div className="col-span-3 rounded-3xl border border-border bg-background p-6">
+              <div className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground font-semibold mb-2">Avaliação Google</div>
+              <div className="flex items-baseline gap-2">
+                <div className="font-display text-4xl font-bold tracking-tight">4,9</div>
+                <div className="text-accent">★★★★★</div>
+              </div>
+              <div className="text-xs text-foreground/55 mt-2">com base em avaliações reais de clientes.</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  );
+}
+
+function TimelineItem({ year, title, desc, index, last }: { year: string; title: string; desc: string; index: number; last?: boolean }) {
+  const { ref, visible } = useReveal<HTMLLIElement>(0.3);
+  return (
+    <li
+      ref={ref}
+      className={`relative transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+      style={{ transitionDelay: `${index * 100}ms` }}
+    >
+      <span className="absolute -left-[42px] lg:-left-[50px] top-1.5 flex h-4 w-4 items-center justify-center">
+        <span className="absolute inset-0 rounded-full bg-primary/15" />
+        <span className="relative w-2 h-2 rounded-full bg-primary" />
+      </span>
+      <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-primary font-semibold mb-1.5">{year}</div>
+      <div className="font-display text-xl lg:text-2xl font-bold tracking-tight mb-2">{title}</div>
+      <p className="text-foreground/65 leading-relaxed max-w-xl">{desc}</p>
+      {!last && <div className="h-2" />}
+    </li>
   );
 }
 
