@@ -43,7 +43,7 @@ export function Footer() {
         {/* Top: brand statement */}
         <div className="grid gap-12 lg:grid-cols-12 mb-20">
           <div className="lg:col-span-7">
-            <div className="eyebrow">RDLF · Hub jurídico estratégico</div>
+            <div className="eyebrow">Fraga · Contabilidade jurídico estratégico</div>
             <h3 className="font-display italic text-[clamp(2rem,4vw,3.4rem)] leading-[1.02] tracking-[-0.03em] text-bone mt-5 max-w-2xl">
               Estrutura jurídica não é custo. É a base que permite crescer sem
               acumular risco.
@@ -104,7 +104,7 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Giant RDLF wordmark */}
+        {/* Giant Fraga wordmark */}
         <div className="relative mt-24 mb-6 overflow-hidden">
           <div className="font-display italic text-[22vw] leading-[0.85] tracking-[-0.06em] text-bone/95 select-none">
             RDLF

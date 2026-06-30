@@ -21,7 +21,7 @@ export function FinalCTA() {
 
         {/* Giant monogram */}
         <span className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-display italic text-[44vw] md:text-[28vw] leading-none text-white/[0.04] select-none tracking-[-0.05em]">
-          RDLF
+          Fraga
         </span>
 
         <div className="container-rdlf relative text-center max-w-3xl">

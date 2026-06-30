@@ -37,7 +37,7 @@ export function OrbitalSystem() {
         className="absolute left-1/2 top-1/2 grid h-28 w-28 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-[color:var(--gold)]/40 bg-ink/70 backdrop-blur-xl shadow-[0_0_80px_rgba(7,53,52,0.25)]"
       >
         <span className="font-display italic text-2xl text-bone" style={{ fontWeight: 400 }}>
-          RDLF
+          Fraga
         </span>
       </motion.div>
 
