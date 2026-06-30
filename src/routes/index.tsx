@@ -1096,9 +1096,7 @@ function Plans() {
                   <ul className="space-y-2.5 mb-7 flex-1">
                     {p.features.map(f => (
                       <li key={f} className={`flex items-start gap-2 text-sm ${isFeatured ? "text-accent-foreground/90" : "text-white/85"}`}>
-                        <span className={`mt-0.5 flex h-4 w-4 items-center justify-center rounded-full ${isFeatured ? "bg-accent-foreground/20" : "bg-accent/20"}`}>
-                          <Check className={`w-2.5 h-2.5 ${isFeatured ? "text-accent-foreground" : "text-accent"}`} strokeWidth={3} />
-                        </span>
+                        <span aria-hidden className={`mt-2 h-px w-3 flex-shrink-0 ${isFeatured ? "bg-accent-foreground/60" : "bg-accent/70"}`} />
                         {f}
                       </li>
                     ))}
