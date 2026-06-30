@@ -318,88 +318,91 @@ function HeroComposition({ mouse }: { mouse: { x: number; y: number } }) {
   const tx = (m: number) => ({ transform: `translate3d(${mouse.x * m}px, ${mouse.y * m}px, 0)` });
   return (
     <div className="absolute inset-0">
-      {/* main dashboard */}
+      {/* Ledger / documento editorial — substitui o dashboard fake */}
       <div
-        className="absolute inset-x-2 top-10 bottom-10 rounded-[2rem] border border-white/10 bg-[oklch(0.16_0.03_220)] shadow-[0_50px_120px_-30px_rgba(0,0,0,0.7)] overflow-hidden"
-        style={tx(0.4)}
+        className="absolute inset-x-4 top-8 bottom-16 rounded-[1.25rem] border border-white/10 bg-[oklch(0.16_0.03_220)] shadow-[0_50px_120px_-30px_rgba(0,0,0,0.7)] overflow-hidden"
+        style={tx(0.35)}
       >
-        <div className="absolute inset-0 bg-gradient-mesh opacity-25" />
-        <div className="relative p-6 h-full flex flex-col">
-          <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-white/30" />
-              <div className="w-2 h-2 rounded-full bg-white/30" />
-              <div className="w-2 h-2 rounded-full bg-accent" />
-            </div>
-            <div className="text-[10px] uppercase tracking-[0.25em] text-white/40">Fraga · Painel</div>
-          </div>
-          <div className="text-[11px] uppercase tracking-wider text-white/40">Resultado consolidado</div>
-          <div className="font-display text-4xl font-bold text-white mt-1 mb-5">
-            R$ <Counter to={1248} />k
-          </div>
-          <div className="grid grid-cols-2 gap-3 mb-5">
-            {[
-              { l: "Margem", v: "32,4%", c: "text-accent-glow" },
-              { l: "Impostos", v: "−9,2%", c: "text-emerald-400" },
-            ].map(m => (
-              <div key={m.l} className="rounded-2xl bg-white/[0.04] border border-white/10 p-3">
-                <div className="text-[10px] uppercase tracking-wider text-white/40">{m.l}</div>
-                <div className={`font-display text-xl font-bold mt-1 ${m.c}`}>{m.v}</div>
+        {/* paper texture */}
+        <div aria-hidden className="absolute inset-0 opacity-[0.05]" style={{
+          backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px)",
+          backgroundSize: "100% 28px",
+        }} />
+        <div className="relative p-7 h-full flex flex-col">
+          <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
+            <div>
+              <div className="text-[9px] uppercase tracking-[0.28em] text-white/35">Fraga · Vila Velha/ES</div>
+              <div className="font-serif italic text-white/85 text-lg mt-1" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
+                Resumo do mês
               </div>
-            ))}
-          </div>
-          <div className="flex-1 rounded-2xl bg-white/[0.04] border border-white/10 p-4">
-            <div className="text-[10px] uppercase tracking-wider text-white/40 mb-3">Fluxo trimestral</div>
-            <div className="flex items-end gap-1.5 h-32">
-              {[34, 48, 38, 62, 52, 78, 64, 90, 76, 84].map((h, i) => (
-                <div key={i} className="flex-1 rounded-t-md transition-all duration-700" style={{
-                  height: `${h}%`,
-                  background: i === 7 ? "linear-gradient(180deg, oklch(0.86 0.15 85), oklch(0.78 0.16 78))" : "linear-gradient(180deg, oklch(0.72 0.13 188 / 0.8), oklch(0.42 0.12 195 / 0.4))",
-                }} />
-              ))}
             </div>
+            <div className="text-[10px] tabular-nums text-white/40">Nº 06 · 2026</div>
+          </div>
+
+          <ul className="space-y-3 text-[13px]">
+            {[
+              { l: "Apuração fiscal", s: "entregue" },
+              { l: "Folha e eSocial", s: "entregue" },
+              { l: "DCTFWeb", s: "entregue" },
+              { l: "Conciliação bancária", s: "em revisão" },
+              { l: "Relatório gerencial", s: "agendado" },
+            ].map((r, i) => (
+              <li key={r.l} className="flex items-center justify-between border-b border-white/5 pb-2.5">
+                <span className="flex items-center gap-3 text-white/80">
+                  <span className="text-[10px] tabular-nums text-white/30 w-5">0{i + 1}</span>
+                  {r.l}
+                </span>
+                <span className={`text-[10px] uppercase tracking-wider ${r.s === "entregue" ? "text-emerald-400/90" : r.s === "em revisão" ? "text-accent-glow" : "text-white/45"}`}>
+                  {r.s}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-auto pt-5 border-t border-white/10 flex items-end justify-between">
+            <div>
+              <div className="text-[10px] uppercase tracking-[0.25em] text-white/35">Responsável técnico</div>
+              <div className="font-serif italic text-white/80 mt-1" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
+                Equipe Fraga
+              </div>
+            </div>
+            <div className="font-display text-3xl text-white/90 italic font-serif" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>F</div>
           </div>
         </div>
       </div>
 
+      {/* Selo institucional desde 1974 — sóbrio */}
       <div
-        className="absolute -top-2 -right-2 lg:right-0 w-56 rounded-2xl border border-white/10 bg-[oklch(0.18_0.03_220)] p-4 shadow-[0_25px_60px_-25px_rgba(0,0,0,0.6)] backdrop-blur animate-float"
-        style={tx(-0.8)}
+        className="absolute -top-2 -right-2 lg:right-2 w-52 rounded-2xl border border-white/10 bg-[oklch(0.18_0.03_220)]/90 p-4 backdrop-blur shadow-[0_25px_60px_-25px_rgba(0,0,0,0.6)] animate-float"
+        style={tx(-0.7)}
       >
-        <div className="flex items-center gap-2 mb-2">
-          <ShieldCheck className="w-4 h-4 text-accent" />
-          <div className="text-[11px] uppercase tracking-wider text-white/50 font-semibold">Conformidade</div>
+        <div className="text-[9px] uppercase tracking-[0.28em] text-white/40 mb-2">Trajetória</div>
+        <div className="flex items-baseline gap-2">
+          <div className="font-serif italic text-white text-4xl leading-none" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>1974</div>
+          <div className="text-[11px] text-white/55">— hoje</div>
         </div>
-        <div className="font-display text-3xl font-bold text-white">100<span className="text-accent">%</span></div>
-        <div className="text-[11px] text-white/55">obrigações em dia</div>
+        <div className="mt-3 h-px bg-white/15" />
+        <div className="text-[11px] text-white/60 mt-3 leading-snug">
+          mais de cinco décadas acompanhando empresas brasileiras.
+        </div>
       </div>
 
+      {/* Assinatura / carimbo dourado */}
       <div
-        className="absolute bottom-6 -left-4 w-64 rounded-2xl border border-accent/30 bg-gradient-to-br from-[oklch(0.78_0.16_78)] to-[oklch(0.86_0.15_85)] text-accent-foreground p-4 shadow-gold animate-float-slow"
-        style={tx(-0.6)}
+        className="absolute bottom-2 -left-2 w-60 rounded-2xl border border-accent/30 bg-[oklch(0.14_0.02_220)] p-4 shadow-gold animate-float-slow"
+        style={tx(-0.5)}
       >
-        <div className="flex items-center gap-2 mb-2">
-          <FileCheck className="w-4 h-4" />
-          <div className="text-[11px] uppercase tracking-wider font-bold">Relatório do mês</div>
-        </div>
-        <div className="font-display text-base font-bold leading-tight">
-          Apuração fiscal, folha e DCTF entregues no prazo.
-        </div>
-        <div className="text-[11px] opacity-80 mt-1">acompanhamento mensal</div>
-      </div>
-
-      <div
-        className="absolute top-1/2 -right-6 w-48 rounded-2xl border border-white/10 bg-[oklch(0.18_0.03_220)] px-4 py-3 backdrop-blur animate-float"
-        style={{ ...tx(0.9), animationDelay: "1.2s" }}
-      >
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-gradient-accent flex items-center justify-center">
-            <Star className="w-4 h-4 fill-accent-foreground text-accent-foreground" />
-          </div>
+        <div className="flex items-center gap-3 mb-3">
+          <span className="flex h-9 w-9 items-center justify-center rounded-full border border-accent/50">
+            <FileCheck className="w-4 h-4 text-accent" />
+          </span>
           <div>
-            <div className="font-display text-base font-bold text-white">4,9/5</div>
-            <div className="text-[10px] text-white/50">avaliação Google</div>
+            <div className="text-[10px] uppercase tracking-[0.22em] text-accent-glow font-semibold">Atendimento</div>
+            <div className="text-white text-[13px] font-semibold">por pessoas da equipe</div>
           </div>
+        </div>
+        <div className="text-[11px] text-white/55 leading-snug">
+          Quem responde no WhatsApp é parte do time técnico — não um robô.
         </div>
       </div>
     </div>
