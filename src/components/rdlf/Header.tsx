@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { RDLFAnimatedLayerButton } from "./motion/RDLFAnimatedLayerButton";
 import { cn } from "@/lib/utils";
-import rdlfLogo from "@/assets/rdlf-logo.png";
+import rdlfLogo from "@/assets/fraga-logo.png.asset.json";
 
 const links = [
   { href: "#hub", label: "Hub Jurídico" },
@@ -41,7 +41,7 @@ export function Header() {
           )}
         >
           <a href="#top" className="flex items-center shrink-0">
-            <img src={rdlfLogo} alt="RDLF" className="h-5 md:h-6 w-auto select-none opacity-100" style={{ filter: "none" }} draggable={false} />
+            <img src={rdlfLogo.url} alt="RDLF" className="h-5 md:h-6 w-auto select-none opacity-100" style={{ filter: "none" }} draggable={false} />
           </a>
 
           <nav className="hidden lg:flex items-center gap-8">
@@ -88,7 +88,7 @@ export function Header() {
             className="fixed inset-0 z-[60] bg-ink/95 backdrop-blur-2xl lg:hidden"
           >
             <div className="container-rdlf flex items-center justify-between py-5">
-              <img src={rdlfLogo} alt="RDLF" className="h-6 w-auto select-none opacity-100" style={{ filter: "none" }} draggable={false} />
+              <img src={rdlfLogo.url} alt="RDLF" className="h-6 w-auto select-none opacity-100" style={{ filter: "none" }} draggable={false} />
               <button
                 aria-label="Fechar menu"
                 onClick={() => setOpen(false)}

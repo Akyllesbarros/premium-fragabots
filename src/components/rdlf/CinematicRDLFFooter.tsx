@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Instagram, Linkedin } from "lucide-react";
-import rdlfLogo from "@/assets/rdlf-logo.png";
+import rdlfLogo from "@/assets/fraga-logo.png.asset.json";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -93,7 +93,7 @@ export function CinematicRDLFFooter() {
       <div className="container-rdlf relative mt-20" ref={linksRef}>
         <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
           <div>
-            <img src={rdlfLogo} alt="RDLF" className="h-12 md:h-14 w-auto select-none opacity-100" style={{ filter: "none" }} draggable={false} />
+            <img src={rdlfLogo.url} alt="RDLF" className="h-12 md:h-14 w-auto select-none opacity-100" style={{ filter: "none" }} draggable={false} />
             <p className="mt-5 max-w-sm text-bone/60 leading-relaxed text-[15px]">
               Hub jurídico estratégico para empresas em crescimento. Base sólida para decisões
               rápidas, seguras e defensáveis.

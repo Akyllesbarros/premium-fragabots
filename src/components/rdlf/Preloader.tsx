@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import rdlfLogo from "@/assets/rdlf-logo.png";
+import rdlfLogo from "@/assets/fraga-logo.png.asset.json";
 
 export function Preloader() {
   const [done, setDone] = useState(false);
@@ -23,7 +23,7 @@ export function Preloader() {
         >
           <div className="flex flex-col items-center gap-4">
             <motion.img
-              src={rdlfLogo}
+              src={rdlfLogo.url}
               alt="RDLF"
               initial={{ opacity: 0, y: 8, filter: "blur(6px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
