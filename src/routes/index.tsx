@@ -415,37 +415,52 @@ function HeroComposition({ mouse }: { mouse: { x: number; y: number } }) {
 function Manifesto() {
   const lines = ["Impostos em ordem.", "Números claros.", "Decisões menos no escuro."];
   return (
-    <div className="relative py-24 lg:py-36 overflow-hidden">
-      <div aria-hidden className="absolute inset-0 opacity-[0.04]" style={{
+    <div className="relative py-28 lg:py-40 overflow-hidden">
+      <div aria-hidden className="absolute inset-0 opacity-[0.035]" style={{
         backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px)",
-        backgroundSize: "100% 96px",
+        backgroundSize: "100% 120px",
       }} />
-      <div className="relative space-y-2">
-        <Marquee direction="left">
-          {lines[0]} · {lines[1]} · {lines[2]} ·{" "}
-        </Marquee>
-        <Marquee direction="right" muted>
-          {lines[1]} · {lines[2]} · {lines[0]} ·{" "}
-        </Marquee>
-      </div>
-      <div className="relative mx-auto max-w-3xl px-4 lg:px-8 text-center mt-20">
-        <p className="font-display text-2xl lg:text-3xl leading-snug text-white/85 tracking-tight">
-          Uma boa contabilidade não aparece só no fim do mês. Ela ajuda o empresário a enxergar riscos, organizar obrigações e entender o que os <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>números</span> estão dizendo.
-        </p>
+      <div className="relative mx-auto max-w-[1100px] px-6 lg:px-10">
+        <div className="text-xs uppercase tracking-[0.28em] text-accent-glow font-semibold mb-10">— Manifesto</div>
+        <div className="space-y-4 lg:space-y-6">
+          {lines.map((l, i) => (
+            <ManifestoLine key={l} index={i} text={l} />
+          ))}
+        </div>
+        <div className="mt-16 grid lg:grid-cols-12 gap-10 items-end">
+          <p className="lg:col-span-7 text-lg lg:text-xl text-white/65 leading-relaxed max-w-2xl">
+            Uma boa contabilidade não aparece só no fim do mês. Ela ajuda o empresário a enxergar riscos, cumprir prazos e entender o que os{" "}
+            <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>números</span>{" "}
+            estão dizendo antes da decisão.
+          </p>
+          <div className="lg:col-span-5 lg:text-right">
+            <div className="font-serif italic text-white/70 text-lg" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
+              — equipe Fraga
+            </div>
+            <div className="text-[11px] uppercase tracking-[0.25em] text-white/35 mt-1">Vila Velha · ES</div>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
 
-function Marquee({ children, direction = "left", muted = false }: { children: React.ReactNode; direction?: "left" | "right"; muted?: boolean }) {
-  const cls = direction === "left" ? "animate-marquee" : "animate-marquee-rev";
+function ManifestoLine({ index, text }: { index: number; text: string }) {
+  const { ref, visible } = useReveal<HTMLDivElement>(0.4);
   return (
-    <div className="overflow-hidden">
-      <div className={`flex whitespace-nowrap ${cls} font-display font-black tracking-[-0.04em] text-[clamp(3rem,11vw,9rem)] leading-none ${muted ? "text-white/10" : "text-white"}`}>
-        {Array.from({ length: 4 }).map((_, i) => (
-          <span key={i} className="px-6">{children}</span>
-        ))}
-      </div>
+    <div ref={ref} className="flex items-baseline gap-5 lg:gap-8 border-b border-white/10 pb-4 lg:pb-6">
+      <span className="text-[11px] tabular-nums text-white/30 font-mono pt-2">0{index + 1}</span>
+      <span
+        className={`font-display font-bold tracking-[-0.035em] leading-[0.95] text-[clamp(2.2rem,7vw,5.5rem)] transition-all duration-1000 ${
+          visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        } ${index === 2 ? "italic font-serif text-gradient-gold" : "text-white"}`}
+        style={{
+          transitionDelay: `${index * 180}ms`,
+          fontFamily: index === 2 ? "'Cormorant Garamond', Georgia, serif" : undefined,
+        }}
+      >
+        {text}
+      </span>
     </div>
   );
 }
