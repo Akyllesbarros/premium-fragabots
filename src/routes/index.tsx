@@ -1227,7 +1227,7 @@ function Faq() {
                   >
                     <span className="font-display font-bold text-lg lg:text-xl text-white flex-1 group-hover:text-accent-glow transition-colors">{f.q}</span>
                     <span className={`flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/70 transition-all ${isOpen ? "bg-accent text-accent-foreground border-accent rotate-180" : ""}`}>
-                      <Plus className="w-4 h-4" />
+                      <span className="text-lg leading-none font-light">+</span>
                     </span>
                   </button>
                   <div
