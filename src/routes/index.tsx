@@ -606,8 +606,8 @@ function DifferentialPreview({ item }: { item: (typeof DIFFERENTIALS)[number] })
         <span>0{DIFFERENTIALS.findIndex(d => d.media === item.media) + 1}</span>
       </div>
       <div className="relative flex-1 flex flex-col justify-center">
-        <div className="w-16 h-16 rounded-2xl bg-gradient-accent flex items-center justify-center shadow-gold mb-7">
-          <item.icon className="w-7 h-7 text-accent-foreground" />
+        <div className="font-display text-7xl font-black text-gradient-gold leading-none mb-7 tabular-nums">
+          0{DIFFERENTIALS.findIndex(d => d.media === item.media) + 1}
         </div>
         <h3 className="font-display text-3xl font-bold text-white tracking-tight mb-4">{item.title}</h3>
         <p className="text-white/65 text-base leading-relaxed">{item.desc}</p>
