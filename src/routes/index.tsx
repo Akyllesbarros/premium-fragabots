@@ -7,6 +7,7 @@ import { waLink, trackConversion } from "@/lib/whatsapp";
 import { PremiumButton } from "@/components/fraga/PremiumButton";
 import { ScrollProgress } from "@/components/fraga/ScrollProgress";
 import { VideoCard, VideoModal, useVideoModal, type VideoItem } from "@/components/fraga/VideoModal";
+import fragaLogo from "@/assets/fraga-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,21 +32,21 @@ function LandingPage() {
     console.log("[FragaLandingPage]", "mounted");
   }, []);
   return (
-    <div className="min-h-screen bg-[oklch(0.13_0.025_220)] text-white selection:bg-accent/40 overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground selection:bg-accent/40 overflow-x-hidden">
       <ScrollProgress />
       <Header />
       <Hero />
-      <Layer bg="bg-[oklch(0.1_0.02_220)]"><Manifesto /></Layer>
-      <Layer bg="bg-[oklch(0.97_0.008_200)] text-foreground"><HistoryAuthority /></Layer>
-      <Layer bg="bg-[oklch(0.13_0.025_220)]"><InteractiveDifferentials /></Layer>
-      <Layer bg="bg-[oklch(0.97_0.008_200)] text-foreground"><NumberedServices /></Layer>
-      <Layer bg="bg-[oklch(0.13_0.025_220)]"><WhatsAppJourney /></Layer>
-      <Layer bg="bg-[oklch(0.97_0.008_200)] text-foreground"><StageSolutions /></Layer>
-      <Layer bg="bg-[oklch(0.1_0.02_220)]"><VideoTestimonials /></Layer>
-      <Layer bg="bg-[oklch(0.97_0.008_200)] text-foreground"><CommunityTrust /></Layer>
-      <Layer bg="bg-[oklch(0.13_0.025_220)]"><Plans /></Layer>
-      <Layer bg="bg-[oklch(0.97_0.008_200)] text-foreground"><Insights /></Layer>
-      <Layer bg="bg-[oklch(0.13_0.025_220)]"><Faq /></Layer>
+      <Layer bg="bg-secondary text-foreground"><Manifesto /></Layer>
+      <Layer bg="bg-background text-foreground"><HistoryAuthority /></Layer>
+      <Layer bg="bg-secondary text-foreground"><InteractiveDifferentials /></Layer>
+      <Layer bg="bg-background text-foreground"><NumberedServices /></Layer>
+      <Layer bg="bg-secondary text-foreground"><WhatsAppJourney /></Layer>
+      <Layer bg="bg-background text-foreground"><StageSolutions /></Layer>
+      <Layer bg="bg-secondary text-foreground"><VideoTestimonials /></Layer>
+      <Layer bg="bg-background text-foreground"><CommunityTrust /></Layer>
+      <Layer bg="bg-secondary text-foreground"><Plans /></Layer>
+      <Layer bg="bg-background text-foreground"><Insights /></Layer>
+      <Layer bg="bg-secondary text-foreground"><Faq /></Layer>
       <FinalCta />
       <Footer />
       <FloatingWhatsApp />
@@ -124,13 +125,13 @@ function Header() {
       <div className={`mx-auto max-w-[1400px] px-4 lg:px-8 transition-all duration-500 ${scrolled ? "py-2" : "py-4"}`}>
         <div className={`flex items-center justify-between rounded-full px-5 lg:px-6 py-2.5 transition-all duration-500 border ${
           scrolled
-            ? "bg-[oklch(0.13_0.025_220/0.78)] backdrop-blur-xl border-white/10 shadow-[0_10px_40px_-20px_rgba(0,0,0,0.5)]"
-            : "bg-transparent border-white/5"
+            ? "bg-white/90 backdrop-blur-xl border-border shadow-card"
+            : "bg-white/70 backdrop-blur-md border-transparent"
         }`}>
           <FragaWordmark />
           <nav className="hidden xl:flex items-center gap-7">
             {nav.map((n) => (
-              <a key={n.href} href={n.href} className="text-[13px] font-medium text-white/65 hover:text-white transition-colors">
+              <a key={n.href} href={n.href} className="text-[13px] font-medium text-muted-foreground hover:text-foreground transition-colors">
                 {n.label}
               </a>
             ))}
@@ -141,14 +142,14 @@ function Header() {
               target="_blank"
               rel="noopener"
               onClick={() => trackConversion("header_cta_click", "Header")}
-              className="hidden sm:inline-flex items-center gap-2 rounded-full bg-white text-[oklch(0.18_0.03_220)] px-4 py-2 text-[13px] font-semibold hover:bg-accent hover:text-accent-foreground transition-colors"
+              className="hidden sm:inline-flex items-center gap-2 rounded-full bg-foreground text-background px-4 py-2 text-[13px] font-semibold hover:bg-accent hover:text-accent-foreground transition-colors"
             >
               <MessageCircle className="w-3.5 h-3.5" />
               Falar com a Fraga
             </a>
             <button
               onClick={() => setOpen(v => !v)}
-              className="xl:hidden inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white"
+              className="xl:hidden inline-flex h-10 w-10 items-center justify-center rounded-full bg-muted text-foreground"
               aria-label="Abrir menu"
             >
               {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -156,9 +157,9 @@ function Header() {
           </div>
         </div>
         {open && (
-          <div className="xl:hidden mt-2 rounded-3xl bg-[oklch(0.13_0.025_220/0.95)] backdrop-blur-xl border border-white/10 p-4 animate-fade-in">
+          <div className="xl:hidden mt-2 rounded-3xl bg-white/95 backdrop-blur-xl border border-border p-4 shadow-card animate-fade-in">
             {nav.map((n) => (
-              <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="block py-2.5 text-white/80 hover:text-white border-b border-white/5 last:border-0">
+              <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="block py-2.5 text-foreground/80 hover:text-foreground border-b border-border last:border-0">
                 {n.label}
               </a>
             ))}
@@ -174,11 +175,11 @@ function Header() {
 
 function FragaWordmark() {
   return (
-    <a href="#inicio" className="flex items-center gap-2.5 group">
-      <div className="leading-none">
-        <div className="text-[15px] font-display font-semibold tracking-tight text-white">Fraga</div>
-        <div className="text-[9px] uppercase tracking-[0.28em] text-white/50 mt-1">Contabilidade · desde 1974</div>
-      </div>
+    <a href="#inicio" className="flex items-center gap-3 group">
+      <img src={fragaLogo.url} alt="Fraga Contabilidade" className="h-7 w-auto" />
+      <span className="hidden sm:block text-[9px] uppercase tracking-[0.28em] text-muted-foreground border-l border-border pl-3">
+        Contabilidade<br/>desde 1974
+      </span>
     </a>
   );
 }
@@ -190,13 +191,14 @@ function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-[100svh] flex flex-col pt-28 pb-12 lg:pt-36 lg:pb-16 bg-[oklch(0.13_0.025_220)] text-white"
+      className="relative min-h-[100svh] flex flex-col pt-28 pb-12 lg:pt-36 lg:pb-16 bg-background text-foreground"
     >
+      <div aria-hidden className="absolute inset-x-0 top-0 h-[60vh] bg-gradient-to-b from-secondary/60 to-transparent pointer-events-none" />
       <div className="relative mx-auto max-w-[1400px] w-full px-6 lg:px-12 flex-1 flex flex-col">
         {/* Editorial top bar */}
-        <div className="border-t border-white/15 pt-5 mb-12 lg:mb-20 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2 text-[11px] uppercase tracking-[0.28em] text-white/55">
+        <div className="border-t border-border pt-5 mb-12 lg:mb-20 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2 text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
           <span>Fraga Contabilidade · Vila Velha — ES</span>
-          <span className="font-mono normal-case tracking-normal text-white/40">
+          <span className="font-mono normal-case tracking-normal text-muted-foreground/70">
             CRC-ES · em atividade desde 1974
           </span>
         </div>
@@ -209,7 +211,7 @@ function Hero() {
         {/* Lede + meta column */}
         <div className="mt-14 lg:mt-20 grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-7 lg:col-start-6">
-            <p className="text-lg lg:text-xl text-white/75 leading-[1.55] font-light max-w-[52ch]">
+            <p className="text-lg lg:text-xl text-foreground/75 leading-[1.55] font-light max-w-[52ch]">
               A Fraga acompanha empresas em Vila Velha, no Espírito Santo e em todo o Brasil com rotinas contábeis, fiscais, tributárias e financeiras conduzidas por uma equipe com mais de 50 anos de experiência.
             </p>
 
@@ -219,14 +221,14 @@ function Hero() {
                 target="_blank"
                 rel="noopener"
                 onClick={() => trackConversion("hero_cta_click", "Hero principal")}
-                className="inline-flex items-center gap-2 border-b border-white pb-1 font-medium text-white hover:opacity-80 transition-opacity"
+                className="inline-flex items-center gap-2 rounded-full bg-accent text-accent-foreground px-5 py-2.5 font-semibold hover:bg-accent-glow transition-colors"
               >
                 Falar com a Fraga pelo WhatsApp
                 <ArrowUpRight className="w-4 h-4" strokeWidth={1.5} />
               </a>
               <a
                 href="#servicos"
-                className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors underline-offset-4 hover:underline"
               >
                 Ver como trabalhamos
                 <ArrowRight className="w-3.5 h-3.5" strokeWidth={1.5} />
@@ -236,7 +238,7 @@ function Hero() {
         </div>
 
         {/* Editorial footer ledger */}
-        <div className="mt-auto pt-16 lg:pt-24 border-t border-white/15">
+        <div className="mt-auto pt-16 lg:pt-24 border-t border-border">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-6">
             {[
               { v: "50+", label: "anos de atuação" },
@@ -245,7 +247,7 @@ function Hero() {
               { v: "4,9 / 5", label: "avaliação Google" },
             ].map((s, i) => (
               <div key={i} className="flex flex-col">
-                <div className="text-[10px] uppercase tracking-[0.28em] text-white/45 mb-2">{s.label}</div>
+                <div className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground mb-2">{s.label}</div>
                 <div className="font-display text-3xl lg:text-4xl font-medium tracking-tight tabular-nums">
                   {s.v}
                 </div>
