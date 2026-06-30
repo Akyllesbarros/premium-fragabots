@@ -1284,16 +1284,16 @@ function FinalCta() {
       }} />
       <div className="relative mx-auto max-w-5xl px-4 lg:px-8 py-28 lg:py-40 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-medium text-white/70 backdrop-blur mb-8">
-          <Sparkles className="w-3 h-3 text-accent" />
-          Sem formulário · Sem espera
+          <MessageCircle className="w-3 h-3 text-accent" />
+          Atendimento direto · sem formulário
         </div>
         <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.0] mb-8 text-white">
-          Pronto para ter uma contabilidade{" "}
-          <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>mais estratégica</span>{" "}
-          ao lado da sua empresa?
+          Quer entender se a Fraga{" "}
+          <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>encaixa</span>{" "}
+          com a sua empresa?
         </h2>
         <p className="text-white/65 text-lg max-w-2xl mx-auto mb-12">
-          Fale com a Fraga pelo WhatsApp e descubra qual solução faz mais sentido para o seu momento.
+          Conte o seu cenário no WhatsApp. A equipe responde com orientação real antes de qualquer proposta.
         </p>
         <PremiumButton
           href={waLink("Olá, quero falar com um especialista da Fraga Contabilidade.")}
@@ -1303,7 +1303,7 @@ function FinalCta() {
           trailingIcon={<ArrowUpRight className="w-4 h-4" />}
           trackLocation="final_cta_click"
         >
-          Falar com especialista pelo WhatsApp
+          Chamar a Fraga no WhatsApp
         </PremiumButton>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-white/55">
           <span className="inline-flex items-center gap-2"><Phone className="w-4 h-4 text-accent" /> (27) 98848-2268</span>
