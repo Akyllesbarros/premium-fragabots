@@ -95,8 +95,8 @@ export function CinematicRDLFFooter() {
           <div>
             <img src={rdlfLogo.url} alt="Fraga Contabilidade" className="h-12 md:h-14 w-auto select-none opacity-100" style={{ filter: "none" }} draggable={false} />
             <p className="mt-5 max-w-sm text-bone/60 leading-relaxed text-[15px]">
-              Hub jurídico estratégico para empresas em crescimento. Base sólida para decisões
-              rápidas, seguras e defensáveis.
+              Contabilidade estratégica para empresas em Vila Velha e em todo o Brasil. +50 anos
+              ajudando empresários a decidir com clareza.
             </p>
             <div className="mt-7 flex items-center gap-3">
               <a
@@ -122,9 +122,9 @@ export function CinematicRDLFFooter() {
 
           <div className="grid sm:grid-cols-3 gap-10">
             {[
-              { title: "Navegação", links: [["Hub Jurídico", "#hub"], ["Propriedade Intelectual", "#pi"], ["Método", "#metodo"], ["Riscos", "#riscos"], ["Contato", "#contato"]] },
-              { title: "Áreas", links: [["Propriedade Intelectual", "#pi"], ["Contratos", "#hub"], ["Preventivo", "#hub"], ["Estruturação", "#hub"], ["Compliance", "#hub"]] },
-              { title: "Contato", links: [["contato@fragacontabilidade.com.br", "mailto:contato@fragacontabilidade.com.br"], ["WhatsApp", "#contato"], ["Instagram", "https://www.instagram.com/fragacontabilidade"], ["LinkedIn", "https://www.linkedin.com/company/fragacontabilidade/"]] },
+              { title: "Navegação", links: [["Sobre", "#sobre"], ["Serviços", "#servicos"], ["Como trabalhamos", "#metodo"], ["FAQ", "#faq"], ["Contato", "#contato"]] },
+              { title: "Serviços", links: [["Planejamento tributário", "#servicos"], ["Rotina contábil", "#servicos"], ["Departamento pessoal", "#servicos"], ["BPO financeiro", "#servicos"], ["Abertura de CNPJ", "#servicos"]] },
+              { title: "Contato", links: [["WhatsApp", "https://wa.me/5527988482268"], ["Vila Velha — ES", "#sobre"], ["Instagram", "#"], ["LinkedIn", "#"]] },
             ].map((c) => (
               <div key={c.title}>
                 <div className="eyebrow mb-5">{c.title}</div>
@@ -159,7 +159,7 @@ export function CinematicRDLFFooter() {
           className="pointer-events-none mx-auto block w-full max-w-[1400px] select-none text-center font-display italic leading-[0.85] tracking-[-0.06em] text-bone/[0.06]"
           style={{ fontSize: "clamp(6rem, 22vw, 22rem)" }}
         >
-          rdlf.
+          fraga.
         </div>
       </div>
 
