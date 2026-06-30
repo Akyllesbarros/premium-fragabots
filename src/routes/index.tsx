@@ -452,12 +452,12 @@ function Marquee({ children, direction = "left", muted = false }: { children: Re
    ============================================================ */
 function HistoryAuthority() {
   const blocks = [
-    { v: "+50", l: "anos de experiência" },
-    { v: "+1.000", l: "casos de sucesso" },
-    { v: "100%", l: "atendimento consultivo" },
-    { v: "BR", l: "empresas em todo o Brasil" },
+    { v: "1974", l: "ano de fundação" },
+    { v: "+1.000", l: "empresas atendidas ao longo da história" },
+    { v: "ES", l: "sede em Vila Velha" },
+    { v: "BR", l: "atendemos empresas em todo o país" },
   ];
-  const tags = ["Segurança fiscal", "Clareza nos números", "Apoio para decisão", "Visão consultiva", "Atendimento próximo"];
+  const tags = ["Rotina contábil mensal", "Folha e DP", "Apuração tributária", "Abertura de CNPJ", "Regularização fiscal", "BPO financeiro"];
   return (
     <div id="sobre" className="py-24 lg:py-36">
       <div className="mx-auto max-w-[1400px] px-4 lg:px-8 grid lg:grid-cols-12 gap-12">
@@ -465,9 +465,9 @@ function HistoryAuthority() {
           <div className="sticky top-32">
             <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-5">— Nossa história</div>
             <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02] mb-8">
-              Mais do que contabilidade. Uma{" "}
-              <span className="italic font-serif text-primary-deep" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>parceria</span>{" "}
-              de longo prazo.
+              Uma contabilidade construída{" "}
+              <span className="italic font-serif text-primary-deep" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>de perto</span>,
+              cliente por cliente.
             </h2>
             <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden bg-gradient-primary shadow-elegant max-w-sm">
               <div className="absolute inset-0 bg-gradient-mesh opacity-40" />
@@ -487,7 +487,7 @@ function HistoryAuthority() {
 
         <div className="lg:col-span-7 lg:pt-20">
           <p className="text-lg lg:text-xl text-foreground/75 leading-relaxed mb-10 max-w-xl">
-            A Fraga combina tradição, tecnologia e visão consultiva para apoiar empresas em diferentes fases: da abertura do CNPJ à estruturação financeira, tributária e gerencial.
+            A Fraga nasceu da prática contábil feita de perto: acompanhando empresários, entendendo rotinas, corrigindo processos e construindo relações que atravessam anos. A tecnologia entrou para acelerar o trabalho, mas a base continua a mesma — clareza, responsabilidade e presença.
           </p>
           <div className="grid grid-cols-2 gap-4 mb-10">
             {blocks.map(b => (
