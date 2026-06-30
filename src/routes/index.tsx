@@ -685,8 +685,8 @@ function NumberedServices() {
               <div key={s.n} className="rounded-[2rem] overflow-hidden border border-border bg-gradient-to-br from-[oklch(0.99_0.005_200)] to-[oklch(0.94_0.018_200)] shadow-elegant p-8 animate-fade-in">
                 <div className="flex items-center justify-between mb-6">
                   <div className="font-display text-5xl font-black text-gradient-primary">{s.n}</div>
-                  <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center shadow-elegant">
-                    <s.icon className="w-5 h-5 text-primary-foreground" />
+                  <div className="text-[10px] uppercase tracking-[0.22em] font-semibold text-foreground/45">
+                    Serviço Fraga
                   </div>
                 </div>
                 <h3 className="font-display text-2xl font-bold mb-3 text-foreground">{s.title}</h3>
@@ -717,8 +717,8 @@ function NumberedServices() {
                 <summary className="flex items-center gap-4 cursor-pointer list-none">
                   <span className="font-display text-xl font-bold text-primary">{it.n}</span>
                   <span className="font-display font-bold flex-1 text-foreground">{it.title}</span>
-                  <Plus className="w-5 h-5 text-foreground/40 group-open:hidden" />
-                  <Minus className="w-5 h-5 text-foreground/40 hidden group-open:block" />
+                  <span className="text-foreground/40 text-xl leading-none font-light group-open:hidden">+</span>
+                  <span className="text-foreground/40 text-xl leading-none font-light hidden group-open:block">−</span>
                 </summary>
                 <div className="mt-4 space-y-3">
                   <p className="text-sm text-foreground/65 leading-relaxed">{it.desc}</p>
