@@ -47,44 +47,44 @@
 :root {
   --radius: 0.5rem;
 
-  /* Fraga brand palette — teal primary, orange accent */
-  --rdlf-green: #1f6f78;        /* teal-dark */
-  --rdlf-green-dark: #103b41;
-  --rdlf-green-soft: #2a8a93;
+  /* Fraga brand palette — light theme */
+  --rdlf-green: #36a2ac;        /* teal primary */
+  --rdlf-green-dark: #1f6f78;
+  --rdlf-green-soft: #5fb8c1;
   --rdlf-offwhite: #edf7f8;     /* mist */
-  --rdlf-gray: #B0B0B0;
-  --rdlf-orange: #ffa819;       /* Fraga orange */
-  --rdlf-black: #07181b;
+  --rdlf-gray: #6b7a7d;
+  --rdlf-orange: #ffa819;
+  --rdlf-black: #0d2528;
 
-  /* Tokens used across imported components — kept name-stable */
-  --ink: #07181b;
-  --ink-soft: #103b41;
-  --bone: #edf7f8;
-  --warm-gray: #9bb1b5;
+  /* Tokens used across imported components — name-stable, meanings flipped to light */
+  --ink: #ffffff;               /* page background */
+  --ink-soft: #edf7f8;          /* card / mist surface */
+  --bone: #0d2528;              /* primary text (now dark) */
+  --warm-gray: #5e7479;         /* secondary text */
   --gold: #36a2ac;              /* Fraga teal primary */
   --gold-light: #ffa819;        /* accent highlight (orange) */
   --petrol: #1f6f78;
-  --glass: rgba(237, 247, 248, 0.05);
+  --glass: rgba(13, 37, 40, 0.04);
 
-  --background: var(--ink);
-  --foreground: var(--bone);
-  --card: var(--ink-soft);
-  --card-foreground: var(--bone);
-  --popover: var(--ink-soft);
-  --popover-foreground: var(--bone);
-  --primary: var(--gold);
-  --primary-foreground: var(--bone);
-  --secondary: #15464d;
-  --secondary-foreground: var(--bone);
-  --muted: #15464d;
-  --muted-foreground: var(--warm-gray);
-  --accent: var(--rdlf-orange);
+  --background: #ffffff;
+  --foreground: #0d2528;
+  --card: #ffffff;
+  --card-foreground: #0d2528;
+  --popover: #ffffff;
+  --popover-foreground: #0d2528;
+  --primary: #36a2ac;
+  --primary-foreground: #ffffff;
+  --secondary: #edf7f8;
+  --secondary-foreground: #0d2528;
+  --muted: #edf7f8;
+  --muted-foreground: #5e7479;
+  --accent: #ffa819;
   --accent-foreground: #2b1700;
-  --destructive: #ff5252;
-  --destructive-foreground: var(--bone);
-  --border: rgba(237, 247, 248, 0.10);
-  --input: rgba(237, 247, 248, 0.12);
-  --ring: var(--gold);
+  --destructive: #d63a3a;
+  --destructive-foreground: #ffffff;
+  --border: rgba(13, 37, 40, 0.10);
+  --input: rgba(13, 37, 40, 0.12);
+  --ring: #36a2ac;
 }
 
 @layer base {
@@ -92,7 +92,7 @@
   html { scroll-behavior: smooth; }
   section[id] { scroll-margin-top: 96px; }
 
-  html, body { background-color: #07181b; }
+  html, body { background-color: #ffffff; }
 
   body {
     color: var(--color-foreground);
@@ -100,12 +100,12 @@
     font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    background-color: #07181b;
+    background-color: #ffffff;
     background-image:
-      radial-gradient(circle at 18% 8%, rgba(31, 111, 120, 0.55) 0%, transparent 34%),
-      radial-gradient(circle at 82% 22%, rgba(54, 162, 172, 0.22) 0%, transparent 32%),
-      radial-gradient(circle at 50% 52%, rgba(31, 111, 120, 0.30) 0%, transparent 46%),
-      linear-gradient(180deg, #07181b 0%, #050d0f 42%, #07181b 100%);
+      radial-gradient(circle at 18% 8%, rgba(54, 162, 172, 0.10) 0%, transparent 38%),
+      radial-gradient(circle at 82% 22%, rgba(255, 168, 25, 0.08) 0%, transparent 36%),
+      radial-gradient(circle at 50% 70%, rgba(237, 247, 248, 0.9) 0%, transparent 50%),
+      linear-gradient(180deg, #ffffff 0%, #f6fbfb 50%, #ffffff 100%);
     background-attachment: fixed;
   }
 
@@ -123,9 +123,9 @@
     z-index: 0;
     pointer-events: none;
     background:
-      radial-gradient(circle at 50% 0%, rgba(237, 247, 248, 0.04), transparent 28%),
-      radial-gradient(circle at 20% 45%, rgba(31, 111, 120, 0.32), transparent 38%),
-      radial-gradient(circle at 80% 70%, rgba(54, 162, 172, 0.22), transparent 34%);
+      radial-gradient(circle at 50% 0%, rgba(54, 162, 172, 0.06), transparent 30%),
+      radial-gradient(circle at 20% 45%, rgba(237, 247, 248, 0.7), transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(255, 168, 25, 0.05), transparent 36%);
   }
   .rdlf-site-shell::after {
     content: "";
@@ -133,14 +133,14 @@
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.045;
-    background-image: radial-gradient(rgba(237, 247, 248, 0.45) 0.5px, transparent 0.5px);
+    opacity: 0.05;
+    background-image: radial-gradient(rgba(13, 37, 40, 0.35) 0.5px, transparent 0.5px);
     background-size: 4px 4px;
-    mix-blend-mode: screen;
+    mix-blend-mode: multiply;
   }
   .rdlf-site-shell > * { position: relative; z-index: 1; }
 
-  ::selection { background: var(--rdlf-orange); color: var(--bone); }
+  ::selection { background: var(--rdlf-orange); color: #2b1700; }
 }
 
 @layer utilities {
