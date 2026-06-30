@@ -695,7 +695,7 @@ function NumberedServices() {
                 <h3 className="font-display text-2xl font-bold mb-3 text-foreground">{s.title}</h3>
                 <p className="text-sm text-foreground/65 leading-relaxed mb-5">{s.desc}</p>
                 <div className="rounded-2xl border border-accent/30 bg-accent/10 p-4 mb-7">
-                  <div className="text-[10px] uppercase tracking-[0.2em] font-semibold text-accent-foreground/80 mb-1">Benefício principal</div>
+                  <div className="text-[10px] uppercase tracking-[0.2em] font-semibold text-accent-foreground/80 mb-1">O que muda na prática</div>
                   <div className="text-sm font-semibold text-foreground">{s.benefit}</div>
                 </div>
                 <PremiumButton
@@ -707,7 +707,7 @@ function NumberedServices() {
                   trackMessage={s.title}
                   className="w-full"
                 >
-                  Falar sobre {s.title}
+                  Conversar sobre {s.title}
                 </PremiumButton>
               </div>
             </div>
@@ -733,7 +733,7 @@ function NumberedServices() {
                     onClick={() => trackConversion("service_whatsapp_click", it.title)}
                     className="inline-flex items-center gap-2 text-sm font-semibold text-primary"
                   >
-                    Falar no WhatsApp <ArrowUpRight className="w-4 h-4" />
+                    Conversar no WhatsApp <ArrowUpRight className="w-4 h-4" />
                   </a>
                 </div>
               </details>
