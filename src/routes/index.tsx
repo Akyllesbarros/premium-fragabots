@@ -1325,10 +1325,10 @@ function Footer() {
           <div className="lg:col-span-3">
             <div className="text-[11px] uppercase tracking-[0.22em] text-white/40 mb-4 font-semibold">Contato</div>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-accent" /> (27) 98848-2268</li>
-              <li className="flex items-center gap-2"><MessageCircle className="w-4 h-4 text-accent" /> WhatsApp</li>
-              <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-accent" /> contato@fragacontabilidade.com.br</li>
-              <li className="flex items-start gap-2"><MapPin className="w-4 h-4 text-accent mt-0.5" /> Vila Velha · Espírito Santo</li>
+              <li><span className="text-[10px] uppercase tracking-[0.22em] text-white/40 mr-2">Tel.</span>(27) 98848-2268</li>
+              <li><span className="text-[10px] uppercase tracking-[0.22em] text-white/40 mr-2">WhatsApp</span>(27) 98848-2268</li>
+              <li><span className="text-[10px] uppercase tracking-[0.22em] text-white/40 mr-2">E-mail</span>contato@fragacontabilidade.com.br</li>
+              <li><span className="text-[10px] uppercase tracking-[0.22em] text-white/40 mr-2">Sede</span>Vila Velha · Espírito Santo</li>
             </ul>
           </div>
           <div className="lg:col-span-4">
