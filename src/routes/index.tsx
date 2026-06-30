@@ -4,7 +4,7 @@ import {
   Award, ShieldCheck, TrendingUp, Users, Building2, Calculator,
   FileCheck, Wallet, Briefcase, Sparkles, ArrowRight, Check, X,
   MessageCircle, ChevronDown, Star, Quote, Menu, Zap, Target,
-  HeartHandshake, BarChart3, Clock, MapPin,
+  HeartHandshake, BarChart3, Clock, MapPin, Phone, Send,
 } from "lucide-react";
 import { waLink, trackConversion } from "@/lib/whatsapp";
 import { PremiumButton } from "@/components/fraga/PremiumButton";
@@ -66,15 +66,19 @@ function LandingPage() {
       <Header />
       <Hero />
       <Stack layer={2}><TrustBar /></Stack>
-      <Stack layer={3}><Narrative /></Stack>
-      <Stack layer={4}><Services /></Stack>
-      <Stack layer={5}><VideoTestimonials /></Stack>
-      <Stack layer={6}><Plans /></Stack>
-      <Stack layer={7}><Process /></Stack>
-      <Stack layer={8}><Testimonials /></Stack>
-      <Stack layer={3}><Comparison /></Stack>
-      <Stack layer={4}><Faq /></Stack>
-      <Stack layer={5}><FinalCta /></Stack>
+      <Stack layer={3}><Manifesto /></Stack>
+      <Stack layer={4}><Narrative /></Stack>
+      <Stack layer={5}><NumberedServices /></Stack>
+      <Stack layer={6}><WhatsAppMockup /></Stack>
+      <Stack layer={7}><StageSolutions /></Stack>
+      <Stack layer={8}><VideoTestimonials /></Stack>
+      <Stack layer={3}><Plans /></Stack>
+      <Stack layer={4}><Process /></Stack>
+      <Stack layer={5}><Testimonials /></Stack>
+      <Stack layer={6}><Comparison /></Stack>
+      <Stack layer={7}><Insights /></Stack>
+      <Stack layer={8}><Faq /></Stack>
+      <Stack layer={3}><FinalCta /></Stack>
       <Footer />
       <WhatsAppFloat />
     </div>
@@ -101,8 +105,10 @@ function Header() {
   }, []);
   const nav = [
     { href: "#solucoes", label: "Soluções" },
+    { href: "#sobre", label: "Sobre" },
+    { href: "#servicos", label: "Serviços" },
+    { href: "#depoimentos-video", label: "Depoimentos" },
     { href: "#planos", label: "Planos" },
-    { href: "#depoimentos", label: "Depoimentos" },
     { href: "#faq", label: "FAQ" },
   ];
   return (
@@ -890,5 +896,360 @@ function WhatsAppFloat() {
         <span className="hidden sm:inline text-sm font-semibold">Fale conosco</span>
       </span>
     </a>
+  );
+}
+
+/* ---------------- Manifesto (repeating typography) ---------------- */
+function Manifesto() {
+  const phrases = ["Empresas fortes.", "Gestão clara.", "Decisões seguras.", "Tradição viva."];
+  return (
+    <section id="sobre" className="relative py-20 lg:py-28 bg-background overflow-hidden">
+      <div className="space-y-2 lg:space-y-4">
+        <div className="flex gap-12 whitespace-nowrap animate-marquee">
+          {[...phrases, ...phrases, ...phrases].map((p, i) => (
+            <span key={`a${i}`} className="text-5xl lg:text-8xl font-bold font-display tracking-tight text-foreground/90">
+              {p} <span className="text-gradient-primary">Fraga.</span>
+            </span>
+          ))}
+        </div>
+        <div className="flex gap-12 whitespace-nowrap animate-marquee-rev">
+          {[...phrases, ...phrases, ...phrases].map((p, i) => (
+            <span key={`b${i}`} className="text-5xl lg:text-8xl font-bold font-display tracking-tight text-foreground/15">
+              {p}
+            </span>
+          ))}
+        </div>
+      </div>
+      <div className="relative mx-auto max-w-6xl px-4 lg:px-8 mt-16 grid md:grid-cols-3 gap-5">
+        {[
+          { icon: Award, k: "+50 anos", v: "ao lado de empresas brasileiras" },
+          { icon: HeartHandshake, k: "Atendimento próximo", v: "consultivo e estratégico" },
+          { icon: BarChart3, k: "Números que decidem", v: "relatórios viram ação" },
+        ].map((c) => (
+          <div key={c.k} className="glass rounded-2xl p-6 shadow-card">
+            <c.icon className="w-6 h-6 text-accent mb-3" />
+            <div className="font-bold text-lg">{c.k}</div>
+            <div className="text-sm text-muted-foreground">{c.v}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+/* ---------------- Numbered Interactive Services (Padelix-style) ---------------- */
+function NumberedServices() {
+  const services = [
+    { n: "01", icon: Briefcase, title: "Abertura de Empresas", desc: "Constituição rápida e segura, com escolha do regime tributário ideal desde o primeiro dia.", bullets: ["Análise do enquadramento", "Registros e alvarás", "CNPJ e inscrição estadual"] },
+    { n: "02", icon: Calculator, title: "Planejamento Tributário", desc: "Análise profunda da operação para reduzir impostos com total respaldo legal.", bullets: ["Diagnóstico fiscal", "Escolha do regime ideal", "Revisão de obrigações"] },
+    { n: "03", icon: FileCheck, title: "Assessoria Contábil", desc: "Rotinas conduzidas com método, prazos cumpridos e relatórios que importam.", bullets: ["Escrita contábil", "Apurações mensais", "Demonstrativos gerenciais"] },
+    { n: "04", icon: Users, title: "Departamento Pessoal", desc: "Folha, admissões, demissões e obrigações trabalhistas sem dor de cabeça.", bullets: ["Folha de pagamento", "eSocial e DCTFWeb", "Admissões e rescisões"] },
+    { n: "05", icon: Wallet, title: "BPO Financeiro", desc: "Contas a pagar e a receber, conciliações e fluxo de caixa com especialistas.", bullets: ["Contas a pagar/receber", "Conciliação bancária", "Fluxo de caixa"] },
+    { n: "06", icon: ShieldCheck, title: "Regularização Fiscal", desc: "Empresas com pendências voltam à conformidade com plano de ação claro.", bullets: ["Diagnóstico de pendências", "Parcelamentos", "Defesa fiscal"] },
+  ];
+  const [active, setActive] = useState(0);
+  const cur = services[active];
+  const link = waLink(`Olá, tenho interesse em ${cur.title} com a Fraga Contabilidade.`);
+  return (
+    <section id="servicos" className="py-24 lg:py-32 bg-secondary/40 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-mesh opacity-15 pointer-events-none" />
+      <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
+        <div className="max-w-3xl mb-14">
+          <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">
+            <span className="w-8 h-px bg-primary" /> Serviços
+          </div>
+          <h2 className="text-3xl lg:text-5xl font-bold">
+            Soluções integradas para uma <span className="text-gradient-primary">gestão sem ruídos</span>
+          </h2>
+        </div>
+
+        <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-16">
+          <ul className="space-y-1">
+            {services.map((s, i) => {
+              const isActive = i === active;
+              return (
+                <li key={s.n}>
+                  <button
+                    type="button"
+                    onMouseEnter={() => setActive(i)}
+                    onClick={() => setActive(i)}
+                    className={`group w-full text-left py-5 lg:py-6 border-t border-border/70 flex items-baseline gap-5 transition-colors duration-300 ${isActive ? "text-foreground" : "text-foreground/40 hover:text-foreground/70"}`}
+                  >
+                    <span className={`font-display text-2xl lg:text-3xl tabular-nums transition-colors ${isActive ? "text-gradient-primary" : "text-foreground/30"}`}>{s.n}</span>
+                    <span className="flex-1 font-display text-2xl lg:text-4xl font-bold leading-tight tracking-tight">{s.title}</span>
+                    <ArrowRight className={`w-5 h-5 mt-2 transition-all ${isActive ? "opacity-100 translate-x-0 text-accent" : "opacity-0 -translate-x-2"}`} />
+                  </button>
+                </li>
+              );
+            })}
+            <li className="border-t border-border/70" />
+          </ul>
+
+          <div className="lg:sticky lg:top-28 self-start">
+            <div key={cur.n} className="animate-fade-up rounded-3xl bg-gradient-dark text-white p-8 lg:p-10 shadow-elegant border border-white/10 overflow-hidden relative">
+              <div className="absolute inset-0 bg-gradient-mesh opacity-25 pointer-events-none" />
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-accent flex items-center justify-center shadow-gold">
+                    <cur.icon className="w-5 h-5 text-accent-foreground" />
+                  </div>
+                  <span className="text-xs uppercase tracking-[0.2em] text-accent-glow font-semibold">Serviço {cur.n}</span>
+                </div>
+                <h3 className="text-2xl lg:text-3xl font-bold mb-3">{cur.title}</h3>
+                <p className="text-white/75 leading-relaxed mb-6">{cur.desc}</p>
+                <ul className="space-y-2.5 mb-8">
+                  {cur.bullets.map((b) => (
+                    <li key={b} className="flex items-start gap-2 text-sm text-white/85">
+                      <div className="mt-0.5 w-4 h-4 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+                        <Check className="w-2.5 h-2.5 text-accent-foreground" strokeWidth={3} />
+                      </div>
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+                <PremiumButton
+                  href={link}
+                  variant="gold"
+                  icon={<MessageCircle className="w-4 h-4" />}
+                  trailingIcon={<ArrowRight className="w-4 h-4" />}
+                  trackLocation="service_whatsapp_click"
+                  trackMessage={cur.title}
+                >
+                  Falar sobre {cur.title}
+                </PremiumButton>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------------- WhatsApp Mockup (Agende em segundos adaptado) ---------------- */
+function WhatsAppMockup() {
+  const steps = [
+    "Chamar no WhatsApp",
+    "Explicar o momento da empresa",
+    "Receber orientação inicial",
+    "Definir o melhor plano",
+    "Iniciar transição contábil",
+  ];
+  const [checked, setChecked] = useState<number[]>([]);
+  useEffect(() => {
+    const t = setInterval(() => {
+      setChecked((prev) => {
+        if (prev.length >= steps.length) return [];
+        return [...prev, prev.length];
+      });
+    }, 1400);
+    return () => clearInterval(t);
+  }, []);
+  const link = waLink("Olá, quero começar pelo WhatsApp para entender qual solução da Fraga faz sentido para minha empresa.");
+  return (
+    <section className="py-24 lg:py-32 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-hero opacity-60 pointer-events-none" />
+      <div className="relative mx-auto max-w-7xl px-4 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">
+            <span className="w-8 h-px bg-primary" /> Comece agora
+          </div>
+          <h2 className="text-3xl lg:text-5xl font-bold mb-5 leading-[1.05]">
+            Comece pelo WhatsApp. <span className="text-gradient-primary">Sem burocracia.</span>
+          </h2>
+          <p className="text-muted-foreground text-lg mb-8 max-w-xl leading-relaxed">
+            Em poucos minutos você fala com a equipe da Fraga, explica seu momento atual e entende qual solução contábil faz mais sentido para sua empresa.
+          </p>
+          <ul className="space-y-3 mb-10">
+            {steps.map((s, i) => {
+              const on = checked.includes(i);
+              return (
+                <li key={s} className="flex items-center gap-3">
+                  <span className={`relative w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all duration-500 ${on ? "bg-gradient-primary border-transparent shadow-glow" : "border-border bg-card"}`}>
+                    <Check className={`w-3.5 h-3.5 text-primary-foreground transition-all ${on ? "scale-100 opacity-100" : "scale-0 opacity-0"}`} strokeWidth={3} />
+                  </span>
+                  <span className={`font-medium transition-colors ${on ? "text-foreground" : "text-foreground/55"}`}>{s}</span>
+                </li>
+              );
+            })}
+          </ul>
+          <PremiumButton
+            href={link}
+            size="lg"
+            icon={<MessageCircle className="w-5 h-5" />}
+            trailingIcon={<ArrowRight className="w-4 h-4" />}
+            trackLocation="wa_mockup_cta_click"
+          >
+            Começar agora pelo WhatsApp
+          </PremiumButton>
+        </div>
+
+        <ChatMockup />
+      </div>
+    </section>
+  );
+}
+
+function ChatMockup() {
+  const messages = [
+    { from: "me", text: "Oi! Quero trocar de contador. Vocês atendem minha cidade?" },
+    { from: "fraga", text: "Olá! Sim, atendemos em todo o Brasil. Pode me contar um pouco do momento da empresa?" },
+    { from: "me", text: "Faturamos cerca de R$ 180k/mês e queremos planejamento tributário sério." },
+    { from: "fraga", text: "Perfeito. O plano Plus se encaixa bem e já inclui consultoria tributária. Posso te mandar os detalhes?" },
+  ];
+  const [shown, setShown] = useState(0);
+  useEffect(() => {
+    if (shown >= messages.length) return;
+    const t = setTimeout(() => setShown((s) => s + 1), 900);
+    return () => clearTimeout(t);
+  }, [shown, messages.length]);
+  return (
+    <div className="relative mx-auto max-w-md">
+      <div className="absolute -inset-8 bg-gradient-mesh opacity-40 blur-3xl pointer-events-none" />
+      <div className="relative rounded-[2rem] bg-gradient-dark border border-white/10 shadow-elegant p-3">
+        <div className="rounded-[1.5rem] bg-[oklch(0.96_0.012_200)] overflow-hidden">
+          <div className="bg-whatsapp text-whatsapp-foreground px-4 py-3 flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center font-bold">F</div>
+            <div className="flex-1">
+              <div className="text-sm font-semibold">Fraga Contabilidade</div>
+              <div className="text-[11px] opacity-80 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent-glow inline-block" /> online agora
+              </div>
+            </div>
+            <Phone className="w-4 h-4 opacity-80" />
+          </div>
+          <div className="p-4 space-y-2 min-h-[320px]" style={{ background: "repeating-linear-gradient(45deg, oklch(0.96 0.012 200), oklch(0.96 0.012 200) 12px, oklch(0.94 0.012 200) 12px, oklch(0.94 0.012 200) 24px)" }}>
+            {messages.slice(0, shown).map((m, i) => (
+              <div key={i} className={`flex animate-wa-pop ${m.from === "me" ? "justify-end" : "justify-start"}`}>
+                <div className={`max-w-[80%] px-3.5 py-2 rounded-2xl text-sm shadow-card ${m.from === "me" ? "bg-[oklch(0.86_0.06_150)] text-[oklch(0.2_0.04_150)] rounded-br-sm" : "bg-white text-foreground rounded-bl-sm"}`}>
+                  {m.text}
+                </div>
+              </div>
+            ))}
+            {shown < messages.length && (
+              <div className="flex justify-start">
+                <div className="bg-white rounded-2xl rounded-bl-sm px-4 py-2.5 shadow-card flex items-center gap-1">
+                  {[0, 1, 2].map((i) => (
+                    <span key={i} className="w-1.5 h-1.5 rounded-full bg-muted-foreground" style={{ animation: `wa-typing 1.2s ease-in-out ${i * 0.15}s infinite` }} />
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+          <div className="bg-white px-3 py-3 flex items-center gap-2 border-t border-border">
+            <div className="flex-1 px-3 py-2 rounded-full bg-secondary text-sm text-muted-foreground">Digitar mensagem…</div>
+            <button type="button" className="w-9 h-9 rounded-full bg-whatsapp text-whatsapp-foreground flex items-center justify-center">
+              <Send className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ---------------- Stage Solutions (tabs por momento da empresa) ---------------- */
+function StageSolutions() {
+  const stages = [
+    { key: "abrindo", label: "Estou abrindo minha empresa", title: "Comece com o pé direito", desc: "Cuidamos da abertura, escolha do regime tributário e estruturação contábil desde o primeiro dia.", msg: "Olá, estou abrindo minha empresa e quero a Fraga ao meu lado." },
+    { key: "trocar", label: "Quero trocar de contador", title: "Migração sem ruído", desc: "Conduzimos toda a transição com segurança, sem parar a sua operação nem perder histórico.", msg: "Olá, quero trocar de contador e migrar para a Fraga." },
+    { key: "financeiro", label: "Preciso organizar meu financeiro", title: "BPO Financeiro estruturado", desc: "Contas a pagar, a receber, conciliações e fluxo de caixa no controle de uma equipe especialista.", msg: "Olá, preciso organizar o financeiro com o BPO da Fraga." },
+    { key: "impostos", label: "Quero entender melhor meus impostos", title: "Clareza tributária", desc: "Diagnóstico fiscal, escolha do regime ideal e plano para reduzir tributos dentro da lei.", msg: "Olá, quero entender melhor meus impostos com a Fraga." },
+    { key: "crescimento", label: "Minha empresa está crescendo", title: "Contabilidade que acompanha o ritmo", desc: "Estrutura preparada para crescer com você: mais conformidade, melhores dados, decisões rápidas.", msg: "Olá, minha empresa está crescendo e busco uma contabilidade estratégica." },
+    { key: "estrategica", label: "Quero uma contabilidade mais estratégica", title: "Parceria consultiva", desc: "Reuniões periódicas, indicadores que importam e gestor dedicado para sua empresa.", msg: "Olá, busco uma contabilidade consultiva e estratégica como a Fraga." },
+  ];
+  const [active, setActive] = useState(0);
+  const cur = stages[active];
+  return (
+    <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        <div className="max-w-3xl mb-12">
+          <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">
+            <span className="w-8 h-px bg-primary" /> Para o seu momento
+          </div>
+          <h2 className="text-3xl lg:text-5xl font-bold leading-[1.05]">
+            Soluções para cada <span className="text-gradient-primary">fase da sua empresa</span>
+          </h2>
+        </div>
+        <div className="grid lg:grid-cols-[1.1fr_1.2fr] gap-10 items-start">
+          <div className="flex flex-wrap gap-2">
+            {stages.map((s, i) => (
+              <button
+                key={s.key}
+                type="button"
+                onClick={() => { setActive(i); trackConversion("solution_click", s.label); }}
+                className={`text-left px-4 py-3 rounded-2xl border text-sm font-semibold transition-all duration-300 ${i === active ? "bg-gradient-primary text-primary-foreground border-transparent shadow-elegant" : "bg-card text-foreground/75 border-border hover:border-primary/40 hover:text-foreground"}`}
+              >
+                {s.label}
+              </button>
+            ))}
+          </div>
+          <div key={cur.key} className="animate-fade-up relative rounded-3xl bg-card border border-border p-8 lg:p-10 shadow-card overflow-hidden">
+            <div className="absolute -top-10 -right-10 text-[10rem] font-bold font-display text-primary/5 leading-none select-none">0{active + 1}</div>
+            <div className="relative">
+              <h3 className="text-2xl lg:text-3xl font-bold mb-4">{cur.title}</h3>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-xl">{cur.desc}</p>
+              <PremiumButton
+                href={waLink(cur.msg)}
+                icon={<MessageCircle className="w-4 h-4" />}
+                trailingIcon={<ArrowRight className="w-4 h-4" />}
+                trackLocation="solution_whatsapp_click"
+                trackMessage={cur.label}
+              >
+                Falar com especialista
+              </PremiumButton>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------------- Insights (mini-blog cards) ---------------- */
+function Insights() {
+  const items = [
+    { tag: "Tributário", title: "Como saber se minha empresa paga imposto corretamente?", desc: "Sinais práticos de que sua carga tributária pode estar maior do que precisa.", msg: "Olá, quero entender se minha empresa está pagando imposto certo." },
+    { tag: "Parceria", title: "Quando vale a pena trocar de contador?", desc: "Indicadores claros de que está na hora de uma contabilidade mais consultiva.", msg: "Olá, estou pensando em trocar de contador e quero falar com a Fraga." },
+    { tag: "Gestão", title: "Por que BPO financeiro melhora a gestão?", desc: "Como terceirizar a rotina financeira libera o gestor para decidir o que importa.", msg: "Olá, quero entender como o BPO financeiro da Fraga funciona." },
+    { tag: "Regime", title: "Como escolher o regime tributário ideal?", desc: "Simples, Lucro Presumido ou Lucro Real — entenda qual faz sentido para você.", msg: "Olá, quero ajuda para escolher o regime tributário ideal." },
+  ];
+  return (
+    <section className="py-24 lg:py-32 bg-secondary/40">
+      <div className="mx-auto max-w-7xl px-4 lg:px-8">
+        <div className="flex items-end justify-between flex-wrap gap-6 mb-12">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">
+              <span className="w-8 h-px bg-primary" /> Insights
+            </div>
+            <h2 className="text-3xl lg:text-5xl font-bold leading-[1.05]">
+              Conteúdo para empresas que querem <span className="text-gradient-primary">crescer com segurança</span>
+            </h2>
+          </div>
+        </div>
+        <div className="grid md:grid-cols-2 gap-5">
+          {items.map((i) => (
+            <a
+              key={i.title}
+              href={waLink(i.msg)}
+              target="_blank"
+              rel="noopener"
+              onClick={() => trackConversion("insight_whatsapp_click", i.title)}
+              className="group relative rounded-3xl bg-card border border-border p-8 shadow-card hover:shadow-elegant transition-all duration-500 hover:-translate-y-1 overflow-hidden block"
+            >
+              <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-primary-glow/0 group-hover:bg-primary-glow/15 blur-3xl transition-all duration-700" />
+              <div className="relative">
+                <span className="inline-flex text-[11px] uppercase tracking-[0.18em] font-bold text-primary mb-4">{i.tag}</span>
+                <h3 className="text-xl lg:text-2xl font-bold mb-3 leading-tight">{i.title}</h3>
+                <p className="text-muted-foreground leading-relaxed mb-5">{i.desc}</p>
+                <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary">
+                  Conversar sobre isso <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
