@@ -42,7 +42,7 @@ export function Header() {
           )}
         >
           <a href="#top" className="flex items-center shrink-0">
-            <img src={rdlfLogo.url} alt="Fraga Contabilidade" className="h-5 md:h-6 w-auto select-none opacity-100" style={{ filter: "none" }} draggable={false} />
+            <img src={rdlfLogo.url} alt="Fraga Contabilidade" className="h-7 md:h-8 w-auto select-none opacity-100" style={{ filter: "none" }} draggable={false} />
           </a>
 
           <nav className="hidden lg:flex items-center gap-8">
