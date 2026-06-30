@@ -51,7 +51,7 @@ export function WorkModels() {
             </Reveal>
             <Reveal delay={0.08}>
               <SectionTitle className="mt-5">
-                Três formas de contratar a RDLF — escolhidas pelo{" "}
+                Três formas de contratar a Fraga — escolhidas pelo{" "}
                 <span className="italic text-[color:var(--gold-light)]">tipo de decisão</span>,
                 não pelo tamanho da empresa.
               </SectionTitle>
@@ -108,7 +108,7 @@ export function WorkModels() {
         </div>
 
         <p className="mt-6 text-xs text-bone/40">
-          Valores definidos sob escopo. A RDLF não pratica honorários por tabela.
+          Valores definidos sob escopo. A Fraga não pratica honorários por tabela.
         </p>
       </div>
     </section>

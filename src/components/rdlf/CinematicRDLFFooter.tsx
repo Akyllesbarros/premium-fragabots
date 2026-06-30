@@ -100,7 +100,7 @@ export function CinematicRDLFFooter() {
             </p>
             <div className="mt-7 flex items-center gap-3">
               <a
-                href="https://www.instagram.com/gestaojuridica.rdlf"
+                href="https://www.instagram.com/fragacontabilidade"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -109,7 +109,7 @@ export function CinematicRDLFFooter() {
                 <Instagram className="h-4 w-4" />
               </a>
               <a
-                href="https://www.linkedin.com/company/gestaojuridica-rdlf/"
+                href="https://www.linkedin.com/company/fragacontabilidade/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -124,7 +124,7 @@ export function CinematicRDLFFooter() {
             {[
               { title: "Navegação", links: [["Hub Jurídico", "#hub"], ["Propriedade Intelectual", "#pi"], ["Método", "#metodo"], ["Riscos", "#riscos"], ["Contato", "#contato"]] },
               { title: "Áreas", links: [["Propriedade Intelectual", "#pi"], ["Contratos", "#hub"], ["Preventivo", "#hub"], ["Estruturação", "#hub"], ["Compliance", "#hub"]] },
-              { title: "Contato", links: [["contato@rdlf.adv.br", "mailto:contato@rdlf.adv.br"], ["WhatsApp", "#contato"], ["Instagram", "https://www.instagram.com/gestaojuridica.rdlf"], ["LinkedIn", "https://www.linkedin.com/company/gestaojuridica-rdlf/"]] },
+              { title: "Contato", links: [["contato@fragacontabilidade.com.br", "mailto:contato@fragacontabilidade.com.br"], ["WhatsApp", "#contato"], ["Instagram", "https://www.instagram.com/fragacontabilidade"], ["LinkedIn", "https://www.linkedin.com/company/fragacontabilidade/"]] },
             ].map((c) => (
               <div key={c.title}>
                 <div className="eyebrow mb-5">{c.title}</div>
@@ -166,7 +166,7 @@ export function CinematicRDLFFooter() {
       <div className="container-rdlf relative pb-10">
         <div className="hairline" />
         <div className="mt-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-bone/45">
-          <div>© {new Date().getFullYear()} RDLF Advocacia. Todos os direitos reservados.</div>
+          <div>© {new Date().getFullYear()} Fraga Contabilidade. Todos os direitos reservados.</div>
           <div className="flex items-center gap-6">
             <a
               href="https://www.instagram.com/_matheusalm/"

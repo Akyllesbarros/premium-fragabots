@@ -25,7 +25,7 @@ const cols = [
   {
     title: "Contato",
     links: [
-      ["contato@rdlf.adv.br", "mailto:contato@rdlf.adv.br"],
+      ["contato@fragacontabilidade.com.br", "mailto:contato@fragacontabilidade.com.br"],
       ["WhatsApp", "#contato"],
       ["Instagram", "#"],
       ["LinkedIn", "#"],
@@ -114,7 +114,7 @@ export function Footer() {
 
         <div className="hairline" />
         <div className="mt-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-bone/45">
-          <div>© {new Date().getFullYear()} RDLF Advocacia. Todos os direitos reservados.</div>
+          <div>© {new Date().getFullYear()} Fraga Contabilidade. Todos os direitos reservados.</div>
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-bone transition-colors">
               Política de Privacidade

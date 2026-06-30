@@ -10,7 +10,7 @@ export function AboutAuthority() {
           <div className="relative aspect-[4/5] w-full max-w-md rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-br from-ink-soft via-ink to-[color:var(--petrol)]/30">
             <img
               src="/about-portrait.jpeg"
-              alt="Retrato — RDLF"
+              alt="Retrato — Fraga"
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover"
             />
@@ -38,7 +38,7 @@ export function AboutAuthority() {
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-6 max-w-xl text-bone/65 leading-relaxed text-[15px]">
-              A RDLF é um hub jurídico estratégico voltado à gestão preventiva e
+              A Fraga é um hub jurídico estratégico voltado à gestão preventiva e
               estruturante de empresas em crescimento. Atua como camada técnica da
               tomada de decisão empresarial, não como serviço reativo a problemas.
             </p>

@@ -17,7 +17,7 @@ const faqs = [
     a: "Antes de a marca virar ativo. Quanto mais a empresa cresce sem registro, maior o risco de outro depositante registrar primeiro e exigir mudança de nome.",
   },
   {
-    q: "A RDLF atua apenas em processos?",
+    q: "A Fraga atua apenas em processos?",
     a: "Não. A atuação central é preventiva e estruturante. Processos são tratados quando inevitáveis, com leitura estratégica do impacto empresarial.",
   },
   {
@@ -33,7 +33,7 @@ const faqs = [
     a: "Para empresas em fase de crescimento e consolidação, sim. Oferece a camada jurídica recorrente sem o custo fixo de uma estrutura interna.",
   },
   {
-    q: "A RDLF garante aprovação de marca?",
+    q: "A Fraga garante aprovação de marca?",
     a: "Não. Nenhum escritório pode garantir deferimento pelo INPI. O que entregamos é estratégia técnica, busca de anterioridade e acompanhamento processual administrativo.",
   },
 ];

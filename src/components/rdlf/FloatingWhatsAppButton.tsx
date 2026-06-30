@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 
 export function FloatingWhatsAppButton() {
   const whatsappUrl =
-    "https://wa.me/5527988482268?text=Olá,%20quero%20saber%20mais%20sobre%20a%20RDLF.";
+    "https://wa.me/5527988482268?text=Olá,%20quero%20saber%20mais%20sobre%20a%20Fraga.";
 
   return (
     <a
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Falar com a RDLF pelo WhatsApp"
+      aria-label="Falar com a Fraga pelo WhatsApp"
       className="rdlf-whatsapp-float group fixed bottom-6 right-5 z-[80] flex h-[58px] w-[58px] items-center justify-center rounded-full border border-[#F5F0E1]/15 bg-[#073534] shadow-[0_18px_50px_rgba(0,0,0,0.35)] transition duration-300 hover:scale-105 hover:bg-[#0B4644] md:bottom-8 md:right-8 md:h-[62px] md:w-[62px]"
     >
       <motion.span

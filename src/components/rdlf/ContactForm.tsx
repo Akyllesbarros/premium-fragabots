@@ -64,7 +64,7 @@ export function ContactForm() {
     try {
       const d = result.data;
       const lines = [
-        "Olá RDLF, gostaria de agendar um diagnóstico.",
+        "Olá Fraga, gostaria de agendar um diagnóstico.",
         "",
         `Nome: ${d.name}`,
         `Empresa: ${d.company}`,
@@ -171,7 +171,7 @@ export function ContactForm() {
                 className="mt-0.5 h-4 w-4 rounded border-white/20 bg-ink accent-[color:var(--gold)]"
               />
               <span>
-                Autorizo o contato pela RDLF para tratativas relacionadas a este pedido,
+                Autorizo o contato pela Fraga para tratativas relacionadas a este pedido,
                 conforme a Política de Privacidade.
               </span>
             </label>

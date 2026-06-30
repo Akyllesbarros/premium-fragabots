@@ -109,7 +109,7 @@ export function RiskConstellationTheater() {
             </h2>
             <p className="mt-6 max-w-2xl text-bone/65 leading-relaxed">
               Um contrato frágil pode tocar marca, operação, sócios e conflito.
-              A RDLF lê essas relações antes que elas virem crise — e estrutura
+              A Fraga lê essas relações antes que elas virem crise — e estrutura
               respostas onde a empresa está mais exposta.
             </p>
             <div className="mt-5 flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-bone/45">
@@ -151,7 +151,7 @@ export function RiskConstellationTheater() {
                   <p className="text-[14px] leading-relaxed text-bone/70">{item.consequence}</p>
                 </div>
                 <div className="mt-5 rounded-2xl border border-[color:var(--gold)]/30 bg-[color:var(--gold)]/[0.06] p-4">
-                  <div className="eyebrow mb-1.5">Resposta RDLF</div>
+                  <div className="eyebrow mb-1.5">Resposta Fraga</div>
                   <p className="text-[14px] leading-relaxed text-bone">{item.rdlfAction}</p>
                 </div>
               </div>
@@ -292,7 +292,7 @@ export function RiskConstellationTheater() {
                 </div>
 
                 <div className="mt-6 rounded-2xl border border-[color:var(--gold)]/30 bg-[color:var(--gold)]/[0.06] p-5">
-                  <div className="eyebrow mb-2">Resposta RDLF</div>
+                  <div className="eyebrow mb-2">Resposta Fraga</div>
                   <p className="text-bone text-[15px] leading-relaxed">{active.rdlfAction}</p>
                 </div>
 

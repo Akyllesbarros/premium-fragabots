@@ -141,7 +141,7 @@ export function RiskMap() {
                 <div className="hairline my-7" />
                 <Block label="Consequência prática" value={active.consequence} />
                 <div className="mt-6">
-                  <Block label="Como a RDLF estrutura" value={active.structure} accent />
+                  <Block label="Como a Fraga estrutura" value={active.structure} accent />
                 </div>
                 <div className="mt-6">
                   <Block label="Área relacionada" value={active.area} />

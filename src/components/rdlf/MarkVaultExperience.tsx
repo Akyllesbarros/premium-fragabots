@@ -193,7 +193,7 @@ export function MarkVaultExperience() {
               />
             </h2>
             <p className="mt-6 max-w-xl text-bone/65 leading-relaxed">
-              A RDLF transforma marca em ativo estratégico: leitura de risco,
+              A Fraga transforma marca em ativo estratégico: leitura de risco,
               viabilidade, classe, protocolo, defesa administrativa e monitoramento
               contínuo dentro de um único cofre jurídico.
             </p>

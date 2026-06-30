@@ -78,7 +78,7 @@ export function Manifesto() {
             transition={{ duration: 1, delay: 0.4 }}
             className="mt-10 max-w-2xl text-bone/65 leading-[1.85] text-[15px]"
           >
-            A RDLF previne, estrutura e acompanha.{" "}
+            A Fraga previne, estrutura e acompanha.{" "}
             Cada empresa atendida recebe uma base jurídica desenhada para o crescimento real —
             não para o papel.
           </motion.p>
@@ -93,7 +93,7 @@ export function Manifesto() {
         >
           <div className="text-[10px] uppercase tracking-[0.3em] text-bone/40">Nota institucional</div>
           <p className="mt-3 text-[13px] text-bone/55 leading-[1.7]">
-            RDLF Advocacia&nbsp; · Atuação consultiva e preventiva para empresas em
+            Fraga Contabilidade&nbsp; · Atuação consultiva e preventiva para empresas em
             crescimento estruturado.
           </p>
         </motion.aside>

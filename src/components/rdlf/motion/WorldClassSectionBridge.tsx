@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 type Props = { label?: string };
 
-export function WorldClassSectionBridge({ label = "RDLF" }: Props) {
+export function WorldClassSectionBridge({ label = "Fraga" }: Props) {
   return (
     <div
       aria-hidden

@@ -7,7 +7,7 @@ export function Preloader() {
 
   useEffect(() => {
     const t = setTimeout(() => {
-      console.log("[RDLF] Preloader completo");
+      console.log("[Fraga] Preloader completo");
       setDone(true);
     }, 2000);
     return () => clearTimeout(t);

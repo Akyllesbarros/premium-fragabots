@@ -250,7 +250,7 @@ export function AnimatedRiskMap() {
                     <p className="text-bone/65 text-[15px] leading-relaxed">{active.consequence}</p>
                   </div>
                   <div>
-                    <div className="eyebrow mb-2">Como a RDLF estrutura</div>
+                    <div className="eyebrow mb-2">Como a Fraga estrutura</div>
                     <p className="text-bone text-[15px] leading-relaxed">{active.solution}</p>
                   </div>
                 </div>

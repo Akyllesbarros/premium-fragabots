@@ -19,7 +19,7 @@ const featured: Area = {
   desc: "Marca tratada como ativo estratégico — não como tarefa de cartório.",
   tag: "Ativo estratégico",
   items: ["Registro INPI", "Monitoramento contínuo", "Defesa e oposições"],
-  link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Propriedade%20Intelectual%20na%20RDLF.",
+  link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Propriedade%20Intelectual%20na%20Fraga.",
 };
 
 const areas: Area[] = [
@@ -29,7 +29,7 @@ const areas: Area[] = [
     desc: "Modelagem contratual sobre o fluxo real do negócio.",
     tag: "Previsibilidade",
     items: ["Redação crítica", "Revisão", "Negociação assistida"],
-    link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Contratos%20Empresariais%20na%20RDLF.",
+    link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Contratos%20Empresariais%20na%20Fraga.",
   },
   {
     n: "03",
@@ -37,7 +37,7 @@ const areas: Area[] = [
     desc: "Jurídico como camada da decisão empresarial.",
     tag: "Decisão segura",
     items: ["Pareceres rápidos", "Hotline jurídica"],
-    link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Consultoria%20Preventiva%20na%20RDLF.",
+    link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Consultoria%20Preventiva%20na%20Fraga.",
   },
   {
     n: "04",
@@ -45,7 +45,7 @@ const areas: Area[] = [
     desc: "Societário, governança e desenho operacional.",
     tag: "Base sólida",
     items: ["Acordo de sócios", "Reorganização"],
-    link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Estrutura%C3%A7%C3%A3o%20de%20Neg%C3%B3cios%20na%20RDLF.",
+    link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Estrutura%C3%A7%C3%A3o%20de%20Neg%C3%B3cios%20na%20Fraga.",
   },
   {
     n: "05",
@@ -53,7 +53,7 @@ const areas: Area[] = [
     desc: "Políticas mínimas para escalar com auditabilidade.",
     tag: "Auditável",
     items: ["Políticas internas", "LGPD aplicada"],
-    link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Compliance%20e%20ESG%20Documental%20na%20RDLF.",
+    link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Compliance%20e%20ESG%20Documental%20na%20Fraga.",
   },
   {
     n: "06",
@@ -61,7 +61,7 @@ const areas: Area[] = [
     desc: "Negociação antes da judicialização do conflito.",
     tag: "Composição",
     items: ["Notificações", "Mediação", "Acordos"],
-    link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Resolu%C3%A7%C3%A3o%20Extrajudicial%20na%20RDLF.",
+    link: "https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Resolu%C3%A7%C3%A3o%20Extrajudicial%20na%20Fraga.",
   },
 ];
 
