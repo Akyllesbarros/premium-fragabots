@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import {
   ArrowUpRight, ArrowRight, MessageCircle, Plus, Minus, Check,
   ShieldCheck, FileCheck, Wallet, Users, Briefcase,
-  Calculator,
+  Calculator, Building2, Star,
   MapPin, Phone, Mail, Clock, Menu, X,
 } from "lucide-react";
 import { waLink, trackConversion } from "@/lib/whatsapp";
@@ -318,91 +318,88 @@ function HeroComposition({ mouse }: { mouse: { x: number; y: number } }) {
   const tx = (m: number) => ({ transform: `translate3d(${mouse.x * m}px, ${mouse.y * m}px, 0)` });
   return (
     <div className="absolute inset-0">
-      {/* Ledger / documento editorial — substitui o dashboard fake */}
+      {/* main dashboard */}
       <div
-        className="absolute inset-x-4 top-8 bottom-16 rounded-[1.25rem] border border-white/10 bg-[oklch(0.16_0.03_220)] shadow-[0_50px_120px_-30px_rgba(0,0,0,0.7)] overflow-hidden"
-        style={tx(0.35)}
+        className="absolute inset-x-2 top-10 bottom-10 rounded-[2rem] border border-white/10 bg-[oklch(0.16_0.03_220)] shadow-[0_50px_120px_-30px_rgba(0,0,0,0.7)] overflow-hidden"
+        style={tx(0.4)}
       >
-        {/* paper texture */}
-        <div aria-hidden className="absolute inset-0 opacity-[0.05]" style={{
-          backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px)",
-          backgroundSize: "100% 28px",
-        }} />
-        <div className="relative p-7 h-full flex flex-col">
-          <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
-            <div>
-              <div className="text-[9px] uppercase tracking-[0.28em] text-white/35">Fraga · Vila Velha/ES</div>
-              <div className="font-serif italic text-white/85 text-lg mt-1" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
-                Resumo do mês
-              </div>
+        <div className="absolute inset-0 bg-gradient-mesh opacity-25" />
+        <div className="relative p-6 h-full flex flex-col">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-white/30" />
+              <div className="w-2 h-2 rounded-full bg-white/30" />
+              <div className="w-2 h-2 rounded-full bg-accent" />
             </div>
-            <div className="text-[10px] tabular-nums text-white/40">Nº 06 · 2026</div>
+            <div className="text-[10px] uppercase tracking-[0.25em] text-white/40">Fraga · Painel</div>
           </div>
-
-          <ul className="space-y-3 text-[13px]">
+          <div className="text-[11px] uppercase tracking-wider text-white/40">Resultado consolidado</div>
+          <div className="font-display text-4xl font-bold text-white mt-1 mb-5">
+            R$ <Counter to={1248} />k
+          </div>
+          <div className="grid grid-cols-2 gap-3 mb-5">
             {[
-              { l: "Apuração fiscal", s: "entregue" },
-              { l: "Folha e eSocial", s: "entregue" },
-              { l: "DCTFWeb", s: "entregue" },
-              { l: "Conciliação bancária", s: "em revisão" },
-              { l: "Relatório gerencial", s: "agendado" },
-            ].map((r, i) => (
-              <li key={r.l} className="flex items-center justify-between border-b border-white/5 pb-2.5">
-                <span className="flex items-center gap-3 text-white/80">
-                  <span className="text-[10px] tabular-nums text-white/30 w-5">0{i + 1}</span>
-                  {r.l}
-                </span>
-                <span className={`text-[10px] uppercase tracking-wider ${r.s === "entregue" ? "text-emerald-400/90" : r.s === "em revisão" ? "text-accent-glow" : "text-white/45"}`}>
-                  {r.s}
-                </span>
-              </li>
-            ))}
-          </ul>
-
-          <div className="mt-auto pt-5 border-t border-white/10 flex items-end justify-between">
-            <div>
-              <div className="text-[10px] uppercase tracking-[0.25em] text-white/35">Responsável técnico</div>
-              <div className="font-serif italic text-white/80 mt-1" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
-                Equipe Fraga
+              { l: "Margem", v: "32,4%", c: "text-accent-glow" },
+              { l: "Impostos", v: "−9,2%", c: "text-emerald-400" },
+            ].map(m => (
+              <div key={m.l} className="rounded-2xl bg-white/[0.04] border border-white/10 p-3">
+                <div className="text-[10px] uppercase tracking-wider text-white/40">{m.l}</div>
+                <div className={`font-display text-xl font-bold mt-1 ${m.c}`}>{m.v}</div>
               </div>
+            ))}
+          </div>
+          <div className="flex-1 rounded-2xl bg-white/[0.04] border border-white/10 p-4">
+            <div className="text-[10px] uppercase tracking-wider text-white/40 mb-3">Fluxo trimestral</div>
+            <div className="flex items-end gap-1.5 h-32">
+              {[34, 48, 38, 62, 52, 78, 64, 90, 76, 84].map((h, i) => (
+                <div key={i} className="flex-1 rounded-t-md transition-all duration-700" style={{
+                  height: `${h}%`,
+                  background: i === 7 ? "linear-gradient(180deg, oklch(0.86 0.15 85), oklch(0.78 0.16 78))" : "linear-gradient(180deg, oklch(0.72 0.13 188 / 0.8), oklch(0.42 0.12 195 / 0.4))",
+                }} />
+              ))}
             </div>
-            <div className="font-display text-3xl text-white/90 italic font-serif" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>F</div>
           </div>
         </div>
       </div>
 
-      {/* Selo institucional desde 1974 — sóbrio */}
       <div
-        className="absolute -top-2 -right-2 lg:right-2 w-52 rounded-2xl border border-white/10 bg-[oklch(0.18_0.03_220)]/90 p-4 backdrop-blur shadow-[0_25px_60px_-25px_rgba(0,0,0,0.6)] animate-float"
-        style={tx(-0.7)}
+        className="absolute -top-2 -right-2 lg:right-0 w-56 rounded-2xl border border-white/10 bg-[oklch(0.18_0.03_220)] p-4 shadow-[0_25px_60px_-25px_rgba(0,0,0,0.6)] backdrop-blur animate-float"
+        style={tx(-0.8)}
       >
-        <div className="text-[9px] uppercase tracking-[0.28em] text-white/40 mb-2">Trajetória</div>
-        <div className="flex items-baseline gap-2">
-          <div className="font-serif italic text-white text-4xl leading-none" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>1974</div>
-          <div className="text-[11px] text-white/55">— hoje</div>
+        <div className="flex items-center gap-2 mb-2">
+          <ShieldCheck className="w-4 h-4 text-accent" />
+          <div className="text-[11px] uppercase tracking-wider text-white/50 font-semibold">Conformidade</div>
         </div>
-        <div className="mt-3 h-px bg-white/15" />
-        <div className="text-[11px] text-white/60 mt-3 leading-snug">
-          mais de cinco décadas acompanhando empresas brasileiras.
-        </div>
+        <div className="font-display text-3xl font-bold text-white">100<span className="text-accent">%</span></div>
+        <div className="text-[11px] text-white/55">obrigações em dia</div>
       </div>
 
-      {/* Assinatura / carimbo dourado */}
       <div
-        className="absolute bottom-2 -left-2 w-60 rounded-2xl border border-accent/30 bg-[oklch(0.14_0.02_220)] p-4 shadow-gold animate-float-slow"
-        style={tx(-0.5)}
+        className="absolute bottom-6 -left-4 w-64 rounded-2xl border border-accent/30 bg-gradient-to-br from-[oklch(0.78_0.16_78)] to-[oklch(0.86_0.15_85)] text-accent-foreground p-4 shadow-gold animate-float-slow"
+        style={tx(-0.6)}
       >
-        <div className="flex items-center gap-3 mb-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full border border-accent/50">
-            <FileCheck className="w-4 h-4 text-accent" />
-          </span>
+        <div className="flex items-center gap-2 mb-2">
+          <FileCheck className="w-4 h-4" />
+          <div className="text-[11px] uppercase tracking-wider font-bold">Relatório do mês</div>
+        </div>
+        <div className="font-display text-base font-bold leading-tight">
+          Apuração fiscal, folha e DCTF entregues no prazo.
+        </div>
+        <div className="text-[11px] opacity-80 mt-1">acompanhamento mensal</div>
+      </div>
+
+      <div
+        className="absolute top-1/2 -right-6 w-48 rounded-2xl border border-white/10 bg-[oklch(0.18_0.03_220)] px-4 py-3 backdrop-blur animate-float"
+        style={{ ...tx(0.9), animationDelay: "1.2s" }}
+      >
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-full bg-gradient-accent flex items-center justify-center">
+            <Star className="w-4 h-4 fill-accent-foreground text-accent-foreground" />
+          </div>
           <div>
-            <div className="text-[10px] uppercase tracking-[0.22em] text-accent-glow font-semibold">Atendimento</div>
-            <div className="text-white text-[13px] font-semibold">por pessoas da equipe</div>
+            <div className="font-display text-base font-bold text-white">4,9/5</div>
+            <div className="text-[10px] text-white/50">avaliação Google</div>
           </div>
-        </div>
-        <div className="text-[11px] text-white/55 leading-snug">
-          Quem responde no WhatsApp é parte do time técnico — não um robô.
         </div>
       </div>
     </div>
@@ -415,52 +412,37 @@ function HeroComposition({ mouse }: { mouse: { x: number; y: number } }) {
 function Manifesto() {
   const lines = ["Impostos em ordem.", "Números claros.", "Decisões menos no escuro."];
   return (
-    <div className="relative py-28 lg:py-40 overflow-hidden">
-      <div aria-hidden className="absolute inset-0 opacity-[0.035]" style={{
+    <div className="relative py-24 lg:py-36 overflow-hidden">
+      <div aria-hidden className="absolute inset-0 opacity-[0.04]" style={{
         backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px)",
-        backgroundSize: "100% 120px",
+        backgroundSize: "100% 96px",
       }} />
-      <div className="relative mx-auto max-w-[1100px] px-6 lg:px-10">
-        <div className="text-xs uppercase tracking-[0.28em] text-accent-glow font-semibold mb-10">— Manifesto</div>
-        <div className="space-y-4 lg:space-y-6">
-          {lines.map((l, i) => (
-            <ManifestoLine key={l} index={i} text={l} />
-          ))}
-        </div>
-        <div className="mt-16 grid lg:grid-cols-12 gap-10 items-end">
-          <p className="lg:col-span-7 text-lg lg:text-xl text-white/65 leading-relaxed max-w-2xl">
-            Uma boa contabilidade não aparece só no fim do mês. Ela ajuda o empresário a enxergar riscos, cumprir prazos e entender o que os{" "}
-            <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>números</span>{" "}
-            estão dizendo antes da decisão.
-          </p>
-          <div className="lg:col-span-5 lg:text-right">
-            <div className="font-serif italic text-white/70 text-lg" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
-              — equipe Fraga
-            </div>
-            <div className="text-[11px] uppercase tracking-[0.25em] text-white/35 mt-1">Vila Velha · ES</div>
-          </div>
-        </div>
+      <div className="relative space-y-2">
+        <Marquee direction="left">
+          {lines[0]} · {lines[1]} · {lines[2]} ·{" "}
+        </Marquee>
+        <Marquee direction="right" muted>
+          {lines[1]} · {lines[2]} · {lines[0]} ·{" "}
+        </Marquee>
+      </div>
+      <div className="relative mx-auto max-w-3xl px-4 lg:px-8 text-center mt-20">
+        <p className="font-display text-2xl lg:text-3xl leading-snug text-white/85 tracking-tight">
+          Uma boa contabilidade não aparece só no fim do mês. Ela ajuda o empresário a enxergar riscos, organizar obrigações e entender o que os <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>números</span> estão dizendo.
+        </p>
       </div>
     </div>
   );
 }
 
-function ManifestoLine({ index, text }: { index: number; text: string }) {
-  const { ref, visible } = useReveal<HTMLDivElement>(0.4);
+function Marquee({ children, direction = "left", muted = false }: { children: React.ReactNode; direction?: "left" | "right"; muted?: boolean }) {
+  const cls = direction === "left" ? "animate-marquee" : "animate-marquee-rev";
   return (
-    <div ref={ref} className="flex items-baseline gap-5 lg:gap-8 border-b border-white/10 pb-4 lg:pb-6">
-      <span className="text-[11px] tabular-nums text-white/30 font-mono pt-2">0{index + 1}</span>
-      <span
-        className={`font-display font-bold tracking-[-0.035em] leading-[0.95] text-[clamp(2.2rem,7vw,5.5rem)] transition-all duration-1000 ${
-          visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-        } ${index === 2 ? "italic font-serif text-gradient-gold" : "text-white"}`}
-        style={{
-          transitionDelay: `${index * 180}ms`,
-          fontFamily: index === 2 ? "'Cormorant Garamond', Georgia, serif" : undefined,
-        }}
-      >
-        {text}
-      </span>
+    <div className="overflow-hidden">
+      <div className={`flex whitespace-nowrap ${cls} font-display font-black tracking-[-0.04em] text-[clamp(3rem,11vw,9rem)] leading-none ${muted ? "text-white/10" : "text-white"}`}>
+        {Array.from({ length: 4 }).map((_, i) => (
+          <span key={i} className="px-6">{children}</span>
+        ))}
+      </div>
     </div>
   );
 }
@@ -469,11 +451,11 @@ function ManifestoLine({ index, text }: { index: number; text: string }) {
    HISTORY / AUTHORITY
    ============================================================ */
 function HistoryAuthority() {
-  const timeline = [
-    { year: "1974", title: "Início de uma trajetória contábil", desc: "A Fraga nasce em Vila Velha acompanhando empresários locais de perto, em rotinas contábeis e fiscais." },
-    { year: "1990s", title: "Expansão dos serviços", desc: "Departamento pessoal, apuração tributária e folha passam a ser conduzidos pela mesma equipe técnica." },
-    { year: "2010s", title: "Atendimento nacional", desc: "Com tecnologia e processos próprios, passamos a atender empresas em todo o Brasil sem perder a proximidade." },
-    { year: "Hoje", title: "Contabilidade próxima da gestão", desc: "Mais de cinco décadas de prática, conversando com sócios e apoiando decisões — não só entregando guias." },
+  const blocks = [
+    { v: "1974", l: "ano de fundação" },
+    { v: "+1.000", l: "empresas atendidas ao longo da história" },
+    { v: "ES", l: "sede em Vila Velha" },
+    { v: "BR", l: "atendemos empresas em todo o país" },
   ];
   const tags = ["Rotina contábil mensal", "Folha e DP", "Apuração tributária", "Abertura de CNPJ", "Regularização fiscal", "BPO financeiro"];
   return (
@@ -487,81 +469,44 @@ function HistoryAuthority() {
               <span className="italic font-serif text-primary-deep" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>de perto</span>,
               cliente por cliente.
             </h2>
-            <p className="text-foreground/65 text-base leading-relaxed mb-8 max-w-md">
-              A Fraga nasceu da prática contábil feita lado a lado com empresários. A tecnologia entrou para acelerar o trabalho, mas a base continua a mesma — clareza, responsabilidade e presença.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {tags.map(t => (
-                <span key={t} className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[11px] font-medium border border-border bg-background text-foreground/70">
-                  <span className="w-1 h-1 rounded-full bg-accent" /> {t}
-                </span>
-              ))}
+            <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden bg-gradient-primary shadow-elegant max-w-sm">
+              <div className="absolute inset-0 bg-gradient-mesh opacity-40" />
+              <div className="absolute inset-0 p-8 flex flex-col justify-between">
+                <div className="flex items-center justify-between text-white">
+                  <div className="font-display text-xl font-bold">Desde<br/>1974</div>
+                  <Building2 className="w-7 h-7 opacity-70" />
+                </div>
+                <div className="text-white">
+                  <div className="font-display text-6xl font-black tracking-tight">F</div>
+                  <div className="text-[11px] uppercase tracking-[0.2em] opacity-70 mt-2">Vila Velha · ES</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="lg:col-span-7 lg:pt-2">
-          <ol className="relative border-l border-border/70 pl-8 lg:pl-10 space-y-10">
-            {timeline.map((t, i) => (
-              <TimelineItem key={t.year} index={i} {...t} last={i === timeline.length - 1} />
+        <div className="lg:col-span-7 lg:pt-20">
+          <p className="text-lg lg:text-xl text-foreground/75 leading-relaxed mb-10 max-w-xl">
+            A Fraga nasceu da prática contábil feita de perto: acompanhando empresários, entendendo rotinas, corrigindo processos e construindo relações que atravessam anos. A tecnologia entrou para acelerar o trabalho, mas a base continua a mesma — clareza, responsabilidade e presença.
+          </p>
+          <div className="grid grid-cols-2 gap-4 mb-10">
+            {blocks.map(b => (
+              <div key={b.l} className="rounded-2xl border border-border bg-card p-6 shadow-card hover:shadow-elegant transition-shadow">
+                <div className="font-display text-4xl lg:text-5xl font-bold tracking-tight text-foreground">{b.v}</div>
+                <div className="text-sm text-muted-foreground mt-2">{b.l}</div>
+              </div>
             ))}
-          </ol>
-
-          {/* Bento institucional inferior */}
-          <div className="mt-12 grid grid-cols-6 gap-3">
-            <div className="col-span-4 rounded-3xl border border-border bg-card p-7 shadow-card">
-              <div className="text-[11px] uppercase tracking-[0.22em] text-primary font-semibold mb-3">Base local</div>
-              <div className="font-display text-2xl lg:text-3xl font-bold tracking-tight leading-tight">
-                Vila Velha · Espírito Santo
-              </div>
-              <p className="text-sm text-foreground/65 mt-3 leading-relaxed">
-                Escritório próprio com equipe técnica presencial. Atendimento por WhatsApp, e-mail e videochamada para empresas em todo o país.
-              </p>
-            </div>
-            <div className="col-span-2 rounded-3xl border border-accent/30 bg-gradient-to-br from-[oklch(0.96_0.06_85)] to-[oklch(0.92_0.10_82)] p-6 flex flex-col justify-between">
-              <div className="text-[10px] uppercase tracking-[0.22em] text-accent-foreground/70 font-semibold">Trajetória</div>
-              <div>
-                <div className="font-serif italic text-accent-foreground text-5xl leading-none" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>+50</div>
-                <div className="text-xs text-accent-foreground/75 mt-1">anos de história contábil</div>
-              </div>
-            </div>
-            <div className="col-span-3 rounded-3xl border border-border bg-background p-6">
-              <div className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground font-semibold mb-2">Empresas atendidas</div>
-              <div className="font-display text-4xl font-bold tracking-tight">+1.000</div>
-              <div className="text-xs text-foreground/55 mt-2">em diferentes momentos — abertura, crescimento, regularização e gestão.</div>
-            </div>
-            <div className="col-span-3 rounded-3xl border border-border bg-background p-6">
-              <div className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground font-semibold mb-2">Avaliação Google</div>
-              <div className="flex items-baseline gap-2">
-                <div className="font-display text-4xl font-bold tracking-tight">4,9</div>
-                <div className="text-accent">★★★★★</div>
-              </div>
-              <div className="text-xs text-foreground/55 mt-2">com base em avaliações reais de clientes.</div>
-            </div>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {tags.map(t => (
+              <span key={t} className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium border border-border bg-background text-foreground/75">
+                <span className="w-1 h-1 rounded-full bg-accent" /> {t}
+              </span>
+            ))}
           </div>
         </div>
       </div>
     </div>
-  );
-}
-
-function TimelineItem({ year, title, desc, index, last }: { year: string; title: string; desc: string; index: number; last?: boolean }) {
-  const { ref, visible } = useReveal<HTMLLIElement>(0.3);
-  return (
-    <li
-      ref={ref}
-      className={`relative transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-      style={{ transitionDelay: `${index * 100}ms` }}
-    >
-      <span className="absolute -left-[42px] lg:-left-[50px] top-1.5 flex h-4 w-4 items-center justify-center">
-        <span className="absolute inset-0 rounded-full bg-primary/15" />
-        <span className="relative w-2 h-2 rounded-full bg-primary" />
-      </span>
-      <div className="font-mono text-[11px] uppercase tracking-[0.25em] text-primary font-semibold mb-1.5">{year}</div>
-      <div className="font-display text-xl lg:text-2xl font-bold tracking-tight mb-2">{title}</div>
-      <p className="text-foreground/65 leading-relaxed max-w-xl">{desc}</p>
-      {!last && <div className="h-2" />}
-    </li>
   );
 }
 
@@ -1061,74 +1006,36 @@ function VideoTestimonials() {
    COMMUNITY TRUST
    ============================================================ */
 function CommunityTrust() {
+  const items = [
+    { icon: MessageCircle, title: "Atendimento por pessoas, não por robô", desc: "Quem responde no WhatsApp e nas reuniões faz parte da equipe técnica da Fraga." },
+    { icon: Clock, title: "Clientes que ficam por muitos anos", desc: "Boa parte da carteira está com a Fraga há mais de uma década, alguns desde a fundação." },
+    { icon: FileCheck, title: "Foco no que é obrigação contábil", desc: "Apuração, folha, obrigações acessórias e relatórios entregues no prazo, todo mês." },
+  ];
   return (
     <div className="py-24 lg:py-36">
       <div className="mx-auto max-w-[1400px] px-4 lg:px-8">
-        <div className="max-w-2xl mb-14">
+        <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Como trabalhamos</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02]">
             O que sustenta a relação com{" "}
             <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>cada cliente</span>.
           </h2>
         </div>
-
-        {/* Bento asimétrico */}
-        <div className="grid grid-cols-1 md:grid-cols-6 auto-rows-[minmax(160px,auto)] gap-4">
-          {/* Atendimento próximo — destaque grande */}
-          <RevealCard delay={0}>
-            <div className="md:col-span-4 row-span-2 relative h-full rounded-[2rem] border border-border bg-gradient-to-br from-[oklch(0.98_0.005_220)] to-[oklch(0.94_0.015_215)] p-9 lg:p-12 overflow-hidden">
-              <div aria-hidden className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-primary/10 blur-3xl" />
-              <div className="relative h-full flex flex-col">
-                <div className="text-[11px] uppercase tracking-[0.22em] text-primary font-semibold mb-3">Atendimento próximo</div>
-                <h3 className="font-display text-3xl lg:text-4xl font-bold tracking-tight leading-tight mb-4">
-                  Quem te responde é{" "}
-                  <span className="italic font-serif text-primary-deep" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>parte da equipe técnica</span> — não um robô.
-                </h3>
-                <p className="text-foreground/65 max-w-md leading-relaxed">
-                  Cada empresa tem contato direto com analistas que conhecem o caso. Sem chatbot, sem ticket frio, sem mudar de atendente toda semana.
-                </p>
-                <div className="mt-auto pt-8 flex items-end justify-between">
-                  <div className="flex -space-x-2">
-                    {["F", "M", "L", "R"].map((c, i) => (
-                      <span key={i} className={`flex h-9 w-9 items-center justify-center rounded-full border-2 border-background font-display font-bold text-xs ${i % 2 === 0 ? "bg-primary text-primary-foreground" : "bg-accent text-accent-foreground"}`}>{c}</span>
-                    ))}
+        <div className="grid md:grid-cols-3 gap-5">
+          {items.map((it, i) => (
+            <RevealCard key={it.title} delay={i * 120}>
+              <div className="relative rounded-3xl border border-border bg-card p-8 h-full shadow-card hover:shadow-elegant transition-all hover:-translate-y-1 overflow-hidden group">
+                <div className="absolute -top-16 -right-16 w-40 h-40 rounded-full bg-primary-glow/10 blur-3xl group-hover:bg-primary-glow/20 transition-all" />
+                <div className="relative">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-elegant mb-6">
+                    <it.icon className="w-6 h-6 text-primary-foreground" />
                   </div>
-                  <div className="font-serif italic text-foreground/55 text-sm" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>equipe Fraga · Vila Velha/ES</div>
+                  <h3 className="font-display text-xl font-bold mb-3">{it.title}</h3>
+                  <p className="text-sm text-foreground/65 leading-relaxed">{it.desc}</p>
                 </div>
               </div>
-            </div>
-          </RevealCard>
-
-          {/* Relação de longo prazo */}
-          <RevealCard delay={120}>
-            <div className="md:col-span-2 h-full rounded-3xl border border-border bg-card p-7 flex flex-col justify-between">
-              <div>
-                <div className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground font-semibold mb-3">Longo prazo</div>
-                <div className="font-display text-2xl font-bold tracking-tight leading-tight">
-                  Clientes que permanecem por décadas
-                </div>
-              </div>
-              <div className="mt-6">
-                <div className="font-serif italic text-primary text-5xl leading-none" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>40<span className="text-2xl align-top">+</span></div>
-                <div className="text-xs text-foreground/55 mt-1">anos de parceria com clientes históricos</div>
-              </div>
-            </div>
-          </RevealCard>
-
-          {/* Visão de gestão */}
-          <RevealCard delay={200}>
-            <div className="md:col-span-2 h-full rounded-3xl border border-accent/30 bg-gradient-to-br from-[oklch(0.97_0.04_85)] to-[oklch(0.93_0.10_82)] p-7">
-              <div className="text-[11px] uppercase tracking-[0.22em] text-accent-foreground/70 font-semibold mb-3">Visão de gestão</div>
-              <div className="font-display text-xl font-bold tracking-tight text-accent-foreground leading-snug mb-4">
-                Reuniões periódicas para ler os números com o sócio.
-              </div>
-              <ul className="space-y-1.5 text-xs text-accent-foreground/80">
-                <li>· leitura de resultado mensal</li>
-                <li>· alertas tributários</li>
-                <li>· apoio para decisões</li>
-              </ul>
-            </div>
-          </RevealCard>
+            </RevealCard>
+          ))}
         </div>
       </div>
     </div>
