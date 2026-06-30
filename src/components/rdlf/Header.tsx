@@ -89,7 +89,7 @@ export function Header() {
             className="fixed inset-0 z-[60] bg-ink/95 backdrop-blur-2xl lg:hidden"
           >
             <div className="container-rdlf flex items-center justify-between py-5">
-              <img src={rdlfLogo.url} alt="Fraga Contabilidade" className="h-6 w-auto select-none opacity-100" style={{ filter: "none" }} draggable={false} />
+              <img src={rdlfLogo.url} alt="Fraga Contabilidade" className="h-8 w-auto select-none opacity-100" style={{ filter: "none" }} draggable={false} />
               <button
                 aria-label="Fechar menu"
                 onClick={() => setOpen(false)}
