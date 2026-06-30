@@ -1007,18 +1007,18 @@ function VideoTestimonials() {
    ============================================================ */
 function CommunityTrust() {
   const items = [
-    { icon: HeartHandshake, title: "Atendimento próximo", desc: "Uma equipe preparada para entender sua realidade e orientar com clareza." },
-    { icon: Clock, title: "Relacionamento de longo prazo", desc: "Parcerias construídas com consistência, confiança e acompanhamento." },
-    { icon: BarChart3, title: "Visão de gestão", desc: "Mais do que obrigações fiscais, uma contabilidade que apoia decisões." },
+    { icon: MessageCircle, title: "Atendimento por pessoas, não por robô", desc: "Quem responde no WhatsApp e nas reuniões faz parte da equipe técnica da Fraga." },
+    { icon: Clock, title: "Clientes que ficam por muitos anos", desc: "Boa parte da carteira está com a Fraga há mais de uma década, alguns desde a fundação." },
+    { icon: FileCheck, title: "Foco no que é obrigação contábil", desc: "Apuração, folha, obrigações acessórias e relatórios entregues no prazo, todo mês." },
   ];
   return (
     <div className="py-24 lg:py-36">
       <div className="mx-auto max-w-[1400px] px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Cultura Fraga</div>
+          <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Como trabalhamos</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02]">
-            Empresas que valorizam clareza{" "}
-            <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>caminham melhor</span>
+            O que sustenta a relação com{" "}
+            <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>cada cliente</span>.
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-5">
