@@ -41,46 +41,42 @@
 
 :root {
   --radius: 0.875rem;
-  /* Fraga premium palette: deep teal + warm gold */
-  --background: oklch(0.99 0.005 200);
-  --foreground: oklch(0.18 0.03 220);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.03 220);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.03 220);
-  --primary: oklch(0.52 0.11 195);
-  --primary-foreground: oklch(0.99 0 0);
-  --primary-deep: oklch(0.28 0.06 215);
-  --primary-glow: oklch(0.72 0.13 188);
-  --secondary: oklch(0.96 0.012 200);
-  --secondary-foreground: oklch(0.25 0.04 215);
-  --muted: oklch(0.96 0.012 200);
-  --muted-foreground: oklch(0.48 0.025 220);
-  --accent: oklch(0.78 0.16 78);
-  --accent-foreground: oklch(0.22 0.05 80);
-  --accent-glow: oklch(0.86 0.15 85);
-  --destructive: oklch(0.6 0.22 27);
-  --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.9 0.012 210);
-  --input: oklch(0.92 0.012 210);
-  --ring: oklch(0.52 0.11 195);
-  --whatsapp: oklch(0.62 0.16 145);
-  --whatsapp-foreground: oklch(0.99 0 0);
+  /* Fraga brand: white + gray, teal #36a2ac, orange #ffa819, mist #edf7f8 */
+  --background: #ffffff;
+  --foreground: #1a1f24;
+  --card: #ffffff;
+  --card-foreground: #1a1f24;
+  --popover: #ffffff;
+  --popover-foreground: #1a1f24;
+  --primary: #36a2ac;
+  --primary-foreground: #ffffff;
+  --primary-deep: #1f6f78;
+  --primary-glow: #5fbac3;
+  --secondary: #edf7f8;
+  --secondary-foreground: #1f6f78;
+  --muted: #edf7f8;
+  --muted-foreground: #5b6770;
+  --accent: #ffa819;
+  --accent-foreground: #3a2400;
+  --accent-glow: #ffc15c;
+  --destructive: #d44a3a;
+  --destructive-foreground: #ffffff;
+  --border: #e3e7ea;
+  --input: #e3e7ea;
+  --ring: #36a2ac;
+  --whatsapp: #25d366;
+  --whatsapp-foreground: #ffffff;
 
-  --gradient-hero: radial-gradient(ellipse 80% 60% at 20% 10%, oklch(0.52 0.11 195 / 0.18), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 90% 80%, oklch(0.78 0.16 78 / 0.14), transparent 60%),
-    linear-gradient(180deg, oklch(0.99 0.005 200), oklch(0.96 0.018 200));
-  --gradient-primary: linear-gradient(135deg, oklch(0.28 0.06 215), oklch(0.52 0.11 195));
-  --gradient-accent: linear-gradient(135deg, oklch(0.78 0.16 78), oklch(0.86 0.15 85));
-  --gradient-dark: linear-gradient(135deg, oklch(0.16 0.03 220), oklch(0.28 0.06 215));
-  --gradient-mesh: radial-gradient(at 27% 37%, oklch(0.72 0.13 188 / 0.35) 0px, transparent 50%),
-    radial-gradient(at 97% 21%, oklch(0.86 0.15 85 / 0.25) 0px, transparent 50%),
-    radial-gradient(at 52% 99%, oklch(0.28 0.06 215 / 0.4) 0px, transparent 50%);
+  --gradient-hero: linear-gradient(180deg, #ffffff, #edf7f8);
+  --gradient-primary: linear-gradient(135deg, #1f6f78, #36a2ac);
+  --gradient-accent: linear-gradient(135deg, #ffa819, #ffc15c);
+  --gradient-dark: linear-gradient(135deg, #1a1f24, #2c343b);
+  --gradient-mesh: none;
 
-  --shadow-elegant: 0 25px 70px -25px oklch(0.28 0.06 215 / 0.4);
-  --shadow-glow: 0 0 80px oklch(0.72 0.13 188 / 0.4);
-  --shadow-gold: 0 20px 55px -20px oklch(0.78 0.16 78 / 0.55);
-  --shadow-card: 0 12px 40px -18px oklch(0.28 0.06 215 / 0.18);
+  --shadow-elegant: 0 20px 50px -25px rgba(31, 111, 120, 0.25);
+  --shadow-glow: 0 0 0 transparent;
+  --shadow-gold: 0 18px 45px -22px rgba(255, 168, 25, 0.35);
+  --shadow-card: 0 8px 30px -16px rgba(26, 31, 36, 0.12);
 
   --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
