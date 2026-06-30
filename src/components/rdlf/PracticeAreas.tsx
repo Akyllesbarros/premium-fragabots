@@ -69,7 +69,7 @@ const areas: Area[] = [
 
 export function PracticeAreas() {
   return (
-    <section className="relative py-28 md:py-36 overflow-hidden">
+    <section id="servicos" className="relative py-28 md:py-36 overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_bottom_right,#041F1F),#050706))]" />
 
       <div className="container-rdlf">
