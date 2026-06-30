@@ -410,7 +410,7 @@ function HeroComposition({ mouse }: { mouse: { x: number; y: number } }) {
    MANIFESTO — marquee
    ============================================================ */
 function Manifesto() {
-  const lines = ["Empresas fortes.", "Gestão clara.", "Decisões seguras."];
+  const lines = ["Impostos em ordem.", "Números claros.", "Decisões menos no escuro."];
   return (
     <div className="relative py-24 lg:py-36 overflow-hidden">
       <div aria-hidden className="absolute inset-0 opacity-[0.04]" style={{
@@ -427,7 +427,7 @@ function Manifesto() {
       </div>
       <div className="relative mx-auto max-w-3xl px-4 lg:px-8 text-center mt-20">
         <p className="font-display text-2xl lg:text-3xl leading-snug text-white/85 tracking-tight">
-          A Fraga transforma contabilidade em <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>clareza</span> para empresários que precisam crescer com controle, segurança e visão estratégica.
+          Uma boa contabilidade não aparece só no fim do mês. Ela ajuda o empresário a enxergar riscos, organizar obrigações e entender o que os <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>números</span> estão dizendo.
         </p>
       </div>
     </div>
