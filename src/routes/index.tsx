@@ -33,36 +33,36 @@ function LandingPage() {
   useEffect(() => {
     console.log("[FragaLandingPage]", "mounted");
   }, []);
-  const stack: React.ReactNode[] = [
-    <Hero key="hero" />,
-    <Manifesto key="manifesto" />,
-    <HistoryAuthority key="history" />,
-    <InteractiveDifferentials key="diffs" />,
-    <NumberedServices key="services" />,
-    <WhatsAppJourney key="wa" />,
-    <StageSolutions key="stage" />,
-    <VideoTestimonials key="testi" />,
-    <CommunityTrust key="trust" />,
-    <Plans key="plans" />,
-    <Insights key="insights" />,
-    <Faq key="faq" />,
-    <FinalCta key="cta" />,
-    <Footer key="footer" />,
+  const stack: { key: string; bg: string; node: React.ReactNode }[] = [
+    { key: "hero", bg: "bg-[oklch(0.13_0.025_220)] text-white", node: <Hero /> },
+    { key: "manifesto", bg: "bg-[oklch(0.1_0.02_220)] text-white", node: <Manifesto /> },
+    { key: "history", bg: "bg-[oklch(0.97_0.008_200)] text-foreground", node: <HistoryAuthority /> },
+    { key: "diffs", bg: "bg-[oklch(0.13_0.025_220)] text-white", node: <InteractiveDifferentials /> },
+    { key: "services", bg: "bg-[oklch(0.97_0.008_200)] text-foreground", node: <NumberedServices /> },
+    { key: "wa", bg: "bg-[oklch(0.13_0.025_220)] text-white", node: <WhatsAppJourney /> },
+    { key: "stage", bg: "bg-[oklch(0.97_0.008_200)] text-foreground", node: <StageSolutions /> },
+    { key: "testi", bg: "bg-[oklch(0.1_0.02_220)] text-white", node: <VideoTestimonials /> },
+    { key: "trust", bg: "bg-[oklch(0.97_0.008_200)] text-foreground", node: <CommunityTrust /> },
+    { key: "plans", bg: "bg-[oklch(0.13_0.025_220)] text-white", node: <Plans /> },
+    { key: "insights", bg: "bg-[oklch(0.97_0.008_200)] text-foreground", node: <Insights /> },
+    { key: "faq", bg: "bg-[oklch(0.13_0.025_220)] text-white", node: <Faq /> },
+    { key: "cta", bg: "bg-[oklch(0.1_0.02_220)] text-white", node: <FinalCta /> },
+    { key: "footer", bg: "bg-[oklch(0.08_0.02_220)] text-white/70", node: <Footer /> },
   ];
   return (
     <div className="min-h-screen bg-[oklch(0.13_0.025_220)] text-white selection:bg-accent/40 overflow-x-hidden">
       <ScrollProgress />
       <Header />
       <div className="fraga-scroll-page">
-        {stack.map((node, i) => (
-          <div
-            key={(node as { key?: string }).key ?? i}
-            className="fraga-stack-section"
+        {stack.map((s, i) => (
+          <section
+            key={s.key}
+            className={`fraga-stack-section ${s.bg}`}
             style={{ zIndex: 10 + i }}
             data-stack-index={i}
           >
-            {node}
-          </div>
+            {s.node}
+          </section>
         ))}
       </div>
       <FloatingWhatsApp />
