@@ -1061,36 +1061,74 @@ function VideoTestimonials() {
    COMMUNITY TRUST
    ============================================================ */
 function CommunityTrust() {
-  const items = [
-    { icon: MessageCircle, title: "Atendimento por pessoas, não por robô", desc: "Quem responde no WhatsApp e nas reuniões faz parte da equipe técnica da Fraga." },
-    { icon: Clock, title: "Clientes que ficam por muitos anos", desc: "Boa parte da carteira está com a Fraga há mais de uma década, alguns desde a fundação." },
-    { icon: FileCheck, title: "Foco no que é obrigação contábil", desc: "Apuração, folha, obrigações acessórias e relatórios entregues no prazo, todo mês." },
-  ];
   return (
     <div className="py-24 lg:py-36">
       <div className="mx-auto max-w-[1400px] px-4 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="max-w-2xl mb-14">
           <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Como trabalhamos</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02]">
             O que sustenta a relação com{" "}
             <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>cada cliente</span>.
           </h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-5">
-          {items.map((it, i) => (
-            <RevealCard key={it.title} delay={i * 120}>
-              <div className="relative rounded-3xl border border-border bg-card p-8 h-full shadow-card hover:shadow-elegant transition-all hover:-translate-y-1 overflow-hidden group">
-                <div className="absolute -top-16 -right-16 w-40 h-40 rounded-full bg-primary-glow/10 blur-3xl group-hover:bg-primary-glow/20 transition-all" />
-                <div className="relative">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-elegant mb-6">
-                    <it.icon className="w-6 h-6 text-primary-foreground" />
+
+        {/* Bento asimétrico */}
+        <div className="grid grid-cols-1 md:grid-cols-6 auto-rows-[minmax(160px,auto)] gap-4">
+          {/* Atendimento próximo — destaque grande */}
+          <RevealCard delay={0}>
+            <div className="md:col-span-4 row-span-2 relative h-full rounded-[2rem] border border-border bg-gradient-to-br from-[oklch(0.98_0.005_220)] to-[oklch(0.94_0.015_215)] p-9 lg:p-12 overflow-hidden">
+              <div aria-hidden className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-primary/10 blur-3xl" />
+              <div className="relative h-full flex flex-col">
+                <div className="text-[11px] uppercase tracking-[0.22em] text-primary font-semibold mb-3">Atendimento próximo</div>
+                <h3 className="font-display text-3xl lg:text-4xl font-bold tracking-tight leading-tight mb-4">
+                  Quem te responde é{" "}
+                  <span className="italic font-serif text-primary-deep" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>parte da equipe técnica</span> — não um robô.
+                </h3>
+                <p className="text-foreground/65 max-w-md leading-relaxed">
+                  Cada empresa tem contato direto com analistas que conhecem o caso. Sem chatbot, sem ticket frio, sem mudar de atendente toda semana.
+                </p>
+                <div className="mt-auto pt-8 flex items-end justify-between">
+                  <div className="flex -space-x-2">
+                    {["F", "M", "L", "R"].map((c, i) => (
+                      <span key={i} className={`flex h-9 w-9 items-center justify-center rounded-full border-2 border-background font-display font-bold text-xs ${i % 2 === 0 ? "bg-primary text-primary-foreground" : "bg-accent text-accent-foreground"}`}>{c}</span>
+                    ))}
                   </div>
-                  <h3 className="font-display text-xl font-bold mb-3">{it.title}</h3>
-                  <p className="text-sm text-foreground/65 leading-relaxed">{it.desc}</p>
+                  <div className="font-serif italic text-foreground/55 text-sm" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>equipe Fraga · Vila Velha/ES</div>
                 </div>
               </div>
-            </RevealCard>
-          ))}
+            </div>
+          </RevealCard>
+
+          {/* Relação de longo prazo */}
+          <RevealCard delay={120}>
+            <div className="md:col-span-2 h-full rounded-3xl border border-border bg-card p-7 flex flex-col justify-between">
+              <div>
+                <div className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground font-semibold mb-3">Longo prazo</div>
+                <div className="font-display text-2xl font-bold tracking-tight leading-tight">
+                  Clientes que permanecem por décadas
+                </div>
+              </div>
+              <div className="mt-6">
+                <div className="font-serif italic text-primary text-5xl leading-none" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>40<span className="text-2xl align-top">+</span></div>
+                <div className="text-xs text-foreground/55 mt-1">anos de parceria com clientes históricos</div>
+              </div>
+            </div>
+          </RevealCard>
+
+          {/* Visão de gestão */}
+          <RevealCard delay={200}>
+            <div className="md:col-span-2 h-full rounded-3xl border border-accent/30 bg-gradient-to-br from-[oklch(0.97_0.04_85)] to-[oklch(0.93_0.10_82)] p-7">
+              <div className="text-[11px] uppercase tracking-[0.22em] text-accent-foreground/70 font-semibold mb-3">Visão de gestão</div>
+              <div className="font-display text-xl font-bold tracking-tight text-accent-foreground leading-snug mb-4">
+                Reuniões periódicas para ler os números com o sócio.
+              </div>
+              <ul className="space-y-1.5 text-xs text-accent-foreground/80">
+                <li>· leitura de resultado mensal</li>
+                <li>· alertas tributários</li>
+                <li>· apoio para decisões</li>
+              </ul>
+            </div>
+          </RevealCard>
         </div>
       </div>
     </div>
