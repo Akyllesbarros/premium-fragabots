@@ -190,12 +190,12 @@ function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-[100svh] flex flex-col pt-28 pb-12 lg:pt-36 lg:pb-16 bg-background text-foreground"
+      className="relative pt-28 pb-16 lg:pt-32 lg:pb-24 bg-background text-foreground"
     >
-      <div aria-hidden className="absolute inset-x-0 top-0 h-[60vh] bg-gradient-to-b from-secondary/60 to-transparent pointer-events-none" />
-      <div className="relative mx-auto max-w-[1400px] w-full px-6 lg:px-12 flex-1 flex flex-col">
+      <div aria-hidden className="absolute inset-x-0 top-0 h-[40vh] bg-gradient-to-b from-secondary/50 to-transparent pointer-events-none" />
+      <div className="relative mx-auto max-w-[1400px] w-full px-6 lg:px-12">
         {/* Editorial top bar */}
-        <div className="border-t border-border pt-5 mb-12 lg:mb-20 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2 text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
+        <div className="border-t border-border pt-5 mb-10 lg:mb-14 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2 text-[11px] uppercase tracking-[0.28em] text-muted-foreground">
           <span>Fraga Contabilidade · Vila Velha — ES</span>
           <span className="font-mono normal-case tracking-normal text-muted-foreground/70">
             CRC-ES · em atividade desde 1974
@@ -203,14 +203,14 @@ function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="font-display font-semibold tracking-[-0.02em] leading-[1.02] text-[clamp(2.6rem,7vw,6.2rem)] max-w-[18ch] text-balance">
+        <h1 className="font-display font-semibold tracking-[-0.025em] leading-[1.04] text-[clamp(2.4rem,5.6vw,5rem)] max-w-[20ch] text-balance">
           Contabilidade para empresários que precisam de clareza antes de decidir.
         </h1>
 
         {/* Lede + meta column */}
-        <div className="mt-14 lg:mt-20 grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+        <div className="mt-10 lg:mt-12 grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           <div className="lg:col-span-7 lg:col-start-6">
-            <p className="text-lg lg:text-xl text-foreground/75 leading-[1.55] font-light max-w-[52ch]">
+            <p className="text-base lg:text-lg text-foreground/75 leading-[1.6] font-light max-w-[56ch]">
               A Fraga acompanha empresas em Vila Velha, no Espírito Santo e em todo o Brasil com rotinas contábeis, fiscais, tributárias e financeiras conduzidas por uma equipe com mais de 50 anos de experiência.
             </p>
 
@@ -237,8 +237,8 @@ function Hero() {
         </div>
 
         {/* Editorial footer ledger */}
-        <div className="mt-auto pt-16 lg:pt-24 border-t border-border">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-6">
+        <div className="mt-16 lg:mt-24 pt-8 border-t border-border">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-6 gap-x-8">
             {[
               { v: "50+", label: "anos de atuação" },
               { v: "1.000+", label: "empresas atendidas" },
@@ -247,7 +247,7 @@ function Hero() {
             ].map((s, i) => (
               <div key={i} className="flex flex-col">
                 <div className="text-[10px] uppercase tracking-[0.28em] text-muted-foreground mb-2">{s.label}</div>
-                <div className="font-display text-3xl lg:text-4xl font-medium tracking-tight tabular-nums">
+                <div className="font-display text-2xl lg:text-3xl font-semibold tracking-tight tabular-nums">
                   {s.v}
                 </div>
               </div>
@@ -265,23 +265,21 @@ function Hero() {
 function Manifesto() {
   const lines = ["Impostos em ordem.", "Números claros.", "Decisões menos no escuro."];
   return (
-    <div className="relative py-24 lg:py-36 overflow-hidden">
-      <div aria-hidden className="absolute inset-0 opacity-[0.04]" style={{
-        backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px)",
-        backgroundSize: "100% 96px",
-      }} />
-      <div className="relative space-y-2">
-        <Marquee direction="left">
-          {lines[0]} · {lines[1]} · {lines[2]} ·{" "}
-        </Marquee>
-        <Marquee direction="right" muted>
-          {lines[1]} · {lines[2]} · {lines[0]} ·{" "}
-        </Marquee>
-      </div>
-      <div className="relative mx-auto max-w-3xl px-4 lg:px-8 text-center mt-20">
-        <p className="font-display text-2xl lg:text-3xl leading-snug text-foreground/85 tracking-tight">
-          Uma boa contabilidade não aparece só no fim do mês. Ela ajuda o empresário a enxergar riscos, organizar obrigações e entender o que os números estão dizendo.
-        </p>
+    <div className="relative py-20 lg:py-28">
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-12">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <div className="lg:col-span-5">
+            <div className="text-[10px] uppercase tracking-[0.28em] text-primary mb-5">— Manifesto</div>
+            <h2 className="font-display font-semibold tracking-[-0.025em] leading-[1.08] text-[clamp(1.9rem,3.4vw,2.8rem)] text-balance">
+              {lines[0]} {lines[1]} {lines[2]}
+            </h2>
+          </div>
+          <div className="lg:col-span-6 lg:col-start-7">
+            <p className="text-base lg:text-lg text-foreground/75 leading-[1.65] font-light max-w-[58ch]">
+              Uma boa contabilidade não aparece só no fim do mês. Ela ajuda o empresário a enxergar riscos, organizar obrigações e entender o que os números estão dizendo.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
