@@ -1059,10 +1059,10 @@ function RevealCard({ children, delay = 0 }: { children: React.ReactNode; delay?
    PLANS
    ============================================================ */
 const PLANS = [
-  { name: "MEI", desc: "Para faturamento até R$ 81 mil/ano", ideal: "Ideal para quem está começando", features: ["Emissão de notas", "Guia DAS mensal", "Declaração anual", "Suporte WhatsApp"], cta: "Falar sobre MEI", msg: "Olá, quero falar sobre o plano MEI da Fraga Contabilidade." },
-  { name: "Essencial", desc: "Para empresas até R$ 100 mil/mês", ideal: "Rotinas contábeis organizadas", features: ["Contabilidade completa", "Departamento pessoal", "Apuração de impostos", "Relatórios mensais"], cta: "Falar sobre Essencial", msg: "Olá, quero falar sobre o plano Essencial da Fraga Contabilidade." },
-  { name: "Plus", desc: "Para empresas até R$ 200 mil/mês", ideal: "Negócios em crescimento", features: ["Tudo do Essencial", "Consultoria tributária", "Análise gerencial", "Atendimento prioritário"], cta: "Falar sobre Plus", msg: "Olá, quero falar sobre o plano Plus da Fraga Contabilidade." },
-  { name: "Premium", desc: "Para empresas até R$ 400 mil/mês", ideal: "Acompanhamento estratégico", features: ["Tudo do Plus", "Planejamento tributário avançado", "Reuniões estratégicas mensais", "Gestor de conta dedicado"], cta: "Falar sobre Premium", msg: "Olá, quero falar sobre o plano Premium da Fraga Contabilidade.", featured: true },
+  { name: "MEI", desc: "Para faturamento até R$ 81 mil/ano", ideal: "Para quem está começando e precisa manter o básico em ordem sem complicação.", features: ["Emissão de notas", "Guia DAS mensal", "Declaração anual", "Suporte por WhatsApp"], cta: "Saber se o MEI serve para mim", msg: "Olá, vim pela landing page e quero saber se o plano MEI da Fraga serve para o meu caso." },
+  { name: "Essencial", desc: "Para empresas até R$ 100 mil/mês", ideal: "Para empresas que precisam de rotina contábil consistente e obrigações bem acompanhadas.", features: ["Contabilidade mensal", "Departamento pessoal", "Apuração de impostos", "Relatórios mensais"], cta: "Conversar sobre o Essencial", msg: "Olá, vim pela landing page e quero conversar sobre o plano Essencial da Fraga." },
+  { name: "Plus", desc: "Para empresas até R$ 200 mil/mês", ideal: "Para negócios em crescimento que exigem mais organização, previsibilidade e suporte.", features: ["Tudo do Essencial", "Consultoria tributária", "Análise gerencial", "Atendimento prioritário"], cta: "Ver se o Plus encaixa", msg: "Olá, vim pela landing page e quero entender se o plano Plus faz sentido para minha empresa." },
+  { name: "Premium", desc: "Para empresas até R$ 400 mil/mês", ideal: "Para empresas que precisam de uma contabilidade próxima da gestão e de decisões mais consultivas.", features: ["Tudo do Plus", "Planejamento tributário aprofundado", "Reuniões periódicas com a equipe", "Gestor de conta dedicado"], cta: "Conversar sobre o Premium", msg: "Olá, vim pela landing page e quero conversar sobre o plano Premium da Fraga.", featured: true },
 ];
 
 function Plans() {
@@ -1073,10 +1073,11 @@ function Plans() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— Planos</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02] mb-5">
-            Planos simples. <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>Valor estratégico.</span>
+            Quatro pontos de partida.{" "}
+            <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>Um atendimento por vez.</span>
           </h2>
           <p className="text-white/65 text-lg">
-            Escolha o plano ideal para o momento da sua empresa e fale diretamente com a Fraga pelo WhatsApp.
+            O plano é apenas o ponto de partida. Antes de indicar, a equipe entende o momento da sua empresa.
           </p>
         </div>
 
@@ -1092,7 +1093,7 @@ function Plans() {
                 }`}>
                   {isFeatured && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[oklch(0.18_0.03_220)] text-accent-glow text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-accent/40">
-                      Mais estratégico
+                      Mais consultivo
                     </div>
                   )}
                   <div className={`text-[11px] font-semibold uppercase tracking-[0.2em] mb-3 ${isFeatured ? "text-accent-foreground/80" : "text-accent-glow"}`}>Plano</div>
@@ -1129,7 +1130,7 @@ function Plans() {
         </div>
 
         <p className="text-center text-sm text-white/55 mt-12">
-          Não sabe qual escolher? <a href={MAIN_CTA} target="_blank" rel="noopener" className="text-accent-glow font-semibold underline-offset-4 hover:underline">Fale com um especialista</a> para indicação personalizada.
+          Não sabe qual escolher? <a href={MAIN_CTA} target="_blank" rel="noopener" className="text-accent-glow font-semibold underline-offset-4 hover:underline">Chame a Fraga no WhatsApp</a> e conte o seu cenário — a indicação vem depois da conversa.
         </p>
       </div>
     </div>
