@@ -896,12 +896,12 @@ function WhatsAppMock() {
    STAGE SOLUTIONS — vertical tabs
    ============================================================ */
 const STAGES = [
-  { key: "abrindo", label: "Estou abrindo minha empresa", title: "Tire o seu CNPJ no caminho certo", desc: "Te ajudamos a escolher a natureza jurídica e o regime tributário que mais protegem o seu negócio desde o dia 1.", benefit: "Comece pagando o imposto certo, sem retrabalho.", msg: "Olá, estou abrindo minha empresa e gostaria de falar com a Fraga Contabilidade." },
-  { key: "trocar", label: "Quero trocar de contador", title: "Migração sem dor de cabeça", desc: "Cuidamos de toda a transição com o seu contador atual. Você não precisa parar a operação para mudar.", benefit: "Em até 30 dias com contabilidade nova rodando.", msg: "Olá, quero trocar de contador e gostaria de falar com a Fraga Contabilidade." },
-  { key: "financeiro", label: "Preciso organizar meu financeiro", title: "BPO financeiro completo", desc: "Contas a pagar/receber, conciliação bancária, fluxo de caixa e relatórios gerenciais.", benefit: "Você passa a tomar decisão olhando dados reais.", msg: "Olá, preciso organizar o financeiro da minha empresa com a Fraga." },
-  { key: "impostos", label: "Quero entender meus impostos", title: "Planejamento tributário consultivo", desc: "Estudamos a sua operação e mostramos, com clareza, onde existe espaço para reduzir tributos legalmente.", benefit: "Pague o que é devido — nem um real a mais.", msg: "Olá, quero entender melhor os impostos da minha empresa com a Fraga." },
-  { key: "crescimento", label: "Minha empresa está crescendo", title: "Estrutura contábil para escalar", desc: "Adaptamos rotinas, controles e relatórios para uma empresa em expansão acelerada.", benefit: "Cresça sem perder o controle.", msg: "Olá, minha empresa está crescendo e preciso de uma contabilidade preparada." },
-  { key: "estrategica", label: "Quero uma contabilidade estratégica", title: "Parceria consultiva de longo prazo", desc: "Reuniões periódicas, análise de cenário, projeções e visão de gestão sobre os números.", benefit: "Um sócio invisível ajudando você a decidir melhor.", msg: "Olá, quero uma contabilidade mais estratégica com a Fraga." },
+  { key: "abrindo", label: "Vou abrir empresa e não sei o melhor enquadramento", title: "Abertura com o enquadramento certo desde o início", desc: "Avaliamos a atividade, o porte e a expectativa de faturamento para indicar a natureza jurídica e o regime tributário mais adequados ao seu caso.", benefit: "Começar pagando o imposto certo, sem retrabalho lá na frente.", msg: "Olá, vou abrir uma empresa e quero entender o melhor enquadramento. Vim pela landing page." },
+  { key: "cresceu", label: "Minha empresa cresceu e a contabilidade ficou confusa", title: "Reorganização contábil para empresas em crescimento", desc: "Revisamos rotinas, controles e relatórios para que a operação continue acompanhando o ritmo do negócio.", benefit: "Estrutura adequada ao tamanho atual da empresa.", msg: "Olá, minha empresa cresceu e a contabilidade ficou confusa. Vim pela landing page." },
+  { key: "trocar", label: "Quero trocar de contador sem dor de cabeça", title: "Transição contábil conduzida em paralelo à operação", desc: "Cuidamos do contato com o contador atual e da migração de informações sem que sua empresa precise parar para mudar.", benefit: "Mudança feita por etapas, sem perder histórico.", msg: "Olá, quero trocar de contador sem dor de cabeça. Vim pela landing page da Fraga." },
+  { key: "financeiro", label: "Preciso organizar financeiro e rotina fiscal", title: "Rotina financeira e fiscal sob o mesmo método", desc: "Contas a pagar/receber, conciliações bancárias, apuração fiscal e relatórios mensais organizados em um único fluxo.", benefit: "Menos planilhas soltas, mais previsibilidade.", msg: "Olá, preciso organizar o financeiro e a rotina fiscal da minha empresa. Vim pela landing page." },
+  { key: "impostos", label: "Tenho dúvidas se pago imposto corretamente", title: "Diagnóstico tributário sem promessas", desc: "Olhamos para o regime atual, a atividade e o histórico para apontar onde existem riscos, excessos ou oportunidades dentro da lei.", benefit: "Clareza sobre o que se paga e por que se paga.", msg: "Olá, tenho dúvidas se pago imposto corretamente. Vim pela landing page da Fraga." },
+  { key: "estrategica", label: "Quero uma contabilidade mais próxima da gestão", title: "Contabilidade conectada às decisões do dia a dia", desc: "Conversas periódicas com os sócios, leitura dos números, alertas de risco e apoio para decisões de gestão.", benefit: "Um contador presente nas decisões, não só nas obrigações.", msg: "Olá, quero uma contabilidade mais próxima da gestão. Vim pela landing page da Fraga." },
 ];
 
 function StageSolutions() {
@@ -911,11 +911,10 @@ function StageSolutions() {
     <div id="solucoes" className="py-24 lg:py-36">
       <div className="mx-auto max-w-[1400px] px-4 lg:px-8">
         <div className="max-w-3xl mb-14">
-          <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Soluções por momento</div>
+          <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Em qual cenário você está?</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02]">
-            Soluções para cada{" "}
-            <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>fase</span>{" "}
-            da sua empresa
+            O atendimento começa pelo seu{" "}
+            <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>cenário real</span>.
           </h2>
         </div>
 
@@ -941,13 +940,13 @@ function StageSolutions() {
 
           <div className="lg:col-span-7">
             <div key={st.key} className="rounded-[2rem] border border-border bg-card overflow-hidden shadow-card p-8 lg:p-12 animate-fade-in">
-              <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">Solução recomendada</div>
+              <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">Como a Fraga atua</div>
               <h3 className="font-display text-3xl lg:text-4xl font-bold tracking-tight mb-5">{st.title}</h3>
               <p className="text-foreground/70 text-lg leading-relaxed mb-7">{st.desc}</p>
               <div className="rounded-2xl border border-accent/30 bg-accent/10 p-5 mb-8 flex items-start gap-3">
-                <Sparkles className="w-5 h-5 text-accent-foreground mt-0.5" />
+                <Check className="w-5 h-5 text-accent-foreground mt-0.5" />
                 <div>
-                  <div className="text-[11px] uppercase tracking-[0.2em] font-bold text-accent-foreground/80">Benefício</div>
+                  <div className="text-[11px] uppercase tracking-[0.2em] font-bold text-accent-foreground/80">O que muda na prática</div>
                   <div className="font-display font-bold text-lg text-foreground">{st.benefit}</div>
                 </div>
               </div>
@@ -960,7 +959,7 @@ function StageSolutions() {
                 trackLocation="solution_whatsapp_click"
                 trackMessage={st.label}
               >
-                Falar sobre esta solução
+                Conversar sobre esse cenário
               </PremiumButton>
             </div>
           </div>
