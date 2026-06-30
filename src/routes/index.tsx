@@ -1,12 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
-import {
-  ArrowUpRight, ArrowRight, MessageCircle, Menu, X,
-} from "lucide-react";
-import { waLink, trackConversion } from "@/lib/whatsapp";
-import { PremiumButton } from "@/components/fraga/PremiumButton";
-import { VideoCard, VideoModal, useVideoModal, type VideoItem } from "@/components/fraga/VideoModal";
-import fragaLogo from "@/assets/fraga-logo.png.asset.json";
+import { Header } from "@/components/rdlf/Header";
+import { Hero } from "@/components/rdlf/Hero";
+import { TrustStrip } from "@/components/rdlf/TrustStrip";
+import { Manifesto } from "@/components/rdlf/Manifesto";
+import { ProblemRiskSolution } from "@/components/rdlf/ProblemRiskSolution";
+import { PracticeAreas } from "@/components/rdlf/PracticeAreas";
+import { Methodology } from "@/components/rdlf/Methodology";
+import { AboutAuthority } from "@/components/rdlf/AboutAuthority";
+import { FAQ } from "@/components/rdlf/FAQ";
+import { FinalCTA } from "@/components/rdlf/FinalCTA";
+import { CinematicRDLFFooter } from "@/components/rdlf/CinematicRDLFFooter";
+import { Preloader } from "@/components/rdlf/Preloader";
+import { FloatingWhatsAppButton } from "@/components/rdlf/FloatingWhatsAppButton";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -19,6 +24,28 @@ export const Route = createFileRoute("/")({
   }),
   component: LandingPage,
 });
+
+function LandingPage() {
+  return (
+    <div className="rdlf-site-shell">
+      <Preloader />
+      <Header />
+      <main className="text-foreground">
+        <Hero />
+        <TrustStrip />
+        <Manifesto />
+        <ProblemRiskSolution />
+        <PracticeAreas />
+        <Methodology />
+        <AboutAuthority />
+        <FAQ />
+        <FinalCTA />
+      </main>
+      <CinematicRDLFFooter />
+      <FloatingWhatsAppButton />
+    </div>
+  );
+}
 
 const MAIN_CTA = waLink("Olá, vim pela landing page da Fraga Contabilidade e gostaria de falar com um especialista.");
 const FLOAT_CTA = waLink("Olá, vim pela landing page da Fraga Contabilidade e gostaria de atendimento.");
