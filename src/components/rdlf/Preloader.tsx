@@ -44,7 +44,7 @@ export function Preloader() {
               className="text-[0.6rem] tracking-[0.3em] uppercase text-[color:var(--gold)]"
               style={{ fontWeight: 400 }}
             >
-              Jurídico Estratégico
+              Contabilidade estratégica
             </motion.p>
           </div>
         </motion.div>
