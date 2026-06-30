@@ -1,10 +1,12 @@
 const items = [
-  "Jurídico Preventivo",
-  "Proteção de Marca",
-  "Contratos Estratégicos",
-  "Estruturação Jurídica",
-  "Compliance & ESG",
-  "Resolução Extrajudicial",
+  "Planejamento tributário",
+  "Rotina contábil mensal",
+  "Folha e Departamento Pessoal",
+  "BPO financeiro",
+  "Abertura de CNPJ",
+  "Regularização fiscal",
+  "Apuração de impostos",
+  "Consultoria empresarial",
 ];
 
 export function TrustStrip() {
