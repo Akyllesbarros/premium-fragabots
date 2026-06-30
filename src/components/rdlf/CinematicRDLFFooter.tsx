@@ -174,7 +174,7 @@ export function CinematicRDLFFooter() {
               rel="noopener noreferrer"
               className="hover:text-[color:var(--gold-light)] transition-colors"
             >
-              Criado por Matheus Nascimento | Agnus Creative Studio
+              Criado por Matheus Nascimento | BAKY Company
             </a>
             <button onClick={scrollTop} className="hover:text-bone transition-colors">↑ Topo</button>
           </div>
