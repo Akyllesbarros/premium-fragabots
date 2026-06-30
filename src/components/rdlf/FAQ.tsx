@@ -42,7 +42,7 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="relative py-28 md:py-36">
+    <section id="faq" className="relative py-28 md:py-36">
       <div className="container-rdlf grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <div>
           <Reveal>
