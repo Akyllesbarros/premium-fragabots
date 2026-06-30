@@ -10,6 +10,8 @@ import { waLink, trackConversion } from "@/lib/whatsapp";
 import { PremiumButton } from "@/components/fraga/PremiumButton";
 import { ScrollProgress } from "@/components/fraga/ScrollProgress";
 import { VideoCard, VideoModal, useVideoModal, type VideoItem } from "@/components/fraga/VideoModal";
+import { ScrollExpandMedia } from "@/components/fraga/ScrollExpandMedia";
+import { ScrollStackSection } from "@/components/fraga/ScrollStackSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,18 +39,18 @@ function LandingPage() {
     <div className="min-h-screen bg-[oklch(0.13_0.025_220)] text-white selection:bg-accent/40 overflow-x-hidden">
       <ScrollProgress />
       <Header />
-      <Hero />
-      <Layer bg="bg-[oklch(0.1_0.02_220)]"><Manifesto /></Layer>
-      <Layer bg="bg-[oklch(0.97_0.008_200)] text-foreground"><HistoryAuthority /></Layer>
-      <Layer bg="bg-[oklch(0.13_0.025_220)]"><InteractiveDifferentials /></Layer>
-      <Layer bg="bg-[oklch(0.97_0.008_200)] text-foreground"><NumberedServices /></Layer>
-      <Layer bg="bg-[oklch(0.13_0.025_220)]"><WhatsAppJourney /></Layer>
-      <Layer bg="bg-[oklch(0.97_0.008_200)] text-foreground"><StageSolutions /></Layer>
-      <Layer bg="bg-[oklch(0.1_0.02_220)]"><VideoTestimonials /></Layer>
-      <Layer bg="bg-[oklch(0.97_0.008_200)] text-foreground"><CommunityTrust /></Layer>
-      <Layer bg="bg-[oklch(0.13_0.025_220)]"><Plans /></Layer>
-      <Layer bg="bg-[oklch(0.97_0.008_200)] text-foreground"><Insights /></Layer>
-      <Layer bg="bg-[oklch(0.13_0.025_220)]"><Faq /></Layer>
+      <FragaHeroExperience />
+      <ScrollStackSection layer={2} bg="bg-[oklch(0.1_0.02_220)]"><Manifesto /></ScrollStackSection>
+      <ScrollStackSection layer={3} bg="bg-[oklch(0.97_0.008_200)] text-foreground"><HistoryAuthority /></ScrollStackSection>
+      <ScrollStackSection layer={4} bg="bg-[oklch(0.13_0.025_220)]"><InteractiveDifferentials /></ScrollStackSection>
+      <ScrollStackSection layer={5} bg="bg-[oklch(0.97_0.008_200)] text-foreground"><NumberedServices /></ScrollStackSection>
+      <ScrollStackSection layer={6} bg="bg-[oklch(0.13_0.025_220)]"><WhatsAppJourney /></ScrollStackSection>
+      <ScrollStackSection layer={7} bg="bg-[oklch(0.97_0.008_200)] text-foreground"><StageSolutions /></ScrollStackSection>
+      <ScrollStackSection layer={8} bg="bg-[oklch(0.1_0.02_220)]"><VideoTestimonials /></ScrollStackSection>
+      <ScrollStackSection bg="bg-[oklch(0.97_0.008_200)] text-foreground"><CommunityTrust /></ScrollStackSection>
+      <ScrollStackSection bg="bg-[oklch(0.13_0.025_220)]"><Plans /></ScrollStackSection>
+      <ScrollStackSection bg="bg-[oklch(0.97_0.008_200)] text-foreground"><Insights /></ScrollStackSection>
+      <ScrollStackSection bg="bg-[oklch(0.13_0.025_220)]"><Faq /></ScrollStackSection>
       <FinalCta />
       <Footer />
       <FloatingWhatsApp />
@@ -56,9 +58,116 @@ function LandingPage() {
   );
 }
 
-function Layer({ bg, children }: { bg: string; children: React.ReactNode }) {
+/* ============================================================
+   FRAGA HERO EXPERIENCE — ScrollExpandMedia cinematic opening
+   ============================================================ */
+function FragaHeroExperience() {
   return (
-    <section className={`stack-section relative ${bg}`}>{children}</section>
+    <div id="inicio">
+      <ScrollExpandMedia
+        eyebrow="Fraga Contabilidade · desde 1974"
+        title="Clareza antes de decidir"
+        scrollHint="Role para abrir a experiência"
+        media={<InstitutionalMedia />}
+      >
+        <HeroRevealedContent />
+      </ScrollExpandMedia>
+    </div>
+  );
+}
+
+/**
+ * Institutional composition: stylized ledger / fiscal report rendered in CSS.
+ * No stock images, no fake SaaS dashboard, no random icons.
+ */
+function InstitutionalMedia() {
+  return (
+    <div className="absolute inset-0">
+      {/* paper texture */}
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(0deg, rgba(255,255,255,0.5) 0 1px, transparent 1px 28px)",
+        }}
+      />
+      <div className="relative h-full w-full p-8 lg:p-14 flex flex-col">
+        <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.3em] text-white/45">
+          <span>Livro Diário · Apuração mensal</span>
+          <span>Vila Velha · ES</span>
+        </div>
+
+        <div className="mt-8 lg:mt-12 grid grid-cols-12 gap-x-6 gap-y-3 text-white/80">
+          <div className="col-span-2 text-[10px] uppercase tracking-[0.25em] text-white/40">Data</div>
+          <div className="col-span-6 text-[10px] uppercase tracking-[0.25em] text-white/40">Histórico</div>
+          <div className="col-span-2 text-[10px] uppercase tracking-[0.25em] text-white/40 text-right">Débito</div>
+          <div className="col-span-2 text-[10px] uppercase tracking-[0.25em] text-white/40 text-right">Crédito</div>
+
+          {[
+            { d: "1974", h: "Início da prática contábil — Fraga", v: "·", c: "—" },
+            { d: "—", h: "Apuração de tributos · Lucro Presumido", v: "12.480,00", c: "—" },
+            { d: "—", h: "Folha de pagamento e encargos", v: "—", c: "38.290,15" },
+            { d: "—", h: "DCTFWeb · obrigação acessória", v: "0,00", c: "0,00" },
+            { d: "—", h: "Conciliação bancária do período", v: "248.110,77", c: "248.110,77" },
+          ].map((row, i) => (
+            <div key={i} className="contents font-mono text-[12px] lg:text-[13px]">
+              <div className="col-span-2 text-white/55">{row.d}</div>
+              <div className="col-span-6 text-white/85">{row.h}</div>
+              <div className="col-span-2 text-right text-white/70">{row.v}</div>
+              <div className="col-span-2 text-right text-white/70">{row.c}</div>
+              <div className="col-span-12 h-px bg-white/[0.06]" />
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-auto pt-10 grid grid-cols-2 lg:grid-cols-4 gap-6 border-t border-white/10">
+          {[
+            { v: "1974", l: "fundada em" },
+            { v: "+50", l: "anos de prática" },
+            { v: "+1.000", l: "empresas atendidas" },
+            { v: "BR", l: "atendimento nacional" },
+          ].map((s) => (
+            <div key={s.l}>
+              <div className="font-display text-3xl lg:text-4xl font-bold tracking-tight text-white">{s.v}</div>
+              <div className="text-[10px] uppercase tracking-[0.22em] text-white/45 mt-1">{s.l}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function HeroRevealedContent() {
+  return (
+    <div className="mx-auto max-w-[1400px] w-full px-4 lg:px-8 pb-16 lg:pb-12">
+      <div className="max-w-3xl">
+        <p className="text-base lg:text-lg text-white/75 leading-relaxed mb-7">
+          A Fraga acompanha empresas em Vila Velha, no Espírito Santo e em todo o Brasil com rotinas contábeis, fiscais, tributárias e financeiras conduzidas por uma equipe com mais de 50 anos de experiência.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <PremiumButton
+            href={MAIN_CTA}
+            variant="gold"
+            size="lg"
+            icon={<MessageCircle className="w-5 h-5" />}
+            trailingIcon={<ArrowUpRight className="w-4 h-4" />}
+            trackLocation="hero_cta_click"
+            trackMessage="Hero principal"
+          >
+            Falar com a Fraga pelo WhatsApp
+          </PremiumButton>
+          <a
+            href="#servicos"
+            className="group inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl text-sm font-semibold border border-white/25 text-white hover:bg-white/10 transition-colors"
+          >
+            Ver como podemos ajudar
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
+      </div>
+    </div>
   );
 }
 
