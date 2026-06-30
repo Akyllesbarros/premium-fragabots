@@ -630,12 +630,12 @@ function DifferentialPreview({ item }: { item: (typeof DIFFERENTIALS)[number] })
    NUMBERED SERVICES (Padelix-style)
    ============================================================ */
 const SERVICES = [
-  { n: "01", title: "Abertura de Empresas", desc: "Constituição rápida e segura, com escolha do regime tributário ideal desde o primeiro dia.", benefit: "Sua empresa em operação sem dor de cabeça burocrática.", msg: "Olá, tenho interesse em abertura de empresa com a Fraga Contabilidade.", icon: Briefcase },
-  { n: "02", title: "Planejamento Tributário", desc: "Análise profunda da sua operação para reduzir impostos com total respaldo legal.", benefit: "Menos imposto pago, mais margem para crescer.", msg: "Olá, tenho interesse em planejamento tributário com a Fraga Contabilidade.", icon: Calculator },
-  { n: "03", title: "Assessoria Contábil", desc: "Rotinas mensais conduzidas com método, prazos cumpridos e relatórios que importam.", benefit: "Você dorme tranquilo sabendo que tudo está em dia.", msg: "Olá, tenho interesse em assessoria contábil com a Fraga Contabilidade.", icon: FileCheck },
-  { n: "04", title: "Departamento Pessoal", desc: "Folha, admissões, demissões e obrigações trabalhistas sem dor de cabeça.", benefit: "Equipe administrada com segurança jurídica.", msg: "Olá, tenho interesse em departamento pessoal com a Fraga Contabilidade.", icon: Users },
-  { n: "05", title: "BPO Financeiro", desc: "Contas a pagar e a receber, conciliações e fluxo de caixa nas mãos de especialistas.", benefit: "Caixa sob controle, decisões com base em dados.", msg: "Olá, tenho interesse em BPO financeiro com a Fraga Contabilidade.", icon: Wallet },
-  { n: "06", title: "Regularização Fiscal", desc: "Empresas com pendências voltam à conformidade com plano de ação claro.", benefit: "Pendências resolvidas, futuro destravado.", msg: "Olá, tenho interesse em regularização fiscal com a Fraga Contabilidade.", icon: ShieldCheck },
+  { n: "01", title: "Abertura de Empresas", desc: "Orientação para abrir o CNPJ com enquadramento adequado, definição de atividade, regime tributário e primeiros passos contábeis organizados.", benefit: "Começar pagando o imposto certo, sem retrabalho lá na frente.", msg: "Olá, vim pela landing page e quero falar sobre abertura de empresa com a Fraga.", icon: Briefcase },
+  { n: "02", title: "Planejamento Tributário", desc: "Análise para entender se a empresa está no regime adequado e onde existem riscos, excessos ou oportunidades dentro da lei.", benefit: "Mais clareza sobre o que se paga e por quê.", msg: "Olá, vim pela landing page e quero falar sobre planejamento tributário com a Fraga.", icon: Calculator },
+  { n: "03", title: "Assessoria Contábil", desc: "Rotina contábil, fiscal e gerencial organizada para que o empresário tenha clareza sobre obrigações e resultados.", benefit: "Obrigações em dia e relatórios que ajudam a decidir.", msg: "Olá, vim pela landing page e quero falar sobre assessoria contábil com a Fraga.", icon: FileCheck },
+  { n: "04", title: "Departamento Pessoal", desc: "Apoio nas rotinas trabalhistas, folha, admissões, desligamentos e obrigações relacionadas à equipe.", benefit: "A equipe administrada com método e prazos cumpridos.", msg: "Olá, vim pela landing page e quero falar sobre departamento pessoal com a Fraga.", icon: Users },
+  { n: "05", title: "BPO Financeiro", desc: "Organização de contas, controles e informações financeiras para dar mais previsibilidade à gestão.", benefit: "Caixa sob controle e relatórios que mostram o real.", msg: "Olá, vim pela landing page e quero falar sobre BPO financeiro com a Fraga.", icon: Wallet },
+  { n: "06", title: "Regularização Fiscal", desc: "Diagnóstico e condução de pendências fiscais para recuperar previsibilidade e evitar que problemas cresçam.", benefit: "Pendências resolvidas com um plano claro de ação.", msg: "Olá, vim pela landing page e quero falar sobre regularização fiscal com a Fraga.", icon: ShieldCheck },
 ];
 
 function NumberedServices() {
@@ -648,13 +648,13 @@ function NumberedServices() {
           <div className="lg:col-span-7">
             <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Serviços</div>
             <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02]">
-              Soluções contábeis para empresas que pensam{" "}
-              <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>grande</span>.
+              O que a Fraga faz, na{" "}
+              <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>prática</span>.
             </h2>
           </div>
           <div className="lg:col-span-5 lg:pt-6">
             <p className="text-foreground/65 text-lg leading-relaxed">
-              Um portfólio completo conduzido por uma equipe que entende seu negócio. Escolha o serviço para ver detalhes — todo CTA leva direto ao WhatsApp.
+              Da abertura do CNPJ à rotina fiscal e financeira do mês a mês. Clique em cada serviço para entender como ele funciona dentro da Fraga.
             </p>
           </div>
         </div>
