@@ -279,7 +279,7 @@ function Manifesto() {
       </div>
       <div className="relative mx-auto max-w-3xl px-4 lg:px-8 text-center mt-20">
         <p className="font-display text-2xl lg:text-3xl leading-snug text-white/85 tracking-tight">
-          Uma boa contabilidade não aparece só no fim do mês. Ela ajuda o empresário a enxergar riscos, organizar obrigações e entender o que os <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>números</span> estão dizendo.
+          Uma boa contabilidade não aparece só no fim do mês. Ela ajuda o empresário a enxergar riscos, organizar obrigações e entender o que os números estão dizendo.
         </p>
       </div>
     </div>
@@ -318,7 +318,7 @@ function HistoryAuthority() {
             <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-5">— Nossa história</div>
             <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02] mb-8">
               Uma contabilidade construída{" "}
-              <span className="italic font-serif text-primary-deep" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>de perto</span>,
+              de perto,
               cliente por cliente.
             </h2>
             <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden bg-gradient-primary shadow-elegant max-w-sm">
@@ -385,7 +385,7 @@ function InteractiveDifferentials() {
             <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— O que a Fraga entrega</div>
             <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02]">
               Um time inteiro acompanhando a{" "}
-              <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>rotina</span>{" "}da sua empresa.
+              rotina{" "}da sua empresa.
             </h2>
           </div>
           <div className="text-sm text-white/55 max-w-xs">
@@ -461,7 +461,7 @@ function DifferentialPreview({ item }: { item: (typeof DIFFERENTIALS)[number] })
         <span>0{DIFFERENTIALS.findIndex(d => d.media === item.media) + 1}</span>
       </div>
       <div className="relative flex-1 flex flex-col justify-center">
-        <div className="font-display text-7xl font-black text-gradient-gold leading-none mb-7 tabular-nums">
+        <div className="font-display text-7xl font-black text-white leading-none mb-7 tabular-nums">
           0{DIFFERENTIALS.findIndex(d => d.media === item.media) + 1}
         </div>
         <h3 className="font-display text-3xl font-bold text-white tracking-tight mb-4">{item.title}</h3>
@@ -501,7 +501,7 @@ function NumberedServices() {
             <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Serviços</div>
             <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02]">
               O que a Fraga faz, na{" "}
-              <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>prática</span>.
+              prática.
             </h2>
           </div>
           <div className="lg:col-span-5 lg:pt-6">
@@ -539,7 +539,7 @@ function NumberedServices() {
             <div className="sticky top-32">
               <div key={s.n} className="rounded-[2rem] overflow-hidden border border-border bg-gradient-to-br from-[oklch(0.99_0.005_200)] to-[oklch(0.94_0.018_200)] shadow-elegant p-8 animate-fade-in">
                 <div className="flex items-center justify-between mb-6">
-                  <div className="font-display text-5xl font-black text-gradient-primary">{s.n}</div>
+                  <div className="font-display text-5xl font-black text-foreground">{s.n}</div>
                   <div className="text-[10px] uppercase tracking-[0.22em] font-semibold text-foreground/45">
                     Serviço Fraga
                   </div>
@@ -617,7 +617,7 @@ function WhatsAppJourney() {
           <div className="text-xs uppercase tracking-[0.22em] text-[oklch(0.78_0.18_145)] font-semibold mb-4">— Como começa</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02] mb-7">
             Sem formulário. Sem espera.{" "}
-            <span className="italic font-serif" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", color: "oklch(0.78 0.18 145)" }}>Conversa direta</span> no WhatsApp.
+            Conversa direta no WhatsApp.
           </h2>
           <p className="text-white/65 text-lg leading-relaxed mb-10 max-w-lg">
             A equipe entende o momento da empresa antes de indicar um plano. Seja para abrir, regularizar, organizar ou trocar de contador, o atendimento começa por uma conversa real.
@@ -766,7 +766,7 @@ function StageSolutions() {
           <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Em qual cenário você está?</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02]">
             O atendimento começa pelo seu{" "}
-            <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>cenário real</span>.
+            cenário real.
           </h2>
         </div>
 
@@ -836,7 +836,7 @@ function VideoTestimonials() {
           <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— Quem trabalha com a Fraga conta</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02] mb-5">
             Clientes falando em{" "}
-            <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>vídeo</span>, na própria voz.
+            vídeo, na própria voz.
           </h2>
           <p className="text-white/65 text-lg max-w-2xl">
             Sem depoimentos escritos por terceiros: dois clientes contam, em vídeo, como é o trabalho com a Fraga.
@@ -867,7 +867,7 @@ function CommunityTrust() {
           <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Como trabalhamos</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02]">
             O que sustenta a relação com{" "}
-            <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>cada cliente</span>.
+            cada cliente.
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-5">
@@ -922,7 +922,7 @@ function Plans() {
           <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— Planos</div>
           <h2 className="font-display text-4xl lg:text-6xl font-bold tracking-tight leading-[1.02] mb-5">
             Quatro pontos de partida.{" "}
-            <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>Um atendimento por vez.</span>
+            Um atendimento por vez.
           </h2>
           <p className="text-white/65 text-lg">
             O plano é apenas o ponto de partida. Antes de indicar, a equipe entende o momento da sua empresa.
@@ -1002,7 +1002,7 @@ function Insights() {
             <div className="text-xs uppercase tracking-[0.22em] text-primary font-semibold mb-4">— Dúvidas comuns que recebemos</div>
             <h2 className="font-display text-4xl lg:text-5xl font-bold tracking-tight leading-[1.02]">
               Os temas que mais aparecem nas{" "}
-              <span className="italic font-serif text-gradient-primary" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>conversas</span> com empresários.
+              conversas com empresários.
             </h2>
           </div>
         </div>
@@ -1062,7 +1062,7 @@ function Faq() {
             <div className="text-xs uppercase tracking-[0.22em] text-accent-glow font-semibold mb-4">— FAQ</div>
             <h2 className="font-display text-3xl lg:text-5xl font-bold tracking-tight leading-[1.02] mb-6">
               Perguntas{" "}
-              <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>frequentes</span>
+              frequentes
             </h2>
             <p className="text-white/55 text-sm leading-relaxed">
               Não encontrou o que procurava? Fale com um especialista no WhatsApp.
@@ -1135,7 +1135,7 @@ function FinalCta() {
         </div>
         <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-[1.0] mb-8 text-white">
           Quer entender se a Fraga{" "}
-          <span className="italic font-serif text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>encaixa</span>{" "}
+          encaixa{" "}
           com a sua empresa?
         </h2>
         <p className="text-white/65 text-lg max-w-2xl mx-auto mb-12">
