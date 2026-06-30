@@ -1001,9 +1001,9 @@ function VideoTestimonials() {
    ============================================================ */
 function CommunityTrust() {
   const items = [
-    { icon: MessageCircle, title: "Atendimento por pessoas, não por robô", desc: "Quem responde no WhatsApp e nas reuniões faz parte da equipe técnica da Fraga." },
-    { icon: Clock, title: "Clientes que ficam por muitos anos", desc: "Boa parte da carteira está com a Fraga há mais de uma década, alguns desde a fundação." },
-    { icon: FileCheck, title: "Foco no que é obrigação contábil", desc: "Apuração, folha, obrigações acessórias e relatórios entregues no prazo, todo mês." },
+    { kicker: "Atendimento", title: "Atendimento por pessoas, não por robô", desc: "Quem responde no WhatsApp e nas reuniões faz parte da equipe técnica da Fraga." },
+    { kicker: "Permanência", title: "Clientes que ficam por muitos anos", desc: "Boa parte da carteira está com a Fraga há mais de uma década, alguns desde a fundação." },
+    { kicker: "Método", title: "Foco no que é obrigação contábil", desc: "Apuração, folha, obrigações acessórias e relatórios entregues no prazo, todo mês." },
   ];
   return (
     <div className="py-24 lg:py-36">
@@ -1018,15 +1018,14 @@ function CommunityTrust() {
         <div className="grid md:grid-cols-3 gap-5">
           {items.map((it, i) => (
             <RevealCard key={it.title} delay={i * 120}>
-              <div className="relative rounded-3xl border border-border bg-card p-8 h-full shadow-card hover:shadow-elegant transition-all hover:-translate-y-1 overflow-hidden group">
-                <div className="absolute -top-16 -right-16 w-40 h-40 rounded-full bg-primary-glow/10 blur-3xl group-hover:bg-primary-glow/20 transition-all" />
-                <div className="relative">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-elegant mb-6">
-                    <it.icon className="w-6 h-6 text-primary-foreground" />
-                  </div>
-                  <h3 className="font-display text-xl font-bold mb-3">{it.title}</h3>
-                  <p className="text-sm text-foreground/65 leading-relaxed">{it.desc}</p>
+              <div className="relative h-full rounded-2xl border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-foreground/30">
+                <div className="flex items-baseline gap-3 mb-6">
+                  <span className="font-display text-sm font-bold tabular-nums text-primary">0{i + 1}</span>
+                  <span className="h-px flex-1 bg-border" />
+                  <span className="text-[10px] uppercase tracking-[0.22em] font-semibold text-foreground/45">{it.kicker}</span>
                 </div>
+                <h3 className="font-display text-xl font-bold mb-3 leading-tight">{it.title}</h3>
+                <p className="text-sm text-foreground/65 leading-relaxed">{it.desc}</p>
               </div>
             </RevealCard>
           ))}
