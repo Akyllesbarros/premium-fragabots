@@ -375,17 +375,17 @@ function HeroComposition({ mouse }: { mouse: { x: number; y: number } }) {
       </div>
 
       <div
-        className="absolute bottom-6 -left-4 w-60 rounded-2xl border border-accent/30 bg-gradient-to-br from-[oklch(0.78_0.16_78)] to-[oklch(0.86_0.15_85)] text-accent-foreground p-4 shadow-gold animate-float-slow"
+        className="absolute bottom-6 -left-4 w-64 rounded-2xl border border-accent/30 bg-gradient-to-br from-[oklch(0.78_0.16_78)] to-[oklch(0.86_0.15_85)] text-accent-foreground p-4 shadow-gold animate-float-slow"
         style={tx(-0.6)}
       >
         <div className="flex items-center gap-2 mb-2">
-          <TrendingUp className="w-4 h-4" />
-          <div className="text-[11px] uppercase tracking-wider font-bold">Economia tributária</div>
+          <FileCheck className="w-4 h-4" />
+          <div className="text-[11px] uppercase tracking-wider font-bold">Relatório do mês</div>
         </div>
-        <div className="font-display text-3xl font-bold">
-          <Counter to={32} />%
+        <div className="font-display text-base font-bold leading-tight">
+          Apuração fiscal, folha e DCTF entregues no prazo.
         </div>
-        <div className="text-[11px] opacity-80">média anual em clientes Premium</div>
+        <div className="text-[11px] opacity-80 mt-1">acompanhamento mensal</div>
       </div>
 
       <div
