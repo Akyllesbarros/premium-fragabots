@@ -5,36 +5,36 @@ import { Eyebrow, Reveal, SectionTitle } from "./primitives";
 
 const faqs = [
   {
-    q: "Minha empresa precisa de jurídico preventivo mesmo sem processo?",
-    a: "Sim. A maior parte dos custos jurídicos relevantes em empresas em crescimento nasce de decisões tomadas sem estrutura — não de processos. Prevenção é o que evita que o problema chegue ao judiciário.",
+    q: "Atendem empresas fora do Espírito Santo?",
+    a: "Sim. Atendemos empresas em todo o Brasil. A sede é em Vila Velha/ES, mas a rotina contábil, fiscal e trabalhista é feita à distância com reuniões periódicas e WhatsApp como canal direto.",
   },
   {
-    q: "Qual a diferença entre contrato genérico e contrato estratégico?",
-    a: "Contrato genérico cobre o óbvio. Contrato estratégico é desenhado sobre o fluxo real de receita, riscos e responsabilidades da operação. A diferença aparece no primeiro conflito.",
+    q: "Quais regimes tributários a Fraga atende?",
+    a: "Trabalhamos com MEI, Simples Nacional, Lucro Presumido e Lucro Real. Em todos os casos avaliamos se o enquadramento ainda é o mais adequado à realidade da empresa.",
   },
   {
-    q: "Quando devo proteger minha marca?",
-    a: "Antes de a marca virar ativo. Quanto mais a empresa cresce sem registro, maior o risco de outro depositante registrar primeiro e exigir mudança de nome.",
+    q: "É possível trocar de contador no meio do ano?",
+    a: "Sim. Conduzimos a transição completa: solicitação de documentos ao contador anterior, conferência de obrigações pendentes e regularização do que estiver em aberto.",
   },
   {
-    q: "A Fraga atua apenas em processos?",
-    a: "Não. A atuação central é preventiva e estruturante. Processos são tratados quando inevitáveis, com leitura estratégica do impacto empresarial.",
+    q: "A Fraga ajuda na abertura da empresa?",
+    a: "Sim. Cuidamos de toda a abertura: definição de natureza jurídica, CNAEs, regime tributário, registro na junta, inscrições municipais e estaduais e emissão dos certificados.",
   },
   {
-    q: "Como funciona o diagnóstico jurídico?",
-    a: "Leitura técnica de contratos críticos, marca, societário e governança, encerrada com um mapa de riscos priorizado e plano jurídico recomendado.",
+    q: "Vocês cuidam da folha e do eSocial?",
+    a: "Sim. Folha de pagamento, admissões, desligamentos, férias, rescisões, eSocial e demais rotinas trabalhistas são conduzidas por uma equipe dedicada ao departamento pessoal.",
   },
   {
-    q: "Posso contratar apenas um projeto pontual?",
-    a: "Sim. Projetos pontuais funcionam para escopos delimitados — como registro de marca, contrato crítico ou acordo de sócios.",
+    q: "Quem é o ponto de contato no dia a dia?",
+    a: "Cada cliente tem responsáveis técnicos por área (contábil, fiscal, pessoal e financeiro), e o WhatsApp é o canal direto para dúvidas e demandas do dia a dia.",
   },
   {
-    q: "O acompanhamento mensal substitui um departamento jurídico interno?",
-    a: "Para empresas em fase de crescimento e consolidação, sim. Oferece a camada jurídica recorrente sem o custo fixo de uma estrutura interna.",
+    q: "Como funciona o BPO financeiro?",
+    a: "Assumimos contas a pagar e a receber, conciliação bancária, fluxo de caixa e relatórios gerenciais, deixando o empresário com tempo para decidir em vez de operar o financeiro.",
   },
   {
-    q: "A Fraga garante aprovação de marca?",
-    a: "Não. Nenhum escritório pode garantir deferimento pelo INPI. O que entregamos é estratégia técnica, busca de anterioridade e acompanhamento processual administrativo.",
+    q: "Vocês fazem planejamento tributário?",
+    a: "Sim. Avaliamos se a empresa está no regime adequado, simulamos cenários e identificamos onde existem excessos, riscos ou oportunidades dentro da lei.",
   },
 ];
 
@@ -50,15 +50,15 @@ export function FAQ() {
           </Reveal>
           <Reveal delay={0.08}>
             <SectionTitle className="mt-5">
-              Perguntas{" "}
-              <span className="italic text-[color:var(--gold-light)]">estratégicas</span> antes
-              de contratar.
+              Dúvidas comuns{" "}
+              <span className="italic text-[color:var(--gold-light)]">que recebemos</span>{" "}
+              de quem está pensando em trocar de contador.
             </SectionTitle>
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-6 text-bone/60 leading-relaxed text-[15px] max-w-sm">
-              Se a sua pergunta não estiver aqui, o diagnóstico inicial é o momento certo
-              para fazê-la.
+              Se a sua pergunta não estiver aqui, fale direto com a Fraga pelo WhatsApp — sem
+              formulário, sem intermediários.
             </p>
           </Reveal>
         </div>
