@@ -213,7 +213,7 @@ function Hero() {
     return () => el?.removeEventListener("mousemove", fn);
   }, []);
 
-  const headline = "Cresça com uma contabilidade que enxerga além dos números.";
+  const headline = "Contabilidade para empresários que precisam de clareza antes de decidir.";
   const words = headline.split(" ");
 
   return (
@@ -238,12 +238,12 @@ function Hero() {
         <div className="lg:col-span-7 z-10">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-medium text-white/75 backdrop-blur mb-7 animate-fade-in">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-glow-pulse" />
-            Contabilidade estratégica para empresas no Espírito Santo e em todo o Brasil
+            Vila Velha · Espírito Santo · atende empresas em todo o Brasil
           </div>
 
           <h1 className="font-display font-bold tracking-[-0.035em] leading-[0.95] text-[clamp(2.4rem,6vw,5.2rem)] mb-7">
             {words.map((w, i) => {
-              const highlight = w.startsWith("enxerga") || w.startsWith("além") || w.startsWith("dos") || w.startsWith("números");
+              const highlight = w.startsWith("clareza") || w.startsWith("antes") || w.startsWith("decidir");
               return (
                 <span key={i} className="inline-block overflow-hidden align-bottom mr-[0.25em]">
                   <span
@@ -258,7 +258,7 @@ function Hero() {
           </h1>
 
           <p className="max-w-xl text-base lg:text-lg text-white/65 leading-relaxed mb-10 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-            Há mais de 50 anos, a Fraga Contabilidade ajuda empresários a organizar a gestão, reduzir riscos, entender seus números e tomar decisões com mais segurança.
+            A Fraga acompanha empresas em Vila Velha, no Espírito Santo e em todo o Brasil com rotinas contábeis, fiscais, tributárias e financeiras conduzidas por uma equipe com mais de 50 anos de experiência.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-12 animate-fade-in" style={{ animationDelay: "0.75s" }}>
@@ -271,23 +271,23 @@ function Hero() {
               trackLocation="hero_cta_click"
               trackMessage="Hero principal"
             >
-              Falar com especialista agora
+              Falar com a Fraga pelo WhatsApp
             </PremiumButton>
             <a
               href="#servicos"
               className="group inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl text-sm font-semibold border border-white/20 text-white hover:bg-white/10 transition-colors"
             >
-              Ver soluções contábeis
+              Ver como podemos ajudar
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden border border-white/10 max-w-2xl">
             {[
-              { v: 50, suf: "+", label: "anos de experiência" },
-              { v: 1000, suf: "+", label: "casos de sucesso" },
-              { v: 100, suf: "%", label: "atendimento nacional" },
-              { v: 4, suf: ",9★", label: "avaliação clientes" },
+              { v: 50, suf: "+", label: "anos de história" },
+              { v: 1000, suf: "+", label: "empresas atendidas" },
+              { v: 1974, suf: "", label: "fundada em" },
+              { v: 4, suf: ",9★", label: "avaliação Google" },
             ].map((s, i) => (
               <div key={i} className="bg-[oklch(0.13_0.025_220)] p-4 lg:p-5">
                 <div className="font-display text-2xl lg:text-3xl font-bold text-white tracking-tight">
