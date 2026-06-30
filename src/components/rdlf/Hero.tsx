@@ -14,10 +14,10 @@ export function Hero() {
       {/* Full-bleed container filling the entire first section */}
       <div className="relative w-full overflow-hidden min-h-screen grain">
 
-        {/* Animated shader background — green only, deep, subtle */}
+        {/* Animated shader background — Fraga teal */}
         <div className="absolute inset-0 z-0 opacity-80 md:opacity-100">
           <ColorBends
-            colors={["#073534", "#0B4644", "#041F1F", "#0E5A56"]}
+            colors={["#36a2ac", "#2a8a93", "#1f6f78", "#5fb8c1"]}
             rotation={112}
             speed={0.12}
             scale={1.18}
@@ -35,8 +35,8 @@ export function Hero() {
         </div>
 
         {/* Overlays for legibility */}
-        <div className="absolute inset-0 z-[1] bg-[radial-gradient(circle_at_50%_42%,rgba(5,7,6,0.58)_0%,rgba(5,7,6,0.44)_28%,rgba(4,31,31,0.68)_58%,rgba(5,7,6,0.86)_100%)] pointer-events-none" />
-        <div className="absolute inset-0 z-[2] bg-[linear-gradient(180deg,rgba(5,7,6,0.38)_0%,rgba(5,7,6,0.16)_36%,rgba(5,7,6,0.78)_100%)] pointer-events-none" />
+        <div className="absolute inset-0 z-[1] bg-[radial-gradient(circle_at_50%_42%,rgba(31,111,120,0.35)_0%,rgba(31,111,120,0.20)_28%,rgba(31,111,120,0.42)_58%,rgba(31,111,120,0.55)_100%)] pointer-events-none" />
+        <div className="absolute inset-0 z-[2] bg-[linear-gradient(180deg,rgba(54,162,172,0.15)_0%,rgba(54,162,172,0.05)_36%,rgba(31,111,120,0.45)_100%)] pointer-events-none" />
         <div className="absolute inset-0 z-[3] opacity-[0.035] pointer-events-none [background-image:radial-gradient(rgba(245,240,225,0.42)_0.5px,transparent_0.5px)] [background-size:4px_4px]" />
 
         {/* Content */}
@@ -92,9 +92,9 @@ export function Hero() {
 
         </div>
 
-        {/* Smooth green transition fading into next section */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[4] h-[34vh] bg-gradient-to-b from-transparent via-[#041F1F]/60 to-[#041F1F]" />
-        <div className="pointer-events-none absolute -bottom-[18vh] left-1/2 z-[3] h-[42vh] w-[92vw] -translate-x-1/2 rounded-[50%] bg-[#073534]/45 blur-[110px]" />
+        {/* Smooth teal transition fading into next section */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[4] h-[34vh] bg-gradient-to-b from-transparent via-[#2a8a93]/55 to-[#36a2ac]" />
+        <div className="pointer-events-none absolute -bottom-[18vh] left-1/2 z-[3] h-[42vh] w-[92vw] -translate-x-1/2 rounded-[50%] bg-[#1f6f78]/40 blur-[110px]" />
       </div>
     </section>
   );
