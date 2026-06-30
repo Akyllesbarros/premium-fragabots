@@ -364,8 +364,8 @@ function HeroComposition({ mouse }: { mouse: { x: number; y: number } }) {
         style={tx(-0.8)}
       >
         <div className="flex items-center gap-2 mb-2">
-          <ShieldCheck className="w-4 h-4 text-accent" />
-          <div className="text-[11px] uppercase tracking-wider text-white/50 font-semibold">Conformidade</div>
+          <span className="h-px w-6 bg-accent" />
+          <div className="text-[10px] uppercase tracking-[0.22em] text-white/50 font-semibold">Conformidade</div>
         </div>
         <div className="font-display text-3xl font-bold text-white">100<span className="text-accent">%</span></div>
         <div className="text-[11px] text-white/55">obrigações em dia</div>
@@ -376,8 +376,8 @@ function HeroComposition({ mouse }: { mouse: { x: number; y: number } }) {
         style={tx(-0.6)}
       >
         <div className="flex items-center gap-2 mb-2">
-          <FileCheck className="w-4 h-4" />
-          <div className="text-[11px] uppercase tracking-wider font-bold">Relatório do mês</div>
+          <span className="h-px w-6 bg-current opacity-60" />
+          <div className="text-[10px] uppercase tracking-[0.22em] font-bold">Relatório do mês</div>
         </div>
         <div className="font-display text-base font-bold leading-tight">
           Apuração fiscal, folha e DCTF entregues no prazo.
@@ -390,8 +390,8 @@ function HeroComposition({ mouse }: { mouse: { x: number; y: number } }) {
         style={{ ...tx(0.9), animationDelay: "1.2s" }}
       >
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-gradient-accent flex items-center justify-center">
-            <Star className="w-4 h-4 fill-accent-foreground text-accent-foreground" />
+          <div className="w-10 h-10 rounded-full bg-gradient-accent flex items-center justify-center font-display font-black text-accent-foreground text-sm">
+            G
           </div>
           <div>
             <div className="font-display text-base font-bold text-white">4,9/5</div>
