@@ -471,7 +471,7 @@ function HistoryAuthority() {
               <div className="absolute inset-0 p-8 flex flex-col justify-between">
                 <div className="flex items-center justify-between text-white">
                   <div className="font-display text-xl font-bold">Desde<br/>1974</div>
-                  <Building2 className="w-7 h-7 opacity-70" />
+                  <span className="text-[10px] uppercase tracking-[0.28em] text-white/55">Fraga · ES</span>
                 </div>
                 <div className="text-white">
                   <div className="font-display text-6xl font-black tracking-tight">F</div>
