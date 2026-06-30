@@ -1297,9 +1297,11 @@ function FinalCta() {
           Chamar a Fraga no WhatsApp
         </PremiumButton>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-white/55">
-          <span className="inline-flex items-center gap-2"><Phone className="w-4 h-4 text-accent" /> (27) 98848-2268</span>
-          <span className="inline-flex items-center gap-2"><MapPin className="w-4 h-4 text-accent" /> Vila Velha · ES</span>
-          <span className="inline-flex items-center gap-2"><Clock className="w-4 h-4 text-accent" /> Resposta rápida no WhatsApp</span>
+          <span><span className="text-[10px] uppercase tracking-[0.22em] text-accent-glow/80 mr-2">Tel.</span> (27) 98848-2268</span>
+          <span className="text-white/30">·</span>
+          <span><span className="text-[10px] uppercase tracking-[0.22em] text-accent-glow/80 mr-2">Sede</span> Vila Velha · ES</span>
+          <span className="text-white/30">·</span>
+          <span><span className="text-[10px] uppercase tracking-[0.22em] text-accent-glow/80 mr-2">Resposta</span> rápida no WhatsApp</span>
         </div>
       </div>
     </section>
