@@ -1,77 +1,184 @@
-import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { ArrowUpRight, MessageCircle, Check, Phone, Video } from "lucide-react";
 import { motion } from "framer-motion";
-import { ScrollReveal, SplitTextReveal, MagneticButton, FloatingBadge } from "./motion/kinetic";
+import { ScrollReveal, SplitTextReveal, MagneticButton } from "./motion/kinetic";
+import fragaLogo from "@/assets/fraga-logo.png.asset.json";
+
+const WA_PRIMARY =
+  "https://wa.me/5527988482268?text=" +
+  encodeURIComponent(
+    "Olá, quero abrir minha empresa com a Fraga Contabilidade. Pode me ajudar a entender o melhor caminho para abrir meu CNPJ com segurança?"
+  );
+const WA_SECONDARY =
+  "https://wa.me/5527988482268?text=" +
+  encodeURIComponent("Olá, quero falar com um especialista da Fraga sobre abertura de empresa.");
 
 export function FinalCTA() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="relative py-36 md:py-52">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,oklch(0.24_0.05_175/0.55),#030504))]" />
-        <div className="absolute inset-0 -z-10 grain" />
+    <section id="contato" className="relative overflow-hidden py-24 md:py-36">
+      {/* Background layers */}
+      <div className="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_at_center,oklch(0.24_0.05_175/0.85),#030504_75%)]" />
+      <div className="absolute inset-0 -z-10 grain opacity-40" />
+      <span className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-display italic text-[40vw] md:text-[24vw] leading-none text-white/[0.035] select-none tracking-[-0.05em]">
+        Fraga
+      </span>
 
-        {/* Light sweep */}
-        <motion.div
-          aria-hidden
-          initial={{ x: "-120%" }}
-          whileInView={{ x: "120%" }}
-          viewport={{ once: true }}
-          transition={{ duration: 2.4, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-          className="absolute inset-y-0 -z-10 w-1/3 bg-gradient-to-r from-transparent via-[color:var(--gold)]/20 to-transparent blur-2xl"
-        />
+      <div className="container-rdlf relative">
+        <div className="relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/10 bg-gradient-to-br from-[oklch(0.22_0.05_175/0.85)] via-[oklch(0.16_0.045_175/0.9)] to-[oklch(0.09_0.035_175/0.95)] backdrop-blur-xl px-6 py-14 md:px-14 md:py-20 lg:px-20">
+          {/* Glow behind phone */}
+          <div className="pointer-events-none absolute -right-20 top-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-[color:var(--gold)]/15 blur-[120px]" />
 
-        {/* Giant monogram */}
-        <span id="contato" className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-display italic text-[44vw] md:text-[28vw] leading-none text-white/[0.04] select-none tracking-[-0.05em]">
-          Fraga
-        </span>
+          <div className="grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 items-center relative">
+            {/* Left — Copy */}
+            <div className="relative z-10">
+              <ScrollReveal>
+                <span className="eyebrow inline-flex">— Abertura de empresa · atendimento direto</span>
+              </ScrollReveal>
 
-        <div className="container-rdlf relative text-center max-w-3xl">
-          <ScrollReveal>
-            <span className="eyebrow inline-flex">— Abertura de empresa · atendimento direto</span>
-          </ScrollReveal>
+              <h2 className="font-display text-[clamp(2.2rem,5vw,4.6rem)] leading-[1] tracking-[-0.035em] text-bone mt-5">
+                <SplitTextReveal
+                  text="Abra sua empresa conversando direto com quem entende."
+                  highlight={["conversando", "entende."]}
+                />
+              </h2>
 
-          <h2 className="font-display text-[clamp(2.4rem,6vw,5.8rem)] leading-[0.98] tracking-[-0.035em] text-bone mt-6">
-            <SplitTextReveal
-              text="Pronto para abrir sua empresa com segurança?"
-              highlight={["abrir", "segurança?"]}
-            />
-          </h2>
+              <ScrollReveal delay={0.25}>
+                <p className="mt-7 text-bone/70 text-[15px] md:text-base max-w-lg leading-relaxed">
+                  Fale com a Fraga pelo WhatsApp e receba orientação para abrir seu CNPJ com
+                  clareza, segurança tributária e acompanhamento contábil desde o primeiro passo.
+                </p>
+              </ScrollReveal>
 
-          <ScrollReveal delay={0.3}>
-            <p className="mt-8 text-bone/65 text-[15px] md:text-base max-w-xl mx-auto leading-relaxed">
-              Fale direto com a Fraga pelo WhatsApp e receba orientação para começar sua empresa
-              com o enquadramento correto, clareza tributária e suporte contábil desde o primeiro passo.
-            </p>
-          </ScrollReveal>
+              <ScrollReveal delay={0.4}>
+                <div className="mt-9 flex flex-wrap gap-4">
+                  <MagneticButton href={WA_PRIMARY}>
+                    Abrir minha empresa agora
+                    <ArrowUpRight className="h-4 w-4" />
+                  </MagneticButton>
+                  <a
+                    href={WA_SECONDARY}
+                    aria-label="Falar com especialista da Fraga pelo WhatsApp"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3.5 text-sm text-bone/85 hover:border-[color:var(--gold)]/50 hover:text-bone transition-colors"
+                  >
+                    <MessageCircle className="h-4 w-4" />
+                    Falar com especialista
+                  </a>
+                </div>
+              </ScrollReveal>
 
-          <ScrollReveal delay={0.45}>
-            <div className="mt-12 flex flex-wrap justify-center gap-4">
-              <MagneticButton href="https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20Contabilidade.%20Pode%20me%20ajudar%20a%20entender%20o%20melhor%20caminho%3F">
-                Abrir minha empresa agora
-                <ArrowUpRight className="h-4 w-4" />
-              </MagneticButton>
-              <a
-                href="https://wa.me/5527988482268?text=Olá,%20quero%20falar%20com%20um%20especialista%20da%20Fraga%20sobre%20abertura%20de%20empresa."
-                className="inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3.5 text-sm text-bone/85 hover:border-[color:var(--gold)]/50 hover:text-bone transition-colors"
-              >
-                <MessageCircle className="h-4 w-4" />
-                Falar com especialista
-              </a>
+              <ScrollReveal delay={0.5}>
+                <p className="mt-6 text-xs uppercase tracking-[0.22em] text-bone/50">
+                  Atendimento consultivo para abertura de empresa em Vila Velha e no Espírito Santo.
+                </p>
+              </ScrollReveal>
             </div>
-          </ScrollReveal>
 
-          <ScrollReveal delay={0.55}>
-            <p className="mt-6 text-xs uppercase tracking-[0.22em] text-bone/50">
-              Atendimento consultivo para abertura de CNPJ em Vila Velha e no Espírito Santo.
-            </p>
-          </ScrollReveal>
-
-          <div className="mt-14 flex flex-wrap justify-center gap-2">
-            {["Abertura de CNPJ", "Vila Velha · ES", "Espírito Santo", "Atendimento Brasil"].map((t, i) => (
-              <FloatingBadge key={t} label={t} delay={0.55 + i * 0.08} />
-            ))}
+            {/* Right — WhatsApp mockup */}
+            <ScrollReveal delay={0.3}>
+              <WhatsAppMockup />
+            </ScrollReveal>
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function WhatsAppMockup() {
+  return (
+    <div className="relative mx-auto max-w-sm lg:max-w-md">
+      {/* Floating decorative dots */}
+      <div className="pointer-events-none absolute -left-6 top-10 h-2 w-2 rounded-full bg-[color:var(--gold)]/60" />
+      <div className="pointer-events-none absolute -left-10 top-24 h-1.5 w-1.5 rounded-full bg-white/30" />
+      <div className="pointer-events-none absolute -right-4 -top-3 h-3 w-3 rounded-full bg-[color:var(--gold)]/40" />
+
+      <motion.div
+        initial={{ rotate: -4, y: 20, opacity: 0 }}
+        whileInView={{ rotate: -4, y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+        className="relative rounded-[2rem] border border-white/15 bg-[#0b1413] shadow-[0_40px_120px_-30px_rgba(0,0,0,0.7)] overflow-hidden"
+      >
+        {/* Header */}
+        <div className="flex items-center gap-3 px-4 py-3.5 bg-[oklch(0.22_0.045_175)] border-b border-white/10">
+          <div className="h-9 w-9 rounded-full bg-white/95 p-1.5 flex items-center justify-center">
+            <img src={fragaLogo.url} alt="Fraga Contabilidade" className="h-full w-full object-contain" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-1.5">
+              <p className="text-bone text-sm font-medium truncate">Fraga Contabilidade</p>
+              <Check className="h-3 w-3 text-[color:var(--gold-light)]" strokeWidth={3} />
+            </div>
+            <p className="text-[11px] text-bone/50">online agora · atendimento consultivo</p>
+          </div>
+          <Video className="h-4 w-4 text-bone/40" />
+          <Phone className="h-4 w-4 text-bone/40" />
+        </div>
+
+        {/* Chat body */}
+        <div className="px-4 py-5 space-y-3 bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><circle cx=%2230%22 cy=%2230%22 r=%220.5%22 fill=%22white%22 opacity=%220.03%22/></svg>')] bg-[#0b1413]">
+          <Bubble side="in" delay={0.1}>Olá, quero abrir minha empresa. Por onde começo?</Bubble>
+          <Bubble side="out" delay={0.35}>
+            Olá! Vamos te orientar na abertura do CNPJ, escolha do regime tributário e primeiros passos contábeis.
+          </Bubble>
+          <Bubble side="in" delay={0.6}>Preciso saber qual tipo de empresa faz sentido para mim.</Bubble>
+          <Bubble side="out" delay={0.85}>
+            Perfeito. A Fraga analisa sua atividade, faturamento previsto e modelo de operação para indicar o caminho mais seguro.
+          </Bubble>
+          <Bubble side="out" delay={1.1} highlight>
+            Comece com clareza desde o primeiro dia.
+          </Bubble>
+
+          {/* Typing */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 1.35, duration: 0.4 }}
+            className="flex items-center gap-1.5 pl-1"
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-bone/40 animate-pulse" />
+            <span className="h-1.5 w-1.5 rounded-full bg-bone/40 animate-pulse [animation-delay:150ms]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-bone/40 animate-pulse [animation-delay:300ms]" />
+          </motion.div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
+function Bubble({
+  side,
+  children,
+  delay = 0,
+  highlight = false,
+}: {
+  side: "in" | "out";
+  children: React.ReactNode;
+  delay?: number;
+  highlight?: boolean;
+}) {
+  const isOut = side === "out";
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 8 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      className={`flex ${isOut ? "justify-start" : "justify-end"}`}
+    >
+      <div
+        className={
+          isOut
+            ? `max-w-[82%] rounded-2xl rounded-tl-sm px-3.5 py-2 text-[13px] leading-relaxed text-bone/90 border ${
+                highlight
+                  ? "bg-[oklch(0.28_0.06_175/0.75)] border-[color:var(--gold)]/40"
+                  : "bg-white/[0.06] border-white/10"
+              }`
+            : "max-w-[82%] rounded-2xl rounded-tr-sm px-3.5 py-2 text-[13px] leading-relaxed text-[#e6f4ea] bg-[oklch(0.32_0.08_155/0.85)] border border-[oklch(0.4_0.1_155/0.5)]"
+        }
+      >
+        {children}
+      </div>
+    </motion.div>
   );
 }
