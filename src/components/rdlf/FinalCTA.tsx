@@ -2,7 +2,7 @@ import { ArrowUpRight, MessageCircle, Check, Phone, Video } from "lucide-react";
 import { motion } from "framer-motion";
 import { ScrollReveal, SplitTextReveal } from "./motion/kinetic";
 import { ShinyButton } from "./ShinyButton";
-import fragaLogo from "@/assets/fraga-logo.png.asset.json";
+import fragaAvatar from "@/assets/fraga-avatar.jpg.asset.json";
 
 const WA_PRIMARY =
   "https://wa.me/5527988482268?text=" +
@@ -109,7 +109,7 @@ function WhatsAppMockup() {
         {/* Header */}
         <div className="flex items-center gap-3 px-4 py-3.5 bg-[oklch(0.22_0.045_175)] border-b border-white/10">
           <img
-            src={fragaLogo.url}
+            src={fragaAvatar.url}
             alt="Fraga Contabilidade"
             className="h-10 w-10 rounded-full object-cover ring-2 ring-[color:var(--gold)]/60 bg-[#0d464c]"
           />
