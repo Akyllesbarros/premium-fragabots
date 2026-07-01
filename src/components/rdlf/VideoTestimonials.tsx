@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { Eyebrow, Reveal } from "./primitives";
-import { MagneticButton } from "./motion/kinetic";
+import { ShinyButton } from "./ShinyButton";
 
 const testimonials = [
   {
@@ -90,10 +90,10 @@ export function VideoTestimonials() {
             <p className="text-bone/75 text-base md:text-lg">
               Quer começar sua empresa com esse mesmo suporte?
             </p>
-            <MagneticButton href="https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20Contabilidade.%20Pode%20me%20ajudar%20a%20entender%20o%20melhor%20caminho%3F">
+            <ShinyButton href="https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20Contabilidade.%20Pode%20me%20ajudar%20a%20entender%20o%20melhor%20caminho%3F">
               Quero começar com esse suporte
               <ArrowUpRight className="h-4 w-4" />
-            </MagneticButton>
+            </ShinyButton>
           </div>
         </Reveal>
       </div>

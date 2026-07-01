@@ -414,3 +414,173 @@ html, body { overflow-x: clip; }
   }
   html { scroll-behavior: auto; }
 }
+
+/* ---------- ShinyButton (Fraga premium CTA) ---------- */
+@property --shiny-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.shiny-cta {
+  --shiny-fg: #f7f4ea;
+  --shiny-gold: #ffa819;
+  --shiny-gold-soft: #ffd99a;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.75rem;
+  border-radius: 9999px;
+  background:
+    linear-gradient(180deg, #0b3538 0%, #041f21 100%);
+  color: var(--shiny-fg);
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.005em;
+  text-decoration: none;
+  isolation: isolate;
+  border: 1px solid rgba(255, 168, 25, 0.18);
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    transform 200ms ease,
+    box-shadow 300ms ease,
+    border-color 300ms ease;
+  box-shadow:
+    0 10px 30px -14px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.shiny-cta::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--shiny-angle),
+    rgba(255, 168, 25, 0.05) 0deg,
+    #ffd99a 60deg,
+    #ffa819 120deg,
+    rgba(255, 168, 25, 0.05) 200deg,
+    #ffd99a 300deg,
+    rgba(255, 168, 25, 0.05) 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  animation: shiny-cta-spin 6s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.shiny-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 224, 138, 0.16) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  animation: shiny-cta-sweep 4.5s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.shiny-cta > .shiny-cta__label {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shiny-cta:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 168, 25, 0.4);
+  box-shadow:
+    0 16px 40px -14px rgba(255, 168, 25, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.shiny-cta:active {
+  transform: translateY(1px);
+}
+
+.shiny-cta:focus-visible {
+  outline: 2px solid var(--shiny-gold-soft);
+  outline-offset: 3px;
+}
+
+.shiny-cta--secondary {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.07) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  color: #f5f0e1;
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 8px 24px -14px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.shiny-cta--secondary::before {
+  background: conic-gradient(
+    from var(--shiny-angle),
+    rgba(255, 168, 25, 0) 0deg,
+    rgba(255, 217, 154, 0.7) 90deg,
+    rgba(255, 168, 25, 0) 180deg,
+    rgba(255, 217, 154, 0.5) 270deg,
+    rgba(255, 168, 25, 0) 360deg
+  );
+  animation-duration: 8s;
+}
+
+.shiny-cta--secondary::after {
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 70%
+  );
+}
+
+.shiny-cta--sm {
+  padding: 0.7rem 1.25rem;
+  font-size: 0.8rem;
+}
+
+.shiny-cta--block {
+  width: 100%;
+}
+
+@keyframes shiny-cta-spin {
+  to {
+    --shiny-angle: 360deg;
+  }
+}
+
+@keyframes shiny-cta-sweep {
+  0% { transform: translateX(-100%); }
+  55%, 100% { transform: translateX(100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shiny-cta,
+  .shiny-cta::before,
+  .shiny-cta::after {
+    animation: none;
+    transition-duration: 150ms;
+  }
+}
