@@ -64,7 +64,7 @@ export function Header() {
                 href="https://wa.me/5527988482268?text=Olá,%20vim%20pela%20landing%20page%20da%20Fraga%20Contabilidade%20e%20gostaria%20de%20falar%20com%20um%20especialista."
                 size="sm"
               >
-                Falar com a Fraga
+                Falar com especialista
               </ShinyButton>
             </div>
             <button
@@ -118,7 +118,7 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 block
               >
-                Falar com a Fraga
+                Falar com especialista
               </ShinyButton>
               </div>
             </nav>

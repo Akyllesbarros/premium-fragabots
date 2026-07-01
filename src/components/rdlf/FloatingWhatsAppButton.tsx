@@ -9,7 +9,7 @@ export function FloatingWhatsAppButton() {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Falar com a Fraga pelo WhatsApp"
+      aria-label="Falar com especialista pelo WhatsApp"
       className="rdlf-whatsapp-float group fixed bottom-6 right-5 z-[80] flex h-[58px] w-[58px] items-center justify-center rounded-full border border-white/15 bg-[#25d366] shadow-[0_18px_50px_rgba(0,0,0,0.35)] transition duration-300 hover:scale-105 hover:bg-[#1ebe57] md:bottom-8 md:right-8 md:h-[62px] md:w-[62px]"
     >
       <motion.span

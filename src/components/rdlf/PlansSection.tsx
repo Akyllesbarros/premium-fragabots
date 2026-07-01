@@ -138,7 +138,7 @@ export function PlansSection() {
                 size="sm"
                 className="flex-none"
               >
-                Falar com a Fraga
+                Falar com especialista
                 <ArrowUpRight className="h-4 w-4" />
               </ShinyButton>
             </div>

@@ -110,7 +110,7 @@ export function AboutAuthority() {
           <Reveal delay={0.28}>
             <div className="mt-9">
               <ShinyButton href="https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20Contabilidade%20e%20gostaria%20de%20entender%20o%20melhor%20caminho.">
-                Falar com a Fraga
+                Falar com especialista
                 <ArrowUpRight className="h-4 w-4" />
               </ShinyButton>
             </div>
