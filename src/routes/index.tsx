@@ -16,10 +16,10 @@ import { FloatingWhatsAppButton } from "@/components/rdlf/FloatingWhatsAppButton
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Contabilidade em Vila Velha e para empresas no Brasil | Fraga Contabilidade" },
-      { name: "description", content: "Conte com a Fraga Contabilidade para assessoria contábil, planejamento tributário, abertura de empresas, BPO financeiro e soluções estratégicas para o seu negócio." },
-      { property: "og:title", content: "Fraga Contabilidade — Contabilidade estratégica desde 1974" },
-      { property: "og:description", content: "+50 anos de experiência, +1.000 casos de sucesso. Fale com um especialista pelo WhatsApp." },
+      { title: "Abertura de Empresa em Vila Velha | Fraga Contabilidade" },
+      { name: "description", content: "Abra sua empresa com segurança e orientação contábil. A Fraga Contabilidade ajuda na abertura de CNPJ, escolha do regime tributário e organização inicial da sua empresa em Vila Velha e no Espírito Santo." },
+      { property: "og:title", content: "Abertura de Empresa em Vila Velha | Fraga Contabilidade" },
+      { property: "og:description", content: "Abra sua empresa com clareza desde o primeiro dia. Orientação para abertura de CNPJ, escolha do regime tributário e contabilidade em Vila Velha e no Espírito Santo." },
     ],
   }),
   component: LandingPage,

@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Eyebrow } from "./primitives";
 
-const HEADLINE = "Impostos em ordem. Números claros. Decisões menos no escuro.";
+const HEADLINE = "Abrir uma empresa não é só emitir um CNPJ.";
 
 export function Manifesto() {
   const ref = useRef<HTMLDivElement>(null);
@@ -78,8 +78,9 @@ export function Manifesto() {
             transition={{ duration: 1, delay: 0.4 }}
             className="mt-10 max-w-2xl text-bone/65 leading-[1.85] text-[15px]"
           >
-            Uma boa contabilidade não aparece só no fim do mês. Ela ajuda o empresário a enxergar
-            riscos, organizar obrigações e entender o que os números estão dizendo.
+            Antes de começar, é preciso entender o melhor tipo de empresa, o regime tributário adequado,
+            as obrigações fiscais e o caminho mais seguro para operar com tranquilidade. Uma escolha
+            errada no início pode gerar impostos maiores, burocracias desnecessárias e retrabalho.
           </motion.p>
         </div>
 

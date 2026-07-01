@@ -1,12 +1,12 @@
 const items = [
-  "Planejamento tributário",
-  "Rotina contábil mensal",
-  "Folha e Departamento Pessoal",
-  "BPO financeiro",
+  "Abertura de empresa",
   "Abertura de CNPJ",
-  "Regularização fiscal",
-  "Apuração de impostos",
-  "Consultoria empresarial",
+  "Escolha do regime tributário",
+  "Simples Nacional",
+  "Contador para abrir empresa",
+  "Planejamento tributário inicial",
+  "Abertura de empresa em Vila Velha",
+  "Contabilidade para novos CNPJs",
 ];
 
 export function TrustStrip() {
