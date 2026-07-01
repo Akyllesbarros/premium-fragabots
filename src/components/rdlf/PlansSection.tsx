@@ -132,15 +132,14 @@ export function PlansSection() {
                 Não sabe qual plano escolher para abrir sua empresa? A Fraga orienta o melhor
                 caminho para o seu momento.
               </p>
-              <a
+              <ShinyButton
                 href="https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20e%20n%C3%A3o%20sei%20qual%20plano%20escolher."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--gold)] px-5 py-3 text-sm font-medium text-[color:var(--ink)] hover:bg-[color:var(--gold-light)] transition-colors flex-none"
+                size="sm"
+                className="flex-none"
               >
                 Falar com a Fraga
                 <ArrowUpRight className="h-4 w-4" />
-              </a>
+              </ShinyButton>
             </div>
           </div>
 
@@ -198,16 +197,15 @@ export function PlansSection() {
                 </p>
               </div>
 
-              <a
+              <ShinyButton
                 href={waBase + current.waText}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[color:var(--gold)] px-6 py-4 text-sm text-[color:var(--ink)] font-medium hover:bg-[color:var(--gold-light)] transition-colors"
+                block
+                className="mt-6"
               >
                 <MessageCircle className="h-4 w-4" />
                 Consultar plano {current.name}
                 <ArrowUpRight className="h-4 w-4" />
-              </a>
+              </ShinyButton>
             </div>
           </div>
         </div>
