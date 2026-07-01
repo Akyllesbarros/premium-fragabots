@@ -17,53 +17,53 @@ const baseWa = "https://wa.me/5527988482268?text=Olá,%20vim%20pela%20landing%20
 
 const featured: Area = {
   n: "01",
-  title: "Planejamento tributário",
-  desc: "Avaliamos se a empresa está no regime adequado e onde existem riscos, excessos ou oportunidades dentro da lei.",
-  tag: "Decisão com clareza",
-  items: ["Análise de regime", "Simulação de cenários", "Acompanhamento mensal"],
-  link: baseWa + "Planejamento%20Tribut%C3%A1rio.",
+  title: "Análise inicial e orientação tributária",
+  desc: "Entendemos sua atividade, expectativa de faturamento e modelo de operação para indicar o melhor tipo de empresa e o regime tributário mais adequado antes de abrir o CNPJ.",
+  tag: "Começar do jeito certo",
+  items: ["Definição do tipo de empresa", "Simples Nacional, Presumido ou Real", "Simulação de cenários"],
+  link: baseWa + "abertura%20de%20empresa%20com%20orienta%C3%A7%C3%A3o%20tribut%C3%A1ria.",
 };
 
 const areas: Area[] = [
   {
     n: "02",
-    title: "Rotina contábil",
-    desc: "Apurações, guias, declarações e obrigações acessórias acompanhadas de perto, com prazos cumpridos e relatórios mensais.",
-    tag: "Sem atraso",
-    items: ["Apuração de impostos", "Obrigações acessórias", "Relatórios mensais"],
-    link: baseWa + "Rotina%20Cont%C3%A1bil.",
+    title: "Abertura do CNPJ",
+    desc: "Acompanhamos o processo de formalização — natureza jurídica, CNAEs, contrato social e inscrições — para sua empresa começar dentro das exigências legais.",
+    tag: "Formalização segura",
+    items: ["Registro na junta", "Inscrições municipais e estaduais", "Certificado digital"],
+    link: baseWa + "abertura%20de%20CNPJ.",
   },
   {
     n: "03",
-    title: "Departamento pessoal",
-    desc: "Folha, admissões, desligamentos, eSocial e rotinas trabalhistas conduzidas por uma equipe dedicada.",
-    tag: "Folha em dia",
-    items: ["Folha de pagamento", "eSocial", "Admissões e rescisões"],
-    link: baseWa + "Departamento%20Pessoal.",
+    title: "Escolha do regime tributário",
+    desc: "Orientamos sobre Simples Nacional, Lucro Presumido ou Lucro Real conforme a sua atividade e faturamento previsto, evitando decisões que podem custar caro depois.",
+    tag: "Impostos previsíveis",
+    items: ["Análise da atividade", "Comparativo de regimes", "Recomendação técnica"],
+    link: baseWa + "escolha%20do%20regime%20tribut%C3%A1rio.",
   },
   {
     n: "04",
-    title: "BPO financeiro",
-    desc: "Contas a pagar e a receber, conciliação bancária e fluxo de caixa organizados para a empresa decidir com dados reais.",
-    tag: "Caixa organizado",
-    items: ["Contas a pagar", "Conciliação bancária", "Fluxo de caixa"],
-    link: baseWa + "BPO%20Financeiro.",
+    title: "Organização contábil inicial",
+    desc: "Estruturamos os primeiros passos da rotina fiscal, contábil e financeira para que sua empresa opere organizada desde o primeiro mês.",
+    tag: "Rotina desde o dia 1",
+    items: ["Emissão de notas", "Apuração de impostos", "Obrigações acessórias"],
+    link: baseWa + "organiza%C3%A7%C3%A3o%20cont%C3%A1bil%20inicial.",
   },
   {
     n: "05",
-    title: "Abertura e regularização",
-    desc: "Abertura de CNPJ, troca de regime, regularização fiscal e tudo o que prepara a empresa para operar sem pendências.",
-    tag: "Estrutura desde o início",
-    items: ["Abertura de CNPJ", "Alterações contratuais", "Regularização"],
-    link: baseWa + "Abertura%20e%20Regulariza%C3%A7%C3%A3o.",
+    title: "Departamento pessoal desde a admissão",
+    desc: "Se sua empresa já nasce com funcionários, cuidamos de admissões, folha, eSocial e demais rotinas trabalhistas para começar em conformidade.",
+    tag: "Folha em dia",
+    items: ["Admissões", "Folha e eSocial", "Rotinas trabalhistas"],
+    link: baseWa + "departamento%20pessoal%20na%20abertura.",
   },
   {
     n: "06",
-    title: "Consultoria empresarial",
-    desc: "Apoio na leitura de números, indicadores e decisões de investimento — para crescer com base no que os relatórios dizem.",
-    tag: "Decidir com dado",
-    items: ["Leitura de indicadores", "Cenários", "Reuniões periódicas"],
-    link: baseWa + "Consultoria%20Empresarial.",
+    title: "Suporte após a abertura",
+    desc: "Depois que o CNPJ está ativo, seguimos acompanhando sua empresa para manter tudo em ordem e apoiar as próximas decisões contábeis e tributárias.",
+    tag: "Continuidade",
+    items: ["Rotina mensal", "Consultoria contábil", "WhatsApp direto"],
+    link: baseWa + "suporte%20cont%C3%A1bil%20cont%C3%ADnuo.",
   },
 ];
 
@@ -76,12 +76,13 @@ export function PracticeAreas() {
         <div className="grid gap-10 lg:grid-cols-12 mb-16">
           <div className="lg:col-span-8 lg:col-start-3">
             <ScrollReveal>
-              <Eyebrow>Áreas de atuação</Eyebrow>
+              <Eyebrow>Processo de abertura</Eyebrow>
             </ScrollReveal>
             <ScrollReveal delay={0.08}>
               <SectionTitle className="mt-5">
-                Seis frentes integradas — uma única{" "}
-                <span className="italic text-[color:var(--gold-light)]">contabilidade</span>.
+                Da ideia ao{" "}
+                <span className="italic text-[color:var(--gold-light)]">CNPJ</span>: a Fraga
+                acompanha cada etapa.
               </SectionTitle>
             </ScrollReveal>
           </div>
@@ -161,7 +162,7 @@ function FeaturedCard({ area }: { area: Area }) {
           rel="noopener noreferrer"
           className="mt-12 inline-flex items-center gap-2 text-[12px] tracking-[0.18em] uppercase text-[color:var(--gold-light)]"
         >
-          Avaliar proteção
+          Começar minha abertura
           <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
         </a>
       </div>

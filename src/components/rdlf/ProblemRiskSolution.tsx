@@ -6,31 +6,31 @@ import { ScrollReveal, SplitTextReveal } from "./motion/kinetic";
 const stages = [
   {
     n: "01",
-    label: "Como começa",
-    title: "Contabilidade no piloto automático.",
-    body: "A empresa recebe guias por e-mail, paga e segue. Não sabe ao certo se está no regime certo, se há imposto a recuperar ou se há risco fiscal acumulado.",
+    label: "Antes de abrir",
+    title: "Decisões importantes vêm antes do CNPJ.",
+    body: "Tipo de empresa, atividade, sócios, regime tributário: cada escolha inicial impacta impostos, obrigações e a rotina que sua empresa terá pelos próximos anos.",
     side: "right",
   },
   {
     n: "02",
     label: "Sinal de alerta",
-    title: "Os números não batem com o que o empresário sente.",
-    body: "Caixa apertado mesmo com bom faturamento, surpresas com impostos, folha com erros e relatórios que não ajudam a decidir nada.",
+    title: "Abrir sem orientação costuma sair caro.",
+    body: "Enquadramento errado, CNAEs mal escolhidos, regime tributário inadequado e obrigações esquecidas viram impostos maiores, multas e retrabalho logo no início.",
     side: "left",
   },
   {
     n: "03",
-    label: "Como trabalhamos",
-    title: "Contabilidade conduzida de perto, com método.",
-    body: "Diagnóstico, revisão fiscal, rotina mensal cumprida em dia, BPO financeiro organizado e reuniões para que os números deixem de ser obrigação e voltem a ser ferramenta.",
+    label: "Como a Fraga trabalha",
+    title: "Abertura de empresa conduzida com método.",
+    body: "Análise da atividade, orientação sobre o melhor regime tributário, abertura do CNPJ acompanhada de perto e organização da rotina contábil desde o primeiro mês.",
     side: "right",
     big: true,
   },
   {
     n: "04",
     label: "O que muda",
-    title: "O empresário decide com clareza, não no escuro.",
-    body: "Impostos em ordem, prazos cumpridos, indicadores reais e uma equipe técnica acessível pelo WhatsApp para as dúvidas do dia a dia.",
+    title: "Sua empresa começa com clareza nos números.",
+    body: "Enquadramento adequado, impostos previsíveis, obrigações organizadas e uma equipe técnica acessível pelo WhatsApp para as dúvidas do dia a dia.",
     side: "left",
   },
 ];
@@ -51,11 +51,11 @@ export function ProblemRiskSolution() {
         <div className="grid gap-10 lg:grid-cols-12 mb-20">
           <div className="lg:col-span-9">
             <ScrollReveal>
-              <Eyebrow>Como começa → Como trabalhamos → O que muda</Eyebrow>
+              <Eyebrow>Antes de abrir → Como trabalhamos → O que muda</Eyebrow>
             </ScrollReveal>
             <h2 className="font-display text-[clamp(2.2rem,5.4vw,5rem)] leading-[0.98] tracking-[-0.03em] text-bone mt-6">
               <SplitTextReveal
-                text="Quem trabalha com a Fraga conta com clareza nos números."
+                text="Quem abre empresa com a Fraga começa com clareza nos números."
                 highlight={["clareza"]}
               />
             </h2>
