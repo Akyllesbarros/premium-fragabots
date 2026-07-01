@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Eyebrow } from "./primitives";
+import { ShinyButton } from "./ShinyButton";
 
 const HEADLINE = "Abrir uma empresa não é só emitir um CNPJ.";
 
