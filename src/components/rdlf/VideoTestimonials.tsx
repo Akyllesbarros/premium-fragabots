@@ -44,8 +44,8 @@ export function VideoTestimonials() {
           </Reveal>
           <Reveal delay={0.16}>
             <p className="mt-6 text-bone/70 text-base md:text-lg max-w-2xl leading-relaxed">
-              Veja o que empresários que caminham com a Fraga Contabilidade têm a dizer sobre uma
-              parceria feita com clareza, proximidade e segurança.
+              Empresas que caminham com a Fraga mostram o valor de ter uma contabilidade próxima,
+              clara e preparada para acompanhar cada fase do negócio — inclusive quem está começando.
             </p>
           </Reveal>
         </div>
@@ -88,10 +88,10 @@ export function VideoTestimonials() {
         <Reveal delay={0.3}>
           <div className="mt-16 flex flex-col items-center text-center gap-5">
             <p className="text-bone/75 text-base md:text-lg">
-              Quer uma contabilidade parceira para a sua empresa?
+              Quer começar sua empresa com esse mesmo suporte?
             </p>
-            <MagneticButton href="https://wa.me/5527988482268?text=Olá,%20vim%20pela%20landing%20page%20da%20Fraga%20Contabilidade%20e%20gostaria%20de%20falar%20com%20um%20especialista.">
-              Falar com a Fraga
+            <MagneticButton href="https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20Contabilidade.%20Pode%20me%20ajudar%20a%20entender%20o%20melhor%20caminho%3F">
+              Quero começar com esse suporte
               <ArrowUpRight className="h-4 w-4" />
             </MagneticButton>
           </div>

@@ -26,41 +26,47 @@ export function FinalCTA() {
 
         <div className="container-rdlf relative text-center max-w-3xl">
           <ScrollReveal>
-            <span className="eyebrow inline-flex">— Atendimento direto · sem formulário</span>
+            <span className="eyebrow inline-flex">— Abertura de empresa · atendimento direto</span>
           </ScrollReveal>
 
           <h2 className="font-display text-[clamp(2.4rem,6vw,5.8rem)] leading-[0.98] tracking-[-0.035em] text-bone mt-6">
             <SplitTextReveal
-              text="Fale direto com a Fraga pelo WhatsApp."
-              highlight={["direto", "WhatsApp."]}
+              text="Pronto para abrir sua empresa com segurança?"
+              highlight={["abrir", "segurança?"]}
             />
           </h2>
 
           <ScrollReveal delay={0.3}>
             <p className="mt-8 text-bone/65 text-[15px] md:text-base max-w-xl mx-auto leading-relaxed">
-              Sem formulários, sem intermediários. Você fala com a equipe da Fraga, explica
-              sua situação e recebe uma resposta com clareza.
+              Fale direto com a Fraga pelo WhatsApp e receba orientação para começar sua empresa
+              com o enquadramento correto, clareza tributária e suporte contábil desde o primeiro passo.
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={0.45}>
             <div className="mt-12 flex flex-wrap justify-center gap-4">
-              <MagneticButton href="https://wa.me/5527988482268?text=Olá,%20vim%20pela%20landing%20page%20da%20Fraga%20Contabilidade%20e%20gostaria%20de%20falar%20com%20um%20especialista.">
-                Falar com a Fraga
+              <MagneticButton href="https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20Contabilidade.%20Pode%20me%20ajudar%20a%20entender%20o%20melhor%20caminho%3F">
+                Abrir minha empresa agora
                 <ArrowUpRight className="h-4 w-4" />
               </MagneticButton>
               <a
-                href="https://wa.me/5527988482268"
+                href="https://wa.me/5527988482268?text=Olá,%20quero%20falar%20com%20um%20especialista%20da%20Fraga%20sobre%20abertura%20de%20empresa."
                 className="inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3.5 text-sm text-bone/85 hover:border-[color:var(--gold)]/50 hover:text-bone transition-colors"
               >
                 <MessageCircle className="h-4 w-4" />
-                Abrir WhatsApp
+                Falar com especialista
               </a>
             </div>
           </ScrollReveal>
 
+          <ScrollReveal delay={0.55}>
+            <p className="mt-6 text-xs uppercase tracking-[0.22em] text-bone/50">
+              Atendimento consultivo para abertura de CNPJ em Vila Velha e no Espírito Santo.
+            </p>
+          </ScrollReveal>
+
           <div className="mt-14 flex flex-wrap justify-center gap-2">
-            {["Vila Velha · ES", "Atendimento Brasil", "Desde 1974", "WhatsApp direto"].map((t, i) => (
+            {["Abertura de CNPJ", "Vila Velha · ES", "Espírito Santo", "Atendimento Brasil"].map((t, i) => (
               <FloatingBadge key={t} label={t} delay={0.55 + i * 0.08} />
             ))}
           </div>
