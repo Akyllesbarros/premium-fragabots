@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import { Eyebrow } from "./primitives";
 
 const HEADLINE = "Abrir uma empresa não é só emitir um CNPJ.";
@@ -82,6 +83,31 @@ export function Manifesto() {
             as obrigações fiscais e o caminho mais seguro para operar com tranquilidade. Uma escolha
             errada no início pode gerar impostos maiores, burocracias desnecessárias e retrabalho.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="mt-10 flex flex-wrap items-center gap-5"
+          >
+            <a
+              href="https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20seguran%C3%A7a%20junto%20%C3%A0%20Fraga."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-[color:var(--gold)] px-6 py-3.5 text-sm font-medium text-[color:var(--ink)] hover:bg-[color:var(--gold-light)] transition-colors"
+            >
+              Quero abrir com segurança
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
+            <a
+              href="#servicos"
+              className="group inline-flex items-center gap-2 text-sm text-bone/80 hover:text-bone transition-colors"
+            >
+              Ver como funciona
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+          </motion.div>
         </div>
 
       </div>

@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import { Eyebrow } from "./primitives";
 import { ScrollReveal, SplitTextReveal } from "./motion/kinetic";
 
@@ -77,6 +78,31 @@ export function ProblemRiskSolution() {
             ))}
           </div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mt-20 md:mt-28 flex flex-wrap items-center justify-center gap-5"
+        >
+          <a
+            href="https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20e%20come%C3%A7ar%20com%20clareza."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-[color:var(--gold)] px-6 py-3.5 text-sm font-medium text-[color:var(--ink)] hover:bg-[color:var(--gold-light)] transition-colors"
+          >
+            Abrir empresa com a Fraga
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+          <a
+            href="#planos"
+            className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3.5 text-sm text-bone/85 hover:border-[color:var(--gold)]/50 hover:text-bone transition-colors"
+          >
+            Ver planos
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
+        </motion.div>
       </div>
     </section>
   );
