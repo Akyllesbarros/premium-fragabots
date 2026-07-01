@@ -1,6 +1,7 @@
 import { ArrowUpRight, MessageCircle, Check, Phone, Video } from "lucide-react";
 import { motion } from "framer-motion";
-import { ScrollReveal, SplitTextReveal, MagneticButton } from "./motion/kinetic";
+import { ScrollReveal, SplitTextReveal } from "./motion/kinetic";
+import { ShinyButton } from "./ShinyButton";
 import fragaLogo from "@/assets/fraga-logo.png.asset.json";
 
 const WA_PRIMARY =
@@ -57,18 +58,18 @@ export function FinalCTA() {
 
               <ScrollReveal delay={0.4}>
                 <div className="mt-9 flex flex-wrap gap-4">
-                  <MagneticButton href={WA_PRIMARY}>
+                  <ShinyButton href={WA_PRIMARY}>
                     Abrir minha empresa agora
                     <ArrowUpRight className="h-4 w-4" />
-                  </MagneticButton>
-                  <a
+                  </ShinyButton>
+                  <ShinyButton
                     href={WA_SECONDARY}
-                    aria-label="Falar com especialista da Fraga pelo WhatsApp"
-                    className="inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3.5 text-sm text-bone/85 hover:border-[color:var(--gold)]/50 hover:text-bone transition-colors"
+                    variant="secondary"
+                    ariaLabel="Falar com especialista da Fraga pelo WhatsApp"
                   >
                     <MessageCircle className="h-4 w-4" />
                     Falar com especialista
-                  </a>
+                  </ShinyButton>
                 </div>
               </ScrollReveal>
 
