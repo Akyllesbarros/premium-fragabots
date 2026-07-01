@@ -5,7 +5,6 @@ import { TrustStrip } from "@/components/rdlf/TrustStrip";
 import { Manifesto } from "@/components/rdlf/Manifesto";
 import { ProblemRiskSolution } from "@/components/rdlf/ProblemRiskSolution";
 import { PracticeAreas } from "@/components/rdlf/PracticeAreas";
-import { Methodology } from "@/components/rdlf/Methodology";
 import { AboutAuthority } from "@/components/rdlf/AboutAuthority";
 import { PlansSection } from "@/components/rdlf/PlansSection";
 import { VideoTestimonials } from "@/components/rdlf/VideoTestimonials";
@@ -36,9 +35,8 @@ function LandingPage() {
         <Manifesto />
         <ProblemRiskSolution />
         <PracticeAreas />
-        <Methodology />
-        <AboutAuthority />
         <PlansSection />
+        <AboutAuthority />
         <VideoTestimonials />
         <FAQ />
         <FinalCTA />
