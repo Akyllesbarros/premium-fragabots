@@ -56,7 +56,7 @@ export function Footer() {
               rel="noopener"
               className="group inline-flex items-center gap-3 rounded-full border border-[color:var(--gold)]/50 bg-bone px-6 py-3 text-sm text-ink hover:bg-[color:var(--gold-light)] transition-colors"
             >
-              Falar com a Fraga
+              Falar com especialista
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </a>
           </div>

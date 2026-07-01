@@ -55,8 +55,8 @@ export function Hero() {
                   style={{ fontWeight: 300 }}
                 >
                   <SplitTextReveal
-                    text="Abra sua empresa com clareza desde o primeiro dia."
-                    highlight={["clareza", "primeiro", "dia."]}
+                    text="Abertura de empresa em Vila Velha para começar com a estrutura contábil certa"
+                    highlight={["estrutura", "contábil", "certa"]}
                   />
                 </h1>
 
@@ -65,22 +65,25 @@ export function Hero() {
                     className="mt-7 md:mt-9 mx-auto max-w-[620px] text-base md:text-lg text-bone/75 leading-[1.75] drop-shadow-[0_4px_22px_rgba(0,0,0,0.45)]"
                     style={{ fontWeight: 300 }}
                   >
-                    A Fraga Contabilidade orienta você em cada etapa da abertura do CNPJ — da escolha do
-                    regime tributário ao início da operação — para sua empresa nascer organizada, em Vila
-                    Velha, no Espírito Santo e em todo o Brasil.
+                    Abra seu CNPJ com orientação da Fraga para escolher o tipo de empresa, o regime
+                    tributário e os primeiros passos contábeis com segurança — em Vila Velha, no Espírito
+                    Santo e em todo o Brasil.
                   </p>
                 </ScrollReveal>
 
                 <ScrollReveal delay={0.45}>
                   <div className="mt-10 md:mt-12 flex flex-wrap items-center justify-center gap-5">
-                    <ShinyButton href="https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20Contabilidade.%20Pode%20me%20ajudar%20a%20entender%20o%20melhor%20caminho%3F">
-                      Abrir minha empresa
+                    <ShinyButton href="https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20Contabilidade.%20Pode%20me%20ajudar%20a%20entender%20o%20melhor%20caminho%20para%20abrir%20meu%20CNPJ%20com%20seguran%C3%A7a%3F">
+                      Falar com especialista
                     </ShinyButton>
                     <ShinyButton href="#servicos" variant="secondary">
-                      Falar com especialista
+                      Conhecer serviços
                       <ArrowRight className="h-4 w-4" />
                     </ShinyButton>
                   </div>
+                  <p className="mt-4 text-sm text-bone/60 text-center font-light tracking-wide">
+                    Atendimento consultivo para quem quer começar do jeito certo.
+                  </p>
                 </ScrollReveal>
 
               </div>
