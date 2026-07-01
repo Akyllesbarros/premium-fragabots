@@ -55,8 +55,8 @@ export function Hero() {
                   style={{ fontWeight: 300 }}
                 >
                   <SplitTextReveal
-                    text="Abra sua empresa com clareza desde o primeiro dia."
-                    highlight={["clareza", "primeiro", "dia."]}
+                    text="Abertura de empresa em Vila Velha para começar com a estrutura contábil certa"
+                    highlight={["estrutura", "contábil", "certa"]}
                   />
                 </h1>
 
@@ -65,9 +65,9 @@ export function Hero() {
                     className="mt-7 md:mt-9 mx-auto max-w-[620px] text-base md:text-lg text-bone/75 leading-[1.75] drop-shadow-[0_4px_22px_rgba(0,0,0,0.45)]"
                     style={{ fontWeight: 300 }}
                   >
-                    A Fraga Contabilidade orienta você em cada etapa da abertura do CNPJ — da escolha do
-                    regime tributário ao início da operação — para sua empresa nascer organizada, em Vila
-                    Velha, no Espírito Santo e em todo o Brasil.
+                    Abra seu CNPJ com orientação da Fraga para escolher o tipo de empresa, o regime
+                    tributário e os primeiros passos contábeis com segurança — em Vila Velha, no Espírito
+                    Santo e em todo o Brasil.
                   </p>
                 </ScrollReveal>
 
