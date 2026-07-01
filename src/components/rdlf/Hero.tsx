@@ -66,7 +66,7 @@ export function Hero() {
                     style={{ fontWeight: 300 }}
                   >
                     Abra seu CNPJ com orientação da Fraga para escolher o tipo de empresa, o regime
-                    tributário e os primeiros passos contábeis com segurança — em Vila Velha, no Espírito
+                    tributário e os primeiros passos contábeis com segurança em Vila Velha, no Espírito
                     Santo e em todo o Brasil.
                   </p>
                 </ScrollReveal>
