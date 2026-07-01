@@ -5,36 +5,36 @@ import { Eyebrow, Reveal, SectionTitle } from "./primitives";
 
 const faqs = [
   {
-    q: "Atendem empresas fora do Espírito Santo?",
-    a: "Sim. Atendemos empresas em todo o Brasil. A sede é em Vila Velha/ES, mas a rotina contábil, fiscal e trabalhista é feita à distância com reuniões periódicas e WhatsApp como canal direto.",
+    q: "Quanto custa abrir uma empresa?",
+    a: "O custo pode variar conforme o tipo de empresa, atividade, cidade, taxas públicas e estrutura necessária. A Fraga analisa o seu caso e orienta o melhor caminho antes de iniciar o processo de abertura.",
   },
   {
-    q: "Quais regimes tributários a Fraga atende?",
-    a: "Trabalhamos com MEI, Simples Nacional, Lucro Presumido e Lucro Real. Em todos os casos avaliamos se o enquadramento ainda é o mais adequado à realidade da empresa.",
+    q: "Preciso de contador para abrir empresa?",
+    a: "Ter um contador desde o início ajuda a escolher o enquadramento correto, entender impostos, evitar erros na abertura do CNPJ e manter a empresa regular depois que estiver ativa.",
   },
   {
-    q: "É possível trocar de contador no meio do ano?",
-    a: "Sim. Conduzimos a transição completa: solicitação de documentos ao contador anterior, conferência de obrigações pendentes e regularização do que estiver em aberto.",
+    q: "Qual o melhor regime tributário para abrir empresa?",
+    a: "Depende da atividade, faturamento previsto, margem e modelo de operação. A Fraga avalia essas informações para orientar a escolha entre Simples Nacional, Lucro Presumido ou Lucro Real.",
   },
   {
-    q: "A Fraga ajuda na abertura da empresa?",
-    a: "Sim. Cuidamos de toda a abertura: definição de natureza jurídica, CNAEs, regime tributário, registro na junta, inscrições municipais e estaduais e emissão dos certificados.",
+    q: "Posso abrir empresa como MEI?",
+    a: "Depende da atividade exercida, do faturamento esperado e das regras aplicáveis ao MEI. Antes de formalizar, é importante verificar se esse modelo realmente atende ao seu negócio.",
   },
   {
-    q: "Vocês cuidam da folha e do eSocial?",
-    a: "Sim. Folha de pagamento, admissões, desligamentos, férias, rescisões, eSocial e demais rotinas trabalhistas são conduzidas por uma equipe dedicada ao departamento pessoal.",
+    q: "Quanto tempo leva para abrir um CNPJ?",
+    a: "O prazo pode variar conforme o tipo de empresa, atividade, município e exigências dos órgãos responsáveis. A Fraga acompanha o processo e orienta você em cada etapa.",
   },
   {
-    q: "Quem é o ponto de contato no dia a dia?",
-    a: "Cada cliente tem responsáveis técnicos por área (contábil, fiscal, pessoal e financeiro), e o WhatsApp é o canal direto para dúvidas e demandas do dia a dia.",
+    q: "A Fraga atende abertura de empresa em Vila Velha e no Espírito Santo?",
+    a: "Sim. A Fraga Contabilidade atende empresas em Vila Velha e em todo o Espírito Santo, oferecendo orientação contábil para quem deseja abrir empresa com mais segurança e clareza.",
   },
   {
-    q: "Como funciona o BPO financeiro?",
-    a: "Assumimos contas a pagar e a receber, conciliação bancária, fluxo de caixa e relatórios gerenciais, deixando o empresário com tempo para decidir em vez de operar o financeiro.",
+    q: "A Fraga atende abertura de empresa fora do Espírito Santo?",
+    a: "Sim. Atendemos empresas em todo o Brasil. A sede é em Vila Velha/ES, mas todo o processo é conduzido com reuniões e WhatsApp como canal direto.",
   },
   {
-    q: "Vocês fazem planejamento tributário?",
-    a: "Sim. Avaliamos se a empresa está no regime adequado, simulamos cenários e identificamos onde existem excessos, riscos ou oportunidades dentro da lei.",
+    q: "Depois da abertura, a Fraga continua acompanhando a empresa?",
+    a: "Sim. Depois que o CNPJ está ativo, seguimos com a rotina contábil, fiscal e trabalhista para manter tudo em ordem e apoiar as próximas decisões.",
   },
 ];
 
@@ -46,20 +46,31 @@ export function FAQ() {
       <div className="container-rdlf grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <div>
           <Reveal>
-            <Eyebrow>FAQ</Eyebrow>
+            <Eyebrow>FAQ · abertura de empresa</Eyebrow>
           </Reveal>
           <Reveal delay={0.08}>
             <SectionTitle className="mt-5">
               Dúvidas comuns{" "}
-              <span className="italic text-[color:var(--gold-light)]">que recebemos</span>{" "}
-              de quem está pensando em trocar de contador.
+              <span className="italic text-[color:var(--gold-light)]">sobre abertura</span>{" "}
+              de empresa.
             </SectionTitle>
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-6 text-bone/60 leading-relaxed text-[15px] max-w-sm">
-              Se a sua pergunta não estiver aqui, fale direto com a Fraga pelo WhatsApp — sem
-              formulário, sem intermediários.
+              Veja respostas para perguntas frequentes de quem está pensando em abrir um CNPJ
+              com segurança. Se a sua dúvida não estiver aqui, fale direto com a Fraga pelo
+              WhatsApp.
             </p>
+          </Reveal>
+          <Reveal delay={0.22}>
+            <a
+              href="https://wa.me/5527988482268?text=Olá,%20tenho%20uma%20d%C3%BAvida%20sobre%20abertura%20de%20empresa%20com%20a%20Fraga."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 text-[12px] tracking-[0.18em] uppercase text-[color:var(--gold-light)] hover:text-bone transition-colors"
+            >
+              Tirar minha dúvida no WhatsApp →
+            </a>
           </Reveal>
         </div>
 

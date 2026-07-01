@@ -35,19 +35,28 @@ export function AboutAuthority() {
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="font-display text-[clamp(2rem,4.4vw,4rem)] leading-[1.02] tracking-[-0.03em] text-bone mt-5">
-              Uma contabilidade construída{" "}
-              <span className="italic text-[color:var(--gold-light)]">de perto</span>,
-              cliente por cliente,{" "}
-              <span className="italic text-[color:var(--gold-light)]">desde 1974</span>.
+              Uma contabilidade experiente para sua{" "}
+              <span className="italic text-[color:var(--gold-light)]">empresa</span> nascer{" "}
+              <span className="italic text-[color:var(--gold-light)]">melhor</span>.
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-6 max-w-xl text-bone/65 leading-relaxed text-[15px]">
-              A Fraga nasceu da prática contábil feita de perto: acompanhando empresários, entendendo
-              rotinas, corrigindo processos e construindo relações que atravessam anos. A tecnologia
-              entrou para acelerar o trabalho, mas a base continua a mesma — clareza, responsabilidade
-              e presença.
+              A Fraga une experiência contábil, visão tributária e proximidade no atendimento para
+              orientar empreendedores e empresas desde a abertura do CNPJ. Mais do que abrir uma
+              empresa, ajudamos você a entender o que precisa ser decidido antes de começar:
+              enquadramento, impostos, obrigações e próximos passos.
             </p>
+          </Reveal>
+          <Reveal delay={0.18}>
+            <a
+              href="https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20e%20falar%20com%20um%20contador."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 text-[12px] tracking-[0.18em] uppercase text-[color:var(--gold-light)] hover:text-bone transition-colors"
+            >
+              Falar com um contador →
+            </a>
           </Reveal>
 
           <Reveal delay={0.22}>

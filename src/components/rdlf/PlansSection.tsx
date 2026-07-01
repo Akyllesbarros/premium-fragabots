@@ -16,47 +16,47 @@ const plans: Plan[] = [
   {
     n: "01",
     name: "MEI",
-    faturamento: "Até R$ 81 mil por ano",
+    faturamento: "Faturamento previsto: até R$ 81 mil por ano",
     price: "Sob consulta",
     description:
-      "Plano ideal para o Microempreendedor Individual que quer manter as obrigações em dia com simplicidade e segurança, sem se preocupar com prazos ou burocracia.",
-    mudanca: "Sua rotina de MEI organizada, sem susto com pendências ou multas.",
+      "Ideal para quem quer formalizar uma atividade como Microempreendedor Individual, com abertura orientada e obrigações em dia desde o início.",
+    mudanca: "Sua empresa nasce formalizada, com orientação para operar sem susto.",
     waText: "MEI",
   },
   {
     n: "02",
     name: "ESSENCIAL",
-    faturamento: "Até R$ 100 mil por mês",
+    faturamento: "Faturamento previsto: até R$ 100 mil por mês",
     price: "Sob consulta",
     description:
-      "Para pequenas empresas que precisam de uma contabilidade completa e próxima — apurações, obrigações, folha e suporte no dia a dia.",
-    mudanca: "Uma contabilidade estruturada acompanhando o crescimento da empresa.",
+      "Para quem está abrindo uma empresa de pequeno porte e precisa de uma contabilidade completa e próxima já no primeiro mês de operação.",
+    mudanca: "Sua empresa começa com contabilidade estruturada e obrigações em ordem.",
     waText: "ESSENCIAL",
   },
   {
     n: "03",
     name: "PLUS",
-    faturamento: "Até R$ 200 mil por mês",
+    faturamento: "Faturamento previsto: até R$ 200 mil por mês",
     price: "Sob consulta",
     description:
-      "Para empresas em expansão que já sentem a necessidade de análises tributárias mais profundas, relatórios estratégicos e um contador de confiança por perto.",
-    mudanca: "Decisões tomadas com base em números claros e planejamento tributário ativo.",
+      "Para quem vai abrir uma empresa com previsão de faturamento mais alto e precisa de análise tributária apurada desde a escolha do regime.",
+    mudanca: "Abertura com planejamento tributário ativo e relatórios claros desde o início.",
     waText: "PLUS",
   },
   {
     n: "04",
     name: "PREMIUM",
-    faturamento: "Até R$ 400 mil por mês",
+    faturamento: "Faturamento previsto: até R$ 400 mil por mês",
     price: "Sob consulta",
     description:
-      "Para empresas consolidadas que precisam de uma contabilidade consultiva, com acompanhamento próximo, indicadores e apoio estratégico contínuo.",
-    mudanca: "Contabilidade estratégica de verdade, integrada às decisões da empresa.",
+      "Para quem já abre a empresa com estrutura maior e precisa de uma contabilidade consultiva, com acompanhamento próximo desde o primeiro dia.",
+    mudanca: "Sua empresa nasce com contabilidade consultiva integrada às decisões.",
     waText: "PREMIUM",
   },
 ];
 
 const waBase =
-  "https://wa.me/5527988482268?text=Olá,%20vim%20pela%20landing%20page%20da%20Fraga%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20";
+  "https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20e%20entender%20o%20plano%20";
 
 export function PlansSection() {
   const [active, setActive] = useState(0);
@@ -80,7 +80,7 @@ export function PlansSection() {
             <h2 className="mt-5 font-display text-[clamp(2rem,4.4vw,4rem)] leading-[1.02] tracking-[-0.03em] text-bone">
               Escolha o plano{" "}
               <span className="italic text-[color:var(--gold-light)]">ideal</span> para
-              sua <span className="italic text-[color:var(--gold-light)]">empresa</span>.
+              começar sua <span className="italic text-[color:var(--gold-light)]">empresa</span>.
             </h2>
 
             <ul className="mt-14 divide-y divide-white/10 border-t border-white/10">
@@ -131,9 +131,9 @@ export function PlansSection() {
           {/* Right: intro + detail card */}
           <div className="lg:pt-4">
             <p className="text-bone/70 text-[15px] md:text-base leading-relaxed max-w-md">
-              Do MEI à empresa consolidada, cada plano é pensado para o momento
-              atual do seu negócio. Clique em cada plano para entender como ele
-              se aplica à sua realidade.
+              Encontre o plano que melhor se adapta ao seu faturamento previsto e conte
+              com uma contabilidade sem complicações desde a abertura. Clique em cada
+              plano para entender como ele se aplica ao seu momento.
             </p>
 
             <div className="mt-10 rounded-3xl border border-white/10 bg-gradient-to-br from-[color:var(--ink-soft)] to-[color:var(--petrol)]/30 p-7 md:p-8 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.6)] backdrop-blur">
@@ -189,7 +189,7 @@ export function PlansSection() {
                 className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[color:var(--gold)] px-6 py-4 text-sm text-[color:var(--ink)] font-medium hover:bg-[color:var(--gold-light)] transition-colors"
               >
                 <MessageCircle className="h-4 w-4" />
-                Conversar sobre plano {current.name}
+                Consultar plano {current.name}
                 <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>

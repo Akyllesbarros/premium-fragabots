@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function FloatingWhatsAppButton() {
   const whatsappUrl =
-    "https://wa.me/5527988482268?text=Olá,%20quero%20saber%20mais%20sobre%20a%20Fraga.";
+    "https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga.%20Pode%20me%20ajudar%20a%20entender%20o%20melhor%20caminho%3F";
 
   return (
     <a

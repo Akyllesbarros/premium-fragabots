@@ -46,7 +46,7 @@ export function Hero() {
               <div className="max-w-4xl mx-auto text-center">
                 <ScrollReveal>
                   <div className="flex justify-center">
-                    <Eyebrow>Contabilidade estratégica · desde 1974</Eyebrow>
+                    <Eyebrow>Abertura de empresa · desde 1974</Eyebrow>
                   </div>
                 </ScrollReveal>
 
@@ -55,8 +55,8 @@ export function Hero() {
                   style={{ fontWeight: 300 }}
                 >
                   <SplitTextReveal
-                    text="Contabilidade para empresários que precisam de clareza antes de decidir."
-                    highlight={["clareza", "decidir"]}
+                    text="Abra sua empresa com clareza desde o primeiro dia."
+                    highlight={["clareza", "primeiro", "dia."]}
                   />
                 </h1>
 
@@ -65,22 +65,22 @@ export function Hero() {
                     className="mt-7 md:mt-9 mx-auto max-w-[620px] text-base md:text-lg text-bone/75 leading-[1.75] drop-shadow-[0_4px_22px_rgba(0,0,0,0.45)]"
                     style={{ fontWeight: 300 }}
                   >
-                    A Fraga acompanha empresas em Vila Velha, no Espírito Santo e em todo o Brasil com rotinas
-                    contábeis, fiscais, tributárias e financeiras conduzidas por uma equipe com mais de 50 anos
-                    de experiência.
+                    A Fraga Contabilidade orienta você em cada etapa da abertura do CNPJ — da escolha do
+                    regime tributário ao início da operação — para sua empresa nascer organizada, em Vila
+                    Velha, no Espírito Santo e em todo o Brasil.
                   </p>
                 </ScrollReveal>
 
                 <ScrollReveal delay={0.45}>
                   <div className="mt-10 md:mt-12 flex flex-wrap items-center justify-center gap-5">
-                    <RDLFAnimatedLayerButton href="https://wa.me/5527988482268?text=Olá,%20vim%20pela%20landing%20page%20da%20Fraga%20Contabilidade%20e%20gostaria%20de%20falar%20com%20um%20especialista.">
-                      Falar com a Fraga
+                    <RDLFAnimatedLayerButton href="https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20Contabilidade.%20Pode%20me%20ajudar%20a%20entender%20o%20melhor%20caminho%3F">
+                      Abrir minha empresa
                     </RDLFAnimatedLayerButton>
                     <a
                       href="#servicos"
                       className="group inline-flex items-center gap-2 text-sm text-bone/80 hover:text-bone transition-colors"
                     >
-                      Ver como trabalhamos
+                      Falar com especialista
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </a>
                   </div>
