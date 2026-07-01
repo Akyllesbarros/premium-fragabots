@@ -26,7 +26,7 @@ export function Manifesto() {
       </motion.span>
 
       <div className="container-rdlf grid gap-12 lg:grid-cols-12 relative">
-        <div className="lg:col-span-2 flex lg:flex-col items-start gap-4">
+        <div className="lg:col-span-3 flex lg:flex-col items-start gap-4">
           <Eyebrow>Manifesto</Eyebrow>
           <div className="relative h-40 w-px bg-white/10 hidden lg:block">
             <motion.div
@@ -36,7 +36,7 @@ export function Manifesto() {
           </div>
         </div>
 
-        <div className="lg:col-span-8">
+        <div className="lg:col-span-9">
           <h2
             className="font-display italic text-bone"
             style={{
