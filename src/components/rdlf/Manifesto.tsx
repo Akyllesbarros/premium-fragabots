@@ -26,7 +26,7 @@ export function Manifesto() {
       </motion.span>
 
       <div className="container-rdlf grid gap-12 lg:grid-cols-12 relative">
-        <div className="lg:col-span-2 flex lg:flex-col items-start gap-4">
+        <div className="lg:col-span-3 flex lg:flex-col items-start gap-4">
           <Eyebrow>Manifesto</Eyebrow>
           <div className="relative h-40 w-px bg-white/10 hidden lg:block">
             <motion.div
@@ -36,7 +36,7 @@ export function Manifesto() {
           </div>
         </div>
 
-        <div className="lg:col-span-8">
+        <div className="lg:col-span-9">
           <h2
             className="font-display italic text-bone"
             style={{
@@ -83,19 +83,6 @@ export function Manifesto() {
           </motion.p>
         </div>
 
-        <motion.aside
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="lg:col-span-2 lg:pt-4"
-        >
-          <div className="text-[10px] uppercase tracking-[0.3em] text-bone/40">Nota institucional</div>
-          <p className="mt-3 text-[13px] text-bone/55 leading-[1.7]">
-            Fraga Contabilidade&nbsp; · Atuação consultiva e preventiva para empresas em
-            crescimento estruturado.
-          </p>
-        </motion.aside>
       </div>
     </section>
   );
