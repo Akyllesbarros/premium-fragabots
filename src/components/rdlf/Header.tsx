@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { RDLFAnimatedLayerButton } from "./motion/RDLFAnimatedLayerButton";
+import { ShinyButton } from "./ShinyButton";
 import { cn } from "@/lib/utils";
 import rdlfLogo from "@/assets/fraga-logo.png.asset.json";
 
@@ -60,12 +60,12 @@ export function Header() {
 
           <div className="flex items-center gap-2">
             <div className="hidden sm:block">
-              <RDLFAnimatedLayerButton
+              <ShinyButton
                 href="https://wa.me/5527988482268?text=Olá,%20vim%20pela%20landing%20page%20da%20Fraga%20Contabilidade%20e%20gostaria%20de%20falar%20com%20um%20especialista."
-                className="h-[44px] min-w-[160px] px-5 text-xs shadow-[5px_5px_0px_#041F1F] hover:translate-y-[3px] hover:shadow-[2px_2px_0px_#041F1F]"
+                size="sm"
               >
                 Falar com a Fraga
-              </RDLFAnimatedLayerButton>
+              </ShinyButton>
             </div>
             <button
               aria-label="Abrir menu"
@@ -113,13 +113,13 @@ export function Header() {
                 </motion.a>
               ))}
               <div className="mt-10">
-              <RDLFAnimatedLayerButton
+              <ShinyButton
                 href="https://wa.me/5527988482268?text=Olá,%20vim%20pela%20landing%20page%20da%20Fraga%20Contabilidade%20e%20gostaria%20de%20falar%20com%20um%20especialista."
                 onClick={() => setOpen(false)}
-                className="w-full"
+                block
               >
                 Falar com a Fraga
-              </RDLFAnimatedLayerButton>
+              </ShinyButton>
               </div>
             </nav>
           </motion.div>
