@@ -91,8 +91,8 @@ export function CinematicRDLFFooter() {
 
       {/* link grid */}
       <div className="container-rdlf relative mt-20" ref={linksRef}>
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
-          <div>
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
+          <div className="sm:col-span-2 lg:col-span-1">
             <img src={rdlfLogo.url} alt="Fraga Contabilidade" className="h-12 md:h-14 w-auto select-none opacity-100" style={{ filter: "none" }} draggable={false} />
             <p className="mt-5 max-w-sm text-bone/60 leading-relaxed text-[15px]">
               Contabilidade estratégica para empresas em Vila Velha e em todo o Brasil. +50 anos
@@ -120,8 +120,7 @@ export function CinematicRDLFFooter() {
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-10">
-            {[
+          {[
               { title: "Navegação", links: [["Sobre", "#sobre"], ["Serviços", "#servicos"], ["Como trabalhamos", "#metodo"], ["FAQ", "#faq"], ["Contato", "#contato"]] },
               { title: "Serviços", links: [["Planejamento tributário", "#servicos"], ["Rotina contábil", "#servicos"], ["Departamento pessoal", "#servicos"], ["BPO financeiro", "#servicos"], ["Abertura de CNPJ", "#servicos"]] },
               { title: "Contato", links: [["WhatsApp", "https://wa.me/5527988482268"], ["Vila Velha — ES", "#sobre"], ["Instagram", "#"], ["LinkedIn", "#"]] },
@@ -147,7 +146,6 @@ export function CinematicRDLFFooter() {
                 </ul>
               </div>
             ))}
-          </div>
         </div>
       </div>
 
