@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Eyebrow } from "./primitives";
 import { ScrollReveal, SplitTextReveal } from "./motion/kinetic";
+import { ShinyButton } from "./ShinyButton";
 
 const stages = [
   {

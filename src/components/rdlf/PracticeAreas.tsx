@@ -123,22 +123,14 @@ export function PracticeAreas() {
 
         <ScrollReveal delay={0.15}>
           <div className="mt-20 flex flex-wrap items-center justify-center gap-5">
-            <a
-              href="https://wa.me/5527988482268?text=Olá,%20quero%20come%C3%A7ar%20minha%20abertura%20de%20empresa%20com%20a%20Fraga."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-[color:var(--gold)] px-6 py-3.5 text-sm font-medium text-[color:var(--ink)] hover:bg-[color:var(--gold-light)] transition-colors"
-            >
+            <ShinyButton href="https://wa.me/5527988482268?text=Olá,%20quero%20come%C3%A7ar%20minha%20abertura%20de%20empresa%20com%20a%20Fraga.">
               Começar minha abertura
               <ArrowUpRight className="h-4 w-4" />
-            </a>
-            <a
-              href="#planos"
-              className="group inline-flex items-center gap-2 text-sm text-bone/80 hover:text-bone transition-colors"
-            >
+            </ShinyButton>
+            <ShinyButton href="#planos" variant="secondary">
               Descobrir melhor caminho
-              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
+              <ArrowUpRight className="h-4 w-4" />
+            </ShinyButton>
           </div>
         </ScrollReveal>
       </div>
