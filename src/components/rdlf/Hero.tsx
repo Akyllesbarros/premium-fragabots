@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Eyebrow } from "./primitives";
 import { ScrollReveal, SplitTextReveal } from "./motion/kinetic";
-import { RDLFAnimatedLayerButton } from "./motion/RDLFAnimatedLayerButton";
+import { ShinyButton } from "./ShinyButton";
 import ColorBends from "./react-bits/ColorBends";
 
 export function Hero() {
@@ -73,16 +73,13 @@ export function Hero() {
 
                 <ScrollReveal delay={0.45}>
                   <div className="mt-10 md:mt-12 flex flex-wrap items-center justify-center gap-5">
-                    <RDLFAnimatedLayerButton href="https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20Contabilidade.%20Pode%20me%20ajudar%20a%20entender%20o%20melhor%20caminho%3F">
+                    <ShinyButton href="https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20Contabilidade.%20Pode%20me%20ajudar%20a%20entender%20o%20melhor%20caminho%3F">
                       Abrir minha empresa
-                    </RDLFAnimatedLayerButton>
-                    <a
-                      href="#servicos"
-                      className="group inline-flex items-center gap-2 text-sm text-bone/80 hover:text-bone transition-colors"
-                    >
+                    </ShinyButton>
+                    <ShinyButton href="#servicos" variant="secondary">
                       Falar com especialista
-                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </a>
+                      <ArrowRight className="h-4 w-4" />
+                    </ShinyButton>
                   </div>
                 </ScrollReveal>
 
