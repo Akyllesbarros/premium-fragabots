@@ -7,6 +7,7 @@ import { ProblemRiskSolution } from "@/components/rdlf/ProblemRiskSolution";
 import { PracticeAreas } from "@/components/rdlf/PracticeAreas";
 import { Methodology } from "@/components/rdlf/Methodology";
 import { AboutAuthority } from "@/components/rdlf/AboutAuthority";
+import { PlansSection } from "@/components/rdlf/PlansSection";
 import { VideoTestimonials } from "@/components/rdlf/VideoTestimonials";
 import { FAQ } from "@/components/rdlf/FAQ";
 import { FinalCTA } from "@/components/rdlf/FinalCTA";
@@ -37,6 +38,7 @@ function LandingPage() {
         <PracticeAreas />
         <Methodology />
         <AboutAuthority />
+        <PlansSection />
         <VideoTestimonials />
         <FAQ />
         <FinalCTA />
