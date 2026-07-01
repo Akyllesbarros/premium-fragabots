@@ -11,32 +11,13 @@ if (typeof window !== "undefined") {
 
 export function CinematicRDLFFooter() {
   const wrapperRef = useRef<HTMLElement>(null);
-  const giantRef = useRef<HTMLDivElement>(null);
   const linksRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!wrapperRef.current) return;
 
     const ctx = gsap.context(() => {
-      // Giant logo intro only — no scroll-scrub so it never fades out.
-      if (giantRef.current) {
-        gsap.fromTo(
-          giantRef.current,
-          { y: 40, scale: 0.96, opacity: 0.001 },
-          {
-            y: 0,
-            scale: 1,
-            opacity: 1,
-            duration: 1.4,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: wrapperRef.current,
-              start: "top 80%",
-              once: true,
-            },
-          },
-        );
-      }
+      // Link grid intro only.
       if (linksRef.current) {
         gsap.fromTo(
           linksRef.current,
@@ -149,17 +130,6 @@ export function CinematicRDLFFooter() {
         </div>
       </div>
 
-      {/* GIANT subtle wordmark */}
-      <div className="relative mt-20 overflow-hidden px-6">
-        <div
-          ref={giantRef}
-          aria-hidden
-          className="pointer-events-none mx-auto block w-full max-w-[1400px] select-none text-center font-display italic leading-[0.85] tracking-[-0.06em] text-bone/[0.06]"
-          style={{ fontSize: "clamp(6rem, 22vw, 22rem)" }}
-        >
-          fraga.
-        </div>
-      </div>
 
       <div className="container-rdlf relative pb-10">
         <div className="hairline" />
