@@ -15,15 +15,22 @@ const WA_SECONDARY =
 export function FinalCTA() {
   return (
     <section id="contato" className="relative overflow-hidden py-24 md:py-36">
-      {/* Background layers */}
-      <div className="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_at_center,oklch(0.24_0.05_175/0.85),#030504_75%)]" />
-      <div className="absolute inset-0 -z-10 grain opacity-40" />
-      <span className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-display italic text-[40vw] md:text-[24vw] leading-none text-white/[0.035] select-none tracking-[-0.05em]">
+      {/* Background layers — matches LP teal palette */}
+      <div className="absolute inset-0 -z-20 bg-[#36a2ac]" />
+      <div
+        className="absolute inset-0 -z-20"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 20% 20%, rgba(31,111,120,0.55) 0%, transparent 45%), radial-gradient(circle at 80% 80%, rgba(255,168,25,0.14) 0%, transparent 40%), radial-gradient(circle at 50% 100%, rgba(13,70,76,0.45) 0%, transparent 55%)",
+        }}
+      />
+      <div className="absolute inset-0 -z-10 grain opacity-30" />
+      <span className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-display italic text-[40vw] md:text-[24vw] leading-none text-white/[0.06] select-none tracking-[-0.05em]">
         Fraga
       </span>
 
       <div className="container-rdlf relative">
-        <div className="relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/10 bg-gradient-to-br from-[oklch(0.22_0.05_175/0.85)] via-[oklch(0.16_0.045_175/0.9)] to-[oklch(0.09_0.035_175/0.95)] backdrop-blur-xl px-6 py-14 md:px-14 md:py-20 lg:px-20">
+        <div className="relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/15 bg-gradient-to-br from-white/10 via-white/[0.06] to-[rgba(13,70,76,0.35)] backdrop-blur-xl px-6 py-14 md:px-14 md:py-20 lg:px-20 shadow-[0_40px_120px_-40px_rgba(13,70,76,0.6)]">
           {/* Glow behind phone */}
           <div className="pointer-events-none absolute -right-20 top-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-[color:var(--gold)]/15 blur-[120px]" />
 
@@ -100,9 +107,11 @@ function WhatsAppMockup() {
       >
         {/* Header */}
         <div className="flex items-center gap-3 px-4 py-3.5 bg-[oklch(0.22_0.045_175)] border-b border-white/10">
-          <div className="h-9 w-9 rounded-full bg-white/95 p-1.5 flex items-center justify-center">
-            <img src={fragaLogo.url} alt="Fraga Contabilidade" className="h-full w-full object-contain" />
-          </div>
+          <img
+            src={fragaLogo.url}
+            alt="Fraga Contabilidade"
+            className="h-10 w-10 rounded-full object-cover ring-2 ring-[color:var(--gold)]/60 bg-[#0d464c]"
+          />
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-1.5">
               <p className="text-bone text-sm font-medium truncate">Fraga Contabilidade</p>
