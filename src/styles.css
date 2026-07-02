@@ -242,6 +242,16 @@ html, body { overflow-x: clip; }
   .rdlf-layer-spin { animation: none !important; }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .journey-card,
+  .journey-progress,
+  .journey-chip {
+    animation: none !important;
+    transition-duration: 150ms !important;
+    transform: none !important;
+  }
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-14px); }
