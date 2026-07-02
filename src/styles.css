@@ -661,3 +661,63 @@ html, body { overflow-x: clip; }
     transform: none !important;
   }
 }
+
+/* ---- Layer 2: spotlight cards (desktop directional light) ---- */
+.spotlight-card {
+  position: relative;
+  isolation: isolate;
+}
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 300ms ease;
+  background: radial-gradient(
+    380px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 168, 25, 0.14),
+    rgba(54, 162, 172, 0.08) 40%,
+    transparent 70%
+  );
+  z-index: 1;
+}
+@media (hover: hover) and (pointer: fine) {
+  .spotlight-card:hover::before {
+    opacity: 1;
+  }
+}
+.spotlight-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---- Layer 2: single-shot CTA pulse ---- */
+@keyframes fraga-cta-pulse-once {
+  0% { box-shadow: 0 18px 50px rgba(0,0,0,0.35), 0 0 0 0 rgba(255,168,25,0.55); }
+  70% { box-shadow: 0 18px 50px rgba(0,0,0,0.35), 0 0 0 18px rgba(255,168,25,0); }
+  100% { box-shadow: 0 18px 50px rgba(0,0,0,0.35), 0 0 0 0 rgba(255,168,25,0); }
+}
+.fraga-cta-pulse-once {
+  animation: fraga-cta-pulse-once 1.6s ease-out 1;
+}
+
+/* ---- Layer 2: FAQ item highlight when open ---- */
+.faq-item-open {
+  border-color: rgba(255, 168, 25, 0.35) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 168, 25, 0.04) 0%,
+    rgba(255, 168, 25, 0) 100%
+  );
+  box-shadow: inset 0 1px 0 rgba(255, 168, 25, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spotlight-card::before,
+  .fraga-cta-pulse-once {
+    animation: none !important;
+    transition: none !important;
+  }
+}
