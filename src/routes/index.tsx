@@ -13,6 +13,7 @@ import { FinalCTA } from "@/components/rdlf/FinalCTA";
 import { CinematicRDLFFooter } from "@/components/rdlf/CinematicRDLFFooter";
 import { FloatingWhatsAppButton } from "@/components/rdlf/FloatingWhatsAppButton";
 import { ScrollEffects } from "@/components/effects/ScrollEffects";
+import { GoldenDivider } from "@/components/effects/GoldenDivider";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -41,7 +42,10 @@ function LandingPage() {
         <div className="reveal-on-scroll"><AboutAuthority /></div>
         <div className="reveal-on-scroll"><VideoTestimonials /></div>
         <div className="reveal-on-scroll"><FAQ /></div>
-        <div className="reveal-on-scroll"><FinalCTA /></div>
+        <div className="reveal-on-scroll">
+          <GoldenDivider className="mt-16" />
+          <FinalCTA />
+        </div>
       </main>
       <CinematicRDLFFooter />
       <FloatingWhatsAppButton />

@@ -79,7 +79,7 @@ export function FAQ() {
             const isOpen = open === i;
             return (
               <Reveal key={f.q} delay={i * 0.03}>
-                <div className="border-b border-white/10">
+                <div className={`border border-transparent border-b-white/10 rounded-xl transition-colors duration-300 ${isOpen ? "faq-item-open" : ""}`}>
                   <button
                     onClick={() => setOpen(isOpen ? null : i)}
                     className="w-full flex items-start gap-6 py-6 text-left group"

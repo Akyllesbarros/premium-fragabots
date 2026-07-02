@@ -199,8 +199,8 @@ function JourneyCard({ step, index }: { step: JourneyStep; index: number }) {
       <div
         className={`relative overflow-hidden rounded-3xl border p-6 md:p-8 transition-all duration-300 backdrop-blur-sm ${
           highlighted
-            ? "border-[color:var(--gold)]/45 bg-[color:var(--petrol)]/45 shadow-[0_20px_60px_-30px_rgba(255,168,25,0.55)]"
-            : "border-white/10 bg-ink-soft/55 hover:border-white/20 hover:-translate-y-0.5"
+            ? "spotlight-card border-[color:var(--gold)]/45 bg-[color:var(--petrol)]/45 shadow-[0_20px_60px_-30px_rgba(255,168,25,0.55)]"
+            : "spotlight-card border-white/10 bg-ink-soft/55 hover:border-white/20 hover:-translate-y-0.5"
         }`}
       >
         {highlighted && (
