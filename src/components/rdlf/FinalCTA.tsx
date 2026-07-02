@@ -104,7 +104,7 @@ function WhatsAppMockup() {
         whileInView={{ rotate: -4, y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-        className="relative rounded-[2rem] border border-white/15 bg-[#0b1413] shadow-[0_40px_120px_-30px_rgba(0,0,0,0.7)] overflow-hidden"
+        className="tilt-glow relative rounded-[2rem] border border-white/15 bg-[#0b1413] shadow-[0_40px_120px_-30px_rgba(0,0,0,0.7)] overflow-hidden"
       >
         {/* Header */}
         <div className="flex items-center gap-3 px-4 py-3.5 bg-[oklch(0.22_0.045_175)] border-b border-white/10">
