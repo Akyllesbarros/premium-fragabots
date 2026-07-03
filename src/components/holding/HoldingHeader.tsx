@@ -61,7 +61,7 @@ export function HoldingHeader() {
           <div className="flex items-center gap-2">
             <div className="hidden sm:block">
               <ShinyButton
-                href="https://wa.me/5527988482268?text=Olá,%20vim%20pela%20landing%20page%20da%20Fraga%20Contabilidade%20e%20gostaria%20de%20falar%20com%20um%20especialista."
+                href="https://wa.me/5527988482268?text=Olá,%20vim%20pela%20p%C3%A1gina%20de%20holding%20da%20Fraga%20Contabilidade%20e%20gostaria%20de%20falar%20com%20um%20especialista."
                 size="sm"
               >
                 Falar com especialista
@@ -114,7 +114,7 @@ export function HoldingHeader() {
               ))}
               <div className="mt-10">
               <ShinyButton
-                href="https://wa.me/5527988482268?text=Olá,%20vim%20pela%20landing%20page%20da%20Fraga%20Contabilidade%20e%20gostaria%20de%20falar%20com%20um%20especialista."
+                href="https://wa.me/5527988482268?text=Olá,%20vim%20pela%20p%C3%A1gina%20de%20holding%20da%20Fraga%20Contabilidade%20e%20gostaria%20de%20falar%20com%20um%20especialista."
                 onClick={() => setOpen(false)}
                 block
               >

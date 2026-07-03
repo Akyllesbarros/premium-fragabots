@@ -5,7 +5,7 @@ export function HoldingFloatingWhatsAppButton() {
   const whatsappUrl =
     "https://wa.me/5527988482268?text=" +
     encodeURIComponent(
-      "Olá, quero abrir minha empresa com a Fraga Contabilidade. Pode me ajudar a entender o melhor caminho para abrir meu CNPJ com segurança?",
+      "Olá, quero estruturar uma holding familiar com a Fraga Contabilidade. Pode me ajudar a entender o melhor caminho para proteger o patrimônio da minha família?",
     );
 
   const [expanded, setExpanded] = useState(false);
@@ -58,7 +58,7 @@ export function HoldingFloatingWhatsAppButton() {
 
       {expanded && (
         <span className="relative z-10 whitespace-nowrap text-white text-sm font-medium tracking-tight animate-[fade-in_0.35s_ease-out]">
-          Abrir CNPJ com especialista
+          Estruturar holding com especialista
         </span>
       )}
     </a>

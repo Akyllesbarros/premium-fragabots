@@ -76,8 +76,8 @@ export function HoldingCinematicRDLFFooter() {
           <div className="sm:col-span-2 lg:col-span-1">
             <img src={rdlfLogo.url} alt="Fraga Contabilidade" className="h-12 md:h-14 w-auto select-none opacity-100" style={{ filter: "none" }} draggable={false} />
             <p className="mt-5 max-w-sm text-bone/60 leading-relaxed text-[15px]">
-              Contabilidade estratégica para empresas em Vila Velha e em todo o Brasil. +50 anos
-              ajudando empresários a decidir com clareza.
+              Contabilidade estratégica para holdings familiares em Vila Velha e em todo o Brasil.
+              +50 anos ajudando famílias a proteger patrimônio com clareza.
             </p>
             <div className="mt-7 flex items-center gap-3">
               <a
@@ -103,7 +103,7 @@ export function HoldingCinematicRDLFFooter() {
 
           {[
               { title: "Navegação", links: [["Sobre", "#sobre"], ["Serviços", "#servicos"], ["Como trabalhamos", "#metodo"], ["FAQ", "#faq"], ["Contato", "#contato"]] },
-              { title: "Serviços", links: [["Planejamento tributário", "#servicos"], ["Rotina contábil", "#servicos"], ["Departamento pessoal", "#servicos"], ["BPO financeiro", "#servicos"], ["Abertura de CNPJ", "#servicos"]] },
+              { title: "Serviços", links: [["Diagnóstico patrimonial", "#servicos"], ["Constituição da holding", "#servicos"], ["Planejamento sucessório", "#servicos"], ["Integralização de bens", "#servicos"], ["Governança familiar", "#servicos"]] },
               { title: "Contato", links: [["WhatsApp", "https://wa.me/5527988482268"], ["Vila Velha — ES", "#sobre"], ["Instagram", "#"], ["LinkedIn", "#"]] },
             ].map((c) => (
               <div key={c.title}>
