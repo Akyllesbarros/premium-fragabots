@@ -18,27 +18,27 @@ type JourneyStep = {
 const WA_SPECIALIST =
   "https://wa.me/5527988482268?text=" +
   encodeURIComponent(
-    "Olá, quero abrir minha empresa com a Fraga Contabilidade. Pode me ajudar a entender o melhor caminho para abrir meu CNPJ com segurança?",
+    "Olá, quero estruturar uma holding familiar com a Fraga Contabilidade. Pode me ajudar a entender o melhor caminho para proteger o patrimônio da minha família?",
   );
 
 const journeySteps: JourneyStep[] = [
   {
     number: "01",
-    title: "Antes de abrir",
-    headline: "Nem todo CNPJ começa do jeito certo.",
+    title: "Antes de estruturar",
+    headline: "Nem toda holding começa do jeito certo.",
     description:
-      "Antes da formalização, é preciso entender sua atividade, faturamento previsto, modelo de operação e documentos necessários. Essa análise evita abrir a empresa com enquadramento errado ou estrutura limitada.",
-    chips: ["Tipo de empresa", "Atividade exercida", "Faturamento previsto", "Documentos iniciais"],
+      "Antes da constituição, é preciso mapear a composição do patrimônio, o perfil da família, os objetivos sucessórios e o cenário tributário. Essa análise evita estruturar uma holding com formato inadequado ou riscos escondidos.",
+    chips: ["Composição patrimonial", "Perfil da família", "Objetivos de sucessão", "Cenário tributário"],
     cta: "Quero começar certo",
     ctaHref: WA_SPECIALIST,
   },
   {
     number: "02",
     title: "Como trabalhamos",
-    headline: "A Fraga organiza o caminho antes da abertura.",
+    headline: "A Fraga organiza o caminho antes da constituição.",
     description:
-      "Avaliamos o melhor enquadramento, orientamos sobre regime tributário, acompanhamos a abertura do CNPJ e indicamos as inscrições necessárias para sua empresa começar regularizada.",
-    chips: ["Enquadramento", "Regime tributário", "Abertura do CNPJ", "Inscrições necessárias"],
+      "Avaliamos o formato ideal de holding, planejamos a integralização dos bens, orientamos o passo a passo tributário e sucessório e acompanhamos toda a constituição da estrutura societária.",
+    chips: ["Formato da holding", "Integralização de bens", "Planejamento sucessório", "Estrutura societária"],
     cta: "Falar com especialista",
     ctaHref: WA_SPECIALIST,
     highlighted: true,
@@ -46,11 +46,11 @@ const journeySteps: JourneyStep[] = [
   {
     number: "03",
     title: "O que muda",
-    headline: "Sua empresa começa com mais segurança contábil.",
+    headline: "Sua família ganha proteção patrimonial e sucessão organizada.",
     description:
-      "Com o suporte certo desde o início, você reduz retrabalho, entende suas obrigações fiscais e começa com uma rotina contábil mais organizada para tomar decisões com mais segurança.",
-    chips: ["Menos retrabalho", "Obrigações mapeadas", "Rotina organizada", "Decisões mais seguras"],
-    cta: "Abrir meu CNPJ com orientação",
+      "Com a holding bem estruturada, o patrimônio fica protegido, a sucessão é planejada com antecedência, os impostos são reduzidos dentro da lei e a família decide com clareza sobre o futuro.",
+    chips: ["Patrimônio protegido", "Sucessão planejada", "Menos impostos", "Decisões em família"],
+    cta: "Estruturar minha holding com orientação",
     ctaHref: WA_SPECIALIST,
   },
 ];
@@ -67,7 +67,7 @@ export function HoldingProblemRiskSolution() {
   return (
     <section
       ref={ref}
-      id="jornada-cnpj"
+      id="jornada-holding"
       className="relative py-28 md:py-40 overflow-hidden"
     >
       <span className="pointer-events-none absolute -left-10 top-24 font-display italic text-[22vw] leading-none text-white/[0.022] select-none">
@@ -88,13 +88,14 @@ export function HoldingProblemRiskSolution() {
               >
                 <Eyebrow>Jornada do CNPJ</Eyebrow>
                 <h2 className="font-display text-[clamp(2rem,4.6vw,3.75rem)] leading-[1.02] tracking-[-0.03em] text-bone mt-5">
-                  Antes de abrir sua empresa,{" "}
-                  <span className="text-[color:var(--gold)]">entenda o caminho</span> que evita
-                  erros.
+                  Antes de estruturar sua holding,{" "}
+                  <span className="text-[color:var(--gold)]">entenda o caminho</span> que protege
+                  sua família.
                 </h2>
                 <p className="mt-6 text-bone/70 text-[16px] md:text-[17px] leading-relaxed max-w-lg">
-                  A Fraga orienta as decisões que vêm antes da formalização, organiza a abertura
-                  do CNPJ e ajuda sua empresa a começar com estrutura contábil certa.
+                  A Fraga orienta as decisões que vêm antes da constituição, organiza a estrutura
+                  societária e ajuda sua família a proteger o patrimônio e planejar a sucessão com
+                  segurança.
                 </p>
 
                 <div className="mt-8 flex flex-col items-start gap-3">
@@ -103,8 +104,8 @@ export function HoldingProblemRiskSolution() {
                     <ArrowUpRight className="h-4 w-4" />
                   </ShinyButton>
                   <p className="text-xs text-bone/50 max-w-sm leading-relaxed">
-                    Atendimento consultivo para abertura de empresa em Vila Velha, no Espírito
-                    Santo e em todo o Brasil.
+                    Atendimento consultivo para holdings familiares e patrimoniais em Vila Velha,
+                    no Espírito Santo e em todo o Brasil.
                   </p>
                 </div>
 
@@ -154,7 +155,7 @@ export function HoldingProblemRiskSolution() {
               className="relative mt-12 md:mt-16 ml-14 md:ml-20 rounded-3xl border border-white/10 bg-ink-soft/50 backdrop-blur-sm p-6 md:p-8"
             >
               <p className="font-display text-xl md:text-2xl text-bone leading-tight max-w-md">
-                Quer saber qual é o melhor caminho para abrir sua empresa?
+                Quer saber qual é o melhor caminho para estruturar a sua holding?
               </p>
               <div className="mt-5">
                 <ShinyButton href={WA_SPECIALIST}>

@@ -14,57 +14,57 @@ type Area = {
   link: string;
 };
 
-const baseWa = "https://wa.me/5527988482268?text=Olá,%20vim%20pela%20landing%20page%20da%20Fraga%20e%20gostaria%20de%20saber%20mais%20sobre%20";
+const baseWa = "https://wa.me/5527988482268?text=Olá,%20vim%20pela%20p%C3%A1gina%20de%20holding%20da%20Fraga%20e%20gostaria%20de%20saber%20mais%20sobre%20";
 
 const featured: Area = {
   n: "01",
-  title: "Análise inicial e orientação tributária",
-  desc: "Entendemos sua atividade, expectativa de faturamento e modelo de operação para indicar o melhor tipo de empresa e o regime tributário mais adequado antes de abrir o CNPJ.",
+  title: "Diagnóstico patrimonial e familiar",
+  desc: "Analisamos a composição do patrimônio, o perfil da família e os objetivos de sucessão para indicar o formato ideal de holding antes de qualquer constituição.",
   tag: "Começar do jeito certo",
-  items: ["Definição do tipo de empresa", "Simples Nacional, Presumido ou Real", "Simulação de cenários"],
-  link: baseWa + "abertura%20de%20empresa%20com%20orienta%C3%A7%C3%A3o%20tribut%C3%A1ria.",
+  items: ["Mapeamento de bens", "Perfil familiar", "Simulação sucessória"],
+  link: baseWa + "diagn%C3%B3stico%20patrimonial%20para%20holding%20familiar.",
 };
 
 const areas: Area[] = [
   {
     n: "02",
-    title: "Abertura do CNPJ",
-    desc: "Acompanhamos o processo de formalização — natureza jurídica, CNAEs, contrato social e inscrições — para sua empresa começar dentro das exigências legais.",
-    tag: "Formalização segura",
-    items: ["Registro na junta", "Inscrições municipais e estaduais", "Certificado digital"],
-    link: baseWa + "abertura%20de%20CNPJ.",
+    title: "Constituição da holding",
+    desc: "Conduzimos a constituição da estrutura societária — contrato social, cláusulas de proteção, CNAEs e registros — para sua holding nascer dentro das exigências legais.",
+    tag: "Estrutura segura",
+    items: ["Contrato social sob medida", "Cláusulas de proteção", "Registros e inscrições"],
+    link: baseWa + "constitui%C3%A7%C3%A3o%20da%20holding.",
   },
   {
     n: "03",
-    title: "Escolha do regime tributário",
-    desc: "Orientamos sobre Simples Nacional, Lucro Presumido ou Lucro Real conforme a sua atividade e faturamento previsto, evitando decisões que podem custar caro depois.",
-    tag: "Impostos previsíveis",
-    items: ["Análise da atividade", "Comparativo de regimes", "Recomendação técnica"],
-    link: baseWa + "escolha%20do%20regime%20tribut%C3%A1rio.",
+    title: "Planejamento tributário e sucessório",
+    desc: "Comparamos cenários tributários e sucessórios para reduzir impostos dentro da lei e evitar inventários demorados e caros no futuro.",
+    tag: "Sucessão planejada",
+    items: ["Cenários sucessórios", "Comparativo tributário", "Recomendação técnica"],
+    link: baseWa + "planejamento%20tribut%C3%A1rio%20e%20sucess%C3%B3rio.",
   },
   {
     n: "04",
-    title: "Organização contábil inicial",
-    desc: "Estruturamos os primeiros passos da rotina fiscal, contábil e financeira para que sua empresa opere organizada desde o primeiro mês.",
-    tag: "Rotina desde o dia 1",
-    items: ["Emissão de notas", "Apuração de impostos", "Obrigações acessórias"],
-    link: baseWa + "organiza%C3%A7%C3%A3o%20cont%C3%A1bil%20inicial.",
+    title: "Integralização de bens",
+    desc: "Orientamos a transferência dos bens da família para a holding com avaliação, laudos e cuidado tributário para evitar surpresas com o Fisco.",
+    tag: "Transferência segura",
+    items: ["Avaliação de bens", "Laudos e documentação", "Aspectos tributários"],
+    link: baseWa + "integraliza%C3%A7%C3%A3o%20de%20bens%20na%20holding.",
   },
   {
     n: "05",
-    title: "Departamento pessoal desde a admissão",
-    desc: "Se sua empresa já nasce com funcionários, cuidamos de admissões, folha, eSocial e demais rotinas trabalhistas para começar em conformidade.",
-    tag: "Folha em dia",
-    items: ["Admissões", "Folha e eSocial", "Rotinas trabalhistas"],
-    link: baseWa + "departamento%20pessoal%20na%20abertura.",
+    title: "Governança familiar",
+    desc: "Ajudamos a família a definir regras claras de gestão, sucessão e distribuição de resultados para reduzir conflitos e organizar decisões conjuntas.",
+    tag: "Regras claras",
+    items: ["Acordo de sócios", "Regras de sucessão", "Distribuição de resultados"],
+    link: baseWa + "governan%C3%A7a%20familiar%20na%20holding.",
   },
   {
     n: "06",
-    title: "Suporte após a abertura",
-    desc: "Depois que o CNPJ está ativo, seguimos acompanhando sua empresa para manter tudo em ordem e apoiar as próximas decisões contábeis e tributárias.",
+    title: "Contabilidade da holding",
+    desc: "Depois de constituída, seguimos acompanhando a holding com rotina contábil, fiscal e sucessória para manter tudo em ordem ao longo dos anos.",
     tag: "Continuidade",
-    items: ["Rotina mensal", "Consultoria contábil", "WhatsApp direto"],
-    link: baseWa + "suporte%20cont%C3%A1bil%20cont%C3%ADnuo.",
+    items: ["Rotina mensal", "Consultoria patrimonial", "WhatsApp direto"],
+    link: baseWa + "contabilidade%20cont%C3%ADnua%20da%20holding.",
   },
 ];
 
@@ -77,12 +77,12 @@ export function HoldingPracticeAreas() {
         <div className="grid gap-10 lg:grid-cols-12 mb-16">
           <div className="lg:col-span-8 lg:col-start-3">
             <ScrollReveal>
-              <Eyebrow>Processo de abertura</Eyebrow>
+              <Eyebrow>Processo de estruturação</Eyebrow>
             </ScrollReveal>
             <ScrollReveal delay={0.08}>
               <SectionTitle className="mt-5">
-                Da ideia ao{" "}
-                <span className="italic text-[color:var(--gold-light)]">CNPJ</span>: a Fraga
+                Do patrimônio à{" "}
+                <span className="italic text-[color:var(--gold-light)]">holding</span>: a Fraga
                 acompanha cada etapa.
               </SectionTitle>
             </ScrollReveal>
@@ -124,8 +124,8 @@ export function HoldingPracticeAreas() {
 
         <ScrollReveal delay={0.15}>
           <div className="mt-20 flex flex-wrap items-center justify-center gap-5">
-            <ShinyButton href="https://wa.me/5527988482268?text=Olá,%20quero%20come%C3%A7ar%20minha%20abertura%20de%20empresa%20com%20a%20Fraga.">
-              Começar minha abertura
+            <ShinyButton href="https://wa.me/5527988482268?text=Olá,%20quero%20come%C3%A7ar%20a%20estrutura%C3%A7%C3%A3o%20da%20minha%20holding%20com%20a%20Fraga.">
+              Começar minha holding
               <ArrowUpRight className="h-4 w-4" />
             </ShinyButton>
             <ShinyButton href="#planos" variant="secondary">
@@ -176,7 +176,7 @@ function FeaturedCard({ area }: { area: Area }) {
           rel="noopener noreferrer"
           className="mt-12 inline-flex items-center gap-2 text-[12px] tracking-[0.18em] uppercase text-[color:var(--gold-light)]"
         >
-          Começar minha abertura
+          Começar minha holding
           <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
         </a>
       </div>
