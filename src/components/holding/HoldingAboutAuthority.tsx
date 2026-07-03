@@ -3,13 +3,13 @@ import { Eyebrow, Reveal } from "../rdlf/primitives";
 import { ShinyButton } from "../rdlf/ShinyButton";
 
 const chapters = [
-  { n: "01", title: "História contábil", desc: "Prática consolidada em contabilidade consultiva para empresas de diferentes portes." },
-  { n: "02", title: "Atendimento próximo", desc: "Relação direta com o empresário — sem intermediários, sem respostas genéricas." },
-  { n: "03", title: "Orientação para abrir empresa", desc: "Enquadramento, regime tributário e obrigações discutidos antes do primeiro passo." },
-  { n: "04", title: "Suporte para crescer com clareza", desc: "Rotina contábil organizada desde o início, para você tomar decisões com segurança." },
+  { n: "01", title: "História com famílias empresárias", desc: "Décadas atendendo famílias que precisam organizar patrimônio, sucessão e empresas." },
+  { n: "02", title: "Atendimento próximo", desc: "Relação direta com a família — sem intermediários, sem respostas genéricas." },
+  { n: "03", title: "Orientação para estruturar holdings", desc: "Formato, tributação e sucessão discutidos antes de qualquer constituição." },
+  { n: "04", title: "Suporte contínuo à holding", desc: "Rotina contábil e patrimonial organizada para a família decidir com segurança ao longo dos anos." },
 ];
 
-const pillars = ["Abertura de CNPJ", "Regime tributário", "Organização inicial", "Suporte contábil"];
+const pillars = ["Holding familiar", "Planejamento sucessório", "Proteção patrimonial", "Governança"];
 
 export function HoldingAboutAuthority() {
   return (
@@ -36,16 +36,16 @@ export function HoldingAboutAuthority() {
             </span>
 
             <div className="relative flex items-center justify-between">
-              <span className="text-[10px] uppercase tracking-[0.28em] text-bone/55">
-                Fraga · Vila Velha · ES
-              </span>
+            <span className="text-[10px] uppercase tracking-[0.28em] text-bone/55">
+              Fraga · Holding · Vila Velha · ES
+            </span>
               <span className="h-px w-16 bg-gradient-to-r from-transparent via-[color:var(--gold)]/60 to-transparent" />
             </div>
 
             <h3 className="relative mt-6 font-display text-[clamp(1.6rem,2.4vw,2.2rem)] leading-[1.1] tracking-[-0.02em] text-bone">
               Uma trajetória{" "}
               <span className="italic text-[color:var(--gold-light)]">contábil</span>{" "}
-              construída no dia a dia das empresas.
+              construída ao lado de famílias empresárias.
             </h3>
 
             <ol className="relative mt-8 md:mt-10 space-y-5">
@@ -89,27 +89,27 @@ export function HoldingAboutAuthority() {
             <h2 className="font-display text-[clamp(2rem,4.4vw,4rem)] leading-[1.02] tracking-[-0.03em] text-bone mt-5">
               Uma contabilidade com{" "}
               <span className="italic text-[color:var(--gold-light)]">história</span> para sua
-              empresa nascer{" "}
+              holding nascer{" "}
               <span className="italic text-[color:var(--gold-light)]">melhor</span>.
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-6 max-w-xl text-bone/70 leading-relaxed text-[15px]">
-              Abrir uma empresa envolve decisões importantes. A Fraga Contabilidade une
-              experiência, proximidade e visão tributária para orientar empreendedores desde a
-              abertura do CNPJ até os primeiros passos da operação.
+              Estruturar uma holding envolve decisões que marcam gerações. A Fraga Contabilidade
+              une experiência, proximidade e visão tributária para orientar famílias na proteção
+              patrimonial, no planejamento sucessório e na governança da holding.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-5 max-w-xl text-bone/60 leading-relaxed text-[14px]">
-              Mais do que formalizar uma empresa, ajudamos você a começar com clareza: escolhendo
-              o enquadramento adequado, entendendo seus impostos e organizando a rotina contábil
-              desde o início.
+              Mais do que constituir uma empresa, ajudamos sua família a organizar o patrimônio
+              com clareza: escolhendo o formato ideal, reduzindo impostos dentro da lei e
+              deixando a sucessão desenhada desde o início.
             </p>
           </Reveal>
           <Reveal delay={0.28}>
             <div className="mt-9">
-              <ShinyButton href="https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20Contabilidade%20e%20gostaria%20de%20entender%20o%20melhor%20caminho.">
+              <ShinyButton href="https://wa.me/5527988482268?text=Olá,%20quero%20estruturar%20uma%20holding%20familiar%20com%20a%20Fraga%20Contabilidade%20e%20gostaria%20de%20entender%20o%20melhor%20caminho.">
                 Falar com especialista
                 <ArrowUpRight className="h-4 w-4" />
               </ShinyButton>

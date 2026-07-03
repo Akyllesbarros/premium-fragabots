@@ -16,48 +16,48 @@ type Plan = {
 const plans: Plan[] = [
   {
     n: "01",
-    name: "MEI",
-    faturamento: "Faturamento previsto: até R$ 81 mil por ano",
+    name: "HOLDING START",
+    faturamento: "Patrimônio de menor complexidade",
     price: "Sob consulta",
     description:
-      "Ideal para quem quer formalizar uma atividade como Microempreendedor Individual, com abertura orientada e obrigações em dia desde o início.",
-    mudanca: "Sua empresa nasce formalizada, com orientação para operar sem susto.",
-    waText: "MEI",
+      "Ideal para famílias com patrimônio mais enxuto que querem começar a organizar a sucessão e proteger os bens já no primeiro passo.",
+    mudanca: "Sua holding nasce estruturada, com orientação para proteger sem susto.",
+    waText: "HOLDING%20START",
   },
   {
     n: "02",
-    name: "ESSENCIAL",
-    faturamento: "Faturamento previsto: até R$ 100 mil por mês",
+    name: "HOLDING ESSENCIAL",
+    faturamento: "Patrimônio familiar em consolidação",
     price: "Sob consulta",
     description:
-      "Para quem está abrindo uma empresa de pequeno porte e precisa de uma contabilidade completa e próxima já no primeiro mês de operação.",
-    mudanca: "Sua empresa começa com contabilidade estruturada e obrigações em ordem.",
-    waText: "ESSENCIAL",
+      "Para famílias que já acumularam um patrimônio relevante e precisam de uma holding bem estruturada, com sucessão organizada desde o primeiro mês.",
+    mudanca: "Sua família começa com holding estruturada e sucessão em ordem.",
+    waText: "HOLDING%20ESSENCIAL",
   },
   {
     n: "03",
-    name: "PLUS",
-    faturamento: "Faturamento previsto: até R$ 200 mil por mês",
+    name: "HOLDING PLUS",
+    faturamento: "Patrimônio com imóveis, empresas e investimentos",
     price: "Sob consulta",
     description:
-      "Para quem vai abrir uma empresa com previsão de faturamento mais alto e precisa de análise tributária apurada desde a escolha do regime.",
-    mudanca: "Abertura com planejamento tributário ativo e relatórios claros desde o início.",
-    waText: "PLUS",
+      "Para famílias com patrimônio mais complexo, envolvendo imóveis, participações societárias e investimentos que exigem planejamento tributário e sucessório apurado.",
+    mudanca: "Holding com planejamento tributário ativo e sucessão desenhada com clareza.",
+    waText: "HOLDING%20PLUS",
   },
   {
     n: "04",
-    name: "PREMIUM",
-    faturamento: "Faturamento previsto: até R$ 400 mil por mês",
+    name: "HOLDING PREMIUM",
+    faturamento: "Grandes patrimônios e famílias multigeracionais",
     price: "Sob consulta",
     description:
-      "Para quem já abre a empresa com estrutura maior e precisa de uma contabilidade consultiva, com acompanhamento próximo desde o primeiro dia.",
-    mudanca: "Sua empresa nasce com contabilidade consultiva integrada às decisões.",
-    waText: "PREMIUM",
+      "Para famílias com patrimônio de alta complexidade e múltiplas gerações envolvidas, que precisam de uma holding consultiva com acompanhamento próximo desde o primeiro dia.",
+    mudanca: "Sua holding nasce com contabilidade consultiva integrada às decisões da família.",
+    waText: "HOLDING%20PREMIUM",
   },
 ];
 
 const waBase =
-  "https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20e%20entender%20o%20plano%20";
+  "https://wa.me/5527988482268?text=Olá,%20quero%20estruturar%20minha%20holding%20com%20a%20Fraga%20e%20entender%20o%20plano%20";
 
 export function HoldingPlansSection() {
   const [active, setActive] = useState(0);
@@ -81,7 +81,7 @@ export function HoldingPlansSection() {
             <h2 className="mt-5 font-display text-[clamp(2rem,4.4vw,4rem)] leading-[1.02] tracking-[-0.03em] text-bone">
               Escolha o plano{" "}
               <span className="italic text-[color:var(--gold-light)]">ideal</span> para
-              começar sua <span className="italic text-[color:var(--gold-light)]">empresa</span>.
+              estruturar sua <span className="italic text-[color:var(--gold-light)]">holding</span>.
             </h2>
 
             <ul className="mt-14 divide-y divide-white/10 border-t border-white/10">
@@ -130,11 +130,11 @@ export function HoldingPlansSection() {
 
             <div className="mt-10 rounded-2xl border border-white/10 bg-[color:var(--ink-soft)]/40 p-5 md:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <p className="text-sm text-bone/75 leading-relaxed max-w-md">
-                Não sabe qual plano escolher para abrir sua empresa? A Fraga orienta o melhor
-                caminho para o seu momento.
+                Não sabe qual plano escolher para a sua holding? A Fraga orienta o melhor
+                caminho para o momento da sua família.
               </p>
               <ShinyButton
-                href="https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20e%20n%C3%A3o%20sei%20qual%20plano%20escolher."
+                href="https://wa.me/5527988482268?text=Olá,%20quero%20estruturar%20uma%20holding%20com%20a%20Fraga%20e%20n%C3%A3o%20sei%20qual%20plano%20escolher."
                 size="sm"
                 className="flex-none"
               >
@@ -147,9 +147,9 @@ export function HoldingPlansSection() {
           {/* Right: intro + detail card */}
           <div className="lg:pt-4">
             <p className="text-bone/70 text-[15px] md:text-base leading-relaxed max-w-md">
-              Encontre o plano que melhor se adapta ao seu faturamento previsto e conte
-              com uma contabilidade sem complicações desde a abertura. Clique em cada
-              plano para entender como ele se aplica ao seu momento.
+              Encontre o plano que melhor se adapta ao patrimônio e ao perfil da sua
+              família e conte com uma holding bem estruturada desde o primeiro passo.
+              Clique em cada plano para entender como ele se aplica ao seu momento.
             </p>
 
             <div className="mt-10 rounded-3xl border border-white/10 bg-gradient-to-br from-[color:var(--ink-soft)] to-[color:var(--petrol)]/30 p-7 md:p-8 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.6)] backdrop-blur">
