@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Eyebrow } from "../rdlf/primitives";
 import { ShinyButton } from "../rdlf/ShinyButton";
 
-const HEADLINE = "Abrir uma empresa não é só emitir um CNPJ.";
+const HEADLINE = "Ter patrimônio não é só ter bens no seu nome.";
 
 export function HoldingManifesto() {
   const ref = useRef<HTMLDivElement>(null);
@@ -80,9 +80,10 @@ export function HoldingManifesto() {
             transition={{ duration: 1, delay: 0.4 }}
             className="mt-10 max-w-2xl text-bone/65 leading-[1.85] text-[15px]"
           >
-            Antes de começar, é preciso entender o melhor tipo de empresa, o regime tributário adequado,
-            as obrigações fiscais e o caminho mais seguro para operar com tranquilidade. Uma escolha
-            errada no início pode gerar impostos maiores, burocracias desnecessárias e retrabalho.
+            Antes de estruturar uma holding, é preciso entender a composição do patrimônio, o
+            modelo familiar, os objetivos de sucessão e o impacto tributário de cada decisão.
+            Escolhas erradas no início podem gerar impostos maiores, conflitos familiares e
+            processos de inventário longos e caros.
           </motion.p>
 
           <motion.div
@@ -92,8 +93,8 @@ export function HoldingManifesto() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mt-10 flex flex-wrap items-center gap-5"
           >
-            <ShinyButton href="https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20seguran%C3%A7a%20junto%20%C3%A0%20Fraga.">
-              Quero abrir com segurança
+            <ShinyButton href="https://wa.me/5527988482268?text=Olá,%20quero%20estruturar%20uma%20holding%20familiar%20com%20seguran%C3%A7a%20junto%20%C3%A0%20Fraga.">
+              Quero estruturar com segurança
               <ArrowUpRight className="h-4 w-4" />
             </ShinyButton>
             <ShinyButton href="#servicos" variant="secondary">

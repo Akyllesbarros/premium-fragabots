@@ -46,7 +46,7 @@ export function HoldingHero() {
               <div className="max-w-4xl mx-auto text-center">
                 <ScrollReveal>
                   <div className="flex justify-center">
-                    <Eyebrow>Abertura de empresa · desde 1974</Eyebrow>
+                    <Eyebrow>Holding familiar e patrimonial · desde 1974</Eyebrow>
                   </div>
                 </ScrollReveal>
 
@@ -55,8 +55,8 @@ export function HoldingHero() {
                   style={{ fontWeight: 300 }}
                 >
                   <SplitTextReveal
-                    text="Abertura de empresa em Vila Velha para começar com a estrutura contábil certa"
-                    highlight={["estrutura", "contábil", "certa"]}
+                    text="Holding familiar em Vila Velha para proteger o patrimônio e organizar a sucessão da sua família"
+                    highlight={["proteger", "patrimônio", "sucessão"]}
                   />
                 </h1>
 
@@ -65,15 +65,15 @@ export function HoldingHero() {
                     className="mt-7 md:mt-9 mx-auto max-w-[620px] text-base md:text-lg text-bone/75 leading-[1.75] drop-shadow-[0_4px_22px_rgba(0,0,0,0.45)]"
                     style={{ fontWeight: 300 }}
                   >
-                    Abra seu CNPJ com orientação da Fraga para escolher o tipo de empresa, o regime
-                    tributário e os primeiros passos contábeis com segurança em Vila Velha, no Espírito
-                    Santo e em todo o Brasil.
+                    Estruture sua holding com orientação da Fraga para planejar sucessão, proteger o
+                    patrimônio familiar e reduzir a carga tributária com segurança em Vila Velha, no
+                    Espírito Santo e em todo o Brasil.
                   </p>
                 </ScrollReveal>
 
                 <ScrollReveal delay={0.45}>
                   <div className="mt-10 md:mt-12 flex flex-wrap items-center justify-center gap-5">
-                    <ShinyButton href="https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20Contabilidade.%20Pode%20me%20ajudar%20a%20entender%20o%20melhor%20caminho%20para%20abrir%20meu%20CNPJ%20com%20seguran%C3%A7a%3F">
+                    <ShinyButton href="https://wa.me/5527988482268?text=Ol%C3%A1%2C%20quero%20estruturar%20uma%20holding%20familiar%20com%20a%20Fraga%20Contabilidade.%20Pode%20me%20ajudar%20a%20entender%20o%20melhor%20caminho%20para%20proteger%20meu%20patrim%C3%B4nio%3F">
                       Falar com especialista
                     </ShinyButton>
                     <ShinyButton href="#servicos" variant="secondary">
@@ -82,7 +82,7 @@ export function HoldingHero() {
                     </ShinyButton>
                   </div>
                   <p className="mt-4 text-sm text-bone/60 text-center font-light tracking-wide">
-                    Atendimento consultivo para quem quer começar do jeito certo.
+                    Atendimento consultivo para famílias que querem proteger o que construíram.
                   </p>
                 </ScrollReveal>
 

@@ -1,12 +1,12 @@
 const items = [
-  "Abertura de empresa",
-  "Abertura de CNPJ",
-  "Escolha do regime tributário",
-  "Simples Nacional",
-  "Contador para abrir empresa",
-  "Planejamento tributário inicial",
-  "Abertura de empresa em Vila Velha",
-  "Contabilidade para novos CNPJs",
+  "Holding familiar",
+  "Holding patrimonial",
+  "Planejamento sucessório",
+  "Proteção patrimonial",
+  "Planejamento tributário",
+  "Governança familiar",
+  "Integralização de bens",
+  "Holding em Vila Velha",
 ];
 
 export function HoldingTrustStrip() {
