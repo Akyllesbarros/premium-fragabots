@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { ShinyButton } from "./ShinyButton";
+import { ShinyButton } from "../rdlf/ShinyButton";
 import { cn } from "@/lib/utils";
 import rdlfLogo from "@/assets/fraga-logo.png.asset.json";
 

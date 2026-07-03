@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ArrowUpRight, Briefcase, MessageCircle } from "lucide-react";
-import { ShinyButton } from "./ShinyButton";
+import { ShinyButton } from "../rdlf/ShinyButton";
 
 type Plan = {
   n: string;

@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
-import { Eyebrow, Reveal } from "./primitives";
-import { ShinyButton } from "./ShinyButton";
+import { Eyebrow, Reveal } from "../rdlf/primitives";
+import { ShinyButton } from "../rdlf/ShinyButton";
 
 const chapters = [
   { n: "01", title: "História contábil", desc: "Prática consolidada em contabilidade consultiva para empresas de diferentes portes." },

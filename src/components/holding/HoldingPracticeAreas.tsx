@@ -1,8 +1,8 @@
 import { ArrowUpRight } from "lucide-react";
-import { Eyebrow, SectionTitle } from "./primitives";
-import { ScrollReveal } from "./motion/kinetic";
-import { WorldClassCard } from "./motion/WorldClassCard";
-import { ShinyButton } from "./ShinyButton";
+import { Eyebrow, SectionTitle } from "../rdlf/primitives";
+import { ScrollReveal } from "../rdlf/motion/kinetic";
+import { WorldClassCard } from "../rdlf/motion/WorldClassCard";
+import { ShinyButton } from "../rdlf/ShinyButton";
 
 
 type Area = {

@@ -1,7 +1,7 @@
 import { ArrowUpRight, MessageCircle, Check, Phone, Video } from "lucide-react";
 import { motion } from "framer-motion";
-import { ScrollReveal, SplitTextReveal } from "./motion/kinetic";
-import { ShinyButton } from "./ShinyButton";
+import { ScrollReveal, SplitTextReveal } from "../rdlf/motion/kinetic";
+import { ShinyButton } from "../rdlf/ShinyButton";
 import fragaAvatar from "@/assets/fraga-avatar.jpg.asset.json";
 
 const WA_PRIMARY =

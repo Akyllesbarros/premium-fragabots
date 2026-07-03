@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
-import { Eyebrow, Reveal, SectionTitle } from "./primitives";
+import { Eyebrow, Reveal, SectionTitle } from "../rdlf/primitives";
 
 const faqs = [
   {

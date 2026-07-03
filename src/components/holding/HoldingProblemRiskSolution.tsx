@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
-import { Eyebrow } from "./primitives";
-import { ShinyButton } from "./ShinyButton";
+import { Eyebrow } from "../rdlf/primitives";
+import { ShinyButton } from "../rdlf/ShinyButton";
 
 type JourneyStep = {
   number: string;

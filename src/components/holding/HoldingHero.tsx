@@ -1,9 +1,9 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { Eyebrow } from "./primitives";
-import { ScrollReveal, SplitTextReveal } from "./motion/kinetic";
-import { ShinyButton } from "./ShinyButton";
-import ColorBends from "./react-bits/ColorBends";
+import { Eyebrow } from "../rdlf/primitives";
+import { ScrollReveal, SplitTextReveal } from "../rdlf/motion/kinetic";
+import { ShinyButton } from "../rdlf/ShinyButton";
+import ColorBends from "../rdlf/react-bits/ColorBends";
 
 export function Hero() {
   return (
