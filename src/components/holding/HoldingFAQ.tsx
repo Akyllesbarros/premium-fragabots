@@ -5,36 +5,36 @@ import { Eyebrow, Reveal, SectionTitle } from "../rdlf/primitives";
 
 const faqs = [
   {
-    q: "Quanto custa abrir uma empresa?",
-    a: "O custo pode variar conforme o tipo de empresa, atividade, cidade, taxas públicas e estrutura necessária. A Fraga analisa o seu caso e orienta o melhor caminho antes de iniciar o processo de abertura.",
+    q: "O que é uma holding familiar?",
+    a: "Uma holding familiar é uma empresa criada para concentrar bens, participações e investimentos da família, facilitando o planejamento sucessório, a proteção patrimonial e a organização tributária.",
   },
   {
-    q: "Preciso de contador para abrir empresa?",
-    a: "Ter um contador desde o início ajuda a escolher o enquadramento correto, entender impostos, evitar erros na abertura do CNPJ e manter a empresa regular depois que estiver ativa.",
+    q: "Quanto custa estruturar uma holding?",
+    a: "O custo varia conforme o patrimônio envolvido, o formato escolhido, as taxas cartoriais e a complexidade da família. A Fraga analisa o seu caso antes de iniciar qualquer estruturação.",
   },
   {
-    q: "Qual o melhor regime tributário para abrir empresa?",
-    a: "Depende da atividade, faturamento previsto, margem e modelo de operação. A Fraga avalia essas informações para orientar a escolha entre Simples Nacional, Lucro Presumido ou Lucro Real.",
+    q: "Vale a pena abrir uma holding?",
+    a: "Depende do patrimônio, dos objetivos sucessórios e do perfil da família. Em muitos casos, a holding reduz impostos, protege bens e evita inventários demorados — mas cada situação exige análise específica.",
   },
   {
-    q: "Posso abrir empresa como MEI?",
-    a: "Depende da atividade exercida, do faturamento esperado e das regras aplicáveis ao MEI. Antes de formalizar, é importante verificar se esse modelo realmente atende ao seu negócio.",
+    q: "Quais bens posso colocar em uma holding?",
+    a: "É possível integralizar imóveis, participações em empresas, investimentos financeiros e outros ativos. A escolha correta depende do planejamento tributário e sucessório definido para a família.",
   },
   {
-    q: "Quanto tempo leva para abrir um CNPJ?",
-    a: "O prazo pode variar conforme o tipo de empresa, atividade, município e exigências dos órgãos responsáveis. A Fraga acompanha o processo e orienta você em cada etapa.",
+    q: "A holding ajuda a reduzir impostos na sucessão?",
+    a: "Bem estruturada, a holding pode reduzir significativamente a carga tributária em heranças e doações, sempre dentro da legislação vigente. Cada estado tem regras próprias que precisam ser avaliadas.",
   },
   {
-    q: "A Fraga atende abertura de empresa em Vila Velha e no Espírito Santo?",
-    a: "Sim. A Fraga Contabilidade atende empresas em Vila Velha e em todo o Espírito Santo, oferecendo orientação contábil para quem deseja abrir empresa com mais segurança e clareza.",
+    q: "Quanto tempo leva para constituir uma holding?",
+    a: "O prazo depende da complexidade do patrimônio, dos cartórios, das juntas comerciais e das exigências dos órgãos envolvidos. A Fraga acompanha cada etapa para você ter previsibilidade.",
   },
   {
-    q: "A Fraga atende abertura de empresa fora do Espírito Santo?",
-    a: "Sim. Atendemos empresas em todo o Brasil. A sede é em Vila Velha/ES, mas todo o processo é conduzido com reuniões e WhatsApp como canal direto.",
+    q: "A Fraga atende estruturação de holding em Vila Velha e no Espírito Santo?",
+    a: "Sim. A Fraga Contabilidade atende famílias em Vila Velha e em todo o Espírito Santo, com orientação para estruturar holdings familiares e patrimoniais com mais segurança.",
   },
   {
-    q: "Depois da abertura, a Fraga continua acompanhando a empresa?",
-    a: "Sim. Depois que o CNPJ está ativo, seguimos com a rotina contábil, fiscal e trabalhista para manter tudo em ordem e apoiar as próximas decisões.",
+    q: "Depois de constituída, a Fraga continua acompanhando a holding?",
+    a: "Sim. Seguimos com a rotina contábil, fiscal e patrimonial da holding, apoiando decisões da família ao longo dos anos e mantendo a estrutura em ordem.",
   },
 ];
 
@@ -46,25 +46,25 @@ export function HoldingFAQ() {
       <div className="container-rdlf grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <div>
           <Reveal>
-            <Eyebrow>FAQ · abertura de empresa</Eyebrow>
+            <Eyebrow>FAQ · holding familiar</Eyebrow>
           </Reveal>
           <Reveal delay={0.08}>
             <SectionTitle className="mt-5">
               Dúvidas comuns{" "}
-              <span className="italic text-[color:var(--gold-light)]">sobre abertura</span>{" "}
-              de empresa.
+              <span className="italic text-[color:var(--gold-light)]">sobre holding</span>{" "}
+              familiar e patrimonial.
             </SectionTitle>
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-6 text-bone/60 leading-relaxed text-[15px] max-w-sm">
-              Veja respostas para perguntas frequentes de quem está pensando em abrir um CNPJ
-              com segurança. Se a sua dúvida não estiver aqui, fale direto com a Fraga pelo
-              WhatsApp.
+              Veja respostas para perguntas frequentes de famílias que pensam em estruturar uma
+              holding para proteger patrimônio e organizar a sucessão. Se a sua dúvida não
+              estiver aqui, fale direto com a Fraga pelo WhatsApp.
             </p>
           </Reveal>
           <Reveal delay={0.22}>
             <a
-              href="https://wa.me/5527988482268?text=Olá,%20tenho%20uma%20d%C3%BAvida%20sobre%20abertura%20de%20empresa%20com%20a%20Fraga."
+              href="https://wa.me/5527988482268?text=Olá,%20tenho%20uma%20d%C3%BAvida%20sobre%20holding%20familiar%20com%20a%20Fraga."
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 inline-flex items-center gap-2 text-[12px] tracking-[0.18em] uppercase text-[color:var(--gold-light)] hover:text-bone transition-colors"

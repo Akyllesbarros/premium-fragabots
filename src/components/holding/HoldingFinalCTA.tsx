@@ -7,11 +7,11 @@ import fragaAvatar from "@/assets/fraga-avatar.jpg.asset.json";
 const WA_PRIMARY =
   "https://wa.me/5527988482268?text=" +
   encodeURIComponent(
-    "Olá, quero abrir minha empresa com a Fraga Contabilidade. Pode me ajudar a entender o melhor caminho para abrir meu CNPJ com segurança?"
+    "Olá, quero estruturar uma holding familiar com a Fraga Contabilidade. Pode me ajudar a entender o melhor caminho para proteger o patrimônio da minha família?"
   );
 const WA_SECONDARY =
   "https://wa.me/5527988482268?text=" +
-  encodeURIComponent("Olá, quero falar com um especialista da Fraga sobre abertura de empresa.");
+  encodeURIComponent("Olá, quero falar com um especialista da Fraga sobre holding familiar.");
 
 export function HoldingFinalCTA() {
   return (
@@ -39,27 +39,28 @@ export function HoldingFinalCTA() {
             {/* Left — Copy */}
             <div className="relative z-10">
               <ScrollReveal>
-                <span className="eyebrow inline-flex">— Abertura de empresa · atendimento direto</span>
+                <span className="eyebrow inline-flex">— Holding familiar · atendimento direto</span>
               </ScrollReveal>
 
               <h2 className="font-display text-[clamp(2.2rem,5vw,4.6rem)] leading-[1] tracking-[-0.035em] text-bone mt-5">
                 <SplitTextReveal
-                  text="Abra sua empresa conversando direto com quem entende."
+                  text="Estruture sua holding conversando direto com quem entende."
                   highlight={["conversando", "entende."]}
                 />
               </h2>
 
               <ScrollReveal delay={0.25}>
                 <p className="mt-7 text-bone/70 text-[15px] md:text-base max-w-lg leading-relaxed">
-                  Fale com a Fraga pelo WhatsApp e receba orientação para abrir seu CNPJ com
-                  clareza, segurança tributária e acompanhamento contábil desde o primeiro passo.
+                  Fale com a Fraga pelo WhatsApp e receba orientação para estruturar sua holding
+                  com clareza, segurança patrimonial e planejamento tributário desde o primeiro
+                  passo.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal delay={0.4}>
                 <div className="mt-9 flex flex-wrap gap-4">
                   <ShinyButton href={WA_PRIMARY}>
-                    Abrir minha empresa agora
+                    Estruturar minha holding agora
                     <ArrowUpRight className="h-4 w-4" />
                   </ShinyButton>
                   <ShinyButton
@@ -75,7 +76,7 @@ export function HoldingFinalCTA() {
 
               <ScrollReveal delay={0.5}>
                 <p className="mt-6 text-xs uppercase tracking-[0.22em] text-bone/50">
-                  Atendimento consultivo para abertura de empresa em Vila Velha e no Espírito Santo.
+                  Atendimento consultivo para holding familiar em Vila Velha e no Espírito Santo.
                 </p>
               </ScrollReveal>
             </div>
@@ -126,16 +127,16 @@ function WhatsAppMockup() {
 
         {/* Chat body */}
         <div className="px-4 py-5 space-y-3 bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><circle cx=%2230%22 cy=%2230%22 r=%220.5%22 fill=%22white%22 opacity=%220.03%22/></svg>')] bg-[#0b1413]">
-          <Bubble side="in" delay={0.1}>Olá, quero abrir minha empresa. Por onde começo?</Bubble>
+          <Bubble side="in" delay={0.1}>Olá, quero estruturar uma holding familiar. Por onde começo?</Bubble>
           <Bubble side="out" delay={0.35}>
-            Olá! Vamos te orientar na abertura do CNPJ, escolha do regime tributário e primeiros passos contábeis.
+            Olá! Vamos te orientar no formato ideal da holding, planejamento sucessório e integralização do patrimônio.
           </Bubble>
-          <Bubble side="in" delay={0.6}>Preciso saber qual tipo de empresa faz sentido para mim.</Bubble>
+          <Bubble side="in" delay={0.6}>Preciso entender qual é o melhor caminho para a minha família.</Bubble>
           <Bubble side="out" delay={0.85}>
-            Perfeito. A Fraga analisa sua atividade, faturamento previsto e modelo de operação para indicar o caminho mais seguro.
+            Perfeito. A Fraga analisa o patrimônio, o perfil da família e os objetivos de sucessão para indicar o caminho mais seguro.
           </Bubble>
           <Bubble side="out" delay={1.1} highlight>
-            Comece com clareza desde o primeiro dia.
+            Proteja o patrimônio da sua família com clareza.
           </Bubble>
 
           {/* Typing */}
