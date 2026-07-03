@@ -38,7 +38,7 @@ const faqs = [
   },
 ];
 
-export function FAQ() {
+export function HoldingFAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (

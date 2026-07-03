@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-export function FloatingWhatsAppButton() {
+export function HoldingFloatingWhatsAppButton() {
   const whatsappUrl =
     "https://wa.me/5527988482268?text=" +
     encodeURIComponent(

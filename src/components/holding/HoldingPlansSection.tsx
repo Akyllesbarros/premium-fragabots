@@ -59,7 +59,7 @@ const plans: Plan[] = [
 const waBase =
   "https://wa.me/5527988482268?text=Olá,%20quero%20abrir%20minha%20empresa%20com%20a%20Fraga%20e%20entender%20o%20plano%20";
 
-export function PlansSection() {
+export function HoldingPlansSection() {
   const [active, setActive] = useState(0);
   const current = plans[active];
 

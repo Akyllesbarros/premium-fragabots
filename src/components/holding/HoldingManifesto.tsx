@@ -6,7 +6,7 @@ import { ShinyButton } from "../rdlf/ShinyButton";
 
 const HEADLINE = "Abrir uma empresa não é só emitir um CNPJ.";
 
-export function Manifesto() {
+export function HoldingManifesto() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,

@@ -14,7 +14,7 @@ const links = [
   { href: "#contato", label: "Contato" },
 ];
 
-export function Header() {
+export function HoldingHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 

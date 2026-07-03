@@ -55,7 +55,7 @@ const journeySteps: JourneyStep[] = [
   },
 ];
 
-export function ProblemRiskSolution() {
+export function HoldingProblemRiskSolution() {
   const ref = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({

@@ -13,7 +13,7 @@ const WA_SECONDARY =
   "https://wa.me/5527988482268?text=" +
   encodeURIComponent("Olá, quero falar com um especialista da Fraga sobre abertura de empresa.");
 
-export function FinalCTA() {
+export function HoldingFinalCTA() {
   return (
     <section id="contato" className="relative overflow-hidden py-24 md:py-36">
       {/* Background layers — matches LP teal palette */}

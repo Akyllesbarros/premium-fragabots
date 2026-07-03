@@ -5,7 +5,7 @@ import { ScrollReveal, SplitTextReveal } from "../rdlf/motion/kinetic";
 import { ShinyButton } from "../rdlf/ShinyButton";
 import ColorBends from "../rdlf/react-bits/ColorBends";
 
-export function Hero() {
+export function HoldingHero() {
   return (
     <section
       id="top"

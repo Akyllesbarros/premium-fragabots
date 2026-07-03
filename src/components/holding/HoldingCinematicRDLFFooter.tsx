@@ -9,7 +9,7 @@ if (typeof window !== "undefined") {
 }
 
 
-export function CinematicRDLFFooter() {
+export function HoldingCinematicRDLFFooter() {
   const wrapperRef = useRef<HTMLElement>(null);
   const linksRef = useRef<HTMLDivElement>(null);
 

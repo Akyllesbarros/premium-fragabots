@@ -9,7 +9,7 @@ const items = [
   "Contabilidade para novos CNPJs",
 ];
 
-export function TrustStrip() {
+export function HoldingTrustStrip() {
   // duplicate for seamless loop
   const loop = [...items, ...items];
 

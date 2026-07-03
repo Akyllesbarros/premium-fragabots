@@ -11,7 +11,7 @@ const chapters = [
 
 const pillars = ["Abertura de CNPJ", "Regime tributário", "Organização inicial", "Suporte contábil"];
 
-export function AboutAuthority() {
+export function HoldingAboutAuthority() {
   return (
     <section id="sobre" className="relative py-28 md:py-36 overflow-hidden">
       {/* subtle background wash */}
