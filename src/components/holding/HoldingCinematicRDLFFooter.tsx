@@ -134,8 +134,11 @@ export function HoldingCinematicRDLFFooter() {
       <div className="container-rdlf relative pb-10">
         <div className="hairline" />
         <div className="mt-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-bone/45">
-          <div>© {new Date().getFullYear()} Fraga Contabilidade. Todos os direitos reservados.</div>
+          <div>© {new Date().getFullYear()} Fraga Contabilidade. Todos os direitos reservados. · CRC-ES 000000/O</div>
           <div className="flex items-center gap-6">
+            <a href="/privacidade" className="hover:text-bone transition-colors">
+              Política de Privacidade
+            </a>
             <a
               href="https://www.instagram.com/_matheusalm/"
               target="_blank"

@@ -9,10 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as HoldingRouteImport } from './routes/holding'
 import { Route as AberturadeempresaRouteImport } from './routes/aberturadeempresa'
 import { Route as IndexRouteImport } from './routes/index'
 
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const HoldingRoute = HoldingRouteImport.update({
   id: '/holding',
   path: '/holding',
@@ -33,34 +39,45 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aberturadeempresa': typeof AberturadeempresaRoute
   '/holding': typeof HoldingRoute
+  '/privacidade': typeof PrivacidadeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aberturadeempresa': typeof AberturadeempresaRoute
   '/holding': typeof HoldingRoute
+  '/privacidade': typeof PrivacidadeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/aberturadeempresa': typeof AberturadeempresaRoute
   '/holding': typeof HoldingRoute
+  '/privacidade': typeof PrivacidadeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/aberturadeempresa' | '/holding'
+  fullPaths: '/' | '/aberturadeempresa' | '/holding' | '/privacidade'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/aberturadeempresa' | '/holding'
-  id: '__root__' | '/' | '/aberturadeempresa' | '/holding'
+  to: '/' | '/aberturadeempresa' | '/holding' | '/privacidade'
+  id: '__root__' | '/' | '/aberturadeempresa' | '/holding' | '/privacidade'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AberturadeempresaRoute: typeof AberturadeempresaRoute
   HoldingRoute: typeof HoldingRoute
+  PrivacidadeRoute: typeof PrivacidadeRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/holding': {
       id: '/holding'
       path: '/holding'
@@ -89,6 +106,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AberturadeempresaRoute: AberturadeempresaRoute,
   HoldingRoute: HoldingRoute,
+  PrivacidadeRoute: PrivacidadeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
