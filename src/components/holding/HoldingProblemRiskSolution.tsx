@@ -86,7 +86,7 @@ export function HoldingProblemRiskSolution() {
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               >
-                <Eyebrow>Jornada do CNPJ</Eyebrow>
+                <Eyebrow>Jornada da Holding</Eyebrow>
                 <h2 className="font-display text-[clamp(2rem,4.6vw,3.75rem)] leading-[1.02] tracking-[-0.03em] text-bone mt-5">
                   Antes de estruturar sua holding,{" "}
                   <span className="text-[color:var(--gold)]">entenda o caminho</span> que protege
