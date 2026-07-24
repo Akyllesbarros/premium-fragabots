@@ -133,11 +133,17 @@ export function HoldingCinematicRDLFFooter() {
 
       <div className="container-rdlf relative pb-10">
         <div className="hairline" />
-        <div className="mt-7 flex flex-col items-center gap-2 text-xs text-bone/45 text-center">
-          <div>S. T. Fraga Contabilidade ME · CRC-ES 004523/O · CNPJ 07.838.084/0001-86</div>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 w-full">
+        <div className="mt-8 flex flex-col items-center gap-4 text-center">
+          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-[13px] sm:text-sm text-bone/65 leading-relaxed">
+            <span className="whitespace-nowrap">S. T. Fraga Contabilidade ME</span>
+            <span className="hidden sm:inline text-bone/40">·</span>
+            <span className="whitespace-nowrap">CRC-ES 004523/O</span>
+            <span className="hidden sm:inline text-bone/40">·</span>
+            <span className="whitespace-nowrap">CNPJ 07.838.084/0001-86</span>
+          </div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 w-full text-xs text-bone/45">
             <div>© {new Date().getFullYear()} Fraga Contabilidade. Todos os direitos reservados.</div>
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1">
               <a href="/privacidade" className="hover:text-bone transition-colors">
                 Política de Privacidade
               </a>
