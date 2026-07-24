@@ -133,21 +133,24 @@ export function HoldingCinematicRDLFFooter() {
 
       <div className="container-rdlf relative pb-10">
         <div className="hairline" />
-        <div className="mt-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-bone/45">
-          <div>© {new Date().getFullYear()} Fraga Contabilidade. Todos os direitos reservados. · CRC-ES 000000/O</div>
-          <div className="flex items-center gap-6">
-            <a href="/privacidade" className="hover:text-bone transition-colors">
-              Política de Privacidade
-            </a>
-            <a
-              href="https://www.instagram.com/_matheusalm/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[color:var(--gold-light)] transition-colors"
-            >
-              Criado por Matheus Nascimento | BAKY Company
-            </a>
-            <button onClick={scrollTop} className="hover:text-bone transition-colors">↑ Topo</button>
+        <div className="mt-7 flex flex-col items-center gap-2 text-xs text-bone/45 text-center">
+          <div>S. T. Fraga Contabilidade ME · CRC-ES 004523/O · CNPJ 07.838.084/0001-86</div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 w-full">
+            <div>© {new Date().getFullYear()} Fraga Contabilidade. Todos os direitos reservados.</div>
+            <div className="flex items-center gap-6">
+              <a href="/privacidade" className="hover:text-bone transition-colors">
+                Política de Privacidade
+              </a>
+              <a
+                href="https://www.instagram.com/_matheusalm/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[color:var(--gold-light)] transition-colors"
+              >
+                Criado por Matheus Nascimento | BAKY Company
+              </a>
+              <button onClick={scrollTop} className="hover:text-bone transition-colors">↑ Topo</button>
+            </div>
           </div>
         </div>
       </div>
